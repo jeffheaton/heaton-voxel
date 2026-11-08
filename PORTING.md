@@ -291,7 +291,8 @@ Therefore:
 - **`world_is_open` is per-platform by nature.** Minecraft holds a Java
   `FileLock` on `session.lock`: POSIX record locks on macOS/Linux (which is
   why the reference probes with `lockf`, not `flock` — separate lock
-  spaces), `LockFileEx` on Windows (probe by attempting `FileStream.Lock`).
+  spaces), `LockFileEx` on Windows (probe by attempting `FileStream.Lock`;
+  the reference takes the file's first byte with `msvcrt.locking` there).
   Getting this wrong reports live worlds as free and invites torn reads.
   Caveat, verified empirically: **CoreCLR on macOS cannot lock at all** —
   `FileStream.Lock`/`Unlock` throw `PlatformNotSupportedException` there,

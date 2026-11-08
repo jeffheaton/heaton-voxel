@@ -731,7 +731,7 @@ class StampGuardTests(SyntheticSiteCase):
         sch.entities.append(stand("minecraft:cow", (640.5, 0.0, 0.5)))
         with self.assertRaises(Refused) as caught:
             b.stamp(sch, (5, 64, 5))
-        self.assertIn(os.path.join(ENTITIES_DIR, "r.1.0.mca"), str(caught.exception))
+        self.assertIn(f"{ENTITIES_DIR}/r.1.0.mca", str(caught.exception))
         self.assertEqual(b.blocks_set, 0)
         self.assertEqual(site.check(), [])
         b.stamp(sch, (5, 64, 5), entities=False)

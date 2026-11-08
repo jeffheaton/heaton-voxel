@@ -56,7 +56,7 @@ from heaton_voxel.craft import (  # noqa: E402
     unsupported,
 )
 from heaton_voxel.craft.blockinfo import is_air  # noqa: E402
-from fixtures import FIXTURE_LEVEL_DAT, FIXTURE_REGION  # noqa: E402
+from fixtures import FIXTURE_LEVEL_DAT, FIXTURE_REGION, LOCK_HOLDER  # noqa: E402
 from heaton_voxel.world import OVERWORLD, MinecraftSave  # noqa: E402
 from palettes import LAB, PALETTES, ROMAN  # noqa: E402
 from tests.test_settings import make_world  # noqa: E402
@@ -1184,11 +1184,7 @@ class CraftSessionTests(_WorldFiles, unittest.TestCase):
             handle.write("☃".encode())
         before = _files(world)
         holder = subprocess.Popen(
-            [sys.executable, "-c",
-             "import fcntl,os,sys,time;"
-             "fd=os.open(sys.argv[1],os.O_RDWR);"
-             "fcntl.lockf(fd,fcntl.LOCK_EX|fcntl.LOCK_NB);"
-             "print('held',flush=True);time.sleep(60)", lock],
+            [sys.executable, "-c", LOCK_HOLDER, lock],
             stdout=subprocess.PIPE, text=True)
         try:
             self.assertEqual(holder.stdout.readline().strip(), "held")

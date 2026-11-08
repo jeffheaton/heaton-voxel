@@ -781,11 +781,15 @@ def world_is_open(world_root: str | os.PathLike) -> bool:
 
     Java implements ``FileLock`` with POSIX record locks, so ``fcntl.lockf``
     is what can observe it -- ``flock`` uses a separate lock space and would
-    report the world as free.
+    report the world as free. On Windows it is a byte-range lock
+    (``LockFileEx`` over the whole file), which ``msvcrt.locking`` meets on
+    the file's first byte, as the C# twin's ``FileStream.Lock`` does.
     """
-    if fcntl is None:  # pragma: no cover - not POSIX
-        return False
     lock = os.path.join(os.fspath(world_root), SESSION_LOCK)
+    if sys.platform == "win32":  # pragma: no cover - CI measures on Linux
+        return _held_on_windows(lock)
+    if fcntl is None:  # pragma: no cover - neither POSIX nor Windows
+        return False
     try:
         fd = os.open(lock, os.O_RDWR)
     except OSError:
@@ -799,6 +803,34 @@ def world_is_open(world_root: str | os.PathLike) -> bool:
         return False
     finally:
         os.close(fd)
+
+
+if sys.platform == "win32":  # pragma: no cover - Windows only
+    import msvcrt
+
+    def _held_on_windows(lock: str) -> bool:
+        """``world_is_open`` on Windows: try for the lock file's first byte.
+
+        The game shares the file for reading and writing, so it opens while
+        held; it is the lock that is refused. A lock file that will not open at
+        all, for any reason but being absent, is something holding it more
+        tightly than the game does, and is reported held rather than free.
+        """
+        try:
+            fd = os.open(lock, os.O_RDWR)
+        except FileNotFoundError:
+            return False
+        except OSError:
+            return True
+        try:
+            msvcrt.locking(fd, msvcrt.LK_NBLCK, 1)
+        except OSError:
+            return True
+        else:
+            msvcrt.locking(fd, msvcrt.LK_UNLCK, 1)
+            return False
+        finally:
+            os.close(fd)
 
 
 # --------------------------------------------------------------------------

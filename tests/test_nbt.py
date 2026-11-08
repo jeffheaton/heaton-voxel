@@ -41,7 +41,7 @@ from heaton_voxel.nbt import (
     encode_modified_utf8,
 )
 
-from fixtures import FIXTURE_LEVEL_DAT, FIXTURE_REGION, snapshot_region
+from fixtures import FIXTURE_LEVEL_DAT, FIXTURE_REGION, LOCK_HOLDER, snapshot_region
 
 # The suite runs against the vendored fixture -- real Minecraft output, but
 # checked in, so the tests are self-contained and deterministic. Point
@@ -383,6 +383,8 @@ class RegionFileTests(unittest.TestCase):
             region.save(path)
             self.assertEqual(NBT.load(path).chunks[self.any_key].data["Marker"], "kept")
 
+    @unittest.skipIf(sys.platform == "win32",
+                     "the peak-memory reading comes from resource, which is POSIX")
     def test_streaming_pass_stays_flat_in_memory(self):
         """The whole-world access pattern: touch every chunk, release each."""
         import resource
@@ -536,6 +538,8 @@ class SaveSafetyTests(unittest.TestCase):
             region.save(path)
             self.assertEqual(os.listdir(tmp), ["r.0.0.mca"])
 
+    @unittest.skipIf(sys.platform == "win32",
+                     "Windows has no POSIX file modes; chmod sets read-only and no more")
     def test_permissions_are_preserved(self):
         """mkstemp makes 0600 files; the original's mode has to win."""
         region = self._small_region()
@@ -567,15 +571,7 @@ class SaveSafetyTests(unittest.TestCase):
 
             # Locked by another process, exactly as Minecraft holds it.
             holder = subprocess.Popen(
-                [
-                    sys.executable,
-                    "-c",
-                    "import fcntl,os,sys,time;"
-                    "fd=os.open(sys.argv[1],os.O_RDWR);"
-                    "fcntl.lockf(fd,fcntl.LOCK_EX|fcntl.LOCK_NB);"
-                    "print('held',flush=True);time.sleep(60)",
-                    lock,
-                ],
+                [sys.executable, "-c", LOCK_HOLDER, lock],
                 stdout=subprocess.PIPE,
                 text=True,
             )

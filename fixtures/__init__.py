@@ -128,6 +128,24 @@ FIXTURE_PLAYER = os.path.join(_HERE, "player.dat")
 #: player.dat takes under players/data/ when assembling a world.
 FIXTURE_PLAYER_UUID = "be0f5711-95ac-467f-bac2-a2e5b1c4157c"
 
+#: A program that takes a world's ``session.lock`` the way Minecraft does and
+#: holds it, printing ``held`` once it has it: by ``fcntl.lockf`` where Java's
+#: FileLock is a POSIX record lock, and by ``msvcrt.locking`` on Windows,
+#: where it is a byte-range lock. Run it as
+#: ``[sys.executable, "-c", LOCK_HOLDER, path]`` and kill it to let go.
+LOCK_HOLDER = (
+    "import os,sys,time\n"
+    "fd=os.open(sys.argv[1],os.O_RDWR)\n"
+    "try:\n"
+    "    import fcntl\n"
+    "    fcntl.lockf(fd,fcntl.LOCK_EX|fcntl.LOCK_NB)\n"
+    "except ImportError:\n"
+    "    import msvcrt\n"
+    "    msvcrt.locking(fd,msvcrt.LK_NBLCK,1)\n"
+    "print('held',flush=True)\n"
+    "time.sleep(60)\n"
+)
+
 #: The 26.3 sample: same region name, newer palette codec.
 MODERN_REGION = os.path.join(_HERE, "modern", "r.-1.0.mca")
 MODERN_LEVEL_DAT = os.path.join(_HERE, "modern", "level.dat")

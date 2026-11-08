@@ -15,7 +15,7 @@ import unittest
 
 import heaton_voxel.nbt as nbt
 from heaton_voxel.blocks import BLOCKS_PER_SECTION, BlockState, Blocks
-from fixtures import FIXTURE_LEVEL_DAT, FIXTURE_REGION
+from fixtures import FIXTURE_LEVEL_DAT, FIXTURE_REGION, LOCK_HOLDER
 from heaton_voxel.nbt import (
     NBT,
     TAG_DOUBLE,
@@ -1552,15 +1552,7 @@ class SaveWriteTests(SaveBase):
         import sys
 
         holder = subprocess.Popen(
-            [
-                sys.executable,
-                "-c",
-                "import fcntl,os,sys,time;"
-                "fd=os.open(sys.argv[1],os.O_RDWR);"
-                "fcntl.lockf(fd,fcntl.LOCK_EX|fcntl.LOCK_NB);"
-                "print('held',flush=True);time.sleep(60)",
-                lock,
-            ],
+            [sys.executable, "-c", LOCK_HOLDER, lock],
             stdout=subprocess.PIPE,
             text=True,
         )

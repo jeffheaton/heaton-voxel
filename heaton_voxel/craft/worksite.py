@@ -66,6 +66,7 @@ import hashlib
 import json
 import math
 import os
+import posixpath
 import re
 import shutil
 from collections import Counter
@@ -79,6 +80,15 @@ from ..world import Dimension, MinecraftSave
 #: Chunks the aftercare litany can reach past the build box; the snapshot
 #: covers the box plus this many blocks on every side.
 DEFAULT_MARGIN = 32
+
+
+def _rel(path: str, base: str) -> str:
+    """``path`` relative to ``base`` as a manifest spells it: with forward
+    slashes on every platform, so a worksite taken on one machine reads on
+    another and every key a check compares is spelled one way. Windows
+    takes the forward slashes back when a key is joined onto the world."""
+    return os.path.relpath(path, base).replace(os.sep, "/")
+
 
 #: A protected zone bigger than this is refused: the digest walks every
 #: block, and a guard that takes minutes stops being run.
@@ -409,7 +419,7 @@ class SiteGuard:
         dim = save.dimension(site.dimension)
         # World-relative, as the manifest spells its files.
         self._directories = tuple(
-            os.path.relpath(path, site.world)
+            _rel(path, site.world)
             for path in (dim.region_dir, dim.entities_dir))
 
     @property
@@ -452,7 +462,7 @@ class SiteGuard:
         sound: set[tuple[int, int]] = set()
 
         def uncovered(directory, rx, rz, cell, how):
-            rel = os.path.join(directory, f"r.{rx}.{rz}.mca")
+            rel = posixpath.join(directory, f"r.{rx}.{rz}.mca")
             if rel in files or rel in reported:
                 return
             reported.add(rel)
@@ -483,7 +493,7 @@ class SiteGuard:
                                      + [(region, False) for region in ring]):
                 if (rx, rz) in held:
                     continue
-                if os.path.join(regions, f"r.{rx}.{rz}.mca") in files:
+                if posixpath.join(regions, f"r.{rx}.{rz}.mca") in files:
                     held.add((rx, rz))
                     continue
                 if kind == "settle":
@@ -673,7 +683,7 @@ class Worksite:
         box plus margin -- from the save's own dimension, so its layout is
         whatever the save's is."""
         dim = self.save.dimension(self.dimension)
-        directories = [os.path.relpath(path, self.world) for path in
+        directories = [_rel(path, self.world) for path in
                        (dim.region_dir, dim.entities_dir, dim.poi_dir)]
         x0, z0, x1, z1 = self.box
         span = ((x0 - self.margin) >> 9, (z0 - self.margin) >> 9,
@@ -698,7 +708,7 @@ class Worksite:
                 match = _SIDECAR.match(name)
                 if (match and r0x <= int(match[1]) >> 5 <= r1x
                         and r0z <= int(match[2]) >> 5 <= r1z):
-                    found.append(os.path.join(directory, name))
+                    found.append(posixpath.join(directory, name))
         return found
 
     def _covered_files(self) -> list[str]:
@@ -711,7 +721,7 @@ class Worksite:
         for directory in directories:
             for rx in range(r0x, r1x + 1):
                 for rz in range(r0z, r1z + 1):
-                    paths.append(os.path.join(directory, f"r.{rx}.{rz}.mca"))
+                    paths.append(posixpath.join(directory, f"r.{rx}.{rz}.mca"))
         return paths + self._sidecars(directories, (r0x, r0z, r1x, r1z))
 
     def _take_snapshot(self) -> None:
@@ -884,7 +894,7 @@ class Worksite:
         def note(path):
             if path is None:
                 return
-            rel = os.path.relpath(path, self.world)
+            rel = _rel(path, self.world)
             if rel not in files:
                 found.add(rel)
 
@@ -999,13 +1009,13 @@ class Worksite:
         manifest = _load_manifest(self.directory, self.name)
         files = manifest[_FILES]
         dim = save.dimension(self.dimension)
-        region_dir = os.path.relpath(dim.region_dir, save.path)
+        region_dir = _rel(dim.region_dir, save.path)
 
         # Every region file the box reads must have a "before".
         needed = []
         for rx in range(x0 >> 9, (x1 >> 9) + 1):
             for rz in range(z0 >> 9, (z1 >> 9) + 1):
-                rel = os.path.join(region_dir, f"r.{rx}.{rz}.mca")
+                rel = posixpath.join(region_dir, f"r.{rx}.{rz}.mca")
                 if rel not in files:
                     raise NBTError(
                         f"worksite {self.name!r} holds no snapshot of {rel}, "

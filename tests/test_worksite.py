@@ -110,9 +110,9 @@ class SidecarTests(WorksiteTestCase):
     not the sidecar would leave a chunk pointing at nothing."""
 
     REGION_DIR = os.path.dirname(REGION_REL)
-    KEPT = os.path.join(REGION_DIR, "c.-20.5.mcc")       # region -1,0: covered
-    MADE = os.path.join(REGION_DIR, "c.-21.6.mcc")       # covered, created later
-    AFAR = os.path.join(REGION_DIR, "c.100.100.mcc")     # region 3,3: not covered
+    KEPT = f"{REGION_DIR}/c.-20.5.mcc"       # region -1,0: covered
+    MADE = f"{REGION_DIR}/c.-21.6.mcc"       # covered, created later
+    AFAR = f"{REGION_DIR}/c.100.100.mcc"     # region 3,3: not covered
 
     def write(self, rel: str, payload: bytes) -> None:
         with open(os.path.join(self.world, rel), "wb") as handle:
@@ -1225,7 +1225,7 @@ class UncoveredCheckTests(SyntheticSiteCase):
         site.save.set_block(645, 64, 5, BRICKS)  # region (1, 0)
         site.save.set_block(5, 64, 5, BRICKS)    # held
         found = site.check()
-        outside = os.path.join(REGION_DIR, "r.1.0.mca")
+        outside = f"{REGION_DIR}/r.1.0.mca"
         self.assertEqual(found.uncovered, [outside])
         self.assertEqual(found.zones, [])
         self.assertTrue(found, "something is wrong, and it says so")
@@ -1235,7 +1235,7 @@ class UncoveredCheckTests(SyntheticSiteCase):
         site = self.open_site(margin=0)
         self.assertTrue(site.save.spawn_entity("minecraft:cow", 650.5, 64.0, 5.5))
         self.assertEqual(site.check().uncovered,
-                         [os.path.join(ENTITIES_DIR, "r.1.0.mca")])
+                         [f"{ENTITIES_DIR}/r.1.0.mca"])
 
     def test_reading_outside_the_snapshot_is_not_a_change(self):
         site = self.open_site(margin=0)
@@ -1262,7 +1262,7 @@ class UncoveredCheckTests(SyntheticSiteCase):
         self.assertEqual(site.check(), [], "loading it is not changing it")
         self.assertEqual(site.save.invalidate_poi((640, 0, 0), (655, 0, 15)), 1)
         self.assertEqual(site.check().uncovered,
-                         [os.path.join(POI_DIR, "r.1.0.mca")])
+                         [f"{POI_DIR}/r.1.0.mca"])
 
     def test_check_lists_exactly_what_save_would_write_outside_the_snapshot(self):
         """A held region, the weather, the player and the difficulty: save()
@@ -1347,7 +1347,7 @@ class SiteBuilderTests(SyntheticSiteCase):
         b = site.builder()
         with self.assertRaises(Refused) as caught:
             b.set(645, 64, 5, BRICKS)
-        self.assertIn(os.path.join(REGION_DIR, "r.1.0.mca"),
+        self.assertIn(f"{REGION_DIR}/r.1.0.mca",
                       caught.exception.faults[0])
         self.assertEqual(site.save.get_block(645, 64, 5).name, "minecraft:air")
         self.assertEqual(site.check(), [], "nothing for a restore to miss")
@@ -1362,7 +1362,7 @@ class SiteBuilderTests(SyntheticSiteCase):
         with self.assertRaises(Refused) as caught:
             b.set(500, 64, 5, BRICKS)
         named = [fault for fault in caught.exception.faults
-                 if os.path.join(REGION_DIR, "r.1.0.mca") in fault]
+                 if f"{REGION_DIR}/r.1.0.mca" in fault]
         self.assertEqual(len(named), 1, caught.exception.faults)
         self.assertIn("finish() settles the chunks around", named[0])
         self.assertEqual(b.blocks_set, 0)
@@ -1375,7 +1375,7 @@ class SiteBuilderTests(SyntheticSiteCase):
         drawn = b.rng.getstate()
         with self.assertRaises(Refused) as caught:
             b.spawn("minecraft:cow", 645, 64, 5)
-        self.assertIn(os.path.join(ENTITIES_DIR, "r.1.0.mca"),
+        self.assertIn(f"{ENTITIES_DIR}/r.1.0.mca",
                       str(caught.exception))
         self.assertEqual(b.entities_added, 0)
         self.assertEqual(b.rng.getstate(), drawn, "no yaw was drawn")
@@ -1553,8 +1553,8 @@ class SiteBuilderTests(SyntheticSiteCase):
         self.assertIn("would settle outside", str(caught.exception))
         self.assertEqual(
             [fault.split()[0] for fault in caught.exception.faults],
-            [os.path.join(REGION_DIR, "r.1.-1.mca"),
-             os.path.join(REGION_DIR, "r.1.0.mca")],
+            [f"{REGION_DIR}/r.1.-1.mca",
+             f"{REGION_DIR}/r.1.0.mca"],
             "the two regions east of it, which the site does not hold")
         self.assertIn("around chunk (31, 0)", caught.exception.faults[0])
         self.assertEqual(site.save.surface_y(500, 5, "WORLD_SURFACE"), 63,
