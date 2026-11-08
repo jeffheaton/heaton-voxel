@@ -1176,8 +1176,8 @@ def _digests(world: str) -> dict[str, str]:
         for name in names:
             path = os.path.join(root, name)
             with open(path, "rb") as handle:
-                found[os.path.relpath(path, world)] = hashlib.sha256(
-                    handle.read()).hexdigest()
+                rel = os.path.relpath(path, world).replace(os.sep, "/")
+                found[rel] = hashlib.sha256(handle.read()).hexdigest()
     return found
 
 

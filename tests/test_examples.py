@@ -566,8 +566,10 @@ class SurfaceYTests(unittest.TestCase):
 #: ocean, so the lot is filled up to the sea from its bed.
 LOT_CENTER = (-384, 32)
 
-REGION = os.path.join("dimensions", "minecraft", "overworld", "region")
-ENTITIES = os.path.join("dimensions", "minecraft", "overworld", "entities")
+# World-relative, with forward slashes on every platform, as a worksite
+# names its files; Windows takes them back in a filesystem path.
+REGION = "dimensions/minecraft/overworld/region"
+ENTITIES = "dimensions/minecraft/overworld/entities"
 
 #: The biome every session held to its villager's type is given under the
 #: villager's column first: one the game types a villager by -- snow --
@@ -591,13 +593,13 @@ def _files(world: str) -> dict[str, bytes]:
         for name in names:
             path = os.path.join(root, name)
             with open(path, "rb") as handle:
-                found[os.path.relpath(path, world)] = handle.read()
+                found[os.path.relpath(path, world).replace(os.sep, "/")] = handle.read()
     return found
 
 
 def _outside_worksites(files: dict[str, bytes]) -> dict[str, bytes]:
     return {rel: data for rel, data in files.items()
-            if not rel.startswith("worksites" + os.sep)}
+            if not rel.startswith("worksites/")}
 
 
 def _quietly(call, *args, **kwargs):
@@ -818,8 +820,8 @@ class CraftSessionTests(_WorldFiles, unittest.TestCase):
                 self.assertEqual(str(data["type"]), "minecraft:snow")
                 self.assertEqual(
                     session.rollback.files,
-                    [os.path.join(ENTITIES, "r.-1.0.mca"),
-                     os.path.join(REGION, "r.-1.0.mca")],
+                    [f"{ENTITIES}/r.-1.0.mca",
+                     f"{REGION}/r.-1.0.mca"],
                     "undoing it puts the region back and takes the "
                     "villager's entities file away")
 
@@ -956,9 +958,9 @@ class CraftSessionTests(_WorldFiles, unittest.TestCase):
                               printed)
                 self.assertIn("the undo would move 2 files:", printed)
                 self.assertRegex(printed, r"\n  delete +" + re.escape(
-                    os.path.join(ENTITIES, "r.-1.0.mca")) + " ")
+                    f"{ENTITIES}/r.-1.0.mca") + " ")
                 self.assertRegex(printed, r"\n  restore +" + re.escape(
-                    os.path.join(REGION, "r.-1.0.mca")) + " ")
+                    f"{REGION}/r.-1.0.mca") + " ")
                 self.assertIn("dry run: nothing moved", printed)
 
     def test_rolling_a_session_back_puts_every_file_back(self):
@@ -1110,7 +1112,7 @@ class CraftSessionTests(_WorldFiles, unittest.TestCase):
             self.assertTrue(handle.read() == played,
                             "the region was put back over the play")
         self.assertIn(f"1 of the world's files changed while the session "
-                      f"ran, not by it: {os.path.join(REGION, 'r.-1.0.mca')}",
+                      f"ran, not by it: {REGION}/r.-1.0.mca",
                       out.getvalue())
 
     def test_once_the_build_is_saved_nothing_raises(self):
@@ -1172,7 +1174,7 @@ class CraftSessionTests(_WorldFiles, unittest.TestCase):
         self.assertEqual(code, 1, out.getvalue())
         self.assertIn("FAILED: what reached the disk is not what was built; "
                       "saved, not accepted", out.getvalue())
-        rel = os.path.join(REGION, "r.-1.0.mca")
+        rel = f"{REGION}/r.-1.0.mca"
         self.assertFalse(_files(world)[rel] == before[rel], "saved")
         (site,) = list_worksites(world)
         self.assertIsNone(site.accepted)
