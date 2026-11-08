@@ -302,21 +302,30 @@ class PackagingTests(unittest.TestCase):
         """The twins ship as ``heaton-voxel`` on PyPI and ``HeatonVoxel`` on
         NuGet, and the corpus makes them one library, so they carry one
         version. The C# one was once unset, which packs as 1.0.0 beside a
-        Python 0.1.0. ``heaton_voxel.__version__`` is the third copy, the one
-        a running program reads, and moves with them.
+        Python 0.1.0. The two version files a running program reads --
+        ``heaton_voxel/version.py`` (``__version__``) and its twin
+        ``Version.cs`` -- are the third and fourth copies, and move with
+        them: the build workflows stamp a date and a build number into
+        them, never a version.
         """
-        with open(os.path.join(_ROOT, "pyproject.toml"), encoding="utf-8") as f:
-            python = re.search(r'^version\s*=\s*"([^"]+)"', f.read(), re.M)
-        with open(os.path.join(_ROOT, "csharp", "HeatonVoxel", "HeatonVoxel.csproj"),
-                  encoding="utf-8") as f:
-            csharp = re.search(r"<Version>([^<]+)</Version>", f.read())
-        with open(os.path.join(PACKAGE, "__init__.py"), encoding="utf-8") as f:
-            runtime = re.search(r'^__version__\s*=\s*"([^"]+)"', f.read(), re.M)
-        self.assertIsNotNone(python, "pyproject.toml has no version")
-        self.assertIsNotNone(csharp, "HeatonVoxel.csproj sets no <Version>")
-        self.assertIsNotNone(runtime, "heaton_voxel/__init__.py sets no __version__")
-        self.assertEqual(csharp.group(1), python.group(1))
-        self.assertEqual(runtime.group(1), python.group(1))
+        def read(*parts, pattern):
+            with open(os.path.join(_ROOT, *parts), encoding="utf-8") as f:
+                found = re.search(pattern, f.read(), re.M)
+            self.assertIsNotNone(found, f"{'/'.join(parts)} carries no version")
+            return found.group(1)
+
+        python = read("pyproject.toml", pattern=r'^version\s*=\s*"([^"]+)"')
+        csharp = read("csharp", "HeatonVoxel", "HeatonVoxel.csproj",
+                      pattern=r"<Version>([^<]+)</Version>")
+        runtime = read("heaton_voxel", "version.py",
+                       pattern=r'^VERSION\s*=\s*"([^"]+)"')
+        twin = read("csharp", "HeatonVoxel", "Version.cs",
+                    pattern=r'const string Version = "([^"]+)";')
+        self.assertEqual(csharp, python)
+        self.assertEqual(runtime, python)
+        self.assertEqual(twin, python)
+        import heaton_voxel
+        self.assertEqual(heaton_voxel.__version__, python)
 
     def test_the_types_ship_and_the_whole_lower_tier_is_checked(self):
         """``py.typed`` is what makes a caller's type checker read the

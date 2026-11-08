@@ -92,6 +92,7 @@ C# partial classes.
 | `schem/copy.py` | `Schem/Copy.cs` |
 | `schem/cli.py` | not ported |
 | `connect.py` | `Connect.cs` |
+| `version.py` | `Version.cs` — class `HeatonVoxelVersion`, `VERSION`/`BUILD_DATE`/`BUILD` ↔ `Version`/`BuildDate`/`Build`. Both are written afresh by the build workflows (`build-lib.yml`, `build-lib-dotnet.yml`), which stamp the date and run number; a checkout carries build 0 |
 | `heightmap_blocks.py` | `Blocks/HeightmapBlocks.generated.cs` — what the game's heightmaps count; both are **generated** by `tools/generate_heightmap_blocks.py` in one run, from what `tools/probe_block_shapes.py` read out of the jar, so regenerate them together and never edit either |
 | `wall_cover.py` | `WallCover.generated.cs` — what every block state's underside shows a wall below it; both are **generated** by `tools/generate_wall_cover.py` from the game's own shapes in one run, so regenerate them together and never edit either |
 | `place.py` | `Place.cs` |

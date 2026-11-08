@@ -1,0 +1,51 @@
+name: Deploy Library to PyPI
+
+# Publishes the wheel and sdist that a Build Library run staged on S3, by
+# version. Mirrors deploy-lib-dotnet.yml (the NuGet package to NuGet.org).
+#
+# One departure from dynaface's: PyPI is reached by Trusted Publishing, as
+# NuGet.org already is, rather than a stored API token. GitHub's OIDC token is
+# exchanged for a short-lived one, so no PyPI credential is kept in the repo;
+# a token for a project not yet on PyPI could only have been an account-wide
+# one. It needs a (pending) trusted publisher on PyPI bound to this workflow
+# file -- see RELEASING.md.
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Package version to deploy (e.g., 0.1.0); deploys heaton_voxel-<version>-py3-none-any.whl and heaton_voxel-<version>.tar.gz'
+        required: true
+
+permissions:
+  contents: read
+  # Trusted Publishing: PyPI accepts this workflow's OIDC token.
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download the distributions from S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+          VERSION: ${{ github.event.inputs.version }}
+        run: |
+          if ! [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+((a|b|rc)[0-9]+)?$ ]]; then
+            echo "Error: '$VERSION' is not a package version (e.g., 0.1.0)."
+            exit 1
+          fi
+          mkdir -p dist
+          for file in "heaton_voxel-$VERSION-py3-none-any.whl" "heaton_voxel-$VERSION.tar.gz"; do
+            echo "Downloading $file from S3..."
+            aws s3 cp "s3://data.heatonresearch.com/library/$file" dist/ || {
+              echo "Error: File $file does not exist in S3. Run Build Library at this version first."
+              exit 1
+            }
+          done
+          ls -l dist
+
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1

@@ -101,7 +101,8 @@ from .world import (
     WorldBorder,
 )
 
-__version__ = "0.1.0"
+# The version, from the one file the release builds stamp.
+from .version import VERSION as __version__  # noqa: E402
 
 __all__ = [
     # nbt — file formats

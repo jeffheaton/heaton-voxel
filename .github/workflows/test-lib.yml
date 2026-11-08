@@ -4,8 +4,9 @@ name: Test Library
 # Python version the library supports, on every push and pull request that can
 # change its result. One of those runs measures coverage for Codecov and the
 # README badges, and a separate job holds the deterministic tier to mypy, as
-# CLAUDE.md's "Verifying" section asks. Releases are made by the manual Release
-# workflow (release.yml).
+# CLAUDE.md's "Verifying" section asks. Releases are built and published by
+# hand: Build Library (build-lib.yml), then Deploy Library to PyPI
+# (deploy-lib.yml).
 on:
   push:
     paths:

@@ -1,0 +1,159 @@
+name: Build Library
+
+# Builds the Python package for a release, by hand, as dynaface's does:
+# static analysis reports, the suite with JUnit and coverage reports, a
+# version file stamped with this build's date and number, then the wheel and
+# sdist, checked by twine and staged as an artifact and on S3. Publishing is
+# a separate, manual step: Deploy Library to PyPI (deploy-lib.yml), which
+# takes what this staged. RELEASING.md has the whole sequence.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  # The JUnit report action publishes the test results as a check.
+  checks: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.12'
+
+      # The package has no dependencies; these are the build's own tools, and
+      # never the package's.
+      - name: Install build and analysis tools
+        run: python -m pip install build twine "coverage[toml]" pytest flake8 mypy bandit black isort
+
+      # Reports, not gates, as in dynaface: each is uploaded for reading.
+      # mypy over the deterministic tier is a gate already, in Test Library.
+      - name: Static code analysis
+        run: |
+          echo "Running flake8..."
+          flake8 heaton_voxel --output-file=flake8-report.txt || true
+
+          echo "Running mypy..."
+          python -m mypy --show-error-codes --no-color-output --no-error-summary > mypy-report.txt || true
+
+          echo "Running bandit..."
+          bandit -r heaton_voxel -f txt -o bandit-report.txt || true
+
+          echo "Checking formatting with black..."
+          black --check heaton_voxel > black-report.txt 2>&1 || true
+
+          echo "Checking imports with isort..."
+          isort heaton_voxel --check-only > isort-report.txt 2>&1 || true
+
+      - name: Upload static analysis reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: static-analysis-reports
+          retention-days: 7
+          path: '*-report.txt'
+          if-no-files-found: ignore
+
+      # The one version every copy carries: pyproject.toml, the csproj and the
+      # two version files (tests/test_architecture.py holds them equal, and
+      # the suite below runs that test too).
+      - name: Read the version
+        run: |
+          VERSION=$(python -c "import tomllib; print(tomllib.load(open('pyproject.toml', 'rb'))['project']['version'])")
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "Building heaton-voxel $VERSION"
+
+      # pytest runs the unittest suite as it stands, for its JUnit report.
+      - name: Run tests
+        run: |
+          python -m coverage run -m pytest tests -p no:cacheprovider \
+            --junitxml=unit_test_results.xml
+          python -m coverage xml -o coverage.xml
+          python -m coverage html
+          python -m coverage report
+
+      - name: Check coverage threshold
+        continue-on-error: true
+        run: python -m coverage report --fail-under=90 > /dev/null
+
+      - name: Publish test results
+        if: always()
+        uses: mikepenz/action-junit-report@v6
+        with:
+          report_paths: unit_test_results.xml
+
+      - name: Upload coverage reports
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: coverage-reports
+          retention-days: 7
+          path: |
+            coverage.xml
+            htmlcov/
+          if-no-files-found: ignore
+
+      - name: Generate version file
+        run: |
+          BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          BUILD="${{ github.run_number }}"
+
+          cat <<EOF > heaton_voxel/version.py
+          """Which build of heaton-voxel this is: written by the Build Library workflow."""
+
+          VERSION = "$VERSION"
+          BUILD_DATE = "$BUILD_DATE"
+          BUILD = $BUILD
+          EOF
+
+          echo "Generated heaton_voxel/version.py:"
+          cat heaton_voxel/version.py
+
+      - name: Build the wheel and sdist
+        run: |
+          rm -rf dist
+          python -m build
+          ls -l dist
+
+      - name: Validate with twine
+        run: python -m twine check --strict dist/*
+
+      # The wheel installs into an empty venv, both console scripts run, and
+      # the stamped version reads back -- from outside the checkout, so
+      # nothing is read from the source tree by accident.
+      - name: Install the wheel and try it
+        run: |
+          python -m venv "$RUNNER_TEMP/smoke"
+          "$RUNNER_TEMP/smoke/bin/pip" install dist/*.whl
+          cd "$RUNNER_TEMP"
+          smoke/bin/heaton-voxel --help > /dev/null
+          smoke/bin/heaton-voxel-nbt --help > /dev/null
+          smoke/bin/python -c "import heaton_voxel.craft; from heaton_voxel import version; print(version.VERSION, version.BUILD_DATE, version.BUILD)"
+
+      - name: Upload the distributions
+        uses: actions/upload-artifact@v7
+        with:
+          name: heaton-voxel-dist
+          retention-days: 7
+          path: dist/*
+
+      # Staged where Deploy Library to PyPI looks for them, by version.
+      - name: Upload to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        run: |
+          for f in dist/heaton_voxel-"$VERSION"-py3-none-any.whl dist/heaton_voxel-"$VERSION".tar.gz; do
+            aws s3 cp "$f" s3://data.heatonresearch.com/library/ --acl public-read
+          done
+
+      - name: Clean up build artifacts
+        if: always()
+        run: rm -rf build dist heaton_voxel.egg-info htmlcov

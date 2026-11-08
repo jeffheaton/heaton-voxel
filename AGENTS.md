@@ -117,15 +117,22 @@ python -m venv /tmp/mypy && /tmp/mypy/bin/pip install mypy && /tmp/mypy/bin/mypy
 CI runs the same checks on every push that can change them:
 `.github/workflows/test-lib.yml` runs the suite on Linux, macOS and Windows
 under Python 3.10 to 3.14, with mypy beside it, and
-`test-lib-dotnet.yml` runs the conformance suite on all three and packs the
-NuGet package. One run of each measures coverage for Codecov
-(`codecov.yml`; the flags are `python` and `dotnet`), which is where the
-README's badges come from. `.gitattributes` turns off line-ending conversion
-for every file, because the corpus and fixtures are compared byte for byte.
-Releases go out through the manual `release.yml`, both packages at once;
-[RELEASING.md](RELEASING.md) has the one-time setup and the steps, and a
-version bump touches `pyproject.toml`, the csproj and
-`heaton_voxel/__init__.py` together.
+`test-lib-dotnet.yml` runs the conformance suite on all three, checks the C#
+against `dotnet format` and packs the NuGet package. One run of each
+measures coverage for Codecov (`codecov.yml`; the flags are `python` and
+`dotnet`), which is where the README's badges come from. `.gitattributes`
+turns off line-ending conversion for every file, because the corpus and
+fixtures are compared byte for byte.
+
+Releases follow dynaface's pattern, two manual steps per language: a build
+that tests, stamps `heaton_voxel/version.py` or `Version.cs` with the date
+and run number, and stages the packages on S3 (`build-lib.yml`,
+`build-lib-dotnet.yml`), then a deploy that publishes what was staged, by
+version (`deploy-lib.yml` to PyPI, `deploy-lib-dotnet.yml` to NuGet.org,
+both by Trusted Publishing). [RELEASING.md](RELEASING.md) has the one-time
+setup and the steps. A version bump touches four files together:
+`pyproject.toml`, the csproj, `heaton_voxel/version.py` and
+`csharp/HeatonVoxel/Version.cs`.
 
 The package ships `py.typed`, which tells a caller's type checker to read
 its annotations, and what that vouches for is the deterministic tier:

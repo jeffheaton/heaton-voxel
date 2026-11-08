@@ -1,0 +1,141 @@
+name: Build Library (.NET)
+
+on:
+  workflow_dispatch:
+
+# Builds the C# library for a release, by hand, as dynaface's does: the
+# formatting check, a vulnerable-packages report, a version file stamped with
+# this build's date and number, the Release build and the conformance suite
+# over it, then the DLL zip and the NuGet package, staged as artifacts and on
+# S3. Publishing to NuGet.org is a separate, manual step: the Deploy Library
+# to NuGet (.NET) workflow (deploy-lib-dotnet.yml). RELEASING.md has the
+# whole sequence.
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up .NET SDK
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore
+        run: dotnet restore csharp/HeatonVoxel.slnx
+
+      - name: Check formatting
+        run: dotnet format csharp/HeatonVoxel.slnx --verify-no-changes --report format-report
+
+      - name: Upload formatting report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: format-report
+          retention-days: 7
+          path: format-report
+          if-no-files-found: ignore
+
+      # The library has no package references, ever; the report says so, and
+      # would name anything that crept in.
+      - name: Check for vulnerable packages
+        continue-on-error: true
+        run: dotnet list csharp/HeatonVoxel/HeatonVoxel.csproj package --vulnerable --include-transitive | tee vulnerable-packages-report.txt
+
+      - name: Upload vulnerability report
+        if: always()
+        uses: actions/upload-artifact@v7
+        with:
+          name: vulnerability-report
+          retention-days: 7
+          path: vulnerable-packages-report.txt
+          if-no-files-found: ignore
+
+      - name: Generate version file
+        run: |
+          VERSION=$(sed -n 's:.*<Version>\(.*\)</Version>.*:\1:p' csharp/HeatonVoxel/HeatonVoxel.csproj | head -1)
+          BUILD_DATE=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          BUILD="${{ github.run_number }}"
+
+          cat <<EOF > csharp/HeatonVoxel/Version.cs
+          // Which build of HeatonVoxel this is: written by the Build Library (.NET) workflow.
+          namespace HeatonVoxel
+          {
+              public static class HeatonVoxelVersion
+              {
+                  public const string Version = "$VERSION";
+                  public const string BuildDate = "$BUILD_DATE";
+                  public const int Build = $BUILD;
+              }
+          }
+          EOF
+
+          echo "VERSION=$VERSION" >> "$GITHUB_ENV"
+          echo "Generated csharp/HeatonVoxel/Version.cs:"
+          cat csharp/HeatonVoxel/Version.cs
+
+      - name: Build (Release)
+        run: dotnet build csharp/HeatonVoxel.slnx -c Release --no-restore -p:Version=$VERSION
+
+      # The conformance runner is the C# side's test suite: it replays every
+      # artifact in fixtures/conformance/ against this build and exits nonzero
+      # on any failure, so nothing is staged unless all of it passes.
+      - name: Run the conformance suite
+        run: dotnet run --project csharp/HeatonVoxel.Conformance -c Release --no-build
+
+      - name: Package library artifact
+        run: |
+          mkdir -p dist
+          cp csharp/HeatonVoxel/bin/Release/netstandard2.1/HeatonVoxel.dll dist/
+          cp csharp/HeatonVoxel/bin/Release/netstandard2.1/HeatonVoxel.pdb dist/
+          cp csharp/HeatonVoxel/bin/Release/netstandard2.1/HeatonVoxel.xml dist/
+          cp NOTICE LICENSE dist/
+          cd dist && zip -r "../heatonvoxel-dotnet-${VERSION}.zip" .
+
+      - name: Upload library artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: heatonvoxel-dotnet-dll
+          retention-days: 7
+          path: heatonvoxel-dotnet-*.zip
+
+      - name: Upload to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        run: aws s3 cp "heatonvoxel-dotnet-${VERSION}.zip" s3://data.heatonresearch.com/library/ --acl public-read
+
+      # The .nupkg (DLL, IntelliSense XML, README, NOTICE) and its .snupkg of
+      # symbols, Source Link pointing them at this commit on GitHub.
+      - name: Pack NuGet package
+        run: |
+          dotnet pack csharp/HeatonVoxel/HeatonVoxel.csproj -c Release --no-build \
+            -p:Version=$VERSION -o nupkgs
+          ls -l nupkgs
+
+      - name: Upload NuGet packages artifact
+        uses: actions/upload-artifact@v7
+        with:
+          name: heatonvoxel-nupkgs
+          retention-days: 7
+          path: nupkgs/*
+
+      - name: Upload NuGet packages to S3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
+        run: |
+          for f in nupkgs/*; do
+            aws s3 cp "$f" s3://data.heatonresearch.com/library/ --acl public-read
+          done
+
+      - name: Clean up build artifacts
+        if: always()
+        run: rm -rf dist nupkgs format-report csharp/HeatonVoxel/bin csharp/HeatonVoxel/obj csharp/HeatonVoxel.Conformance/bin csharp/HeatonVoxel.Conformance/obj

@@ -87,6 +87,7 @@ files = [
     "heaton_voxel/connect_faces.py",
     "heaton_voxel/wall_cover.py",
     "heaton_voxel/place.py",
+    "heaton_voxel/version.py",
     "heaton_voxel/world",
     "heaton_voxel/schem",
 ]

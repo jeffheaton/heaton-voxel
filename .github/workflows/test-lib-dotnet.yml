@@ -5,7 +5,9 @@ name: Test Library (.NET)
 # test harness: HeatonVoxel.Conformance replays every artifact in
 # fixtures/conformance/ and exits nonzero on any failure. The Linux run measures
 # the library's coverage under it for Codecov and the README badges. Releases
-# are made by the manual Release workflow (release.yml).
+# are built and published by hand: Build Library (.NET)
+# (build-lib-dotnet.yml), then Deploy Library to NuGet (.NET)
+# (deploy-lib-dotnet.yml).
 on:
   push:
     paths:
@@ -63,6 +65,12 @@ jobs:
       # during restore, so this also fails on a vulnerable or unreachable feed.
       - name: Build (Release)
         run: dotnet build csharp/HeatonVoxel.slnx -c Release
+
+      # Build Library (.NET) refuses unformatted code, as dynaface's does, so
+      # drift is caught here, on the push that made it, not at release time.
+      - name: Check formatting
+        if: runner.os == 'Linux'
+        run: dotnet format csharp/HeatonVoxel.slnx --verify-no-changes
 
       # The runner finds fixtures/conformance/ by walking up from the working
       # directory, so it runs from the repo root.
