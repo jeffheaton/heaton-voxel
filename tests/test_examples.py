@@ -1019,9 +1019,7 @@ class CraftSessionTests(_WorldFiles, unittest.TestCase):
         self.assertIn("FAILED: the game will not keep", out.getvalue())
         after = _files(world)
         self.assertSameFiles(_outside_worksites(after), before)
-        manifest = json.loads(after[os.path.join("worksites",
-                                                 "craft-session",
-                                                 "manifest.json")])
+        manifest = json.loads(after["worksites/craft-session/manifest.json"])
         self.assertIsNone(manifest["accepted"])
 
     def test_every_check_says_what_it_found(self):
