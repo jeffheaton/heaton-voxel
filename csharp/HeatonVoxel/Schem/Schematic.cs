@@ -934,7 +934,9 @@ namespace HeatonVoxel.Schem
                 {
                     entries.Add(new TagCompound
                     {
-                        ["Id"] = identity, ["Pos"] = pos, ["Data"] = payload,
+                        ["Id"] = identity,
+                        ["Pos"] = pos,
+                        ["Data"] = payload,
                     });
                 }
                 else
@@ -969,7 +971,9 @@ namespace HeatonVoxel.Schem
                     }
                     entries.Add(new TagCompound
                     {
-                        ["Id"] = identity, ["Pos"] = pos, ["Data"] = payload,
+                        ["Id"] = identity,
+                        ["Pos"] = pos,
+                        ["Data"] = payload,
                     });
                 }
                 else

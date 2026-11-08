@@ -27,8 +27,10 @@ namespace HeatonVoxel
         private static readonly Dictionary<string, (int Dx, int Dz)> Vector =
             new Dictionary<string, (int, int)>(StringComparer.Ordinal)
             {
-                ["north"] = (0, -1), ["south"] = (0, 1),
-                ["west"] = (-1, 0), ["east"] = (1, 0),
+                ["north"] = (0, -1),
+                ["south"] = (0, 1),
+                ["west"] = (-1, 0),
+                ["east"] = (1, 0),
             };
 
         /// <summary>Two-block plants: lower half at the placed cell, upper

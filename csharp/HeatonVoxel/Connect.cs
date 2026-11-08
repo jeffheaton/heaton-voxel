@@ -39,15 +39,19 @@ namespace HeatonVoxel
         private static readonly Dictionary<string, (int Dx, int Dz)> Vector =
             new Dictionary<string, (int, int)>(StringComparer.Ordinal)
             {
-                ["north"] = (0, -1), ["south"] = (0, 1),
-                ["west"] = (-1, 0), ["east"] = (1, 0),
+                ["north"] = (0, -1),
+                ["south"] = (0, 1),
+                ["west"] = (-1, 0),
+                ["east"] = (1, 0),
             };
 
         private static readonly Dictionary<string, string> Opposite =
             new Dictionary<string, string>(StringComparer.Ordinal)
             {
-                ["north"] = "south", ["south"] = "north",
-                ["west"] = "east", ["east"] = "west",
+                ["north"] = "south",
+                ["south"] = "north",
+                ["west"] = "east",
+                ["east"] = "west",
             };
 
         /// <summary>Counter-clockwise seen from above, the game's
@@ -55,8 +59,10 @@ namespace HeatonVoxel
         private static readonly Dictionary<string, string> Ccw =
             new Dictionary<string, string>(StringComparer.Ordinal)
             {
-                ["north"] = "west", ["west"] = "south",
-                ["south"] = "east", ["east"] = "north",
+                ["north"] = "west",
+                ["west"] = "south",
+                ["south"] = "east",
+                ["east"] = "north",
             };
 
         // The game's Block.isExceptionForConnection (26.3, read with javap):
@@ -241,8 +247,10 @@ namespace HeatonVoxel
         private static readonly Dictionary<string, int> SideBit =
             new Dictionary<string, int>(StringComparer.Ordinal)
             {
-                ["north"] = WallCover.North, ["east"] = WallCover.East,
-                ["south"] = WallCover.South, ["west"] = WallCover.West,
+                ["north"] = WallCover.North,
+                ["east"] = WallCover.East,
+                ["south"] = WallCover.South,
+                ["west"] = WallCover.West,
             };
 
         /// <summary>What the block over a wall shows it, as a

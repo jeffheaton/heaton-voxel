@@ -223,13 +223,19 @@ namespace HeatonVoxel.Nbt
         {
             var copy = new NbtFile
             {
-                Kind = Kind, Path = Path, RootName = RootName,
+                Kind = Kind,
+                Path = Path,
+                RootName = RootName,
                 CompressionScheme = CompressionScheme,
                 Root = Root == null ? null : Codec.Decode(Codec.Encode(Root)).Root,
-                RegionX = RegionX, RegionZ = RegionZ,
-                _raw = _raw, _digest = _digest, _loadDigest = _loadDigest,
+                RegionX = RegionX,
+                RegionZ = RegionZ,
+                _raw = _raw,
+                _digest = _digest,
+                _loadDigest = _loadDigest,
                 _timestamps = (uint[])_timestamps.Clone(),
-                _totalSectors = _totalSectors, _loadedEmpty = _loadedEmpty,
+                _totalSectors = _totalSectors,
+                _loadedEmpty = _loadedEmpty,
             };
             foreach (var pair in Chunks)
                 copy.Chunks[pair.Key] = pair.Value.HistoryCopy();

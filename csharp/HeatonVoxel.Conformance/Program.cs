@@ -216,93 +216,93 @@ internal static class Program
                     new TagInt(step.GetProperty("data_version").GetInt32());
                 break;
             case "create_chunks" when refused:
-            {
-                bool threw = false;
-                try
                 {
-                    save.CreateChunks(Corner(step, "from"), Corner(step, "to"));
+                    bool threw = false;
+                    try
+                    {
+                        save.CreateChunks(Corner(step, "from"), Corner(step, "to"));
+                    }
+                    catch (NbtException)
+                    {
+                        threw = true;
+                    }
+                    Check(threw, $"{label}: create_chunks must be refused");
+                    break;
                 }
-                catch (NbtException)
-                {
-                    threw = true;
-                }
-                Check(threw, $"{label}: create_chunks must be refused");
-                break;
-            }
             case "create_chunks":
-            {
-                var r = save.CreateChunks(Corner(step, "from"), Corner(step, "to"),
-                                          Optional("dimension"), Optional("biome"));
-                Check(r.ChunksCreated == want.GetProperty("chunks_created").GetInt32(), $"{label}: chunks_created");
-                Check(SamePairs(r.CreatedChunks, want.GetProperty("created_chunks")), $"{label}: created_chunks");
-                Check(r.RegionsCreated == want.GetProperty("regions_created").GetInt32(), $"{label}: regions_created");
-                Check(SamePairs(r.ExistingChunks, want.GetProperty("existing_chunks")), $"{label}: existing_chunks");
-                Check(SamePairs(r.UnfinishedChunks, want.GetProperty("unfinished_chunks")), $"{label}: unfinished_chunks");
-                Check(r.UnreadableChunks.Count == want.GetProperty("unreadable_chunks").GetInt32(), $"{label}: unreadable_chunks");
-                Check(r.DataVersion == want.GetProperty("data_version").GetInt32(), $"{label}: data_version");
-                int? Maybe(string name) => want.GetProperty(name).ValueKind == JsonValueKind.Null
-                    ? null : want.GetProperty(name).GetInt32();
-                Check(r.MinY == Maybe("min_y") && r.MaxY == Maybe("max_y"), $"{label}: height");
-                Check(r.Biome == want.GetProperty("biome").GetString(), $"{label}: biome");
-                Check(r.Complete == want.GetProperty("complete").GetBoolean(), $"{label}: complete");
-                break;
-            }
+                {
+                    var r = save.CreateChunks(Corner(step, "from"), Corner(step, "to"),
+                                              Optional("dimension"), Optional("biome"));
+                    Check(r.ChunksCreated == want.GetProperty("chunks_created").GetInt32(), $"{label}: chunks_created");
+                    Check(SamePairs(r.CreatedChunks, want.GetProperty("created_chunks")), $"{label}: created_chunks");
+                    Check(r.RegionsCreated == want.GetProperty("regions_created").GetInt32(), $"{label}: regions_created");
+                    Check(SamePairs(r.ExistingChunks, want.GetProperty("existing_chunks")), $"{label}: existing_chunks");
+                    Check(SamePairs(r.UnfinishedChunks, want.GetProperty("unfinished_chunks")), $"{label}: unfinished_chunks");
+                    Check(r.UnreadableChunks.Count == want.GetProperty("unreadable_chunks").GetInt32(), $"{label}: unreadable_chunks");
+                    Check(r.DataVersion == want.GetProperty("data_version").GetInt32(), $"{label}: data_version");
+                    int? Maybe(string name) => want.GetProperty(name).ValueKind == JsonValueKind.Null
+                        ? null : want.GetProperty(name).GetInt32();
+                    Check(r.MinY == Maybe("min_y") && r.MaxY == Maybe("max_y"), $"{label}: height");
+                    Check(r.Biome == want.GetProperty("biome").GetString(), $"{label}: biome");
+                    Check(r.Complete == want.GetProperty("complete").GetBoolean(), $"{label}: complete");
+                    break;
+                }
             case "create_chunk":
-            {
-                var chunk = step.GetProperty("chunk");
-                bool threw = false;
-                try
                 {
-                    save.Dimension(Optional("dimension")).CreateChunk(
-                        chunk[0].GetInt32(), chunk[1].GetInt32(),
-                        step.GetProperty("data_version").GetInt32(), step.GetProperty("biome").GetString()!);
+                    var chunk = step.GetProperty("chunk");
+                    bool threw = false;
+                    try
+                    {
+                        save.Dimension(Optional("dimension")).CreateChunk(
+                            chunk[0].GetInt32(), chunk[1].GetInt32(),
+                            step.GetProperty("data_version").GetInt32(), step.GetProperty("biome").GetString()!);
+                    }
+                    catch (NbtException)
+                    {
+                        threw = true;
+                    }
+                    Check(threw == want.GetProperty("refused").GetBoolean(), $"{label}: create_chunk refusal");
+                    break;
                 }
-                catch (NbtException)
-                {
-                    threw = true;
-                }
-                Check(threw == want.GetProperty("refused").GetBoolean(), $"{label}: create_chunk refusal");
-                break;
-            }
             case "fill":
-            {
-                var r = save.Fill(Corner(step, "from"), Corner(step, "to"),
-                                  BlockState.Parse(step.GetProperty("block").GetString()!), keepLoaded: true);
-                Check(r.BlocksFilled == want.GetProperty("blocks_filled").GetInt32()
-                      && r.ChunksModified == want.GetProperty("chunks_modified").GetInt32(), $"{label}: fill");
-                break;
-            }
+                {
+                    var r = save.Fill(Corner(step, "from"), Corner(step, "to"),
+                                      BlockState.Parse(step.GetProperty("block").GetString()!), keepLoaded: true);
+                    Check(r.BlocksFilled == want.GetProperty("blocks_filled").GetInt32()
+                          && r.ChunksModified == want.GetProperty("chunks_modified").GetInt32(), $"{label}: fill");
+                    break;
+                }
             case "place":
-            {
-                var at = step.GetProperty("at");
-                bool placed = save.PlaceBlock(at[0].GetInt32(), at[1].GetInt32(), at[2].GetInt32(),
-                                              step.GetProperty("block").GetString()!);
-                Check(placed == want.GetProperty("placed").GetBoolean(), $"{label}: place");
-                break;
-            }
+                {
+                    var at = step.GetProperty("at");
+                    bool placed = save.PlaceBlock(at[0].GetInt32(), at[1].GetInt32(), at[2].GetInt32(),
+                                                  step.GetProperty("block").GetString()!);
+                    Check(placed == want.GetProperty("placed").GetBoolean(), $"{label}: place");
+                    break;
+                }
             case "rebuild_heightmaps":
-            {
-                var r = save.RebuildHeightmaps(Corner(step, "from"), Corner(step, "to"), keepLoaded: true);
-                Check(r.ChunksRebuilt == want.GetProperty("chunks_rebuilt").GetInt32(), $"{label}: rebuild");
-                break;
-            }
+                {
+                    var r = save.RebuildHeightmaps(Corner(step, "from"), Corner(step, "to"), keepLoaded: true);
+                    Check(r.ChunksRebuilt == want.GetProperty("chunks_rebuilt").GetInt32(), $"{label}: rebuild");
+                    break;
+                }
             case "import":
-            {
-                var size = step.GetProperty("size");
-                var paste = new Schematic(size[0].GetInt32(), size[1].GetInt32(), size[2].GetInt32(),
-                                          step.GetProperty("data_version").GetInt32());
-                foreach (var cell in step.GetProperty("cells").EnumerateArray())
-                    paste.SetBlock(cell[0].GetInt32(), cell[1].GetInt32(), cell[2].GetInt32(),
-                                   cell[3].GetString()!);
-                bool voids = step.TryGetProperty("paste_voids", out var flagVoids) && flagVoids.GetBoolean();
-                var r = save.ImportSchem(paste, Corner(step, "at"), anchor: "min", pasteVoids: voids);
-                Check(r.BlocksPasted == want.GetProperty("blocks_pasted").GetInt32()
-                      && r.AirSkipped == want.GetProperty("air_skipped").GetInt32()
-                      && r.VoidsSkipped == want.GetProperty("voids_skipped").GetInt32()
-                      && r.ChunksModified == want.GetProperty("chunks_modified").GetInt32(),
-                      $"{label}: import pasted {r.BlocksPasted}, voids skipped {r.VoidsSkipped}");
-                break;
-            }
+                {
+                    var size = step.GetProperty("size");
+                    var paste = new Schematic(size[0].GetInt32(), size[1].GetInt32(), size[2].GetInt32(),
+                                              step.GetProperty("data_version").GetInt32());
+                    foreach (var cell in step.GetProperty("cells").EnumerateArray())
+                        paste.SetBlock(cell[0].GetInt32(), cell[1].GetInt32(), cell[2].GetInt32(),
+                                       cell[3].GetString()!);
+                    bool voids = step.TryGetProperty("paste_voids", out var flagVoids) && flagVoids.GetBoolean();
+                    var r = save.ImportSchem(paste, Corner(step, "at"), anchor: "min", pasteVoids: voids);
+                    Check(r.BlocksPasted == want.GetProperty("blocks_pasted").GetInt32()
+                          && r.AirSkipped == want.GetProperty("air_skipped").GetInt32()
+                          && r.VoidsSkipped == want.GetProperty("voids_skipped").GetInt32()
+                          && r.ChunksModified == want.GetProperty("chunks_modified").GetInt32(),
+                          $"{label}: import pasted {r.BlocksPasted}, voids skipped {r.VoidsSkipped}");
+                    break;
+                }
             default:
                 throw new InvalidOperationException($"unknown chunk_creation op {op}");
         }
@@ -425,36 +425,36 @@ internal static class Program
         switch (kind)
         {
             case "compound":
-            {
-                Check(actual is TagCompound, $"{context}: expected compound");
-                if (actual is not TagCompound compound) return;
-                var children = expected.GetProperty("v");
-                int expectedCount = children.EnumerateObject().Count();
-                Check(compound.Count == expectedCount,
-                      $"{context}: compound has {compound.Count} children, "
-                      + $"expected {expectedCount}");
-                foreach (var child in children.EnumerateObject())
                 {
-                    var tag = compound.Get(child.Name);
-                    Check(tag != null, $"{context}: missing key '{child.Name}'");
-                    if (tag != null)
-                        CompareTag($"{context}.{child.Name}", child.Value, tag);
+                    Check(actual is TagCompound, $"{context}: expected compound");
+                    if (actual is not TagCompound compound) return;
+                    var children = expected.GetProperty("v");
+                    int expectedCount = children.EnumerateObject().Count();
+                    Check(compound.Count == expectedCount,
+                          $"{context}: compound has {compound.Count} children, "
+                          + $"expected {expectedCount}");
+                    foreach (var child in children.EnumerateObject())
+                    {
+                        var tag = compound.Get(child.Name);
+                        Check(tag != null, $"{context}: missing key '{child.Name}'");
+                        if (tag != null)
+                            CompareTag($"{context}.{child.Name}", child.Value, tag);
+                    }
+                    break;
                 }
-                break;
-            }
             case "list":
-            {
-                Check(actual is TagList, $"{context}: expected list");
-                if (actual is not TagList list) return;
-                Check(Tag.NameOf(list.Count > 0 ? list.Items[0].Id : list.ElementType)
-                          == expected.GetProperty("e").GetString(),
-                      $"{context}: list element type");
-                var items = expected.GetProperty("v").EnumerateArray().ToList();
-                Check(list.Count == items.Count, $"{context}: list length");
-                for (int i = 0; i < Math.Min(list.Count, items.Count); i++)
-                    CompareTag($"{context}[{i}]", items[i], list.Items[i]);
-                break;
-            }
+                {
+                    Check(actual is TagList, $"{context}: expected list");
+                    if (actual is not TagList list) return;
+                    Check(Tag.NameOf(list.Count > 0 ? list.Items[0].Id : list.ElementType)
+                              == expected.GetProperty("e").GetString(),
+                          $"{context}: list element type");
+                    var items = expected.GetProperty("v").EnumerateArray().ToList();
+                    Check(list.Count == items.Count, $"{context}: list length");
+                    for (int i = 0; i < Math.Min(list.Count, items.Count); i++)
+                        CompareTag($"{context}[{i}]", items[i], list.Items[i]);
+                    break;
+                }
             case "byte":
                 Check(actual is TagByte b && b.Value == expected.GetProperty("v").GetSByte(),
                       $"{context}: byte value");
@@ -1166,189 +1166,189 @@ internal static class Program
             switch (op)
             {
                 case "fill":
-                {
-                    var got = save.Fill(Corner(step, "from"), Corner(step, "to"),
-                                        step.GetProperty("block").GetString()!,
-                                        keepLoaded: true);
-                    CheckInt(label, "blocks_filled", got.BlocksFilled, want);
-                    CheckInt(label, "sections_replaced", got.SectionsReplaced, want);
-                    CheckInt(label, "chunks_modified", got.ChunksModified, want);
-                    CheckInt(label, "blocks_out_of_range", got.BlocksOutOfRange, want);
-                    Check(got.Complete == want.GetProperty("complete").GetBoolean(),
-                          $"{label}: complete");
-                    CheckMissingChunks(label, got.MissingChunks, want);
-                    break;
-                }
-                case "replace":
-                {
-                    var mapping = step.GetProperty("mapping").EnumerateArray()
-                        .Select(pair => new KeyValuePair<string, string>(
-                            pair[0].GetString()!, pair[1].GetString()!))
-                        .ToList();
-                    var got = save.ReplaceBlocks(Corner(step, "from"), Corner(step, "to"),
-                                                 mapping, keepLoaded: true);
-                    CheckInt(label, "blocks_replaced", got.BlocksReplaced, want);
-                    CheckInt(label, "sections_replaced", got.SectionsReplaced, want);
-                    CheckInt(label, "chunks_modified", got.ChunksModified, want);
-                    CheckInt(label, "block_entities_removed", got.BlockEntitiesRemoved, want);
-                    CheckInt(label, "blocks_out_of_range", got.BlocksOutOfRange, want);
-                    Check(got.Complete == want.GetProperty("complete").GetBoolean(),
-                          $"{label}: complete");
-                    CheckMissingChunks(label, got.MissingChunks, want);
-                    CheckChunkList(label, "unfinished_chunks", got.UnfinishedChunks, want);
-                    CheckChunkList(label, "unreadable_chunks",
-                                   got.UnreadableChunks.Select(bad => bad.Chunk), want);
-                    break;
-                }
-                case "unfreeze":
-                {
-                    bool deepSnow = step.TryGetProperty("deep_snow", out var deep)
-                                    && deep.GetBoolean();
-                    var got = save.Unfreeze(Corner(step, "from"), Corner(step, "to"),
-                                            deepSnow: deepSnow, keepLoaded: true);
-                    CheckInt(label, "snow_removed", got.SnowRemoved, want);
-                    CheckInt(label, "ice_melted", got.IceMelted, want);
-                    CheckInt(label, "snowy_cleared", got.SnowyCleared, want);
-                    CheckInt(label, "deep_snow_kept", got.DeepSnowKept, want);
-                    CheckInt(label, "chunks_modified", got.ChunksModified, want);
-                    CheckInt(label, "floating_water", got.FloatingWater, want);
-                    Check(got.Complete == want.GetProperty("complete").GetBoolean(),
-                          $"{label}: complete");
-                    CheckMissingChunks(label, got.MissingChunks, want);
-                    break;
-                }
-                case "fill_biome":
-                {
-                    var got = save.FillBiome(Corner(step, "from"), Corner(step, "to"),
-                                             step.GetProperty("biome").GetString()!,
-                                             keepLoaded: true);
-                    CheckInt(label, "cells_filled", got.CellsFilled, want);
-                    CheckInt(label, "sections_replaced", got.SectionsReplaced, want);
-                    CheckInt(label, "chunks_modified", got.ChunksModified, want);
-                    CheckInt(label, "cells_out_of_range", got.CellsOutOfRange, want);
-                    Check(got.Complete == want.GetProperty("complete").GetBoolean(),
-                          $"{label}: complete");
-                    var box = want.GetProperty("written_box");
-                    var (min, max) = (got.WrittenBox!.Value.Min, got.WrittenBox.Value.Max);
-                    Check(min.X == box[0][0].GetInt32() && min.Y == box[0][1].GetInt32()
-                          && min.Z == box[0][2].GetInt32()
-                          && max.X == box[1][0].GetInt32() && max.Y == box[1][1].GetInt32()
-                          && max.Z == box[1][2].GetInt32(),
-                          $"{label}: written_box, got ({min.X},{min.Y},{min.Z})"
-                          + $"-({max.X},{max.Y},{max.Z})");
-                    break;
-                }
-                case "place":
-                {
-                    var at = step.GetProperty("at");
-                    if (want.TryGetProperty("refused", out var refused)
-                        && refused.GetBoolean())
                     {
-                        // Water the game does not have under a block that
-                        // would take it: refused, and the read-back shows
-                        // nothing was written.
-                        bool threw = false;
-                        try
-                        {
-                            save.PlaceBlock(
-                                at[0].GetInt32(), at[1].GetInt32(), at[2].GetInt32(),
-                                step.GetProperty("block").GetString()!);
-                        }
-                        catch (NbtException)
-                        {
-                            threw = true;
-                        }
-                        Check(threw, $"{label}: must refuse");
+                        var got = save.Fill(Corner(step, "from"), Corner(step, "to"),
+                                            step.GetProperty("block").GetString()!,
+                                            keepLoaded: true);
+                        CheckInt(label, "blocks_filled", got.BlocksFilled, want);
+                        CheckInt(label, "sections_replaced", got.SectionsReplaced, want);
+                        CheckInt(label, "chunks_modified", got.ChunksModified, want);
+                        CheckInt(label, "blocks_out_of_range", got.BlocksOutOfRange, want);
+                        Check(got.Complete == want.GetProperty("complete").GetBoolean(),
+                              $"{label}: complete");
+                        CheckMissingChunks(label, got.MissingChunks, want);
                         break;
                     }
-                    bool got = save.PlaceBlock(
-                        at[0].GetInt32(), at[1].GetInt32(), at[2].GetInt32(),
-                        step.GetProperty("block").GetString()!);
-                    Check(got == want.GetProperty("placed").GetBoolean(),
-                          $"{label}: placed");
-                    break;
-                }
-                case "connect":
-                {
-                    var got = save.ConnectBlocks(Corner(step, "from"),
-                                                 Corner(step, "to"),
+                case "replace":
+                    {
+                        var mapping = step.GetProperty("mapping").EnumerateArray()
+                            .Select(pair => new KeyValuePair<string, string>(
+                                pair[0].GetString()!, pair[1].GetString()!))
+                            .ToList();
+                        var got = save.ReplaceBlocks(Corner(step, "from"), Corner(step, "to"),
+                                                     mapping, keepLoaded: true);
+                        CheckInt(label, "blocks_replaced", got.BlocksReplaced, want);
+                        CheckInt(label, "sections_replaced", got.SectionsReplaced, want);
+                        CheckInt(label, "chunks_modified", got.ChunksModified, want);
+                        CheckInt(label, "block_entities_removed", got.BlockEntitiesRemoved, want);
+                        CheckInt(label, "blocks_out_of_range", got.BlocksOutOfRange, want);
+                        Check(got.Complete == want.GetProperty("complete").GetBoolean(),
+                              $"{label}: complete");
+                        CheckMissingChunks(label, got.MissingChunks, want);
+                        CheckChunkList(label, "unfinished_chunks", got.UnfinishedChunks, want);
+                        CheckChunkList(label, "unreadable_chunks",
+                                       got.UnreadableChunks.Select(bad => bad.Chunk), want);
+                        break;
+                    }
+                case "unfreeze":
+                    {
+                        bool deepSnow = step.TryGetProperty("deep_snow", out var deep)
+                                        && deep.GetBoolean();
+                        var got = save.Unfreeze(Corner(step, "from"), Corner(step, "to"),
+                                                deepSnow: deepSnow, keepLoaded: true);
+                        CheckInt(label, "snow_removed", got.SnowRemoved, want);
+                        CheckInt(label, "ice_melted", got.IceMelted, want);
+                        CheckInt(label, "snowy_cleared", got.SnowyCleared, want);
+                        CheckInt(label, "deep_snow_kept", got.DeepSnowKept, want);
+                        CheckInt(label, "chunks_modified", got.ChunksModified, want);
+                        CheckInt(label, "floating_water", got.FloatingWater, want);
+                        Check(got.Complete == want.GetProperty("complete").GetBoolean(),
+                              $"{label}: complete");
+                        CheckMissingChunks(label, got.MissingChunks, want);
+                        break;
+                    }
+                case "fill_biome":
+                    {
+                        var got = save.FillBiome(Corner(step, "from"), Corner(step, "to"),
+                                                 step.GetProperty("biome").GetString()!,
                                                  keepLoaded: true);
-                    CheckInt(label, "blocks_scanned", got.BlocksScanned, want);
-                    CheckInt(label, "fences_updated", got.FencesUpdated, want);
-                    CheckInt(label, "walls_updated", got.WallsUpdated, want);
-                    CheckInt(label, "panes_updated", got.PanesUpdated, want);
-                    CheckInt(label, "gates_updated", got.GatesUpdated, want);
-                    CheckInt(label, "stairs_updated", got.StairsUpdated, want);
-                    CheckInt(label, "total_updated", got.TotalUpdated, want);
-                    Check(got.Complete == want.GetProperty("complete").GetBoolean(),
-                          $"{label}: complete");
-                    break;
-                }
-                case "rebuild_heightmaps":
-                {
-                    var got = save.RebuildHeightmaps(Corner(step, "from"),
+                        CheckInt(label, "cells_filled", got.CellsFilled, want);
+                        CheckInt(label, "sections_replaced", got.SectionsReplaced, want);
+                        CheckInt(label, "chunks_modified", got.ChunksModified, want);
+                        CheckInt(label, "cells_out_of_range", got.CellsOutOfRange, want);
+                        Check(got.Complete == want.GetProperty("complete").GetBoolean(),
+                              $"{label}: complete");
+                        var box = want.GetProperty("written_box");
+                        var (min, max) = (got.WrittenBox!.Value.Min, got.WrittenBox.Value.Max);
+                        Check(min.X == box[0][0].GetInt32() && min.Y == box[0][1].GetInt32()
+                              && min.Z == box[0][2].GetInt32()
+                              && max.X == box[1][0].GetInt32() && max.Y == box[1][1].GetInt32()
+                              && max.Z == box[1][2].GetInt32(),
+                              $"{label}: written_box, got ({min.X},{min.Y},{min.Z})"
+                              + $"-({max.X},{max.Y},{max.Z})");
+                        break;
+                    }
+                case "place":
+                    {
+                        var at = step.GetProperty("at");
+                        if (want.TryGetProperty("refused", out var refused)
+                            && refused.GetBoolean())
+                        {
+                            // Water the game does not have under a block that
+                            // would take it: refused, and the read-back shows
+                            // nothing was written.
+                            bool threw = false;
+                            try
+                            {
+                                save.PlaceBlock(
+                                    at[0].GetInt32(), at[1].GetInt32(), at[2].GetInt32(),
+                                    step.GetProperty("block").GetString()!);
+                            }
+                            catch (NbtException)
+                            {
+                                threw = true;
+                            }
+                            Check(threw, $"{label}: must refuse");
+                            break;
+                        }
+                        bool got = save.PlaceBlock(
+                            at[0].GetInt32(), at[1].GetInt32(), at[2].GetInt32(),
+                            step.GetProperty("block").GetString()!);
+                        Check(got == want.GetProperty("placed").GetBoolean(),
+                              $"{label}: placed");
+                        break;
+                    }
+                case "connect":
+                    {
+                        var got = save.ConnectBlocks(Corner(step, "from"),
                                                      Corner(step, "to"),
                                                      keepLoaded: true);
-                    CheckInt(label, "chunks_rebuilt", got.ChunksRebuilt, want);
-                    Check(got.Complete == want.GetProperty("complete").GetBoolean(),
-                          $"{label}: complete");
-                    break;
-                }
-                case "reset_lighting":
-                {
-                    var got = save.ResetLighting(
-                        Corner(step, "from"), Corner(step, "to"),
-                        neighbors: step.GetProperty("neighbors").GetBoolean());
-                    CheckInt(label, "chunks_reset", got.ChunksReset, want);
-                    CheckInt(label, "arrays_removed", got.ArraysRemoved, want);
-                    CheckInt(label, "chunks_skipped", got.ChunksSkipped, want);
-                    break;
-                }
-                case "light_section":
-                {
-                    // Not an edit: the case the fixture lacks, a section of
-                    // light alone past the top of the world. Appended at the
-                    // end, where the game keeps the top one, and released so
-                    // the next accessor is read with it.
-                    int chunkX = step.GetProperty("chunk")[0].GetInt32();
-                    int chunkZ = step.GetProperty("chunk")[1].GetInt32();
-                    var dim = save.Dimension(DimensionNames.Overworld);
-                    var sections = (TagList)dim.Chunk(chunkX, chunkZ)!.Data!["sections"];
-                    var light = new sbyte[2048];
-                    Array.Fill(light, (sbyte)-1);
-                    sections.Add(new TagCompound
+                        CheckInt(label, "blocks_scanned", got.BlocksScanned, want);
+                        CheckInt(label, "fences_updated", got.FencesUpdated, want);
+                        CheckInt(label, "walls_updated", got.WallsUpdated, want);
+                        CheckInt(label, "panes_updated", got.PanesUpdated, want);
+                        CheckInt(label, "gates_updated", got.GatesUpdated, want);
+                        CheckInt(label, "stairs_updated", got.StairsUpdated, want);
+                        CheckInt(label, "total_updated", got.TotalUpdated, want);
+                        Check(got.Complete == want.GetProperty("complete").GetBoolean(),
+                              $"{label}: complete");
+                        break;
+                    }
+                case "rebuild_heightmaps":
                     {
-                        ["Y"] = new TagByte((sbyte)step.GetProperty("y").GetInt32()),
-                        ["SkyLight"] = new TagByteArray(light),
-                    });
-                    dim.Release(chunkX, chunkZ);
-                    var accessor = dim.Blocks(chunkX, chunkZ)!;
-                    CheckInt(label, "sections", accessor.Sections.Count, want);
-                    CheckInt(label, "min_y", accessor.MinY, want);
-                    CheckInt(label, "max_y", accessor.MaxY, want);
-                    break;
-                }
+                        var got = save.RebuildHeightmaps(Corner(step, "from"),
+                                                         Corner(step, "to"),
+                                                         keepLoaded: true);
+                        CheckInt(label, "chunks_rebuilt", got.ChunksRebuilt, want);
+                        Check(got.Complete == want.GetProperty("complete").GetBoolean(),
+                              $"{label}: complete");
+                        break;
+                    }
+                case "reset_lighting":
+                    {
+                        var got = save.ResetLighting(
+                            Corner(step, "from"), Corner(step, "to"),
+                            neighbors: step.GetProperty("neighbors").GetBoolean());
+                        CheckInt(label, "chunks_reset", got.ChunksReset, want);
+                        CheckInt(label, "arrays_removed", got.ArraysRemoved, want);
+                        CheckInt(label, "chunks_skipped", got.ChunksSkipped, want);
+                        break;
+                    }
+                case "light_section":
+                    {
+                        // Not an edit: the case the fixture lacks, a section of
+                        // light alone past the top of the world. Appended at the
+                        // end, where the game keeps the top one, and released so
+                        // the next accessor is read with it.
+                        int chunkX = step.GetProperty("chunk")[0].GetInt32();
+                        int chunkZ = step.GetProperty("chunk")[1].GetInt32();
+                        var dim = save.Dimension(DimensionNames.Overworld);
+                        var sections = (TagList)dim.Chunk(chunkX, chunkZ)!.Data!["sections"];
+                        var light = new sbyte[2048];
+                        Array.Fill(light, (sbyte)-1);
+                        sections.Add(new TagCompound
+                        {
+                            ["Y"] = new TagByte((sbyte)step.GetProperty("y").GetInt32()),
+                            ["SkyLight"] = new TagByteArray(light),
+                        });
+                        dim.Release(chunkX, chunkZ);
+                        var accessor = dim.Blocks(chunkX, chunkZ)!;
+                        CheckInt(label, "sections", accessor.Sections.Count, want);
+                        CheckInt(label, "min_y", accessor.MinY, want);
+                        CheckInt(label, "max_y", accessor.MaxY, want);
+                        break;
+                    }
                 case "drop_section":
-                {
-                    // Not an edit either: a chunk without the section at its
-                    // floor still counts from the yPos it records, not from
-                    // the lowest section it stores.
-                    int chunkX = step.GetProperty("chunk")[0].GetInt32();
-                    int chunkZ = step.GetProperty("chunk")[1].GetInt32();
-                    int sectionY = step.GetProperty("y").GetInt32();
-                    var dim = save.Dimension(DimensionNames.Overworld);
-                    var sections = (TagList)dim.Chunk(chunkX, chunkZ)!.Data!["sections"];
-                    var dropped = sections.Items.FindAll(
-                        tag => Tag.AsInt(((TagCompound)tag).Get("Y")!) == sectionY);
-                    Check(dropped.Count == 1, $"{label}: one section Y={sectionY}");
-                    sections.Items.Remove(dropped[0]);
-                    dim.Release(chunkX, chunkZ);
-                    var accessor = dim.Blocks(chunkX, chunkZ)!;
-                    CheckInt(label, "sections", accessor.Sections.Count, want);
-                    CheckInt(label, "min_y", accessor.MinY, want);
-                    CheckInt(label, "max_y", accessor.MaxY, want);
-                    break;
-                }
+                    {
+                        // Not an edit either: a chunk without the section at its
+                        // floor still counts from the yPos it records, not from
+                        // the lowest section it stores.
+                        int chunkX = step.GetProperty("chunk")[0].GetInt32();
+                        int chunkZ = step.GetProperty("chunk")[1].GetInt32();
+                        int sectionY = step.GetProperty("y").GetInt32();
+                        var dim = save.Dimension(DimensionNames.Overworld);
+                        var sections = (TagList)dim.Chunk(chunkX, chunkZ)!.Data!["sections"];
+                        var dropped = sections.Items.FindAll(
+                            tag => Tag.AsInt(((TagCompound)tag).Get("Y")!) == sectionY);
+                        Check(dropped.Count == 1, $"{label}: one section Y={sectionY}");
+                        sections.Items.Remove(dropped[0]);
+                        dim.Release(chunkX, chunkZ);
+                        var accessor = dim.Blocks(chunkX, chunkZ)!;
+                        CheckInt(label, "sections", accessor.Sections.Count, want);
+                        CheckInt(label, "min_y", accessor.MinY, want);
+                        CheckInt(label, "max_y", accessor.MaxY, want);
+                        break;
+                    }
                 default:
                     Check(false, $"{label}: unknown op");
                     break;
@@ -1666,62 +1666,62 @@ internal static class Program
                 switch (op)
                 {
                     case "set":
-                    {
-                        var (x, y, z) = Xyz(step.GetProperty("at"));
-                        save.SetBlock(x, y, z, step.GetProperty("block").GetString()!);
-                        break;
-                    }
-                    case "stale":
-                    {
-                        var at = step.GetProperty("chunk");
-                        var got = dim.Blocks(at[0].GetInt32(), at[1].GetInt32())!
-                            .StaleHeightmaps();
-                        Check(got.Count == want.EnumerateObject().Count(),
-                              $"{label}: {got.Count} maps stale");
-                        foreach (var entry in want.EnumerateObject())
-                            Check(got.TryGetValue(entry.Name, out int columns)
-                                  && columns == entry.Value.GetInt32(),
-                                  $"{label}: {entry.Name}");
-                        break;
-                    }
-                    case "rebuild":
-                    {
-                        var got = save.RebuildHeightmaps(Xyz(step.GetProperty("from")),
-                                                         Xyz(step.GetProperty("to")));
-                        CheckInt(label, "chunks_rebuilt", got.ChunksRebuilt, want);
-                        CheckChunks(label, "missing", want, got.MissingChunks);
-                        CheckChunks(label, "unfinished", want, got.UnfinishedChunks);
-                        Check(got.Complete == want.GetProperty("complete").GetBoolean(),
-                              $"{label}: complete");
-                        break;
-                    }
-                    case "tops":
-                    {
-                        var column = step.GetProperty("column");
-                        foreach (var entry in want.EnumerateObject())
                         {
-                            int? got = save.SurfaceY(column[0].GetInt32(),
-                                                     column[1].GetInt32(), entry.Name);
-                            Check(got == entry.Value.GetInt32(),
-                                  $"{label}: {entry.Name} got {got}");
+                            var (x, y, z) = Xyz(step.GetProperty("at"));
+                            save.SetBlock(x, y, z, step.GetProperty("block").GetString()!);
+                            break;
                         }
-                        break;
-                    }
+                    case "stale":
+                        {
+                            var at = step.GetProperty("chunk");
+                            var got = dim.Blocks(at[0].GetInt32(), at[1].GetInt32())!
+                                .StaleHeightmaps();
+                            Check(got.Count == want.EnumerateObject().Count(),
+                                  $"{label}: {got.Count} maps stale");
+                            foreach (var entry in want.EnumerateObject())
+                                Check(got.TryGetValue(entry.Name, out int columns)
+                                      && columns == entry.Value.GetInt32(),
+                                      $"{label}: {entry.Name}");
+                            break;
+                        }
+                    case "rebuild":
+                        {
+                            var got = save.RebuildHeightmaps(Xyz(step.GetProperty("from")),
+                                                             Xyz(step.GetProperty("to")));
+                            CheckInt(label, "chunks_rebuilt", got.ChunksRebuilt, want);
+                            CheckChunks(label, "missing", want, got.MissingChunks);
+                            CheckChunks(label, "unfinished", want, got.UnfinishedChunks);
+                            Check(got.Complete == want.GetProperty("complete").GetBoolean(),
+                                  $"{label}: complete");
+                            break;
+                        }
+                    case "tops":
+                        {
+                            var column = step.GetProperty("column");
+                            foreach (var entry in want.EnumerateObject())
+                            {
+                                int? got = save.SurfaceY(column[0].GetInt32(),
+                                                         column[1].GetInt32(), entry.Name);
+                                Check(got == entry.Value.GetInt32(),
+                                      $"{label}: {entry.Name} got {got}");
+                            }
+                            break;
+                        }
                     case "import":
-                    {
-                        var got = save.ImportSchem(
-                            paste, Xyz(step.GetProperty("at")), anchor: "min",
-                            heightmaps: step.GetProperty("heightmaps").GetBoolean());
-                        CheckInt(label, "blocks_pasted", got.BlocksPasted, want);
-                        CheckInt(label, "blocks_out_of_range", got.BlocksOutOfRange, want);
-                        CheckInt(label, "chunks_modified", got.ChunksModified, want);
-                        CheckInt(label, "heightmaps_rebuilt", got.HeightmapsRebuilt, want);
-                        CheckChunks(label, "missing", want, got.MissingChunks);
-                        CheckChunks(label, "unfinished", want, got.UnfinishedChunks);
-                        Check(got.Complete == want.GetProperty("complete").GetBoolean(),
-                              $"{label}: complete");
-                        break;
-                    }
+                        {
+                            var got = save.ImportSchem(
+                                paste, Xyz(step.GetProperty("at")), anchor: "min",
+                                heightmaps: step.GetProperty("heightmaps").GetBoolean());
+                            CheckInt(label, "blocks_pasted", got.BlocksPasted, want);
+                            CheckInt(label, "blocks_out_of_range", got.BlocksOutOfRange, want);
+                            CheckInt(label, "chunks_modified", got.ChunksModified, want);
+                            CheckInt(label, "heightmaps_rebuilt", got.HeightmapsRebuilt, want);
+                            CheckChunks(label, "missing", want, got.MissingChunks);
+                            CheckChunks(label, "unfinished", want, got.UnfinishedChunks);
+                            Check(got.Complete == want.GetProperty("complete").GetBoolean(),
+                                  $"{label}: complete");
+                            break;
+                        }
                     default:
                         Check(false, $"{label}: unknown op");
                         break;
@@ -2346,44 +2346,44 @@ internal static class Program
                 switch (op)
                 {
                     case "set_block":
-                    {
-                        var (x, y, z) = At();
-                        bool got = save.SetBlock(x, y, z, step.GetProperty("block").GetString()!);
-                        Check(got == want.GetProperty("written").GetBoolean(), $"{label}: {got}");
-                        break;
-                    }
+                        {
+                            var (x, y, z) = At();
+                            bool got = save.SetBlock(x, y, z, step.GetProperty("block").GetString()!);
+                            Check(got == want.GetProperty("written").GetBoolean(), $"{label}: {got}");
+                            break;
+                        }
                     case "place":
-                    {
-                        var (x, y, z) = At();
-                        bool got = save.PlaceBlock(x, y, z, step.GetProperty("block").GetString()!);
-                        Check(got == want.GetProperty("placed").GetBoolean(), $"{label}: {got}");
-                        break;
-                    }
+                        {
+                            var (x, y, z) = At();
+                            bool got = save.PlaceBlock(x, y, z, step.GetProperty("block").GetString()!);
+                            Check(got == want.GetProperty("placed").GetBoolean(), $"{label}: {got}");
+                            break;
+                        }
                     case "set_biome":
-                    {
-                        var (x, y, z) = At();
-                        bool got = save.SetBiome(x, y, z, step.GetProperty("biome").GetString()!);
-                        Check(got == want.GetProperty("written").GetBoolean(), $"{label}: {got}");
-                        break;
-                    }
+                        {
+                            var (x, y, z) = At();
+                            bool got = save.SetBiome(x, y, z, step.GetProperty("biome").GetString()!);
+                            Check(got == want.GetProperty("written").GetBoolean(), $"{label}: {got}");
+                            break;
+                        }
                     case "spawn_entity":
-                    {
-                        var at = step.GetProperty("at");
-                        bool threw = false;
-                        try
                         {
-                            save.SpawnEntity(step.GetProperty("id").GetString()!,
-                                             at[0].GetDouble(), at[1].GetDouble(),
-                                             at[2].GetDouble());
+                            var at = step.GetProperty("at");
+                            bool threw = false;
+                            try
+                            {
+                                save.SpawnEntity(step.GetProperty("id").GetString()!,
+                                                 at[0].GetDouble(), at[1].GetDouble(),
+                                                 at[2].GetDouble());
+                            }
+                            catch (ReadOnlyChunkException)
+                            {
+                                threw = true;
+                            }
+                            Check(threw == want.GetProperty("refused").GetBoolean(),
+                                  $"{label}: refused {threw}");
+                            break;
                         }
-                        catch (ReadOnlyChunkException)
-                        {
-                            threw = true;
-                        }
-                        Check(threw == want.GetProperty("refused").GetBoolean(),
-                              $"{label}: refused {threw}");
-                        break;
-                    }
                     case "fill":
                         refused = save.Fill(Corner(step, "from"), Corner(step, "to"),
                                             step.GetProperty("block").GetString()!).UnreadableChunks;
@@ -2413,14 +2413,14 @@ internal static class Program
                                                    allowIncomplete: true).UnreadableChunks;
                         break;
                     case "import_schem":
-                    {
-                        var paste = new Schematic(2, 2, 2, ChunkBlocks.MinDataVersion);
-                        foreach (var cell in step.GetProperty("cells").EnumerateArray())
-                            paste.SetBlock(cell[0].GetInt32(), cell[1].GetInt32(), cell[2].GetInt32(),
-                                           step.GetProperty("block").GetString()!);
-                        refused = save.ImportSchem(paste, At()).UnreadableChunks;
-                        break;
-                    }
+                        {
+                            var paste = new Schematic(2, 2, 2, ChunkBlocks.MinDataVersion);
+                            foreach (var cell in step.GetProperty("cells").EnumerateArray())
+                                paste.SetBlock(cell[0].GetInt32(), cell[1].GetInt32(), cell[2].GetInt32(),
+                                               step.GetProperty("block").GetString()!);
+                            refused = save.ImportSchem(paste, At()).UnreadableChunks;
+                            break;
+                        }
                     default:
                         Check(false, $"{label}: unknown op");
                         break;
@@ -3287,44 +3287,44 @@ internal static class Program
                               $"{label}: read-back");
                         break;
                     case "set_weather":
-                    {
-                        int? duration = step.TryGetProperty("duration", out var d)
-                            ? d.GetInt32() : (int?)null;
-                        save.SetWeather(step.GetProperty("kind").GetString()!,
-                                        duration);
-                        Check(save.Weather().Kind
-                                  == want.GetProperty("kind").GetString(),
-                              $"{label}: read-back");
-                        break;
-                    }
+                        {
+                            int? duration = step.TryGetProperty("duration", out var d)
+                                ? d.GetInt32() : (int?)null;
+                            save.SetWeather(step.GetProperty("kind").GetString()!,
+                                            duration);
+                            Check(save.Weather().Kind
+                                      == want.GetProperty("kind").GetString(),
+                                  $"{label}: read-back");
+                            break;
+                        }
                     case "set_day_time":
-                    {
-                        string? dimension = step.TryGetProperty("dimension", out var dim)
-                            ? dim.GetString() : null;
-                        var time = step.GetProperty("time");
-                        long total = time.ValueKind == JsonValueKind.String
-                            ? save.SetDayTime(time.GetString()!, dimension)
-                            : save.SetDayTime(time.GetInt64(), dimension);
-                        Check(total == long.Parse(
-                                  want.GetProperty("total_ticks").GetString()!),
-                              $"{label}: returned total");
-                        break;
-                    }
+                        {
+                            string? dimension = step.TryGetProperty("dimension", out var dim)
+                                ? dim.GetString() : null;
+                            var time = step.GetProperty("time");
+                            long total = time.ValueKind == JsonValueKind.String
+                                ? save.SetDayTime(time.GetString()!, dimension)
+                                : save.SetDayTime(time.GetInt64(), dimension);
+                            Check(total == long.Parse(
+                                      want.GetProperty("total_ticks").GetString()!),
+                                  $"{label}: returned total");
+                            break;
+                        }
                     case "set_spawn":
-                    {
-                        var pos = step.GetProperty("pos");
-                        double? yaw = step.TryGetProperty("yaw", out var y)
-                            ? y.GetDouble() : (double?)null;
-                        save.SetSpawnPosition(pos[0].GetInt32(), pos[1].GetInt32(),
-                                              pos[2].GetInt32(), yaw: yaw);
-                        var spawn = save.SpawnPosition();
-                        var wantSpawn = want.GetProperty("spawn");
-                        Check(spawn.X == wantSpawn[0].GetInt32()
-                              && spawn.Y == wantSpawn[1].GetInt32()
-                              && spawn.Z == wantSpawn[2].GetInt32(),
-                              $"{label}: read-back");
-                        break;
-                    }
+                        {
+                            var pos = step.GetProperty("pos");
+                            double? yaw = step.TryGetProperty("yaw", out var y)
+                                ? y.GetDouble() : (double?)null;
+                            save.SetSpawnPosition(pos[0].GetInt32(), pos[1].GetInt32(),
+                                                  pos[2].GetInt32(), yaw: yaw);
+                            var spawn = save.SpawnPosition();
+                            var wantSpawn = want.GetProperty("spawn");
+                            Check(spawn.X == wantSpawn[0].GetInt32()
+                                  && spawn.Y == wantSpawn[1].GetInt32()
+                                  && spawn.Z == wantSpawn[2].GetInt32(),
+                                  $"{label}: read-back");
+                            break;
+                        }
                     case "world_border":
                         CheckBorder($"{label}: read-back",
                                     want.GetProperty("border"),
@@ -3332,44 +3332,44 @@ internal static class Program
                                         ? wbDim.GetString() : null);
                         break;
                     case "inject_old_border_keys":
-                    {
-                        var level = (TagCompound)save.Level!.Root!["Data"];
-                        int injected = 0;
-                        foreach (var field in step.GetProperty("fields")
-                                                  .EnumerateArray())
                         {
-                            level[field.GetProperty("name").GetString()!] =
-                                BorderFieldTag(field);
-                            injected++;
+                            var level = (TagCompound)save.Level!.Root!["Data"];
+                            int injected = 0;
+                            foreach (var field in step.GetProperty("fields")
+                                                      .EnumerateArray())
+                            {
+                                level[field.GetProperty("name").GetString()!] =
+                                    BorderFieldTag(field);
+                                injected++;
+                            }
+                            Check(injected == want.GetProperty("injected").GetInt32(),
+                                  $"{label}: injected count");
+                            break;
                         }
-                        Check(injected == want.GetProperty("injected").GetInt32(),
-                              $"{label}: injected count");
-                        break;
-                    }
                     case "write_world_border_file":
-                    {
-                        var data = new TagCompound();
-                        foreach (var field in step.GetProperty("fields")
-                                                  .EnumerateArray())
-                            data[field.GetProperty("name").GetString()!] =
-                                BorderFieldTag(field);
-                        var borderRoot = new TagCompound { ["data"] = data };
-                        var handle = new NbtFile
                         {
-                            Root = borderRoot,
-                            CompressionScheme = Compression.SchemeGzip,
-                        };
-                        string borderTarget = Path.Combine(
-                            temp,
-                            step.GetProperty("path").GetString()!
-                                .Replace('/', Path.DirectorySeparatorChar));
-                        Directory.CreateDirectory(
-                            Path.GetDirectoryName(borderTarget)!);
-                        handle.Save(borderTarget);
-                        Check(want.GetProperty("written").GetBoolean(),
-                              $"{label}: written");
-                        break;
-                    }
+                            var data = new TagCompound();
+                            foreach (var field in step.GetProperty("fields")
+                                                      .EnumerateArray())
+                                data[field.GetProperty("name").GetString()!] =
+                                    BorderFieldTag(field);
+                            var borderRoot = new TagCompound { ["data"] = data };
+                            var handle = new NbtFile
+                            {
+                                Root = borderRoot,
+                                CompressionScheme = Compression.SchemeGzip,
+                            };
+                            string borderTarget = Path.Combine(
+                                temp,
+                                step.GetProperty("path").GetString()!
+                                    .Replace('/', Path.DirectorySeparatorChar));
+                            Directory.CreateDirectory(
+                                Path.GetDirectoryName(borderTarget)!);
+                            handle.Save(borderTarget);
+                            Check(want.GetProperty("written").GetBoolean(),
+                                  $"{label}: written");
+                            break;
+                        }
                     default:
                         Check(false, $"{label}: unknown op");
                         break;
@@ -3424,9 +3424,12 @@ internal static class Program
     private static readonly Dictionary<string, (int X, int Y, int Z)> NeighborOffsets =
         new Dictionary<string, (int, int, int)>(StringComparer.Ordinal)
         {
-            ["north"] = (0, 0, -1), ["south"] = (0, 0, 1),
-            ["west"] = (-1, 0, 0), ["east"] = (1, 0, 0),
-            ["above"] = (0, 1, 0), ["below"] = (0, -1, 0),
+            ["north"] = (0, 0, -1),
+            ["south"] = (0, 0, 1),
+            ["west"] = (-1, 0, 0),
+            ["east"] = (1, 0, 0),
+            ["above"] = (0, 1, 0),
+            ["below"] = (0, -1, 0),
         };
 
     private static void VerifyDerivedStates(string corpus)

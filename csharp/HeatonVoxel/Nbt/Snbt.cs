@@ -1068,46 +1068,46 @@ namespace HeatonVoxel.Nbt
             switch (tag)
             {
                 case TagCompound compound:
-                {
-                    if (depth >= Codec.MaxDepth)
-                        throw new NbtException($"tag nesting exceeds the {Codec.MaxDepth}-level limit");
-                    out_.Append('{');
-                    var keys = compound.Keys.ToList();
-                    keys.Sort(StringComparer.Ordinal);
-                    for (int n = 0; n < keys.Count; n++)
                     {
-                        string key = keys[n];
-                        if (n > 0)
-                            out_.Append(',');
-                        if (string.Equals(key, "true", StringComparison.OrdinalIgnoreCase)
-                            || string.Equals(key, "false", StringComparison.OrdinalIgnoreCase)
-                            || !IsBareKey(key))
-                            Quote(key, out_);
-                        else
-                            out_.Append(key);
-                        out_.Append(':');
-                        Write(compound[key], out_, depth + 1);
+                        if (depth >= Codec.MaxDepth)
+                            throw new NbtException($"tag nesting exceeds the {Codec.MaxDepth}-level limit");
+                        out_.Append('{');
+                        var keys = compound.Keys.ToList();
+                        keys.Sort(StringComparer.Ordinal);
+                        for (int n = 0; n < keys.Count; n++)
+                        {
+                            string key = keys[n];
+                            if (n > 0)
+                                out_.Append(',');
+                            if (string.Equals(key, "true", StringComparison.OrdinalIgnoreCase)
+                                || string.Equals(key, "false", StringComparison.OrdinalIgnoreCase)
+                                || !IsBareKey(key))
+                                Quote(key, out_);
+                            else
+                                out_.Append(key);
+                            out_.Append(':');
+                            Write(compound[key], out_, depth + 1);
+                        }
+                        out_.Append('}');
+                        break;
                     }
-                    out_.Append('}');
-                    break;
-                }
                 case TagList list:
-                {
-                    if (depth >= Codec.MaxDepth)
-                        throw new NbtException($"tag nesting exceeds the {Codec.MaxDepth}-level limit");
-                    out_.Append('[');
-                    for (int n = 0; n < list.Count; n++)
                     {
-                        if (n > 0)
-                            out_.Append(',');
-                        var item = list[n];
-                        if (item is TagCompound wrapper && IsWrapper(wrapper))
-                            item = wrapper[""];
-                        Write(item, out_, depth + 1);
+                        if (depth >= Codec.MaxDepth)
+                            throw new NbtException($"tag nesting exceeds the {Codec.MaxDepth}-level limit");
+                        out_.Append('[');
+                        for (int n = 0; n < list.Count; n++)
+                        {
+                            if (n > 0)
+                                out_.Append(',');
+                            var item = list[n];
+                            if (item is TagCompound wrapper && IsWrapper(wrapper))
+                                item = wrapper[""];
+                            Write(item, out_, depth + 1);
+                        }
+                        out_.Append(']');
+                        break;
                     }
-                    out_.Append(']');
-                    break;
-                }
                 case TagString text:
                     Quote(text.Value, out_);
                     break;

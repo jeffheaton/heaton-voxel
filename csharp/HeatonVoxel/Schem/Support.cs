@@ -96,19 +96,19 @@ namespace HeatonVoxel.Schem
             switch (tag)
             {
                 case TagCompound compound:
-                {
-                    var copy = new TagCompound();
-                    foreach (var pair in compound)
-                        copy[pair.Key] = CopyTag(pair.Value);
-                    return copy;
-                }
+                    {
+                        var copy = new TagCompound();
+                        foreach (var pair in compound)
+                            copy[pair.Key] = CopyTag(pair.Value);
+                        return copy;
+                    }
                 case TagList list:
-                {
-                    var copy = new TagList(list.ElementType);
-                    foreach (var item in list)
-                        copy.Add(CopyTag(item));
-                    return copy;
-                }
+                    {
+                        var copy = new TagList(list.ElementType);
+                        foreach (var item in list)
+                            copy.Add(CopyTag(item));
+                        return copy;
+                    }
                 case TagByteArray bytes:
                     return new TagByteArray((sbyte[])bytes.Values.Clone());
                 case TagIntArray ints:
