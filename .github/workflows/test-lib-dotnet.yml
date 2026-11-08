@@ -63,8 +63,13 @@ jobs:
 
       # Warnings are errors in both projects, and the NuGet advisory audit runs
       # during restore, so this also fails on a vulnerable or unreachable feed.
+      # ContinuousIntegrationBuild, which the csproj turns on under GitHub
+      # Actions, maps every source path in the PDB to /_/ for a reproducible
+      # package -- and coverlet, finding no file behind those paths, then
+      # reports nothing. This build only tests, so it keeps the real paths;
+      # Build Library (.NET), which ships, keeps the mapping.
       - name: Build (Release)
-        run: dotnet build csharp/HeatonVoxel.slnx -c Release
+        run: dotnet build csharp/HeatonVoxel.slnx -c Release -p:ContinuousIntegrationBuild=false
 
       # Build Library (.NET) refuses unformatted code, as dynaface's does, so
       # drift is caught here, on the push that made it, not at release time.
