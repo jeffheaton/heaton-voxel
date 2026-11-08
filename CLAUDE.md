@@ -114,6 +114,19 @@ MINECRAFT_SAVE=~/path/to/world python -m unittest discover -s tests # also hit a
 python -m venv /tmp/mypy && /tmp/mypy/bin/pip install mypy && /tmp/mypy/bin/mypy  # types
 ```
 
+CI runs the same checks on every push that can change them:
+`.github/workflows/test-lib.yml` runs the suite on Linux, macOS and Windows
+under Python 3.10 to 3.14, with mypy beside it, and
+`test-lib-dotnet.yml` runs the conformance suite on all three and packs the
+NuGet package. One run of each measures coverage for Codecov
+(`codecov.yml`; the flags are `python` and `dotnet`), which is where the
+README's badges come from. `.gitattributes` turns off line-ending conversion
+for every file, because the corpus and fixtures are compared byte for byte.
+Releases go out through the manual `release.yml`, both packages at once;
+[RELEASING.md](RELEASING.md) has the one-time setup and the steps, and a
+version bump touches `pyproject.toml`, the csproj and
+`heaton_voxel/__init__.py` together.
+
 The package ships `py.typed`, which tells a caller's type checker to read
 its annotations, and what that vouches for is the deterministic tier:
 `[tool.mypy]` in `pyproject.toml` lists it, a bare `mypy` from the root

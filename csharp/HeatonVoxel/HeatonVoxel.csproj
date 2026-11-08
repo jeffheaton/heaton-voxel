@@ -29,6 +29,15 @@
          TreatWarningsAsErrors it would otherwise fail the build outright. -->
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <!-- Symbols for a debugger stepping into the package: a .snupkg beside the
+         .nupkg, with Source Link (built into the .NET SDK, no package
+         reference) pointing each file at its commit on GitHub. A CI build
+         maps its paths so the DLL does not carry the runner's. -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
   </PropertyGroup>
   <ItemGroup>
     <!-- The package's own page, and the NOTICE the license asks to travel

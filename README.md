@@ -1,5 +1,14 @@
 # Heaton Voxel
 
+[![PyPI](https://img.shields.io/pypi/v/heaton-voxel?style=flat-square)](https://pypi.org/project/heaton-voxel/)
+[![NuGet](https://img.shields.io/nuget/v/HeatonVoxel?style=flat-square)](https://www.nuget.org/packages/HeatonVoxel)
+[![Python versions](https://img.shields.io/pypi/pyversions/heaton-voxel?style=flat-square)](https://pypi.org/project/heaton-voxel/)
+[![Python tests](https://img.shields.io/github/actions/workflow/status/jeffheaton/heaton-voxel/test-lib.yml?branch=main&label=Python%20tests&style=flat-square)](https://github.com/jeffheaton/heaton-voxel/actions/workflows/test-lib.yml)
+[![Python coverage](https://img.shields.io/codecov/c/github/jeffheaton/heaton-voxel/main?flag=python&label=Python%20coverage&style=flat-square)](https://app.codecov.io/gh/jeffheaton/heaton-voxel)
+[![.NET tests](https://img.shields.io/github/actions/workflow/status/jeffheaton/heaton-voxel/test-lib-dotnet.yml?branch=main&label=.NET%20tests&style=flat-square)](https://github.com/jeffheaton/heaton-voxel/actions/workflows/test-lib-dotnet.yml)
+[![.NET coverage](https://img.shields.io/codecov/c/github/jeffheaton/heaton-voxel/main?flag=dotnet&label=.NET%20coverage&style=flat-square)](https://app.codecov.io/gh/jeffheaton/heaton-voxel)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue?style=flat-square)](https://github.com/jeffheaton/heaton-voxel/blob/main/LICENSE)
+
 A from-scratch toolkit for Minecraft (Java Edition) saves: a lossless
 reader/writer for NBT data and Anvil regions, written directly against the
 binary formats, with block, biome and whole-world layers on top. Pure standard
@@ -40,9 +49,9 @@ and deliberately outside the C# port.
 | document | for |
 | --- | --- |
 | this README | what it does and why it works that way |
-| [API.md](API.md) | the contract to write an example or tool against |
-| [PORTING.md](PORTING.md) | porting to another language, and the conformance corpus under `fixtures/conformance/` |
-| [CLAUDE.md](CLAUDE.md) | project rules, verification, and traps already hit |
+| [API.md](https://github.com/jeffheaton/heaton-voxel/blob/main/API.md) | the contract to write an example or tool against |
+| [PORTING.md](https://github.com/jeffheaton/heaton-voxel/blob/main/PORTING.md) | porting to another language, and the conformance corpus under `fixtures/conformance/` |
+| [CLAUDE.md](https://github.com/jeffheaton/heaton-voxel/blob/main/CLAUDE.md) | project rules, verification, and traps already hit |
 
 ## Usage
 
@@ -342,7 +351,7 @@ heaton-voxel world <world-path> --fill 0 70 0 8 78 8 minecraft:glass --write
 python -m heaton_voxel world <world-path>
 ```
 
-And a worked example in [`examples/gold_box.py`](examples/gold_box.py), which
+And a worked example in [`examples/gold_box.py`](https://github.com/jeffheaton/heaton-voxel/blob/main/examples/gold_box.py), which
 places a solid cube next to the player:
 
 ```
@@ -432,7 +441,7 @@ position, `~-5` five blocks short of it — in `schem`, `world --fill` and
 CLI notices when that happened and tells you to quote rather than
 misreading it.
 
-### Re-climating an area — [`examples/biome_zone.py`](examples/biome_zone.py)
+### Re-climating an area — [`examples/biome_zone.py`](https://github.com/jeffheaton/heaton-voxel/blob/main/examples/biome_zone.py)
 
 Sets the biome over a square centered on the player, from ground level to the
 sky if the player is above ground, or down to bedrock if they are underground:
@@ -471,7 +480,7 @@ cells; the script prints the box it actually wrote. Changing a biome does not
 retroactively change the world — snow already on the ground is placed blocks
 and stays put, while weather and mob spawning follow the new biome.
 
-### Raising a castle — [`examples/castle.py`](examples/castle.py)
+### Raising a castle — [`examples/castle.py`](https://github.com/jeffheaton/heaton-voxel/blob/main/examples/castle.py)
 
 Builds an ornate stone castle sized to order: `--width` is the square
 footprint everything — moat included — fits inside, `--height` is how far the
@@ -523,7 +532,7 @@ lights only its own block. And the report keeps *ungenerated* apart from
 *unreadable* chunks, because "nothing there" and "something there this
 toolkit cannot see" call for different responses.
 
-### Laying a road — [`examples/road.py`](examples/road.py)
+### Laying a road — [`examples/road.py`](https://github.com/jeffheaton/heaton-voxel/blob/main/examples/road.py)
 
 Builds a level stone-brick road, three wide with lamp posts, straight ahead
 from wherever the player logged out — the way they were facing, at the level
@@ -549,7 +558,7 @@ ground is refused outright. Length is the only parameter, 500 the maximum.
 Afterwards the heightmaps are refreshed and the touched chunks relit, so the
 lamps really light.
 
-### A whole building session — [`examples/craft_session.py`](examples/craft_session.py)
+### A whole building session — [`examples/craft_session.py`](https://github.com/jeffheaton/heaton-voxel/blob/main/examples/craft_session.py)
 
 The construction tier, `heaton_voxel.craft`, start to finish, the way every
 real session should run: a worksite snapshot first, the build in named
@@ -569,7 +578,7 @@ palette), a `flight` up through the floor it cuts, both stories furnished
 -- a lane to a paved square, lit by `line_lamps` to `NO_SPAWNS` and by
 `pave` to `NO_NEW_SNOW_OR_ICE`, a villager in the square, and a watch tower
 crowned by `battlement`, its deck lit flush. It builds in one of two
-sample palettes in [`examples/palettes.py`](examples/palettes.py), `ROMAN`
+sample palettes in [`examples/palettes.py`](https://github.com/jeffheaton/heaton-voxel/blob/main/examples/palettes.py), `ROMAN`
 and `LAB`, each role read off the build it is named for. The land round
 the lot is protected before anything is built; then it checks what it
 built: nothing the game will not keep that was not there before, a clean
@@ -580,7 +589,7 @@ snapshot goes to a temporary directory, and the world is left byte for byte
 as it was; with it, the build is saved only once every check has passed,
 and the `worksite rollback` plan for undoing it is printed.
 
-### Mapping a world — [`examples/world_map.py`](examples/world_map.py)
+### Mapping a world — [`examples/world_map.py`](https://github.com/jeffheaton/heaton-voxel/blob/main/examples/world_map.py)
 
 Renders a top-down PNG of every block in a dimension. Read-only.
 
@@ -832,7 +841,7 @@ Three worth knowing about:
 
 ## License
 
-Apache License 2.0 — see [LICENSE](LICENSE).
+Apache License 2.0 — see [LICENSE](https://github.com/jeffheaton/heaton-voxel/blob/main/LICENSE).
 
 Not an official Minecraft product. Not approved by or associated with Mojang
 or Microsoft.

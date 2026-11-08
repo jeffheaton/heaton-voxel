@@ -1,5 +1,10 @@
 # HeatonVoxel
 
+[![NuGet](https://img.shields.io/nuget/v/HeatonVoxel?style=flat-square)](https://www.nuget.org/packages/HeatonVoxel)
+[![.NET tests](https://img.shields.io/github/actions/workflow/status/jeffheaton/heaton-voxel/test-lib-dotnet.yml?branch=main&label=.NET%20tests&style=flat-square)](https://github.com/jeffheaton/heaton-voxel/actions/workflows/test-lib-dotnet.yml)
+[![.NET coverage](https://img.shields.io/codecov/c/github/jeffheaton/heaton-voxel/main?flag=dotnet&label=.NET%20coverage&style=flat-square)](https://app.codecov.io/gh/jeffheaton/heaton-voxel)
+[![License](https://img.shields.io/badge/license-Apache%202.0-blue?style=flat-square)](https://github.com/jeffheaton/heaton-voxel/blob/main/LICENSE)
+
 A from-scratch toolkit for Minecraft (Java Edition) saves, for .NET and
 Unity: NBT and Anvil region files, paletted chunk contents, whole-save
 editing, Sponge `.schem` interchange, and the neighbor-derived block states
@@ -33,7 +38,7 @@ save.Save();   // refuses while Minecraft has the world open
 ```
 
 **Scope.** It reads and writes the current chunk format (Minecraft 1.18 and
-later), reads chunks saved by 1.17 and 1.17.1 but refuses to write them, and
+later), reads chunks saved by 1.13 to 1.17.1 but refuses to write them, and
 refuses anything older with an error that says why. It reads Java Edition
 worlds only: Bedrock worlds are a different format.
 

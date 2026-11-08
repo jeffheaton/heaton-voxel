@@ -168,7 +168,17 @@ class GameAgreementTests(unittest.TestCase):
     def test_what_the_game_prints_reads_back_as_the_same_tag(self):
         """``to_snbt`` and ``parse_snbt`` are inverses wherever SNBT can say
         the value at all: no NaN, no infinity, no empty compound key -- and
-        a zero is the positive one, as the game reads every zero."""
+        a zero is the positive one, as the game reads every zero.
+
+        The corpus nests a tag 512 deep, and walking and comparing it takes
+        about two frames a level -- before Python 3.12 a comprehension is a
+        frame of its own, and comparing nested tuples recurses in C against
+        the same limit -- which passes the default limit of 1000 on 3.10 and
+        3.11. The library reads and writes that depth within the default;
+        it is only this check's walk that needs the room."""
+        limit = sys.getrecursionlimit()
+        sys.setrecursionlimit(max(limit, 5000))
+        self.addCleanup(sys.setrecursionlimit, limit)
         failures = []
         for row in _GAME["parse"] + _GAME["print"]:
             if "nbt" not in row:

@@ -15,9 +15,17 @@ keywords = ["minecraft", "nbt", "anvil", "region", "voxel", "mca"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Games/Entertainment",
     "Topic :: File Formats",
+    "Typing :: Typed",
 ]
 # Standard library only -- the binary formats are parsed directly. See
 # requirements.txt for the one optional dependency and why it is not here.
@@ -26,6 +34,9 @@ dependencies = []
 [project.urls]
 Homepage = "https://github.com/jeffheaton/heaton-voxel"
 Source = "https://github.com/jeffheaton/heaton-voxel"
+Documentation = "https://github.com/jeffheaton/heaton-voxel/blob/main/API.md"
+Issues = "https://github.com/jeffheaton/heaton-voxel/issues"
+Releases = "https://github.com/jeffheaton/heaton-voxel/releases"
 
 [project.scripts]
 heaton-voxel = "heaton_voxel.__main__:main"
@@ -44,6 +55,17 @@ packages = [
 # installed package carries.
 [tool.setuptools.package-data]
 heaton_voxel = ["py.typed"]
+
+# Coverage, as CI measures it for the badge: the package alone, branches
+# included, over the whole unittest suite. Like mypy, coverage is a
+# development tool from a venv, never a dependency:
+#   python -m coverage run -m unittest discover -s tests && python -m coverage report
+[tool.coverage.run]
+source = ["heaton_voxel"]
+branch = true
+
+[tool.coverage.report]
+skip_empty = true
 
 # What the marker vouches for: the deterministic tier, checked clean by mypy
 # (a development tool, run from a venv, never a dependency). craft ships its

@@ -1,0 +1,5 @@
+# Check every file out exactly as it was committed, on every platform. The
+# fixtures are byte-exact game data and the conformance corpus is compared
+# byte for byte when the tests regenerate it, so a checkout that turned LF
+# into CRLF (git's default on Windows) would fail them for nothing.
+* -text
