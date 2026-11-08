@@ -1,0 +1,70 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "heaton-voxel"
+version = "0.1.0"
+description = "A from-scratch Minecraft (Java Edition) save toolkit: NBT, Anvil regions, blocks and biomes, whole worlds."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{ name = "Jeff Heaton", email = "jeff@jeffheaton.com" }]
+keywords = ["minecraft", "nbt", "anvil", "region", "voxel", "mca"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Games/Entertainment",
+    "Topic :: File Formats",
+]
+# Standard library only -- the binary formats are parsed directly. See
+# requirements.txt for the one optional dependency and why it is not here.
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/jeffheaton/heaton-voxel"
+Source = "https://github.com/jeffheaton/heaton-voxel"
+
+[project.scripts]
+heaton-voxel = "heaton_voxel.__main__:main"
+heaton-voxel-nbt = "heaton_voxel.nbt:main"
+
+[tool.setuptools]
+packages = [
+    "heaton_voxel",
+    "heaton_voxel.world",
+    "heaton_voxel.schem",
+    "heaton_voxel.craft",
+    "heaton_voxel.craft.build",
+]
+
+# The PEP 561 marker: without it a type checker ignores every annotation the
+# installed package carries.
+[tool.setuptools.package-data]
+heaton_voxel = ["py.typed"]
+
+# What the marker vouches for: the deterministic tier, checked clean by mypy
+# (a development tool, run from a venv, never a dependency). craft ships its
+# annotations too, partial and unchecked, and a caller's checker reads them
+# as they are. Run `mypy` from the repository root.
+[tool.mypy]
+python_version = "3.10"
+follow_imports = "silent"
+files = [
+    "heaton_voxel/__init__.py",
+    "heaton_voxel/__main__.py",
+    "heaton_voxel/nbt.py",
+    "heaton_voxel/snbt.py",
+    "heaton_voxel/blocks.py",
+    "heaton_voxel/block_defaults.py",
+    "heaton_voxel/heightmap_blocks.py",
+    "heaton_voxel/legacy_biomes.py",
+    "heaton_voxel/connect.py",
+    "heaton_voxel/connect_faces.py",
+    "heaton_voxel/wall_cover.py",
+    "heaton_voxel/place.py",
+    "heaton_voxel/world",
+    "heaton_voxel/schem",
+]

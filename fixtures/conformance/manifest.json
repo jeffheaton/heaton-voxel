@@ -1,0 +1,145 @@
+{
+ "artifacts": {
+  "block_defaults.json": {
+   "bytes": 62667,
+   "sha256": "2f756b193b0f42c5ca167a2a72fb05b1f77d5bbded8a73eba65e1b61a8d68544"
+  },
+  "chunk_creation.json": {
+   "bytes": 11885,
+   "sha256": "1f32b30539e15d2f153814b20d3513c32bf81689662ae542ea1a06749c383fd0"
+  },
+  "chunk_deletes.json": {
+   "bytes": 18778,
+   "sha256": "addd367f9bb505f2d4e49fd10996f73c621e092893487a3363bc0d6e07aec146"
+  },
+  "chunk_deletes/entities/r.-1.-1.mca": {
+   "bytes": 12288,
+   "sha256": "975309b0866dedae47107829a8bc57043b1162d572465565e18bc541565bf73b"
+  },
+  "chunk_deletes/entities/r.-1.0.mca": {
+   "bytes": 20480,
+   "sha256": "056210a1a8dd8dc6290edeacc8143b483a44cdd755fef61d56ea58ff68aa8c82"
+  },
+  "chunk_deletes/poi/r.-1.0.mca": {
+   "bytes": 20480,
+   "sha256": "25d3d21b7ee156454ab3cec392e813687a4aa6250d66ec3983226a4183b8aeb4"
+  },
+  "derived_states.json": {
+   "bytes": 14830,
+   "sha256": "bf04fc755df9ad50f4adf5c7457c777403c6533e1537479f55d0d481f22b8f3f"
+  },
+  "empty/r.0.0.mca": {
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "heightmaps.json": {
+   "bytes": 105981,
+   "sha256": "2070200bce746ac63b52c017cd7996e670a5f4e9777ded77e2f72045d948fa2a"
+  },
+  "history.json": {
+   "bytes": 1370,
+   "sha256": "0c7c658ec041711feb4b907d08d92d3839373568f12852c6bf0e1b51331f88c0"
+  },
+  "legacy.json": {
+   "bytes": 152288,
+   "sha256": "2b0ebd3d52d8dea06528a10655e6200b9af55c8c473f20d51be6bb08cee9d756"
+  },
+  "modern.json": {
+   "bytes": 81123,
+   "sha256": "a8890deea039da3e28a9609daf67fd4691fe9b8c3011c3ad4611f26718244977"
+  },
+  "nbt_cases.json": {
+   "bytes": 5681,
+   "sha256": "396a6448fbc566d0cc2a8e10411931352a18fdd34ce4d6fc56e448195b94ec1d"
+  },
+  "nibbles.json": {
+   "bytes": 4669,
+   "sha256": "d92248289caedb722819e1ca4fb6cd91911ef1f9bd493052dde4777975cfc7fc"
+  },
+  "old_layout.json": {
+   "bytes": 17078,
+   "sha256": "776e1c522d53e8d29097aa25a5e9e52831d6133bd2627e542e5129b60caeaf3f"
+  },
+  "older_chunks.json": {
+   "bytes": 77450,
+   "sha256": "6e2defc77b8cfb7bc777b9fd390d6f1f99486916ee1168d99d4e60a88f77068f"
+  },
+  "packing.json": {
+   "bytes": 13407,
+   "sha256": "f26118a9ce2b6039d6278d7d5ee07fbfc0ed1bff61ec11dfa8be1050a5ec13d3"
+  },
+  "region.json": {
+   "bytes": 4184,
+   "sha256": "88b3b4cb9caa45db2d7fd5326890243bcdc6b9a24ed82aac39079f496bf7910b"
+  },
+  "save_hook.json": {
+   "bytes": 385,
+   "sha256": "468cbd7ad0a2970be4065780b29c661076cdeb5427a18218cdbc586e2f30dba0"
+  },
+  "schem/expected.json": {
+   "bytes": 14503,
+   "sha256": "4e8172f22082947aa265c70417198683278b8722a67366960f82f02856b1db8c"
+  },
+  "schem/sample.litematic": {
+   "bytes": 966,
+   "sha256": "6de1ab354e95db5ce40f976055f73f4ee85654633c1de92f75f152f2bbc16624"
+  },
+  "schem/sample.nbt": {
+   "bytes": 1193,
+   "sha256": "8d101cf1093d432d57e0720831b41f46799583bf8d329556597ce0650434a7e0"
+  },
+  "schem/sample_v2.schem": {
+   "bytes": 1288,
+   "sha256": "f7c29b45167470765ab781328833cfee1f32e62eee4bdcca7c2dccd020d760b7"
+  },
+  "schem/sample_v3.schem": {
+   "bytes": 1333,
+   "sha256": "426aa99ad6e374efa9510ac6f37be27ed4d10f60bd4142f0ebc4218ac2479cc6"
+  },
+  "schem/sample_v3_rot90.schem": {
+   "bytes": 1340,
+   "sha256": "bb9b69d76d988652f6bfc1d8d4163512e700f1ffb84418496562997a477463d8"
+  },
+  "snbt.json": {
+   "bytes": 531734,
+   "sha256": "b4fc91c4dbbe0404c4658e380f0a8830b680eeb9252f46fd59cbf34aad5b1e38"
+  },
+  "tables.json": {
+   "bytes": 71157,
+   "sha256": "22c92d17d9d01fece62dba2a34ed36d95b6fd3c739fb7b2044092c667f8da0f3"
+  },
+  "transforms.json": {
+   "bytes": 11583,
+   "sha256": "e1edc0a931862fe8db24be7198a5c09f9a7cbc31580c16060e0ba32618cb06fb"
+  },
+  "varints.json": {
+   "bytes": 732,
+   "sha256": "15ef1b5fb5b37f0ed2aca7a13901ccabda3bd19b8d7e35ff94a12b9b0d1f52a9"
+  },
+  "wall_cover.json": {
+   "bytes": 56137,
+   "sha256": "e7c85f69a473e614ce86e02aa862854677e8dc96ed0999fed426af64079f0040"
+  },
+  "world.json": {
+   "bytes": 33854,
+   "sha256": "533105232f2bfbcab7f0cf8e16f9f0d4054df76e2d4e1eed7b85d18de87fe37c"
+  },
+  "world_edits.json": {
+   "bytes": 66769,
+   "sha256": "acc5e6de2660d3c317952a63f0ab7ce3334a348e9221a7971822dcf221dc711e"
+  },
+  "world_settings.json": {
+   "bytes": 19706,
+   "sha256": "a079f33a2fa3c7509e34c192ea7a1ba0ba7a78643c3e75e8eecc1688aa1b4c36"
+  }
+ },
+ "conventions": {
+  "binary": "lowercase hex",
+  "digests": "sha256, lowercase hex; NBT digests are always of the UNCOMPRESSED encoding -- compressed bytes are not portable across zlib implementations. chunk_deletes.json is the one artifact that digests whole region files, compressed records and all: deleting a chunk recompresses nothing, so those bytes are reproducible in any language",
+  "floats": "IEEE-754 bits as hex in 'bits'; compare bits, never values",
+  "int64": "decimal strings",
+  "strings": "non-printable-ASCII strings appear as codepoint arrays under 'cp'; in snbt.json only those holding a lone surrogate do, and its others are JSON strings under 'v', escapes and all"
+ },
+ "corpus_version": 1,
+ "purpose": "language-neutral conformance suite for ports of heaton-voxel; see PORTING.md"
+}

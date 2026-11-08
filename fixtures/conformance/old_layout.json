@@ -1,0 +1,851 @@
+{
+ "assembly": "world n is cases[n].before of ../old_layout.json: make every directory in 'dirs', write every file in 'files' -- a string is its bytes in base64, {fixture} a file of ../ copied there -- and open it",
+ "note": "'refused' is a reader that refused; 'refused_writes' the writes, run in order, each refused as read-only; 64-bit tick counts are decimal strings",
+ "version": 1,
+ "worlds": [
+  {
+   "case": 0,
+   "name": "1.13.2, a player in level.dat and in playerdata",
+   "reads": {
+    "allow_commands": true,
+    "border": {
+     "minecraft:overworld": {
+      "center_x": {
+       "bits": "4025000000000000",
+       "v": 10.5
+      },
+      "center_z": {
+       "bits": "c034800000000000",
+       "v": -20.5
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40b3880000000000",
+       "v": 5000.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40b3880000000000",
+       "v": 5000.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     },
+     "minecraft:the_end": {
+      "center_x": {
+       "bits": "4025000000000000",
+       "v": 10.5
+      },
+      "center_z": {
+       "bits": "c034800000000000",
+       "v": -20.5
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40b3880000000000",
+       "v": 5000.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40b3880000000000",
+       "v": 5000.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     },
+     "minecraft:the_nether": {
+      "center_x": {
+       "bits": "3ff5000000000000",
+       "v": 1.3125
+      },
+      "center_z": {
+       "bits": "c004800000000000",
+       "v": -2.5625
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40b3880000000000",
+       "v": 5000.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40b3880000000000",
+       "v": 5000.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     }
+    },
+    "day_time": {
+     "minecraft:overworld": "123456",
+     "minecraft:the_end": "refused",
+     "minecraft:the_nether": "refused"
+    },
+    "difficulty": "hard",
+    "difficulty_locked": true,
+    "dimensions": {
+     "minecraft:overworld": [
+      [
+       0,
+       -5
+      ]
+     ],
+     "minecraft:the_end": [
+      [
+       -1,
+       -1
+      ]
+     ]
+    },
+    "game_type": "creative",
+    "hardcore": false,
+    "layout": "old",
+    "player": {
+     "dimension": "minecraft:overworld",
+     "pos": [
+      {
+       "bits": "3ff8000000000000",
+       "v": 1.5
+      },
+      {
+       "bits": "4054000000000000",
+       "v": 80.0
+      },
+      {
+       "bits": "4004000000000000",
+       "v": 2.5
+      }
+     ],
+     "rotation": [
+      {
+       "bits": "0000000000000000",
+       "v": 0.0
+      },
+      {
+       "bits": "0000000000000000",
+       "v": 0.0
+      }
+     ]
+    },
+    "read_only": true,
+    "refused_writes": [
+     "save",
+     "set_game_type",
+     "set_weather",
+     "set_day_time",
+     "set_spawn",
+     "create_chunks"
+    ],
+    "spawn": [
+     40,
+     70,
+     -2440
+    ],
+    "weather": {
+     "clear_weather_time": 0,
+     "rain_time": 1234,
+     "raining": true,
+     "thunder_time": 5678,
+     "thundering": true
+    }
+   }
+  },
+  {
+   "case": 1,
+   "name": "1.16.5, a player only in playerdata, an empty nether",
+   "reads": {
+    "allow_commands": false,
+    "border": {
+     "minecraft:overworld": {
+      "center_x": {
+       "bits": "0000000000000000",
+       "v": 0.0
+      },
+      "center_z": {
+       "bits": "0000000000000000",
+       "v": 0.0
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "418c9c3700000000",
+       "v": 59999968.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "418c9c3700000000",
+       "v": 59999968.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     },
+     "minecraft:the_end": {
+      "center_x": {
+       "bits": "0000000000000000",
+       "v": 0.0
+      },
+      "center_z": {
+       "bits": "0000000000000000",
+       "v": 0.0
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "418c9c3700000000",
+       "v": 59999968.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "418c9c3700000000",
+       "v": 59999968.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     },
+     "minecraft:the_nether": {
+      "center_x": {
+       "bits": "0000000000000000",
+       "v": 0.0
+      },
+      "center_z": {
+       "bits": "0000000000000000",
+       "v": 0.0
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "418c9c3700000000",
+       "v": 59999968.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "418c9c3700000000",
+       "v": 59999968.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     }
+    },
+    "day_time": {
+     "minecraft:overworld": "30000",
+     "minecraft:the_end": "refused",
+     "minecraft:the_nether": "refused"
+    },
+    "difficulty": "easy",
+    "difficulty_locked": false,
+    "dimensions": {
+     "minecraft:overworld": [
+      [
+       5,
+       -1
+      ]
+     ],
+     "minecraft:the_end": [
+      [
+       -1,
+       -1
+      ]
+     ],
+     "minecraft:the_nether": []
+    },
+    "game_type": "survival",
+    "hardcore": true,
+    "layout": "old",
+    "player": {
+     "dimension": "minecraft:the_nether",
+     "pos": [
+      {
+       "bits": "c00a000000000000",
+       "v": -3.25
+      },
+      {
+       "bits": "4050000000000000",
+       "v": 64.0
+      },
+      {
+       "bits": "401f000000000000",
+       "v": 7.75
+      }
+     ],
+     "rotation": [
+      {
+       "bits": "4066800000000000",
+       "v": 180.0
+      },
+      {
+       "bits": "c03e000000000000",
+       "v": -30.0
+      }
+     ]
+    },
+    "read_only": true,
+    "refused_writes": [
+     "save",
+     "set_game_type",
+     "set_weather",
+     "set_day_time",
+     "set_spawn",
+     "create_chunks"
+    ],
+    "spawn": [
+     -100,
+     64,
+     200
+    ],
+    "weather": {
+     "clear_weather_time": 48000,
+     "rain_time": 0,
+     "raining": false,
+     "thunder_time": 0,
+     "thundering": false
+    }
+   }
+  },
+  {
+   "case": 2,
+   "name": "1.21.4, current chunks in the old layout",
+   "reads": {
+    "allow_commands": true,
+    "border": {
+     "minecraft:overworld": {
+      "center_x": {
+       "bits": "c059000000000000",
+       "v": -100.0
+      },
+      "center_z": {
+       "bits": "406f400000000000",
+       "v": 250.0
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     },
+     "minecraft:the_end": {
+      "center_x": {
+       "bits": "c059000000000000",
+       "v": -100.0
+      },
+      "center_z": {
+       "bits": "406f400000000000",
+       "v": 250.0
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     },
+     "minecraft:the_nether": {
+      "center_x": {
+       "bits": "c029000000000000",
+       "v": -12.5
+      },
+      "center_z": {
+       "bits": "403f400000000000",
+       "v": 31.25
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     }
+    },
+    "day_time": {
+     "minecraft:overworld": "777777",
+     "minecraft:the_end": "refused",
+     "minecraft:the_nether": "refused"
+    },
+    "difficulty": "normal",
+    "difficulty_locked": false,
+    "dimensions": {
+     "minecraft:overworld": [
+      [
+       -1,
+       0
+      ]
+     ],
+     "minecraft:the_end": [],
+     "minecraft:the_nether": []
+    },
+    "game_type": "adventure",
+    "hardcore": false,
+    "layout": "old",
+    "player": {
+     "dimension": "minecraft:overworld",
+     "pos": [
+      {
+       "bits": "c025000000000000",
+       "v": -10.5
+      },
+      {
+       "bits": "4051800000000000",
+       "v": 70.0
+      },
+      {
+       "bits": "4016000000000000",
+       "v": 5.5
+      }
+     ],
+     "rotation": [
+      {
+       "bits": "4070e00000000000",
+       "v": 270.0
+      },
+      {
+       "bits": "4046800000000000",
+       "v": 45.0
+      }
+     ]
+    },
+    "read_only": true,
+    "refused_writes": [
+     "save",
+     "set_game_type",
+     "set_weather",
+     "set_day_time",
+     "set_spawn",
+     "create_chunks"
+    ],
+    "spawn": [
+     -20,
+     63,
+     15
+    ],
+    "weather": {
+     "clear_weather_time": 0,
+     "rain_time": 600,
+     "raining": true,
+     "thunder_time": 9000,
+     "thundering": false
+    }
+   }
+  },
+  {
+   "case": 3,
+   "name": "the border and spawn compounds of 4556, current chunks in the old layout",
+   "reads": {
+    "allow_commands": true,
+    "border": {
+     "minecraft:overworld": {
+      "center_x": {
+       "bits": "c059000000000000",
+       "v": -100.0
+      },
+      "center_z": {
+       "bits": "406f400000000000",
+       "v": 250.0
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     },
+     "minecraft:the_end": {
+      "center_x": {
+       "bits": "c059000000000000",
+       "v": -100.0
+      },
+      "center_z": {
+       "bits": "406f400000000000",
+       "v": 250.0
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     },
+     "minecraft:the_nether": {
+      "center_x": {
+       "bits": "c029000000000000",
+       "v": -12.5
+      },
+      "center_z": {
+       "bits": "403f400000000000",
+       "v": 31.25
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     }
+    },
+    "day_time": {
+     "minecraft:overworld": "777777",
+     "minecraft:the_end": "refused",
+     "minecraft:the_nether": "refused"
+    },
+    "difficulty": "normal",
+    "difficulty_locked": false,
+    "dimensions": {
+     "minecraft:overworld": [
+      [
+       -1,
+       0
+      ]
+     ],
+     "minecraft:the_end": [],
+     "minecraft:the_nether": []
+    },
+    "game_type": "adventure",
+    "hardcore": false,
+    "layout": "old",
+    "player": {
+     "dimension": "minecraft:overworld",
+     "pos": [
+      {
+       "bits": "c025000000000000",
+       "v": -10.5
+      },
+      {
+       "bits": "4051800000000000",
+       "v": 70.0
+      },
+      {
+       "bits": "4016000000000000",
+       "v": 5.5
+      }
+     ],
+     "rotation": [
+      {
+       "bits": "4070e00000000000",
+       "v": 270.0
+      },
+      {
+       "bits": "4046800000000000",
+       "v": 45.0
+      }
+     ]
+    },
+    "read_only": true,
+    "refused_writes": [
+     "save",
+     "set_game_type",
+     "set_weather",
+     "set_day_time",
+     "set_spawn",
+     "create_chunks"
+    ],
+    "spawn": [
+     -20,
+     63,
+     15
+    ],
+    "weather": {
+     "clear_weather_time": 0,
+     "rain_time": 600,
+     "raining": true,
+     "thunder_time": 9000,
+     "thundering": false
+    }
+   }
+  },
+  {
+   "case": 4,
+   "name": "the game rules of 4671, current chunks in the old layout",
+   "reads": {
+    "allow_commands": true,
+    "border": {
+     "minecraft:overworld": {
+      "center_x": {
+       "bits": "c059000000000000",
+       "v": -100.0
+      },
+      "center_z": {
+       "bits": "406f400000000000",
+       "v": 250.0
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     },
+     "minecraft:the_end": {
+      "center_x": {
+       "bits": "c059000000000000",
+       "v": -100.0
+      },
+      "center_z": {
+       "bits": "406f400000000000",
+       "v": 250.0
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     },
+     "minecraft:the_nether": {
+      "center_x": {
+       "bits": "c029000000000000",
+       "v": -12.5
+      },
+      "center_z": {
+       "bits": "403f400000000000",
+       "v": 31.25
+      },
+      "damage_per_block": {
+       "bits": "3fd3333333333333",
+       "v": 0.3
+      },
+      "lerp_target": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "lerp_time": "0",
+      "safe_zone": {
+       "bits": "4014000000000000",
+       "v": 5.0
+      },
+      "size": {
+       "bits": "40a0000000000000",
+       "v": 2048.0
+      },
+      "stored": true,
+      "warning_blocks": 7,
+      "warning_time": 20
+     }
+    },
+    "day_time": {
+     "minecraft:overworld": "777777",
+     "minecraft:the_end": "refused",
+     "minecraft:the_nether": "refused"
+    },
+    "difficulty": "normal",
+    "difficulty_locked": false,
+    "dimensions": {
+     "minecraft:overworld": [
+      [
+       -1,
+       0
+      ]
+     ],
+     "minecraft:the_end": [],
+     "minecraft:the_nether": []
+    },
+    "game_type": "adventure",
+    "hardcore": false,
+    "layout": "old",
+    "player": {
+     "dimension": "minecraft:overworld",
+     "pos": [
+      {
+       "bits": "c025000000000000",
+       "v": -10.5
+      },
+      {
+       "bits": "4051800000000000",
+       "v": 70.0
+      },
+      {
+       "bits": "4016000000000000",
+       "v": 5.5
+      }
+     ],
+     "rotation": [
+      {
+       "bits": "4070e00000000000",
+       "v": 270.0
+      },
+      {
+       "bits": "4046800000000000",
+       "v": 45.0
+      }
+     ]
+    },
+    "read_only": true,
+    "refused_writes": [
+     "save",
+     "set_game_type",
+     "set_weather",
+     "set_day_time",
+     "set_spawn",
+     "create_chunks"
+    ],
+    "spawn": [
+     -20,
+     63,
+     15
+    ],
+    "weather": {
+     "clear_weather_time": 0,
+     "rain_time": 600,
+     "raining": true,
+     "thunder_time": 9000,
+     "thundering": false
+    }
+   }
+  }
+ ]
+}

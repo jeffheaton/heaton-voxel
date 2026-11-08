@@ -1,0 +1,156 @@
+{
+ "chunks": [
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "a245c6ca0275d8f30dfa7931ecb3065054abdd663fb0392cd4b65f6a21fb4440",
+   "status": "minecraft:full",
+   "timestamp": 1784414053,
+   "x": 0,
+   "z": 2
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "f9c57a6c724e1f64101fc82e0bb0509b9dc02299b3f22b6ea3bd9173569c2305",
+   "status": "minecraft:initialize_light",
+   "timestamp": 1784414494,
+   "x": 0,
+   "z": 28
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "e6058d5e1669a0f40c961667dfdb48bba02e8912286bbd4cc62b63baf65383cf",
+   "status": "minecraft:carvers",
+   "timestamp": 1784414494,
+   "x": 0,
+   "z": 29
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "7893483ae2b5df94b66d9f3105e93178e207926f4688798b987d1eccec3685b1",
+   "status": "minecraft:full",
+   "timestamp": 1784414047,
+   "x": 4,
+   "z": 14
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "2a11dd24a58d690c3bf4ed86c91edfc2c23f94dc6cfba151c8b2b7f2ab7301e2",
+   "status": "minecraft:full",
+   "timestamp": 1784414043,
+   "x": 7,
+   "z": 1
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "7e0402ddf35c423fe9974f50aff4dbd3e437744d92c202e383d69e852002b85a",
+   "status": "minecraft:full",
+   "timestamp": 1784414043,
+   "x": 7,
+   "z": 2
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "2443ab938a98022f1857073b89443b002bce9922e6f2eafb701296b118e2a6db",
+   "status": "minecraft:full",
+   "timestamp": 1784414041,
+   "x": 8,
+   "z": 1
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "b1d78eacaca09abd1a88b19870cbe8a53626af93d9515fb69bf1db3d84c51e63",
+   "status": "minecraft:full",
+   "timestamp": 1784414041,
+   "x": 8,
+   "z": 2
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "6e58287c5d59f689dc1c377a8c94dc755de09add93179edee45d81ba9a32f63e",
+   "status": "minecraft:full",
+   "timestamp": 1784414041,
+   "x": 9,
+   "z": 1
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "f8bc2b6c033f11751e9c0a0425d1d4be1eec0ea53b27201b6e21047ebb6089a1",
+   "status": "minecraft:full",
+   "timestamp": 1784414037,
+   "x": 11,
+   "z": 0
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "49ed138633a116c50abc44579fd621ef55ed49548285ca182f57bc6f244076f0",
+   "status": "minecraft:full",
+   "timestamp": 1784414034,
+   "x": 12,
+   "z": 0
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "506487f12952d590e0594ee6d298660302ff0ac7d9202a6382368e040d1f7142",
+   "status": "minecraft:full",
+   "timestamp": 1784414031,
+   "x": 14,
+   "z": 0
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "18c7d64fb4eb775f936cc1764d7358d09d80ded1aedd5eb679752a0c42ac577f",
+   "status": "minecraft:full",
+   "timestamp": 1784414491,
+   "x": 25,
+   "z": 2
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "dce8c3031b37289374ffe2e82c8d37032cee5aa99621f52a065d03fc10c0a32f",
+   "status": "minecraft:full",
+   "timestamp": 1784414119,
+   "x": 26,
+   "z": 0
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "bc02162604cf4fe071facdbc4d212ceaf5277652af63f0ab57ab11a34b69b26f",
+   "status": "minecraft:full",
+   "timestamp": 1784414407,
+   "x": 26,
+   "z": 1
+  },
+  {
+   "compression": 2,
+   "data_version": 4903,
+   "payload_sha256": "41c55f075b54ec8e568c07076e1dc18d3d4023952e12d4b7ef56c5d063c82795",
+   "status": "minecraft:full",
+   "timestamp": 1784414017,
+   "x": 27,
+   "z": 1
+  }
+ ],
+ "empty_region": {
+  "file": "empty/r.0.0.mca",
+  "rule": "a zero-byte .mca is a valid empty region (Minecraft writes them, commonly under poi/): it loads with no chunks and saves back to zero bytes, never growing an 8 KiB header unless chunks are added"
+ },
+ "file": "../r.-1.0.mca",
+ "file_sha256": "cc013ab470c83197a06523311b30fa76a947f364c5869c00c6fc07fcb6151740",
+ "untouched_roundtrip": "loading this file and saving it unmodified must reproduce it byte for byte (original compressed bytes are reused, so this holds in any language)",
+ "version": 1
+}

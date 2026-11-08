@@ -1,0 +1,42 @@
+{
+ "before": {
+  "chunk": "2a11dd24a58d690c3bf4ed86c91edfc2c23f94dc6cfba151c8b2b7f2ab7301e2",
+  "chunks": 16,
+  "level": "a3f349a28d146cbeda517b03ce852d9e47a9191f0a262edbaa310e6781850010"
+ },
+ "built": {
+  "paths": [
+   "dimensions/minecraft/overworld/region/r.1.1.mca"
+  ],
+  "redone_present": true,
+  "undone_absent": true,
+  "undone_file": false,
+  "undone_written": 0
+ },
+ "delete_undone": {
+  "chunk": "732d6dde4f373226da89febed2bd2c149facff09277ab1bb28e923be847b899c",
+  "chunks": 16,
+  "level": "bec01270f36cf0ded7299f0b99207552b5a54ab50f49f498a26a4b57ef6dde28"
+ },
+ "deleted": {
+  "chunk": null,
+  "chunks": 15,
+  "level": "bec01270f36cf0ded7299f0b99207552b5a54ab50f49f498a26a4b57ef6dde28"
+ },
+ "edited": {
+  "chunk": "732d6dde4f373226da89febed2bd2c149facff09277ab1bb28e923be847b899c",
+  "chunks": 16,
+  "level": "bec01270f36cf0ded7299f0b99207552b5a54ab50f49f498a26a4b57ef6dde28"
+ },
+ "redone": {
+  "chunk": "732d6dde4f373226da89febed2bd2c149facff09277ab1bb28e923be847b899c",
+  "chunks": 16,
+  "level": "bec01270f36cf0ded7299f0b99207552b5a54ab50f49f498a26a4b57ef6dde28"
+ },
+ "restored_region": "cc013ab470c83197a06523311b30fa76a947f364c5869c00c6fc07fcb6151740",
+ "undo_after_save": {
+  "chunk": "2a11dd24a58d690c3bf4ed86c91edfc2c23f94dc6cfba151c8b2b7f2ab7301e2",
+  "chunks": 16,
+  "level": "a3f349a28d146cbeda517b03ce852d9e47a9191f0a262edbaa310e6781850010"
+ }
+}

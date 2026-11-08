@@ -1,0 +1,6126 @@
+{
+ "lobby": {
+  "name": "Ground floor \u2014 lobby and entrance hall",
+  "note": "Found no rule violations \u2014 palette, props, stair cells, columns, duplicates, support and reachability all pass \u2014 so I kept the layout and only thickened it: a second chain lantern over the runner's west half, the yellow apron widened to wrap the stair foot, and planting continued along the south glass and into the north-east corner.",
+  "blocks": [
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 281,
+    "block": "orange_carpet"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 281,
+    "block": "orange_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 281,
+    "block": "orange_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 281,
+    "block": "orange_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 281,
+    "block": "orange_carpet"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 281,
+    "block": "orange_carpet"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 281,
+    "block": "orange_carpet"
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 281,
+    "block": "orange_carpet"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 281,
+    "block": "orange_carpet"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 281,
+    "block": "orange_carpet"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 281,
+    "block": "yellow_carpet"
+   },
+   {
+    "x": -140,
+    "dy": 1,
+    "z": 281,
+    "block": "yellow_carpet"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 282,
+    "block": "yellow_carpet"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 282,
+    "block": "yellow_carpet"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 282,
+    "block": "rooted_dirt"
+   },
+   {
+    "x": -151,
+    "dy": 2,
+    "z": 282,
+    "block": "flowering_azalea"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 282,
+    "block": "lectern",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 3,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 282,
+    "block": "birch_wall_sign",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 3,
+    "z": 282,
+    "block": "birch_wall_sign",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 4,
+    "z": 283,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 283,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 283,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 283,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 283,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 285,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 285,
+    "block": "copper_chest"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 285,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 285,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 285,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 287,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 287,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 287,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 288,
+    "block": "birch_fence"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 288,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 288,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 288,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 289,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 289,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 289,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 290,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 290,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 290,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 290,
+    "block": "rooted_dirt"
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 290,
+    "block": "azalea"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 290,
+    "block": "rooted_dirt"
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 290,
+    "block": "flowering_azalea"
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 287,
+    "block": "chiseled_copper"
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 287,
+    "block": "copper_golem_statue"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 286,
+    "block": "potted_azalea_bush"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 288,
+    "block": "potted_fern"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 289,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 289,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 282,
+    "block": "birch_wall_sign",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 3,
+    "z": 283,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_flowering_azalea_bush"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_fern"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_azalea_bush"
+   },
+   {
+    "x": -140,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_fern"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 290,
+    "block": "rooted_dirt"
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 290,
+    "block": "azalea"
+   },
+   {
+    "x": -140,
+    "dy": 1,
+    "z": 290,
+    "block": "rooted_dirt"
+   },
+   {
+    "x": -140,
+    "dy": 2,
+    "z": 290,
+    "block": "flowering_azalea"
+   },
+   {
+    "x": -148,
+    "dy": 6,
+    "z": 283,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 5,
+    "z": 283,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 6,
+    "z": 281,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 5,
+    "z": 281,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 6,
+    "z": 281,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 5,
+    "z": 281,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 6,
+    "z": 288,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 5,
+    "z": 288,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 6,
+    "z": 287,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 5,
+    "z": 287,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   }
+  ]
+ },
+ "market": {
+  "name": "The Market Hall",
+  "note": "One real fault: copper_chest carried facing=north but has no property-vocabulary entry in the brief, so both chests now go bare (their default already faces north); also set the chain-hung signs to attached=true, gave the barrow its own hanging sign, and added stall matting, a composter and a chiseled_bookshelf so all four pitches read as pitches.",
+  "blocks": [
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 282,
+    "block": "hay_block",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 282,
+    "block": "hay_block",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 282,
+    "block": "barrel",
+    "props": {
+     "facing": "south",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 282,
+    "block": "barrel",
+    "props": {
+     "facing": "south",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 282,
+    "block": "birch_planks"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 282,
+    "block": "birch_planks"
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 282,
+    "block": "birch_planks"
+   },
+   {
+    "x": -148,
+    "dy": 3,
+    "z": 282,
+    "block": "birch_planks"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 282,
+    "block": "podzol"
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 282,
+    "block": "sweet_berry_bush",
+    "props": {
+     "age": "3"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 283,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "south",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 3,
+    "z": 283,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "south",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 283,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 284,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 284,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 284,
+    "block": "melon"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 284,
+    "block": "hay_block",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 284,
+    "block": "pumpkin"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 284,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_sign",
+    "props": {
+     "rotation": "0"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 282,
+    "block": "loom",
+    "props": {
+     "facing": "south"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 282,
+    "block": "white_wool"
+   },
+   {
+    "x": -143,
+    "dy": 2,
+    "z": 282,
+    "block": "light_blue_wool"
+   },
+   {
+    "x": -143,
+    "dy": 3,
+    "z": 282,
+    "block": "birch_planks"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 282,
+    "block": "barrel",
+    "props": {
+     "facing": "south",
+     "open": "false"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 2,
+    "z": 282,
+    "block": "white_wool"
+   },
+   {
+    "x": -142,
+    "dy": 3,
+    "z": 282,
+    "block": "birch_planks"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 282,
+    "block": "pink_wool"
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 282,
+    "block": "light_blue_wool"
+   },
+   {
+    "x": -143,
+    "dy": 3,
+    "z": 283,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "south",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 3,
+    "z": 283,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "south",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 283,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 284,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 284,
+    "block": "white_wool"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 284,
+    "block": "copper_chest"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 284,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_sign",
+    "props": {
+     "rotation": "0"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 284,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 287,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 287,
+    "block": "birch_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 287,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 287,
+    "block": "birch_sign",
+    "props": {
+     "rotation": "8"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 287,
+    "block": "copper_chest"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 287,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 287,
+    "block": "birch_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 288,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "north",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 3,
+    "z": 288,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "north",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 288,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 289,
+    "block": "cartography_table"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 289,
+    "block": "decorated_pot"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 289,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 289,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 289,
+    "block": "birch_planks"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 289,
+    "block": "birch_planks"
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 289,
+    "block": "chiseled_bookshelf",
+    "props": {
+     "facing": "north",
+     "slot_0_occupied": "true",
+     "slot_1_occupied": "true",
+     "slot_2_occupied": "false",
+     "slot_3_occupied": "true",
+     "slot_4_occupied": "false",
+     "slot_5_occupied": "true"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 3,
+    "z": 289,
+    "block": "birch_planks"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 289,
+    "block": "lectern",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 288,
+    "block": "hay_block",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 2,
+    "z": 288,
+    "block": "pumpkin"
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 288,
+    "block": "podzol"
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 288,
+    "block": "sweet_berry_bush",
+    "props": {
+     "age": "3"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 288,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 2,
+    "z": 288,
+    "block": "melon"
+   },
+   {
+    "x": -149,
+    "dy": 4,
+    "z": 285,
+    "block": "birch_hanging_sign",
+    "props": {
+     "attached": "true",
+     "rotation": "0"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 5,
+    "z": 285,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 6,
+    "z": 285,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 4,
+    "z": 285,
+    "block": "birch_hanging_sign",
+    "props": {
+     "attached": "true",
+     "rotation": "0"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 5,
+    "z": 285,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 6,
+    "z": 285,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 4,
+    "z": 286,
+    "block": "birch_hanging_sign",
+    "props": {
+     "attached": "true",
+     "rotation": "8"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 5,
+    "z": 286,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 6,
+    "z": 286,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 4,
+    "z": 283,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 5,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 6,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 4,
+    "z": 286,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 5,
+    "z": 286,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 6,
+    "z": 286,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 6,
+    "z": 286,
+    "block": "bell",
+    "props": {
+     "attachment": "ceiling",
+     "facing": "north"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_flowering_azalea_bush"
+   },
+   {
+    "x": -140,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_azalea_bush"
+   },
+   {
+    "x": -144,
+    "dy": 4,
+    "z": 287,
+    "block": "birch_hanging_sign",
+    "props": {
+     "attached": "true",
+     "rotation": "8"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 5,
+    "z": 287,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 6,
+    "z": 287,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 283,
+    "block": "composter"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 285,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 285,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 285,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 285,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 286,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 286,
+    "block": "brown_carpet"
+   }
+  ]
+ },
+ "workshop": {
+  "name": "The Copper Forge",
+  "note": "Freed the copper chest \u2014 cut_copper sat directly on it, so it could never be opened \u2014 by moving it into the west work run and dropping a barrel in its place; turned the three hood stairs from south to north so the canopy hangs over the hearth instead of into the wall; tapered the flue with two cut_copper slabs, and added a tool chest by the forge and a half-stack of copper on the stock pile.",
+  "blocks": [
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 290,
+    "block": "stone_bricks"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 290,
+    "block": "stone_bricks"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 290,
+    "block": "stone_bricks"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 290,
+    "block": "stone_bricks"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 290,
+    "block": "stone_bricks"
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 290,
+    "block": "stone_bricks"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 289,
+    "block": "stone_bricks"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 289,
+    "block": "copper_grate"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 289,
+    "block": "stone_bricks"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 289,
+    "block": "copper_grate"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 289,
+    "block": "stone_bricks"
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 289,
+    "block": "stone_bricks"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 290,
+    "block": "blast_furnace",
+    "props": {
+     "facing": "north",
+     "lit": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 290,
+    "block": "furnace",
+    "props": {
+     "facing": "north",
+     "lit": "false"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 290,
+    "block": "furnace",
+    "props": {
+     "facing": "north",
+     "lit": "false"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 290,
+    "block": "furnace",
+    "props": {
+     "facing": "north",
+     "lit": "false"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 2,
+    "z": 290,
+    "block": "blast_furnace",
+    "props": {
+     "facing": "north",
+     "lit": "false"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 290,
+    "block": "chiseled_stone_bricks"
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 289,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "north",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 290,
+    "block": "cut_copper"
+   },
+   {
+    "x": -148,
+    "dy": 3,
+    "z": 290,
+    "block": "chiseled_copper"
+   },
+   {
+    "x": -147,
+    "dy": 3,
+    "z": 290,
+    "block": "copper_bulb",
+    "props": {
+     "lit": "true",
+     "powered": "false"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 3,
+    "z": 290,
+    "block": "chiseled_copper"
+   },
+   {
+    "x": -145,
+    "dy": 3,
+    "z": 290,
+    "block": "cut_copper"
+   },
+   {
+    "x": -144,
+    "dy": 3,
+    "z": 290,
+    "block": "cut_copper"
+   },
+   {
+    "x": -144,
+    "dy": 3,
+    "z": 289,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "north",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 289,
+    "block": "birch_wall_sign",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 4,
+    "z": 290,
+    "block": "cut_copper"
+   },
+   {
+    "x": -147,
+    "dy": 4,
+    "z": 290,
+    "block": "copper_grate"
+   },
+   {
+    "x": -146,
+    "dy": 4,
+    "z": 290,
+    "block": "cut_copper"
+   },
+   {
+    "x": -148,
+    "dy": 4,
+    "z": 289,
+    "block": "cut_copper_stairs",
+    "props": {
+     "facing": "north",
+     "half": "top",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 4,
+    "z": 289,
+    "block": "cut_copper_stairs",
+    "props": {
+     "facing": "north",
+     "half": "top",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 4,
+    "z": 289,
+    "block": "cut_copper_stairs",
+    "props": {
+     "facing": "north",
+     "half": "top",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 5,
+    "z": 290,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 5,
+    "z": 290,
+    "block": "cut_copper"
+   },
+   {
+    "x": -146,
+    "dy": 5,
+    "z": 290,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 6,
+    "z": 290,
+    "block": "chiseled_copper"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 290,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 289,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 290,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -140,
+    "dy": 1,
+    "z": 290,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -142,
+    "dy": 2,
+    "z": 290,
+    "block": "anvil",
+    "props": {
+     "facing": "east"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 2,
+    "z": 289,
+    "block": "chipped_anvil",
+    "props": {
+     "facing": "east"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 290,
+    "block": "grindstone",
+    "props": {
+     "face": "floor",
+     "facing": "north"
+    }
+   },
+   {
+    "x": -140,
+    "dy": 2,
+    "z": 290,
+    "block": "water_cauldron",
+    "props": {
+     "level": "3"
+    }
+   },
+   {
+    "x": -139,
+    "dy": 1,
+    "z": 286,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -139,
+    "dy": 1,
+    "z": 287,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -139,
+    "dy": 1,
+    "z": 288,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -139,
+    "dy": 2,
+    "z": 286,
+    "block": "cut_copper"
+   },
+   {
+    "x": -139,
+    "dy": 2,
+    "z": 287,
+    "block": "copper_grate"
+   },
+   {
+    "x": -139,
+    "dy": 2,
+    "z": 288,
+    "block": "cut_copper"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 282,
+    "block": "barrel",
+    "props": {
+     "facing": "up",
+     "open": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 283,
+    "block": "smithing_table"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 284,
+    "block": "stonecutter",
+    "props": {
+     "facing": "east"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 285,
+    "block": "crafting_table"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 286,
+    "block": "copper_chest",
+    "props": {
+     "facing": "east"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 287,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 288,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 288,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 287,
+    "block": "smooth_stone_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 288,
+    "block": "smooth_stone_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 288,
+    "block": "smooth_stone_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 287,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 288,
+    "block": "chest",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 288,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 281,
+    "block": "copper_golem_statue"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 281,
+    "block": "iron_block"
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 281,
+    "block": "copper_block"
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 281,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 6,
+    "z": 286,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 5,
+    "z": 286,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 4,
+    "z": 286,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 6,
+    "z": 288,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 5,
+    "z": 288,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 4,
+    "z": 288,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   }
+  ]
+ },
+ "kitchen": {
+  "name": "The Kitchen and Brewhouse",
+  "note": "Fixed the table \u2014 its four birch_fence legs are 1.5 tall, so they stabbed up through the trapdoor top and formed the room's only impassable wall; now stripped_birch_log \u2014 and the hood, whose three closed top-half trapdoors sat buried flush under the chimney block and rendered as nothing; they now hang open as the skirt. Added a head chair at the table's west end, a lantern over the brewing bench, and a candle on the prep counter.",
+  "blocks": [
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 290,
+    "block": "smoker",
+    "props": {
+     "facing": "north",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 290,
+    "block": "smoker",
+    "props": {
+     "facing": "north",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 290,
+    "block": "furnace",
+    "props": {
+     "facing": "north",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 290,
+    "block": "water_cauldron",
+    "props": {
+     "level": "3"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 290,
+    "block": "composter",
+    "props": {
+     "level": "4"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 290,
+    "block": "copper_chest"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 290,
+    "block": "pumpkin"
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 2,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 289,
+    "block": "birch_wall_sign",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 3,
+    "z": 290,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "north",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 3,
+    "z": 290,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "top",
+     "open": "true"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 290,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "top",
+     "open": "true"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 3,
+    "z": 290,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "top",
+     "open": "true"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 4,
+    "z": 290,
+    "block": "stripped_birch_wood",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 4,
+    "z": 290,
+    "block": "stripped_birch_wood",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 4,
+    "z": 290,
+    "block": "stripped_birch_wood",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 5,
+    "z": 290,
+    "block": "stripped_birch_wood",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 6,
+    "z": 290,
+    "block": "copper_grate"
+   },
+   {
+    "x": -149,
+    "dy": 4,
+    "z": 289,
+    "block": "bell",
+    "props": {
+     "attachment": "single_wall",
+     "facing": "north"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 288,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 288,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 288,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 288,
+    "block": "crafting_table"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 288,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 288,
+    "block": "lectern",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 288,
+    "block": "decorated_pot"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 288,
+    "block": "orange_candle",
+    "props": {
+     "candles": "3",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 288,
+    "block": "potted_fern"
+   },
+   {
+    "x": -148,
+    "dy": 4,
+    "z": 288,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 5,
+    "z": 288,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 6,
+    "z": 288,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 284,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 284,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 284,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 284,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 285,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 285,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 285,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 285,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 283,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 283,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 284,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 284,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "west",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 4,
+    "z": 284,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 5,
+    "z": 284,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 6,
+    "z": 284,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 280,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 280,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 280,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -143,
+    "dy": 2,
+    "z": 280,
+    "block": "brewing_stand",
+    "props": {
+     "has_bottle_0": "true",
+     "has_bottle_1": "true",
+     "has_bottle_2": "false"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 2,
+    "z": 280,
+    "block": "water_cauldron",
+    "props": {
+     "level": "2"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 280,
+    "block": "barrel",
+    "props": {
+     "facing": "up",
+     "open": "false"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_flowering_azalea_bush"
+   },
+   {
+    "x": -143,
+    "dy": 4,
+    "z": 281,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 5,
+    "z": 281,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 6,
+    "z": 281,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 4,
+    "z": 289,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 5,
+    "z": 289,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 6,
+    "z": 289,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   }
+  ]
+ },
+ "library": {
+  "name": "The Reading Room",
+  "note": "Turned the archive chest so its front is not buried in a bookshelf and moved the decorated pot out of the stair landing's doorway; added stack-head signs, a west window seat and a third hanging lantern. [build] The east stack ran wall to wall at x=-141 and sealed the twelve floor cells between it and the stair, which the walk check caught; its south end (z=289) is now a gap you go through.",
+  "blocks": [
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 281,
+    "block": "potted_fern"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 281,
+    "block": "lectern",
+    "props": {
+     "facing": "south"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 281,
+    "block": "lectern",
+    "props": {
+     "facing": "south"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 281,
+    "block": "decorated_pot"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 281,
+    "block": "lectern",
+    "props": {
+     "facing": "east"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 282,
+    "block": "birch_fence"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 282,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 282,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 282,
+    "block": "light_gray_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 282,
+    "block": "blue_carpet"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 282,
+    "block": "light_gray_carpet"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 282,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 283,
+    "block": "birch_fence"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 283,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 4,
+    "z": 283,
+    "block": "lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 5,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 6,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 283,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 283,
+    "block": "blue_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 283,
+    "block": "blue_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 4,
+    "z": 283,
+    "block": "lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 5,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 6,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 283,
+    "block": "blue_carpet"
+   },
+   {
+    "x": -144,
+    "dy": 4,
+    "z": 283,
+    "block": "lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 5,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 6,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 284,
+    "block": "birch_fence"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 284,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 284,
+    "block": "light_gray_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 284,
+    "block": "blue_carpet"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 284,
+    "block": "light_gray_carpet"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 284,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 285,
+    "block": "birch_wall_sign",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 3,
+    "z": 285,
+    "block": "birch_wall_sign",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 3,
+    "z": 285,
+    "block": "birch_wall_sign",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 285,
+    "block": "bookshelf"
+   },
+   {
+    "x": -143,
+    "dy": 2,
+    "z": 285,
+    "block": "bookshelf"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 286,
+    "block": "lectern",
+    "props": {
+     "facing": "east"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 286,
+    "block": "bookshelf"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 286,
+    "block": "chiseled_bookshelf",
+    "props": {
+     "facing": "north",
+     "slot_0_occupied": "true",
+     "slot_1_occupied": "true",
+     "slot_2_occupied": "false",
+     "slot_3_occupied": "true",
+     "slot_4_occupied": "false",
+     "slot_5_occupied": "true"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 286,
+    "block": "bookshelf"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 286,
+    "block": "chiseled_bookshelf",
+    "props": {
+     "facing": "north",
+     "slot_0_occupied": "true",
+     "slot_1_occupied": "true",
+     "slot_2_occupied": "false",
+     "slot_3_occupied": "true",
+     "slot_4_occupied": "false",
+     "slot_5_occupied": "true"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 286,
+    "block": "chiseled_bookshelf",
+    "props": {
+     "facing": "north",
+     "slot_0_occupied": "true",
+     "slot_1_occupied": "true",
+     "slot_2_occupied": "false",
+     "slot_3_occupied": "true",
+     "slot_4_occupied": "false",
+     "slot_5_occupied": "true"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 3,
+    "z": 286,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 286,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 2,
+    "z": 286,
+    "block": "chiseled_bookshelf",
+    "props": {
+     "facing": "north",
+     "slot_0_occupied": "true",
+     "slot_1_occupied": "true",
+     "slot_2_occupied": "false",
+     "slot_3_occupied": "true",
+     "slot_4_occupied": "false",
+     "slot_5_occupied": "true"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 3,
+    "z": 286,
+    "block": "bookshelf"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 286,
+    "block": "bookshelf"
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 286,
+    "block": "bookshelf"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 287,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 6,
+    "z": 287,
+    "block": "sea_lantern"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -149,
+    "dy": 4,
+    "z": 287,
+    "block": "white_candle",
+    "props": {
+     "candles": "3",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 6,
+    "z": 287,
+    "block": "sea_lantern"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -147,
+    "dy": 3,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -147,
+    "dy": 4,
+    "z": 287,
+    "block": "white_candle",
+    "props": {
+     "candles": "2",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 6,
+    "z": 287,
+    "block": "sea_lantern"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 2,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 3,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 4,
+    "z": 287,
+    "block": "white_candle",
+    "props": {
+     "candles": "1",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 6,
+    "z": 287,
+    "block": "sea_lantern"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 287,
+    "block": "enchanting_table"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 287,
+    "block": "bookshelf"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 288,
+    "block": "birch_fence"
+   },
+   {
+    "x": -151,
+    "dy": 2,
+    "z": 288,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -147,
+    "dy": 3,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 2,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 3,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 289,
+    "block": "potted_azalea_bush"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 289,
+    "block": "bookshelf"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 289,
+    "block": "bookshelf"
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 289,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "south",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 289,
+    "block": "bookshelf"
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 289,
+    "block": "bookshelf"
+   },
+   {
+    "x": -147,
+    "dy": 3,
+    "z": 289,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 289,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 2,
+    "z": 289,
+    "block": "bookshelf"
+   },
+   {
+    "x": -145,
+    "dy": 3,
+    "z": 289,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "south",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 289,
+    "block": "bookshelf"
+   },
+   {
+    "x": -143,
+    "dy": 2,
+    "z": 289,
+    "block": "bookshelf"
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 290,
+    "block": "copper_chest",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "up",
+     "open": "false"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 2,
+    "z": 290,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   }
+  ]
+ },
+ "apartment_s1": {
+  "name": "South-landing flat A",
+  "note": "Fixed the one real fault - birch_shelf floated at (-147,dy3,290) with air below and only the glass wall behind it, re-mounted at (-150,dy2,290) where the smoker supports it from below and the south-west glowstone column backs it; all other 49 blocks verified against palette, props, bounds, the south-landing blocked cells, glowstone columns, bed halves, support, duplicates and a walkability trace, and left unchanged.",
+  "blocks": [
+   {
+    "x": -140,
+    "dy": 1,
+    "z": 280,
+    "block": "light_blue_bed",
+    "props": {
+     "facing": "north",
+     "part": "head"
+    }
+   },
+   {
+    "x": -140,
+    "dy": 1,
+    "z": 281,
+    "block": "light_blue_bed",
+    "props": {
+     "facing": "north",
+     "part": "foot"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 280,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 280,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 281,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -140,
+    "dy": 1,
+    "z": 282,
+    "block": "chest",
+    "props": {
+     "facing": "west"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_flowering_azalea_bush"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 282,
+    "block": "bookshelf"
+   },
+   {
+    "x": -142,
+    "dy": 2,
+    "z": 282,
+    "block": "potted_azalea_bush"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 283,
+    "block": "bookshelf"
+   },
+   {
+    "x": -142,
+    "dy": 2,
+    "z": 283,
+    "block": "white_candle",
+    "props": {
+     "candles": "2",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 280,
+    "block": "bookshelf"
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 280,
+    "block": "white_candle",
+    "props": {
+     "candles": "3",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 280,
+    "block": "lectern",
+    "props": {
+     "facing": "south"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 280,
+    "block": "chiseled_bookshelf",
+    "props": {
+     "facing": "south",
+     "slot_0_occupied": "true",
+     "slot_1_occupied": "false",
+     "slot_2_occupied": "true",
+     "slot_3_occupied": "true",
+     "slot_4_occupied": "false",
+     "slot_5_occupied": "true"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 281,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 283,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 284,
+    "block": "birch_fence"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 285,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 283,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 284,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 285,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 283,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 284,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 285,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -150,
+    "dy": 4,
+    "z": 284,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 5,
+    "z": 284,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 6,
+    "z": 284,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 282,
+    "block": "potted_red_tulip"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 286,
+    "block": "potted_fern"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 287,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 288,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 287,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 288,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 287,
+    "block": "jukebox"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 288,
+    "block": "birch_fence"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 288,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 290,
+    "block": "smoker",
+    "props": {
+     "facing": "north",
+     "lit": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 290,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "east",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 290,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 290,
+    "block": "decorated_pot"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 290,
+    "block": "water_cauldron",
+    "props": {
+     "level": "3"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 290,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 290,
+    "block": "crafting_table"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 290,
+    "block": "composter",
+    "props": {
+     "level": "2"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 4,
+    "z": 290,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 5,
+    "z": 290,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 6,
+    "z": 290,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   }
+  ]
+ },
+ "apartment_s2": {
+  "name": "Dais Flat \u2014 south-landing variant B",
+  "note": "Mechanically it was clean; ten pieces faced the wrong way \u2014 both dais steps rose away from the dais, the desk chair and the two window-bench seats sat with their backs to the desk and the view, the nook seats stared at the stairwell, the chiseled bookshelf's face was sealed by the shelf directly in front of it, and two barrel faces were buried against a plank and a stair \u2014 all turned round, plus a lectern in the bare north-west floor.",
+  "blocks": [
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 280,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 280,
+    "block": "barrel",
+    "props": {
+     "facing": "south",
+     "open": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 280,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 280,
+    "block": "potted_blue_orchid"
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 280,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 281,
+    "block": "spruce_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 280,
+    "block": "spruce_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 280,
+    "block": "spruce_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 280,
+    "block": "barrel",
+    "props": {
+     "facing": "south",
+     "open": "false"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 2,
+    "z": 280,
+    "block": "potted_fern"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 282,
+    "block": "lectern",
+    "props": {
+     "facing": "south"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 282,
+    "block": "copper_golem_statue"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 282,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 282,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 283,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 283,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -146,
+    "dy": 6,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 5,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 4,
+    "z": 283,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 284,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 284,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 284,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 285,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 285,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 285,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 286,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 286,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 286,
+    "block": "spruce_planks"
+   },
+   {
+    "x": -151,
+    "dy": 2,
+    "z": 285,
+    "block": "light_blue_bed",
+    "props": {
+     "facing": "west",
+     "part": "head"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 285,
+    "block": "light_blue_bed",
+    "props": {
+     "facing": "west",
+     "part": "foot"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 2,
+    "z": 284,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 284,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 284,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 285,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -151,
+    "dy": 2,
+    "z": 286,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 286,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 286,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 283,
+    "block": "spruce_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 287,
+    "block": "spruce_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 284,
+    "block": "bookshelf"
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 284,
+    "block": "chiseled_bookshelf",
+    "props": {
+     "facing": "west",
+     "slot_0_occupied": "true",
+     "slot_1_occupied": "true",
+     "slot_2_occupied": "false",
+     "slot_3_occupied": "true",
+     "slot_4_occupied": "false",
+     "slot_5_occupied": "true"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "east",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 285,
+    "block": "barrel",
+    "props": {
+     "facing": "east",
+     "open": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 285,
+    "block": "spruce_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 286,
+    "block": "barrel",
+    "props": {
+     "facing": "east",
+     "open": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 286,
+    "block": "spruce_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 288,
+    "block": "water_cauldron",
+    "props": {
+     "level": "3"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 6,
+    "z": 288,
+    "block": "cave_vines",
+    "props": {
+     "berries": "true"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 6,
+    "z": 288,
+    "block": "pale_hanging_moss",
+    "props": {
+     "tip": "true"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 289,
+    "block": "moss_block"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 289,
+    "block": "moss_block"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 290,
+    "block": "moss_block"
+   },
+   {
+    "x": -151,
+    "dy": 2,
+    "z": 289,
+    "block": "flowering_azalea"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 289,
+    "block": "moss_carpet"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 290,
+    "block": "azalea"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 290,
+    "block": "potted_bamboo"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 287,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 288,
+    "block": "spruce_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 289,
+    "block": "spruce_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 290,
+    "block": "jukebox"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 288,
+    "block": "birch_fence"
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 288,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 289,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 290,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 6,
+    "z": 289,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 5,
+    "z": 289,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 4,
+    "z": 289,
+    "block": "lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 290,
+    "block": "potted_oxeye_daisy"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 289,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 290,
+    "block": "light_blue_carpet"
+   }
+  ]
+ },
+ "apartment_n1": {
+  "name": "North-landing flat A \u2014 the window seat",
+  "note": "Repaired: statue taken out of the stair bay onto the cupboard top, glow-berry vines dropped (they grow down and would curtain the west glass), lectern moved off the chiseled bookshelf's only usable face, and the boxed-in corner pot swapped with the wardrobe so no cell is sealed; fence table posts now connect.",
+  "blocks": [
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 280,
+    "block": "barrel",
+    "props": {
+     "facing": "south",
+     "open": "false"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 280,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 280,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 280,
+    "block": "water_cauldron",
+    "props": {
+     "level": "3"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 280,
+    "block": "smooth_stone"
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 280,
+    "block": "potted_fern"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 280,
+    "block": "smoker",
+    "props": {
+     "facing": "south",
+     "lit": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 281,
+    "block": "birch_fence",
+    "props": {
+     "east": "true"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 281,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 281,
+    "block": "birch_fence",
+    "props": {
+     "west": "true"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 281,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 4,
+    "z": 281,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 5,
+    "z": 281,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 6,
+    "z": 281,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 282,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 282,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 284,
+    "block": "potted_lily_of_the_valley"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 284,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 284,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 284,
+    "block": "crafting_table"
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 285,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 285,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 285,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 285,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 285,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 285,
+    "block": "copper_chest",
+    "props": {
+     "facing": "west"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 286,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 286,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 286,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 4,
+    "z": 286,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 5,
+    "z": 286,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 6,
+    "z": 286,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 286,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 286,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 286,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 2,
+    "z": 286,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 287,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 287,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 287,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 287,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 287,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 2,
+    "z": 287,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 3,
+    "z": 287,
+    "block": "copper_golem_statue"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 288,
+    "block": "potted_flowering_azalea_bush"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 288,
+    "block": "lectern",
+    "props": {
+     "facing": "east"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 288,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "west",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 288,
+    "block": "chiseled_bookshelf",
+    "props": {
+     "facing": "west",
+     "slot_0_occupied": "true",
+     "slot_1_occupied": "true",
+     "slot_2_occupied": "false",
+     "slot_3_occupied": "true",
+     "slot_4_occupied": "false",
+     "slot_5_occupied": "true"
+    }
+   },
+   {
+    "x": -143,
+    "dy": 2,
+    "z": 288,
+    "block": "bookshelf"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 289,
+    "block": "potted_azalea_bush"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 289,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 289,
+    "block": "light_blue_bed",
+    "props": {
+     "facing": "south",
+     "part": "foot"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 289,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 290,
+    "block": "white_candle",
+    "props": {
+     "candles": "2",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 290,
+    "block": "light_blue_bed",
+    "props": {
+     "facing": "south",
+     "part": "head"
+    }
+   }
+  ]
+ },
+ "apartment_n2": {
+  "name": "The Fernery",
+  "note": "Rules all passed; fixed a moss strand dangling in mid-air over bare floor at (-145,284) by hanging it over the potting bench, finished the moss verge that stopped one cell short of the growing bed, turned the stool to face the potting slab instead of the cauldron, and added a window seat and side table at the north glass, a chair at the lectern and a pot in the dead north-west corner.",
+  "blocks": [
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 280,
+    "block": "podzol",
+    "props": {
+     "snowy": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 280,
+    "block": "podzol",
+    "props": {
+     "snowy": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 280,
+    "block": "rooted_dirt"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 280,
+    "block": "moss_block"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 280,
+    "block": "large_fern",
+    "props": {
+     "half": "lower"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 3,
+    "z": 280,
+    "block": "large_fern",
+    "props": {
+     "half": "upper"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 280,
+    "block": "flowering_azalea"
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 280,
+    "block": "sweet_berry_bush",
+    "props": {
+     "age": "3"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 280,
+    "block": "small_dripleaf",
+    "props": {
+     "facing": "south",
+     "half": "lower"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 3,
+    "z": 280,
+    "block": "small_dripleaf",
+    "props": {
+     "facing": "south",
+     "half": "upper"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_fern"
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_azalea_bush"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 280,
+    "block": "potted_bamboo"
+   },
+   {
+    "x": -149,
+    "dy": 6,
+    "z": 280,
+    "block": "pale_hanging_moss",
+    "props": {
+     "tip": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 5,
+    "z": 280,
+    "block": "pale_hanging_moss",
+    "props": {
+     "tip": "true"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 281,
+    "block": "potted_fern"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 281,
+    "block": "moss_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 281,
+    "block": "moss_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 281,
+    "block": "moss_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 281,
+    "block": "moss_carpet"
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 281,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 281,
+    "block": "birch_fence"
+   },
+   {
+    "x": -145,
+    "dy": 2,
+    "z": 281,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -151,
+    "dy": 1,
+    "z": 282,
+    "block": "birch_fence"
+   },
+   {
+    "x": -151,
+    "dy": 2,
+    "z": 282,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 282,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 285,
+    "block": "barrel",
+    "props": {
+     "facing": "north",
+     "open": "false"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 285,
+    "block": "composter",
+    "props": {
+     "level": "6"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 285,
+    "block": "water_cauldron",
+    "props": {
+     "level": "3"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 285,
+    "block": "birch_slab",
+    "props": {
+     "type": "double"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 285,
+    "block": "birch_slab",
+    "props": {
+     "type": "double"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 285,
+    "block": "potted_birch_sapling"
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 285,
+    "block": "copper_golem_statue"
+   },
+   {
+    "x": -148,
+    "dy": 6,
+    "z": 285,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 5,
+    "z": 285,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 4,
+    "z": 285,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 6,
+    "z": 285,
+    "block": "pale_hanging_moss",
+    "props": {
+     "tip": "false"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 5,
+    "z": 285,
+    "block": "pale_hanging_moss",
+    "props": {
+     "tip": "true"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 286,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -140,
+    "dy": 1,
+    "z": 287,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 288,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 288,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 288,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -140,
+    "dy": 1,
+    "z": 288,
+    "block": "copper_chest",
+    "props": {
+     "facing": "west"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 289,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 289,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 289,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 289,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 6,
+    "z": 289,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 5,
+    "z": 289,
+    "block": "copper_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 4,
+    "z": 289,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 289,
+    "block": "light_blue_carpet"
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 289,
+    "block": "light_blue_bed",
+    "props": {
+     "facing": "south",
+     "part": "foot"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 290,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 290,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 290,
+    "block": "birch_fence"
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 290,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 290,
+    "block": "lectern",
+    "props": {
+     "facing": "north"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 290,
+    "block": "chiseled_bookshelf",
+    "props": {
+     "facing": "north",
+     "slot_0_occupied": "true",
+     "slot_1_occupied": "true",
+     "slot_2_occupied": "false",
+     "slot_3_occupied": "true",
+     "slot_4_occupied": "true",
+     "slot_5_occupied": "true"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 290,
+    "block": "white_candle",
+    "props": {
+     "candles": "2",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 290,
+    "block": "potted_flowering_azalea_bush"
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 290,
+    "block": "decorated_pot"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 290,
+    "block": "potted_lily_of_the_valley"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 290,
+    "block": "barrel",
+    "props": {
+     "facing": "west",
+     "open": "false"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 2,
+    "z": 290,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 290,
+    "block": "light_blue_bed",
+    "props": {
+     "facing": "south",
+     "part": "head"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 3,
+    "z": 290,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "north",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   }
+  ]
+ },
+ "lounge": {
+  "name": "The Sky Lounge",
+  "note": "Cleared the planter that pinched the stair landing's only south exit to one cell, moved the west planter off the bar stool it was fusing to, dropped the bar sign to a readable height on two chains, gave the back bar a capped post and second shelf, and added two window seats to the empty north-west corner.",
+  "blocks": [
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 281,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 281,
+    "block": "stripped_birch_wood",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 281,
+    "block": "stripped_birch_wood",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 3,
+    "z": 281,
+    "block": "stripped_birch_wood",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 281,
+    "block": "barrel",
+    "props": {
+     "facing": "south",
+     "open": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 281,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "west",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 3,
+    "z": 281,
+    "block": "birch_shelf",
+    "props": {
+     "facing": "west",
+     "powered": "false",
+     "side_chain": "unconnected"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 281,
+    "block": "stripped_birch_wood",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 281,
+    "block": "stripped_birch_wood",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 3,
+    "z": 281,
+    "block": "copper_bulb",
+    "props": {
+     "lit": "true",
+     "powered": "false"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 281,
+    "block": "barrel",
+    "props": {
+     "facing": "south",
+     "open": "false"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 281,
+    "block": "orange_candle",
+    "props": {
+     "candles": "3",
+     "lit": "true"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 281,
+    "block": "moss_block"
+   },
+   {
+    "x": -145,
+    "dy": 2,
+    "z": 281,
+    "block": "flowering_azalea"
+   },
+   {
+    "x": -143,
+    "dy": 1,
+    "z": 281,
+    "block": "potted_azalea_bush"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 282,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 283,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 283,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 283,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 4,
+    "z": 283,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 5,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 6,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 2,
+    "z": 283,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 4,
+    "z": 283,
+    "block": "birch_hanging_sign",
+    "props": {
+     "attached": "true",
+     "rotation": "0"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 5,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 6,
+    "z": 283,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 283,
+    "block": "stripped_birch_log",
+    "props": {
+     "axis": "x"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 2,
+    "z": 283,
+    "block": "cut_copper_slab",
+    "props": {
+     "type": "bottom"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 283,
+    "block": "jukebox"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 284,
+    "block": "birch_fence"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 284,
+    "block": "birch_fence"
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -145,
+    "dy": 1,
+    "z": 284,
+    "block": "birch_fence"
+   },
+   {
+    "x": -145,
+    "dy": 2,
+    "z": 284,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 285,
+    "block": "moss_block"
+   },
+   {
+    "x": -150,
+    "dy": 2,
+    "z": 285,
+    "block": "flowering_azalea"
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 285,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 286,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 286,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 286,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 286,
+    "block": "birch_fence"
+   },
+   {
+    "x": -147,
+    "dy": 2,
+    "z": 286,
+    "block": "birch_fence"
+   },
+   {
+    "x": -147,
+    "dy": 3,
+    "z": 286,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "false"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 286,
+    "block": "birch_fence"
+   },
+   {
+    "x": -144,
+    "dy": 2,
+    "z": 286,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 4,
+    "z": 286,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 5,
+    "z": 286,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 6,
+    "z": 286,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -141,
+    "dy": 1,
+    "z": 286,
+    "block": "moss_block"
+   },
+   {
+    "x": -141,
+    "dy": 2,
+    "z": 286,
+    "block": "azalea"
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 287,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 287,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 287,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 287,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -144,
+    "dy": 1,
+    "z": 287,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 287,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 288,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 288,
+    "block": "birch_fence"
+   },
+   {
+    "x": -149,
+    "dy": 2,
+    "z": 288,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "west",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 288,
+    "block": "birch_fence"
+   },
+   {
+    "x": -148,
+    "dy": 2,
+    "z": 288,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 4,
+    "z": 288,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 5,
+    "z": 288,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -148,
+    "dy": 6,
+    "z": 288,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 288,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 288,
+    "block": "birch_fence"
+   },
+   {
+    "x": -142,
+    "dy": 2,
+    "z": 288,
+    "block": "birch_trapdoor",
+    "props": {
+     "facing": "north",
+     "half": "bottom",
+     "open": "false"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 4,
+    "z": 288,
+    "block": "copper_lantern",
+    "props": {
+     "hanging": "true"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 5,
+    "z": 288,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -142,
+    "dy": 6,
+    "z": 288,
+    "block": "iron_chain",
+    "props": {
+     "axis": "y"
+    }
+   },
+   {
+    "x": -150,
+    "dy": 1,
+    "z": 289,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -149,
+    "dy": 1,
+    "z": 289,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -148,
+    "dy": 1,
+    "z": 289,
+    "block": "brown_carpet"
+   },
+   {
+    "x": -147,
+    "dy": 1,
+    "z": 289,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "east",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   },
+   {
+    "x": -146,
+    "dy": 1,
+    "z": 289,
+    "block": "potted_flowering_azalea_bush"
+   },
+   {
+    "x": -142,
+    "dy": 1,
+    "z": 289,
+    "block": "birch_stairs",
+    "props": {
+     "facing": "south",
+     "half": "bottom",
+     "shape": "straight"
+    }
+   }
+  ]
+ }
+}

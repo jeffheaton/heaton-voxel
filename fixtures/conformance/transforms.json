@@ -1,0 +1,387 @@
+{
+ "conventions": "rotations are clockwise seen from above (north becomes east); flips run along the named axis (flipx swaps east/west). fake_block's directional-looking property is outside the vocabulary and must pass through unchanged (and be warned about).",
+ "facing_bytes": {
+  "mirror": {
+   "x": {
+    "4": 5,
+    "5": 4
+   },
+   "y": {
+    "0": 1,
+    "1": 0
+   },
+   "z": {
+    "2": 3,
+    "3": 2
+   }
+  },
+  "rot90": {
+   "2": 5,
+   "3": 4,
+   "4": 2,
+   "5": 3
+  },
+  "three_d_order": [
+   "down",
+   "up",
+   "north",
+   "south",
+   "west",
+   "east"
+  ],
+  "two_d_mirror": {
+   "x": {
+    "1": 3,
+    "3": 1
+   },
+   "y": {},
+   "z": {
+    "0": 2,
+    "2": 0
+   }
+  },
+  "two_d_order": [
+   "south",
+   "west",
+   "north",
+   "east"
+  ],
+  "two_d_rot90": {
+   "0": 1,
+   "1": 2,
+   "2": 3,
+   "3": 0
+  }
+ },
+ "geometry": {
+  "box": [
+   4,
+   3,
+   5
+  ],
+  "cell_rot90": "(x,y,z) -> (length-1-z, y, x); size becomes (length, height, width)",
+  "cell_samples_rot90": [
+   [
+    [
+     0,
+     0,
+     0
+    ],
+    [
+     4,
+     0,
+     0
+    ]
+   ],
+   [
+    [
+     3,
+     2,
+     4
+    ],
+    [
+     0,
+     2,
+     3
+    ]
+   ],
+   [
+    [
+     1,
+     0,
+     2
+    ],
+    [
+     2,
+     0,
+     1
+    ]
+   ]
+  ],
+  "offset_rot90": "(ox,oy,oz) -> (-oz-length+1, oy, ox)",
+  "point_rot90": "(x,y,z) -> (length-z, y, x)",
+  "yaw_rot90": "+90 degrees, wrapped to [-180, 180)"
+ },
+ "negative_rotation": {
+  "equivalences": [
+   [
+    -90,
+    270
+   ],
+   [
+    -180,
+    180
+   ],
+   [
+    -270,
+    90
+   ],
+   [
+    450,
+    90
+   ]
+  ],
+  "rule": "degrees normalize as quarters = floormod(degrees / 90, 4); with truncating division use ((d/90)%4+4)%4"
+ },
+ "states": [
+  {
+   "flipx": "minecraft:oak_stairs[facing=north,half=bottom,shape=inner_right]",
+   "flipy": "minecraft:oak_stairs[facing=north,half=top,shape=inner_left]",
+   "flipz": "minecraft:oak_stairs[facing=south,half=bottom,shape=inner_right]",
+   "rot180": "minecraft:oak_stairs[facing=south,half=bottom,shape=inner_left]",
+   "rot270": "minecraft:oak_stairs[facing=west,half=bottom,shape=inner_left]",
+   "rot90": "minecraft:oak_stairs[facing=east,half=bottom,shape=inner_left]",
+   "state": "minecraft:oak_stairs[facing=north,half=bottom,shape=inner_left]"
+  },
+  {
+   "flipx": "minecraft:oak_stairs[facing=west,shape=outer_left]",
+   "flipy": "minecraft:oak_stairs[facing=east,shape=outer_right]",
+   "flipz": "minecraft:oak_stairs[facing=east,shape=outer_left]",
+   "rot180": "minecraft:oak_stairs[facing=west,shape=outer_right]",
+   "rot270": "minecraft:oak_stairs[facing=north,shape=outer_right]",
+   "rot90": "minecraft:oak_stairs[facing=south,shape=outer_right]",
+   "state": "minecraft:oak_stairs[facing=east,shape=outer_right]"
+  },
+  {
+   "flipx": "minecraft:oak_log[axis=x]",
+   "flipy": "minecraft:oak_log[axis=x]",
+   "flipz": "minecraft:oak_log[axis=x]",
+   "rot180": "minecraft:oak_log[axis=x]",
+   "rot270": "minecraft:oak_log[axis=z]",
+   "rot90": "minecraft:oak_log[axis=z]",
+   "state": "minecraft:oak_log[axis=x]"
+  },
+  {
+   "flipx": "minecraft:oak_log[axis=y]",
+   "flipy": "minecraft:oak_log[axis=y]",
+   "flipz": "minecraft:oak_log[axis=y]",
+   "rot180": "minecraft:oak_log[axis=y]",
+   "rot270": "minecraft:oak_log[axis=y]",
+   "rot90": "minecraft:oak_log[axis=y]",
+   "state": "minecraft:oak_log[axis=y]"
+  },
+  {
+   "flipx": "minecraft:oak_sign[rotation=13]",
+   "flipy": "minecraft:oak_sign[rotation=3]",
+   "flipz": "minecraft:oak_sign[rotation=5]",
+   "rot180": "minecraft:oak_sign[rotation=11]",
+   "rot270": "minecraft:oak_sign[rotation=15]",
+   "rot90": "minecraft:oak_sign[rotation=7]",
+   "state": "minecraft:oak_sign[rotation=3]"
+  },
+  {
+   "flipx": "minecraft:oak_sign[rotation=1]",
+   "flipy": "minecraft:oak_sign[rotation=15]",
+   "flipz": "minecraft:oak_sign[rotation=9]",
+   "rot180": "minecraft:oak_sign[rotation=7]",
+   "rot270": "minecraft:oak_sign[rotation=11]",
+   "rot90": "minecraft:oak_sign[rotation=3]",
+   "state": "minecraft:oak_sign[rotation=15]"
+  },
+  {
+   "flipx": "minecraft:rail[shape=north_west]",
+   "flipy": "minecraft:rail[shape=north_east]",
+   "flipz": "minecraft:rail[shape=south_east]",
+   "rot180": "minecraft:rail[shape=south_west]",
+   "rot270": "minecraft:rail[shape=north_west]",
+   "rot90": "minecraft:rail[shape=south_east]",
+   "state": "minecraft:rail[shape=north_east]"
+  },
+  {
+   "flipx": "minecraft:rail[shape=east_west]",
+   "flipy": "minecraft:rail[shape=east_west]",
+   "flipz": "minecraft:rail[shape=east_west]",
+   "rot180": "minecraft:rail[shape=east_west]",
+   "rot270": "minecraft:rail[shape=north_south]",
+   "rot90": "minecraft:rail[shape=north_south]",
+   "state": "minecraft:rail[shape=east_west]"
+  },
+  {
+   "flipx": "minecraft:powered_rail[shape=ascending_north]",
+   "flipy": "minecraft:powered_rail[shape=ascending_north]",
+   "flipz": "minecraft:powered_rail[shape=ascending_south]",
+   "rot180": "minecraft:powered_rail[shape=ascending_south]",
+   "rot270": "minecraft:powered_rail[shape=ascending_west]",
+   "rot90": "minecraft:powered_rail[shape=ascending_east]",
+   "state": "minecraft:powered_rail[shape=ascending_north]"
+  },
+  {
+   "flipx": "minecraft:cobblestone_wall[east=none,north=tall,south=none,up=true,west=low]",
+   "flipy": "minecraft:cobblestone_wall[down=true,east=low,north=tall,south=none,west=none]",
+   "flipz": "minecraft:cobblestone_wall[east=low,north=none,south=tall,up=true,west=none]",
+   "rot180": "minecraft:cobblestone_wall[east=none,north=none,south=tall,up=true,west=low]",
+   "rot270": "minecraft:cobblestone_wall[east=none,north=low,south=none,up=true,west=tall]",
+   "rot90": "minecraft:cobblestone_wall[east=tall,north=none,south=low,up=true,west=none]",
+   "state": "minecraft:cobblestone_wall[east=low,north=tall,south=none,up=true,west=none]"
+  },
+  {
+   "flipx": "minecraft:vine[east=false,north=false,south=false,up=true,west=true]",
+   "flipy": "minecraft:vine[down=true,east=true,north=false,south=false,west=false]",
+   "flipz": "minecraft:vine[east=true,north=false,south=false,up=true,west=false]",
+   "rot180": "minecraft:vine[east=false,north=false,south=false,up=true,west=true]",
+   "rot270": "minecraft:vine[east=false,north=true,south=false,up=true,west=false]",
+   "rot90": "minecraft:vine[east=false,north=false,south=true,up=true,west=false]",
+   "state": "minecraft:vine[east=true,north=false,south=false,up=true,west=false]"
+  },
+  {
+   "flipx": "minecraft:oak_door[facing=west,half=lower,hinge=right]",
+   "flipy": "minecraft:oak_door[facing=east,half=upper,hinge=left]",
+   "flipz": "minecraft:oak_door[facing=east,half=lower,hinge=right]",
+   "rot180": "minecraft:oak_door[facing=west,half=lower,hinge=left]",
+   "rot270": "minecraft:oak_door[facing=north,half=lower,hinge=left]",
+   "rot90": "minecraft:oak_door[facing=south,half=lower,hinge=left]",
+   "state": "minecraft:oak_door[facing=east,half=lower,hinge=left]"
+  },
+  {
+   "flipx": "minecraft:chest[facing=east,type=right]",
+   "flipy": "minecraft:chest[facing=west,type=left]",
+   "flipz": "minecraft:chest[facing=west,type=right]",
+   "rot180": "minecraft:chest[facing=east,type=left]",
+   "rot270": "minecraft:chest[facing=south,type=left]",
+   "rot90": "minecraft:chest[facing=north,type=left]",
+   "state": "minecraft:chest[facing=west,type=left]"
+  },
+  {
+   "flipx": "minecraft:oak_slab[type=top]",
+   "flipy": "minecraft:oak_slab[type=bottom]",
+   "flipz": "minecraft:oak_slab[type=top]",
+   "rot180": "minecraft:oak_slab[type=top]",
+   "rot270": "minecraft:oak_slab[type=top]",
+   "rot90": "minecraft:oak_slab[type=top]",
+   "state": "minecraft:oak_slab[type=top]"
+  },
+  {
+   "flipx": "minecraft:lever[face=floor,facing=north]",
+   "flipy": "minecraft:lever[face=ceiling,facing=north]",
+   "flipz": "minecraft:lever[face=floor,facing=south]",
+   "rot180": "minecraft:lever[face=floor,facing=south]",
+   "rot270": "minecraft:lever[face=floor,facing=west]",
+   "rot90": "minecraft:lever[face=floor,facing=east]",
+   "state": "minecraft:lever[face=floor,facing=north]"
+  },
+  {
+   "flipx": "minecraft:piston[extended=false,facing=up]",
+   "flipy": "minecraft:piston[extended=false,facing=down]",
+   "flipz": "minecraft:piston[extended=false,facing=up]",
+   "rot180": "minecraft:piston[extended=false,facing=up]",
+   "rot270": "minecraft:piston[extended=false,facing=up]",
+   "rot90": "minecraft:piston[extended=false,facing=up]",
+   "state": "minecraft:piston[extended=false,facing=up]"
+  },
+  {
+   "flipx": "minecraft:lantern[hanging=true]",
+   "flipy": "minecraft:lantern[hanging=false]",
+   "flipz": "minecraft:lantern[hanging=true]",
+   "rot180": "minecraft:lantern[hanging=true]",
+   "rot270": "minecraft:lantern[hanging=true]",
+   "rot90": "minecraft:lantern[hanging=true]",
+   "state": "minecraft:lantern[hanging=true]"
+  },
+  {
+   "flipx": "minecraft:pointed_dripstone[vertical_direction=up]",
+   "flipy": "minecraft:pointed_dripstone[vertical_direction=down]",
+   "flipz": "minecraft:pointed_dripstone[vertical_direction=up]",
+   "rot180": "minecraft:pointed_dripstone[vertical_direction=up]",
+   "rot270": "minecraft:pointed_dripstone[vertical_direction=up]",
+   "rot90": "minecraft:pointed_dripstone[vertical_direction=up]",
+   "state": "minecraft:pointed_dripstone[vertical_direction=up]"
+  },
+  {
+   "flipx": "minecraft:crafter[orientation=north_up]",
+   "flipy": "minecraft:crafter[orientation=north_down]",
+   "flipz": "minecraft:crafter[orientation=south_up]",
+   "rot180": "minecraft:crafter[orientation=south_up]",
+   "rot270": "minecraft:crafter[orientation=west_up]",
+   "rot90": "minecraft:crafter[orientation=east_up]",
+   "state": "minecraft:crafter[orientation=north_up]"
+  },
+  {
+   "flipx": "minecraft:white_bed[facing=south,part=foot]",
+   "flipy": "minecraft:white_bed[facing=south,part=foot]",
+   "flipz": "minecraft:white_bed[facing=north,part=foot]",
+   "rot180": "minecraft:white_bed[facing=north,part=foot]",
+   "rot270": "minecraft:white_bed[facing=east,part=foot]",
+   "rot90": "minecraft:white_bed[facing=west,part=foot]",
+   "state": "minecraft:white_bed[facing=south,part=foot]"
+  },
+  {
+   "flipx": "minecraft:fake_block[widget=north]",
+   "flipy": "minecraft:fake_block[widget=north]",
+   "flipz": "minecraft:fake_block[widget=north]",
+   "rot180": "minecraft:fake_block[widget=north]",
+   "rot270": "minecraft:fake_block[widget=north]",
+   "rot90": "minecraft:fake_block[widget=north]",
+   "state": "minecraft:fake_block[widget=north]"
+  }
+ ],
+ "version": 1,
+ "yaw": {
+  "cases": [
+   {
+    "flipx": 0.0,
+    "flipy": 0.0,
+    "flipz": -180.0,
+    "rot180": -180.0,
+    "rot270": -90.0,
+    "rot90": 90.0,
+    "yaw": 0.0
+   },
+   {
+    "flipx": -90.0,
+    "flipy": 90.0,
+    "flipz": 90.0,
+    "rot180": -90.0,
+    "rot270": 0.0,
+    "rot90": -180.0,
+    "yaw": 90.0
+   },
+   {
+    "flipx": -170.0,
+    "flipy": 170.0,
+    "flipz": 10.0,
+    "rot180": -10.0,
+    "rot270": 80.0,
+    "rot90": -100.0,
+    "yaw": 170.0
+   },
+   {
+    "flipx": -180.0,
+    "flipy": -180.0,
+    "flipz": 0.0,
+    "rot180": 0.0,
+    "rot270": 90.0,
+    "rot90": -90.0,
+    "yaw": -180.0
+   },
+   {
+    "flipx": 90.0,
+    "flipy": -90.0,
+    "flipz": -90.0,
+    "rot180": 90.0,
+    "rot270": -180.0,
+    "rot90": 0.0,
+    "yaw": -90.0
+   },
+   {
+    "flipx": 10.0,
+    "flipy": -10.0,
+    "flipz": -170.0,
+    "rot180": 170.0,
+    "rot270": -100.0,
+    "rot90": 80.0,
+    "yaw": 350.0
+   },
+   {
+    "flipx": -170.0,
+    "flipy": 170.0,
+    "flipz": 10.0,
+    "rot180": -10.0,
+    "rot270": 80.0,
+    "rot90": -100.0,
+    "yaw": -190.0
+   }
+  ],
+  "pitch_note": "pitch is untouched by every op except flipy, which negates it",
+  "range": "[-180, 180)"
+ }
+}

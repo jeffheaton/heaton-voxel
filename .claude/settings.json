@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m unittest *)",
+      "Bash(python3 -m unittest *)",
+      "Bash(python -m pytest *)",
+      "Bash(python -m heaton_voxel *)",
+      "Bash(python3 -m heaton_voxel *)",
+      "Bash(python fixtures/make_conformance.py)"
+    ]
+  }
+}

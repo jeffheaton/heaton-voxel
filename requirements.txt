@@ -1,0 +1,9 @@
+# heaton-voxel has no required third-party dependencies -- it reads and writes
+# the binary formats directly using only the Python standard library (struct,
+# zlib, gzip, array, hashlib). Installing this file is a no-op.
+#
+# Optional: Minecraft 1.20.5+ can be configured to compress region chunks with
+# LZ4 (compression scheme 4). No vanilla world uses it by default, and nothing
+# in the target save does, so it is left out. Uncomment to read such worlds:
+#
+# lz4>=4.3.2

@@ -1,0 +1,274 @@
+{
+ "cases": [
+  {
+   "binary": "0a0000010008627974655f6d696e80010008627974655f6d61787f02000973686f72745f6d696e800002000973686f72745f6d61787fff030007696e745f6d696e80000000030007696e745f6d61787fffffff0400086c6f6e675f6d696e80000000000000000400086c6f6e675f6d61787fffffffffffffff050005666c6f61743fc00000060006646f75626c65bf50624dd2f1a9fc08000474657874000b706c61696e20617363696900",
+   "description": "every scalar type at ordinary and extreme values",
+   "expected": {
+    "t": "compound",
+    "v": {
+     "byte_max": {
+      "t": "byte",
+      "v": 127
+     },
+     "byte_min": {
+      "t": "byte",
+      "v": -128
+     },
+     "double": {
+      "bits": "bf50624dd2f1a9fc",
+      "t": "double",
+      "v": -0.001
+     },
+     "float": {
+      "bits": "3fc00000",
+      "t": "float",
+      "v": 1.5
+     },
+     "int_max": {
+      "t": "int",
+      "v": 2147483647
+     },
+     "int_min": {
+      "t": "int",
+      "v": -2147483648
+     },
+     "long_max": {
+      "t": "long",
+      "v": "9223372036854775807"
+     },
+     "long_min": {
+      "t": "long",
+      "v": "-9223372036854775808"
+     },
+     "short_max": {
+      "t": "short",
+      "v": 32767
+     },
+     "short_min": {
+      "t": "short",
+      "v": -32768
+     },
+     "text": {
+      "t": "string",
+      "v": "plain ascii"
+     }
+    }
+   },
+   "name": "scalars",
+   "root_name": "",
+   "roundtrip_exact": true
+  },
+  {
+   "binary": "0a00076e616d6564c3a908000a6e756c5f696e73696465000461c0806208000661737472616c000c636c65663a20eda0b4edb49e080003626d70000c636166c3a920e4b896e7958c00",
+   "description": "Java modified UTF-8: NUL encodes as C0 80, astral characters as CESU-8 surrogate pairs -- not standard UTF-8",
+   "expected": {
+    "t": "compound",
+    "v": {
+     "astral": {
+      "cp": [
+       99,
+       108,
+       101,
+       102,
+       58,
+       32,
+       119070
+      ],
+      "t": "string"
+     },
+     "bmp": {
+      "cp": [
+       99,
+       97,
+       102,
+       233,
+       32,
+       19990,
+       30028
+      ],
+      "t": "string"
+     },
+     "nul_inside": {
+      "cp": [
+       97,
+       0,
+       98
+      ],
+      "t": "string"
+     }
+    }
+   },
+   "name": "modified-utf8",
+   "root_name": "named\u00e9",
+   "roundtrip_exact": true
+  },
+  {
+   "binary": "0a00000900066f665f656e6400000000000900066f665f696e74030000000009000b6f665f636f6d706f756e640a0000000000",
+   "description": "an empty list's declared element type is data and must survive",
+   "expected": {
+    "t": "compound",
+    "v": {
+     "of_compound": {
+      "e": "TAG_Compound",
+      "t": "list",
+      "v": []
+     },
+     "of_end": {
+      "e": "TAG_End",
+      "t": "list",
+      "v": []
+     },
+     "of_int": {
+      "e": "TAG_Int",
+      "t": "list",
+      "v": []
+     }
+    }
+   },
+   "name": "empty-lists",
+   "root_name": "",
+   "roundtrip_exact": true
+  },
+  {
+   "binary": "0a000009000467726964090000000203000000020000000100000002030000000100000003090004726f77730a000000020100016101000000",
+   "description": "lists of lists, compounds in lists",
+   "expected": {
+    "t": "compound",
+    "v": {
+     "grid": {
+      "e": "TAG_List",
+      "t": "list",
+      "v": [
+       {
+        "e": "TAG_Int",
+        "t": "list",
+        "v": [
+         {
+          "t": "int",
+          "v": 1
+         },
+         {
+          "t": "int",
+          "v": 2
+         }
+        ]
+       },
+       {
+        "e": "TAG_Int",
+        "t": "list",
+        "v": [
+         {
+          "t": "int",
+          "v": 3
+         }
+        ]
+       }
+      ]
+     },
+     "rows": {
+      "e": "TAG_Compound",
+      "t": "list",
+      "v": [
+       {
+        "t": "compound",
+        "v": {
+         "a": {
+          "t": "byte",
+          "v": 1
+         }
+        }
+       },
+       {
+        "t": "compound",
+        "v": {}
+       }
+      ]
+     }
+    }
+   },
+   "name": "nesting",
+   "root_name": "",
+   "roundtrip_exact": true
+  },
+  {
+   "binary": "0a000007000562797465730000000580ff00017f0b0004696e74730000000480000000ffffffff000000007fffffff0c00056c6f6e6773000000058000000000000000ffffffffffffffff000000000000000040000000000000007fffffffffffffff00",
+   "description": "array payloads are signed; a negative long's high bits are real data, and reading fields across words must mask, not sign-extend",
+   "expected": {
+    "t": "compound",
+    "v": {
+     "bytes": {
+      "t": "byte_array",
+      "v": [
+       -128,
+       -1,
+       0,
+       1,
+       127
+      ]
+     },
+     "ints": {
+      "t": "int_array",
+      "v": [
+       -2147483648,
+       -1,
+       0,
+       2147483647
+      ]
+     },
+     "longs": {
+      "t": "long_array",
+      "v": [
+       "-9223372036854775808",
+       "-1",
+       "0",
+       "4611686018427387904",
+       "9223372036854775807"
+      ]
+     }
+    }
+   },
+   "name": "arrays-signed",
+   "root_name": "",
+   "roundtrip_exact": true
+  },
+  {
+   "binary": "0a0000080001730002c18100",
+   "description": "an overlong encoding decodes normally but the original bytes must be preserved for re-encoding",
+   "expected": {
+    "t": "compound",
+    "v": {
+     "s": {
+      "t": "string",
+      "v": "A"
+     }
+    }
+   },
+   "name": "non-canonical-string",
+   "root_name": "",
+   "roundtrip_exact": true
+  },
+  {
+   "binary": "0a0000050001667fa00001060001647ff000000000beef00",
+   "description": "NaN bit patterns are data; compare floats by bits, never by value",
+   "expected": {
+    "t": "compound",
+    "v": {
+     "d": {
+      "bits": "7ff000000000beef",
+      "t": "double",
+      "v": null
+     },
+     "f": {
+      "bits": "7fa00001",
+      "t": "float",
+      "v": null
+     }
+    }
+   },
+   "name": "nan-payloads",
+   "root_name": "",
+   "roundtrip_exact": true
+  }
+ ],
+ "version": 1
+}

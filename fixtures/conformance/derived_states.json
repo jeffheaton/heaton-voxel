@@ -1,0 +1,466 @@
+{
+ "cases": [
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=false,south=false,west=false]",
+   "name": "fence-solo",
+   "neighbors": {}
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=true,north=false,south=false,west=false]",
+   "name": "fence-pair",
+   "neighbors": {
+    "east": "minecraft:oak_fence"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=true,south=false,west=false]",
+   "name": "fence-to-solid",
+   "neighbors": {
+    "north": "minecraft:stone"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=false,south=false,west=false]",
+   "name": "fence-not-to-slab",
+   "neighbors": {
+    "north": "minecraft:oak_slab[type=bottom]"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=true,south=false,west=false]",
+   "name": "fence-to-double-slab",
+   "neighbors": {
+    "north": "minecraft:oak_slab[type=double]"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=true,south=false,west=false]",
+   "name": "fence-to-stair-back",
+   "neighbors": {
+    "north": "minecraft:oak_stairs[facing=south]"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=false,south=false,west=false]",
+   "name": "fence-not-to-stair-side",
+   "neighbors": {
+    "north": "minecraft:oak_stairs[facing=east]"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=false,south=false,west=true]",
+   "name": "fence-to-spawner",
+   "neighbors": {
+    "west": "minecraft:spawner"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=false,south=false,west=false]",
+   "name": "fence-not-to-grindstone",
+   "neighbors": {
+    "west": "minecraft:grindstone[face=floor,facing=north]"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=false,south=false,west=false]",
+   "name": "fence-not-to-nether",
+   "neighbors": {
+    "east": "minecraft:nether_brick_fence"
+   }
+  },
+  {
+   "center": "minecraft:nether_brick_fence",
+   "expected": "minecraft:nether_brick_fence[east=true,north=false,south=false,west=false]",
+   "name": "nether-pair",
+   "neighbors": {
+    "east": "minecraft:nether_brick_fence"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=true,north=false,south=false,west=false]",
+   "name": "fence-gate-along-bar",
+   "neighbors": {
+    "east": "minecraft:oak_fence_gate[facing=north]"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=false,south=false,west=false]",
+   "name": "fence-gate-across-bar",
+   "neighbors": {
+    "north": "minecraft:oak_fence_gate[facing=north]"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence[waterlogged=true]",
+   "expected": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=true,west=false]",
+   "name": "fence-keeps-waterlogged",
+   "neighbors": {
+    "east": "minecraft:oak_fence"
+   }
+  },
+  {
+   "center": "minecraft:gray_stained_glass_pane",
+   "expected": "minecraft:gray_stained_glass_pane[east=true,north=false,south=false,west=true]",
+   "name": "pane-to-waxed-copper",
+   "neighbors": {
+    "east": "minecraft:waxed_oxidized_cut_copper",
+    "west": "minecraft:waxed_oxidized_copper"
+   }
+  },
+  {
+   "center": "minecraft:glass_pane",
+   "expected": "minecraft:glass_pane[east=false,north=true,south=false,west=false]",
+   "name": "pane-to-smooth-quartz",
+   "neighbors": {
+    "north": "minecraft:smooth_quartz"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=true,north=false,south=false,west=false]",
+   "name": "fence-to-stem",
+   "neighbors": {
+    "east": "minecraft:crimson_stem[axis=y]"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=false,south=false,west=false]",
+   "name": "fence-to-open-door-plate",
+   "neighbors": {
+    "west": "minecraft:oak_door[facing=east,half=lower,hinge=left,open=false,powered=false]"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=none,north=low,south=none,up=true,west=none]",
+   "name": "wall-to-crafter",
+   "neighbors": {
+    "north": "minecraft:crafter[crafting=false,orientation=north_up,triggered=false]"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=none,north=none,south=none,up=true,west=none]",
+   "name": "wall-solo",
+   "neighbors": {}
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=false,west=low]",
+   "name": "wall-straight",
+   "neighbors": {
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=none,south=low,up=true,west=none]",
+   "name": "wall-corner",
+   "neighbors": {
+    "east": "minecraft:cobblestone_wall",
+    "south": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=none,south=low,up=true,west=low]",
+   "name": "wall-tee",
+   "neighbors": {
+    "east": "minecraft:cobblestone_wall",
+    "south": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=low,south=low,up=false,west=low]",
+   "name": "wall-cross",
+   "neighbors": {
+    "east": "minecraft:cobblestone_wall",
+    "north": "minecraft:cobblestone_wall",
+    "south": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=tall,north=none,south=none,up=false,west=tall]",
+   "name": "wall-under-solid",
+   "neighbors": {
+    "above": "minecraft:stone",
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=true,west=low]",
+   "name": "wall-under-lantern",
+   "neighbors": {
+    "above": "minecraft:lantern[hanging=false]",
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=false,west=low]",
+   "name": "wall-under-cave-air",
+   "neighbors": {
+    "above": "minecraft:cave_air",
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=false,west=low]",
+   "name": "wall-under-void-air",
+   "neighbors": {
+    "above": "minecraft:void_air",
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=tall,north=none,south=none,up=false,west=tall]",
+   "name": "wall-under-wall",
+   "neighbors": {
+    "above": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=false,west=low]",
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=tall,north=low,south=low,up=true,west=low]",
+   "name": "wall-lopsided-under-wall",
+   "neighbors": {
+    "above": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=true,west=none]",
+    "east": "minecraft:cobblestone_wall",
+    "north": "minecraft:cobblestone_wall",
+    "south": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=none,north=tall,south=tall,up=true,west=none]",
+   "name": "wall-under-posted-wall",
+   "neighbors": {
+    "above": "minecraft:cobblestone_wall[east=none,north=low,south=low,up=true,west=none]",
+    "north": "minecraft:cobblestone_wall",
+    "south": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=none,north=tall,south=tall,up=false,west=none]",
+   "name": "wall-under-leaves",
+   "neighbors": {
+    "above": "minecraft:spruce_leaves[distance=3,persistent=false]",
+    "north": "minecraft:cobblestone_wall",
+    "south": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=tall,north=none,south=none,up=false,west=tall]",
+   "name": "wall-under-bottom-slab",
+   "neighbors": {
+    "above": "minecraft:stone_slab[type=bottom]",
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=false,west=low]",
+   "name": "wall-under-top-slab",
+   "neighbors": {
+    "above": "minecraft:stone_slab[type=top]",
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=false,west=low]",
+   "name": "wall-under-open-trapdoor",
+   "neighbors": {
+    "above": "minecraft:oak_trapdoor[half=bottom,open=true]",
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=true,west=low]",
+   "name": "wall-under-torch",
+   "neighbors": {
+    "above": "minecraft:torch",
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=none,north=low,south=none,up=true,west=none]",
+   "name": "wall-not-to-pumpkin",
+   "neighbors": {
+    "north": "minecraft:cobblestone_wall",
+    "south": "minecraft:pumpkin"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=false,north=false,south=false,west=false]",
+   "name": "fence-not-to-carved-pumpkin",
+   "neighbors": {
+    "east": "minecraft:carved_pumpkin[facing=north]"
+   }
+  },
+  {
+   "center": "minecraft:glass_pane",
+   "expected": "minecraft:glass_pane[east=false,north=false,south=false,west=false]",
+   "name": "pane-not-to-melon",
+   "neighbors": {
+    "west": "minecraft:melon"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=false,west=low]",
+   "name": "wall-to-open-trapdoor-plate",
+   "neighbors": {
+    "east": "minecraft:spruce_trapdoor[facing=east,half=top,open=true]",
+    "west": "minecraft:oak_trapdoor[facing=west,open=true]"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=none,north=none,south=none,up=true,west=none]",
+   "name": "wall-not-to-trapdoor-edge-or-shut",
+   "neighbors": {
+    "east": "minecraft:spruce_trapdoor[facing=north,open=true]",
+    "north": "minecraft:oak_trapdoor[facing=north,half=top]",
+    "west": "minecraft:oak_trapdoor[facing=east,open=true]"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=none,north=low,south=none,up=true,west=none]",
+   "name": "wall-joins-pane",
+   "neighbors": {
+    "north": "minecraft:glass_pane"
+   }
+  },
+  {
+   "center": "minecraft:glass_pane",
+   "expected": "minecraft:glass_pane[east=true,north=false,south=false,west=true]",
+   "name": "pane-in-wall",
+   "neighbors": {
+    "east": "minecraft:stone",
+    "west": "minecraft:stone"
+   }
+  },
+  {
+   "center": "minecraft:iron_bars",
+   "expected": "minecraft:iron_bars[east=false,north=false,south=true,west=false]",
+   "name": "bars-join-wall",
+   "neighbors": {
+    "south": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence_gate[facing=north]",
+   "expected": "minecraft:oak_fence_gate[facing=north,in_wall=true]",
+   "name": "gate-in-wall",
+   "neighbors": {
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:oak_fence_gate[facing=east]",
+   "expected": "minecraft:oak_fence_gate[facing=east,in_wall=false]",
+   "name": "gate-wrong-axis",
+   "neighbors": {
+    "east": "minecraft:cobblestone_wall",
+    "west": "minecraft:cobblestone_wall"
+   }
+  },
+  {
+   "center": "minecraft:oak_stairs[facing=south]",
+   "expected": "minecraft:oak_stairs[facing=south,shape=straight]",
+   "name": "stair-straight",
+   "neighbors": {}
+  },
+  {
+   "center": "minecraft:oak_stairs[facing=south]",
+   "expected": "minecraft:oak_stairs[facing=south,shape=outer_left]",
+   "name": "stair-outer-left",
+   "neighbors": {
+    "south": "minecraft:oak_stairs[facing=east]"
+   }
+  },
+  {
+   "center": "minecraft:oak_stairs[facing=south]",
+   "expected": "minecraft:oak_stairs[facing=south,shape=outer_right]",
+   "name": "stair-outer-right",
+   "neighbors": {
+    "south": "minecraft:oak_stairs[facing=west]"
+   }
+  },
+  {
+   "center": "minecraft:oak_stairs[facing=south]",
+   "expected": "minecraft:oak_stairs[facing=south,shape=inner_left]",
+   "name": "stair-inner-left",
+   "neighbors": {
+    "north": "minecraft:oak_stairs[facing=east]"
+   }
+  },
+  {
+   "center": "minecraft:oak_stairs[facing=south]",
+   "expected": "minecraft:oak_stairs[facing=south,shape=inner_right]",
+   "name": "stair-inner-right",
+   "neighbors": {
+    "north": "minecraft:oak_stairs[facing=west]"
+   }
+  },
+  {
+   "center": "minecraft:oak_stairs[facing=south]",
+   "expected": "minecraft:oak_stairs[facing=south,shape=straight]",
+   "name": "stair-flank-suppresses",
+   "neighbors": {
+    "south": "minecraft:oak_stairs[facing=east]",
+    "west": "minecraft:oak_stairs[facing=south]"
+   }
+  },
+  {
+   "center": "minecraft:oak_stairs[facing=south]",
+   "expected": "minecraft:oak_stairs[facing=south,shape=straight]",
+   "name": "stair-half-mismatch",
+   "neighbors": {
+    "south": "minecraft:oak_stairs[facing=east,half=top]"
+   }
+  }
+ ],
+ "meaning": "expected is the state a vanilla neighbor update would store for center, given the neighbors (all other positions are minecraft:air). Properties not shown in an input state take vanilla defaults.",
+ "version": 1
+}

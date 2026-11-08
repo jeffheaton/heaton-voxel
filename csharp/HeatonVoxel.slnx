@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="HeatonVoxel.Conformance/HeatonVoxel.Conformance.csproj" />
+  <Project Path="HeatonVoxel/HeatonVoxel.csproj" />
+</Solution>

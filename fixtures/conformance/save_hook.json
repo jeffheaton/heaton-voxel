@@ -1,0 +1,22 @@
+{
+ "offered": [
+  {
+   "existed": true,
+   "path": "dimensions/minecraft/overworld/region/r.-1.0.mca"
+  },
+  {
+   "existed": false,
+   "path": "dimensions/minecraft/overworld/region/r.1.1.mca"
+  },
+  {
+   "existed": true,
+   "path": "level.dat"
+  }
+ ],
+ "refused": true,
+ "refused_left_file": true,
+ "then_written": 1,
+ "unchanged_offered": 0,
+ "unchanged_written": 0,
+ "written": 3
+}

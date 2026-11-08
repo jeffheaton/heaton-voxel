@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+._*
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Packaging / build artifacts (the root only: heaton_voxel/craft/build/ is source)
+/build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+
+# Test / tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# Claude Code machine-local settings
+.claude/settings.local.json
+
+# NOTE: fixtures/ intentionally tracks binary game data (*.mca, level.dat) —
+# do not add patterns that would ignore it.
+
+# Default output filename of `python -m heaton_voxel render` (render.py -o).
+/render.png
+
+# The game's own log, left behind when a probe runs it from the root.
+/logs/

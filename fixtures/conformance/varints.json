@@ -1,0 +1,57 @@
+{
+ "encoding": "LEB128-style: 7 data bits per byte, low group first, high bit set means continue; at most 5 bytes",
+ "sequence": {
+  "bytes": "00f40301d0f7077f8001",
+  "values": [
+   0,
+   500,
+   1,
+   130000,
+   127,
+   128
+  ]
+ },
+ "singles": [
+  {
+   "bytes": "00",
+   "value": 0
+  },
+  {
+   "bytes": "01",
+   "value": 1
+  },
+  {
+   "bytes": "7f",
+   "value": 127
+  },
+  {
+   "bytes": "8001",
+   "value": 128
+  },
+  {
+   "bytes": "ff01",
+   "value": 255
+  },
+  {
+   "bytes": "ac02",
+   "value": 300
+  },
+  {
+   "bytes": "ff7f",
+   "value": 16383
+  },
+  {
+   "bytes": "808001",
+   "value": 16384
+  },
+  {
+   "bytes": "ffff7f",
+   "value": 2097151
+  },
+  {
+   "bytes": "ffffffff07",
+   "value": 2147483647
+  }
+ ],
+ "version": 1
+}

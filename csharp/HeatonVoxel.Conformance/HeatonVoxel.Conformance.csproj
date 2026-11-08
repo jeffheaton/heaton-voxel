@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- The test harness IS the conformance corpus: this runner verifies
+       every artifact under fixtures/conformance/ against the port, exits
+       nonzero on any failure, and has no dependencies beyond the BCL. -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../HeatonVoxel/HeatonVoxel.csproj" />
+  </ItemGroup>
+</Project>

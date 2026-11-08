@@ -1,0 +1,7 @@
+worksite/
+renders/
+__pycache__/
+# lakeplan.py writes plan.json (3 MB), and pictures.py, section.py and
+# bathymetry.py write their PNGs straight into this directory, not renders/.
+*.png
+*.json

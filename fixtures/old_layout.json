@@ -1,0 +1,306 @@
+{
+ "game": "26.3",
+ "cases": [
+  {
+   "name": "1.13.2, a player in level.dat and in playerdata",
+   "data_version": 1631,
+   "before": {
+    "files": {
+     "DIM1/region/r.-1.-1.mca": {
+      "fixture": "legacy/1.16.5-end/r.-1.-1.mca"
+     },
+     "level.dat": "H4sIAAAAAAACE3VTzW7TQBAe105iO00JUHHipxckuLQq7QUuuEna0pLSqD+0VEhoG28Sq+tda3fTEk69wYkDdyQkHgGuSH0GeAMegmuZ9U9aQKwUOfPNzjc7M9/4AD44LaKJDVXzeU6ligQHKL+yoXJcWOvffKjkPhsm1kJzwQXnGYkplOdn5xdmH1jgbnOSqIHQAC54bXpMWXrB32ThTHbJAb9NlO4wMqJIYum3/BQsqEY80hFh0RsaWja4qxi2M0oo4BULaoQxcdIUcUx4qBBwB0SGXSEphvqtqNeLukOmR7YF9QurLbpHyGZBRRKk531DbP7uRPgmcL5jrB4MeUhl5qzmVua/MWtDvcsokXuU6EEBYyBUWmRUWGD9DBxwxuZEaWBDeTshJ3wfzXuF8QKNlcI4OD//9boMtYaQmK9JuaZyP7ibEsBf+MHZ4mmO+xm+jV0KvrzLwakcJD16IDgNpguW65ljj0hTfINhO1Rws/Be/cNrnh8sFr7pizxtKpMdIvtUFxkduPaXuyj9cmyLxKRPO1SmeR//WEiPD56Z7NaQUeXClVBgI1nUH+jmCDsNpR5hirpQO6I0WePHWL+QI3C0HCI6FYp8EtntHK7G4nBVRrSHZeQMqGnPiLlDsGQPKsucHDIaumZaKGrCI8aIB24rUmOHWYR6c6i0iBtCqWWTXKGMa33KqST4kFTKlZD2CKoLtTF2jHcGLJT3FmpUxNvUyNuc+geU9wZJVvDtQ0mV5V8K3Uw0RirMXU5XQv67hh7YHaHKyGQH9zPKoJMp4uzznfSLpWwJTQxVyUiw8RVgacbg5Q1h0DQa/nNwnTb5qhSofasEkyu4bNgYTXg3HWsJyk8oYXqw9MmQTCXpOy8vqAfeeFh+JhF3d3ettSGUPro1+X5uvf3QAc9AbYrL/3Hv9tyjpy9jG6eE2uFF8/D3G9ixbDmQBAAA",
+     "playerdata/6b1d0c8e-2f4a-4c39-9d57-1e2f3a4b5c6d.dat": "H4sIAAAAAAACE3WPSwrCQBBEK+ZDRsUb6BVc60aFoMYPihjdCNLogMFkRjKjkEt4A8FjujRjdOnbFF3V1dBVwEYtIE0bnqlYCsDbM9hLqTwUWe+FD/31V51SGfyV1KSLhluMFeDne3Np3E8bf7DgL8Qok1dxtFzUh5QkQaw0iQM3sQtvzCnRp8HTHGlcEsp5NqKUr/OL2bAYWChuXGiZ5VVTceBHURjMpdLnZv3ensw6DpixZpyUfmxb7e50l9pgQZxyUX5a8AbKvhHBAAEAAA==",
+     "region/r.0.-5.mca": {
+      "fixture": "legacy/1.15.2/r.0.-5.mca"
+     }
+    },
+    "dirs": [
+     "DIM1",
+     "DIM1/region",
+     "playerdata",
+     "region"
+    ]
+   },
+   "after": {
+    "files": {
+     "data/minecraft/custom_boss_events.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkYGbgdgHSYalFxZn5eQwMQksYAG+remkeAAAA",
+     "data/minecraft/game_rules.dat": "H4sIAAAAAAAA/2XNMQ6CQBAF0L+RCjsLo1eh9gy2mxE+OCE7a8YJxPt4UOmMsX7Fa4EWzSAhCaeixt5ljG4mH1ltoUX1V0o4fq3UW55cOapN+BEZFrGeObRwk/O/rJS40xN22F+29Ep/ajXg8MYHFOToNYsAAAA=",
+     "data/minecraft/scheduled_events.dat": "H4sIAAAAAAAA/+NiYOBiYElJLEnkZGBLLUvNKylmAANmBm4XoGhYalFxZn4eA4PQEgYA4i2VaywAAAA=",
+     "data/minecraft/wandering_trader.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkZuAuLkgsz4tPSc1JrGRgiD3AzMADEUnOSMxLTmVgYJBkAKpyASoOSy0qzszPY2AQWsIAAJmV1xhDAAAA",
+     "data/minecraft/weather.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkZGAvSszMy8xLZ2Rk4CrJKM1LSS0C8ZgZeKC8+JLM3FQGBjE9Zgah5JzUxKL48tTEkgy4BAMDMwMnyBAon+USUIDbBWh4WGpRcWZ+HgOD0BIGAHeuw+hzAAAA",
+     "data/minecraft/world_clocks.dat": "H4sIAAAAAAAA/+NiYOBiYElJLEnkYhDOzcxLTS5KTCuxyi9LLSrPL8pJYWHgLskvScyJL8lMzi5mAAHGRw6MDGwFiaXFqSlALjMDtwtQe1hqUXFmfh4Dg9ASBgDBO3BHVQAAAA==",
+     "data/minecraft/world_gen_settings.dat": "H4sIAAAAAAAA/6WSUU7DMBBEJyJCwQXRUrhMvzkDv5abTFtLjV3ZmyKuwRk4KKZQDG0SCeEPf/iNd2dWqwCFsjFiCkyW3nVR1xtGQYkykg0OZ/paYLamYzBCvaKRLjAWCqqxLV203kWFeWsd62BWsvB7hmcftk2FUl527GUKV181fahQRYpYt4692hM7CtdL61vq6LtQs8LlLhmijHp4yKzttmK18zYSR3yb8SdIk7nPb7Khdkx3OH7ohUOhpj+qH4TjiU5oDnhW5x/pZr8D0H2P6pwM5brJyqT6Y6ihZiOugQtMHtO+PjF87B1w94Z3g4JFxMYCAAA=",
+     "dimensions/minecraft/overworld/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEegVPoHu78Axuw7f9lmCbliSgdOXSg3gDL+AdvJCxbd5yeAyTAAmikhwJLArWjo3sP/sH/hNYl9RQxbLz+Fy3xfXw3Q0TiKzqOX8/h+cMyxsZrXQlnWrYk0wgtnRh2bea8wzTbRVug816NhdIazaddGQqdsEYIR7pqJt6QuI93yIo06OvP7GxqtXA5oUfdQLDUdQAAAA=",
+     "dimensions/minecraft/overworld/region/r.0.-5.mca": {
+      "fixture": "legacy/1.15.2/r.0.-5.mca"
+     },
+     "dimensions/minecraft/the_end/data/minecraft/ender_dragon_fight.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkYGbgdgHSYalFxZn5eQwMQksYAG+remkeAAAA",
+     "dimensions/minecraft/the_end/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEegVPoHu78Axuw7f9lmCbliSgdOXSg3gDL+AdvJCxbd5yeAyTAAmikhwJLArWjo3sP/sH/hNYl9RQxbLz+Fy3xfXw3Q0TiKzqOX8/h+cMyxsZrXQlnWrYk0wgtnRh2bea8wzTbRVug816NhdIazaddGQqdsEYIR7pqJt6QuI93yIo06OvP7GxqtXA5oUfdQLDUdQAAAA=",
+     "dimensions/minecraft/the_end/region/r.-1.-1.mca": {
+      "fixture": "legacy/1.16.5-end/r.-1.-1.mca"
+     },
+     "dimensions/minecraft/the_nether/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOwQnCMBhGPzBE24qIdBMHaA/O4DXE9rcE26QkAaUnjw7iBi7gDs7i3dg23/Hx8XgpkILV0kuOVUXakxXDm93xH8e2lp1sSPQBn1pTXYrPfhwHc2qg8vUYnwusr9JqpRvhVUeB5ByJk2cSg9FU5phvm3gbbS6wJUfWku2Fl7YhH40MyUQn3dwTE2/FF1GZHUL9kaxTRgO7J34LMAnF1AAAAA==",
+     "level.dat": "H4sIAAAAAAAA/0VQy0oDMRQ908nYaaoL6Vpx6arSCoJufWEtKii6EeQ6k9rQTDJM0tb6Ef6BFP0PF/6UW02q4oVL4IR7XhzgYAfkiKOVy8FAZmPlZndWOCf1g03B/1GwIVV5hDQ8makEIiwpk42EB5tYtf5CiVLRTFR347HMAbDR2vLzVq+/+3KzvrV3elswsCtZCISpJcMY6TEV4mpWBiiKUZ+Iykqjgd47A++TdReB0ZNFr2+1/Q+OxJY01U3EpbH+KPa76ffo6+vzMUFSSpcNA32KRu6l9IKuVUgtsooGbs94iampVJ4gntF0YYWjfv0j7PNdairt0DjPsHQpKiksWEFSx6ideB+teQp25l2DdXfa20GnLyZCLSB+rvKNTruz3e76UqSWTpKST76iCCuklJnum6IgnVsfthmav/4L3JpzNAJyQdnINlA/1HSvRJ6GZnwxpKVS1EB6IO3iA7/zDU7mQgPGAQAA",
+     "level.dat_old": "H4sIAAAAAAAA/0VQy0oDMRQ908nYaaoL6Vpx6arSCoJufWEtKii6EeQ6k9rQTDJM0tb6Ef6BFP0A/8DfcqtJVbxwCZxwz4sDHOyAHHG0cjkYyGys3OzOCuekfrAp+D8KNqQqj5CGJzOVQIQlZbKR8GATq9ZfKFEqmonqbjyWOQA2Wlt+3ur1d19u1rf2Tm8LBnYlC4EwtWQYIz2mQlzNygBFMeoTUVlpNND7YOB9su4iMHqy6PWttv/OkdiSprqJuDTWH8V+N/0efX19PiZISumyYaBP0ci9lF7QtQqpRVbRwO0ZLzE1lcoTxDOaLqxw1K9/hH2+S02lHRrnGZYuRSWFBStI6hi1E++jNU/BzrxrsO5Oezvo9MVEqAXEz1W+0Wl3tttdX4rU0klS8slXFGGFlDLTfVMUpHPrwzZD89d/gVtzjkZALigb2Qbqh5rulcjT0IwvhrRUihpID6RdfOB3vgGYpozRxgEAAA==",
+     "players/data/6b1d0c8e-2f4a-4c39-9d57-1e2f3a4b5c6d.dat": "H4sIAAAAAAACE3WPSwrCQBBEK+ZDRsUb6BVc60aFoMYPihjdCNLogMFkRjKjkEt4A8FjujRjdOnbFF3V1dBVwEYtIE0bnqlYCsDbM9hLqTwUWe+FD/31V51SGfyV1KSLhluMFeDne3Np3E8bf7DgL8Qok1dxtFzUh5QkQaw0iQM3sQtvzCnRp8HTHGlcEsp5NqKUr/OL2bAYWChuXGiZ5VVTceBHURjMpdLnZv3ensw6DpixZpyUfmxb7e50l9pgQZxyUX5a8AbKvhHBAAEAAA=="
+    },
+    "dirs": [
+     "data",
+     "data/minecraft",
+     "dimensions",
+     "dimensions/minecraft",
+     "dimensions/minecraft/overworld",
+     "dimensions/minecraft/overworld/data",
+     "dimensions/minecraft/overworld/data/minecraft",
+     "dimensions/minecraft/overworld/region",
+     "dimensions/minecraft/the_end",
+     "dimensions/minecraft/the_end/data",
+     "dimensions/minecraft/the_end/data/minecraft",
+     "dimensions/minecraft/the_end/region",
+     "dimensions/minecraft/the_nether",
+     "dimensions/minecraft/the_nether/data",
+     "dimensions/minecraft/the_nether/data/minecraft",
+     "players",
+     "players/data"
+    ]
+   }
+  },
+  {
+   "name": "1.16.5, a player only in playerdata, an empty nether",
+   "data_version": 2586,
+   "before": {
+    "files": {
+     "DIM1/region/r.-1.-1.mca": {
+      "fixture": "legacy/1.16.5-end/r.-1.-1.mca"
+     },
+     "level.dat": "H4sIAAAAAAACE6VUz28SQRR+K1tYlmKprYc2HvwLGht/JV6kQNPUoDZCpDYxZMo+YNPZGTIzS4On3rx48uSh/4kx8ejdP6i+gd1uC3jqXOC979vvzfs1PoAPboMZloOS/fmISodSkHs7B4Vxar355UMhwXJw7zCwBA/cdyxCyO/u7L7Yee6A1xJspIfSAHhQbOIY+ZTgv+fB4xnJBb/JtDnibIIk4piv4gIcKIUiNCHj4RcMnBx4B/RZezJCoONAmXEuz+syipgINDm8IVNBTyp0HPAbYb8f9mJuJmRVMqspe2cUw4GCYiQvBkDC9m87jBJh3wxjEaCagaXESvEcVHocmeogM8PU/fPChUKDTVISQPzEBTczfxznIN8asXNxfHV1dZkanwiqpsYJGX/yUK5JRfHqKAyqY0jOnP8k8/szf4uqtPft8uXMeT9xsj6eSIHVzZS9MQM6TNnka5zKoauPUnT9FmqvX32WYptZnCaqUZupAZo0ogsP5uDr1G9822ARG+ARqmnc13+fTo8PRdvZDzFH7cFaIKmQPBwMTX1ClYaVPuMaPSifIY4OxZjyl2oCrlExee8HMunEjJ24S5E8PVAh9m0TZwo000U7zEeMUi5CYV+wU46BN+15YcxEyDkrgtcI9TVgF6FSj7WRUU1qvW+Da1gBf9qwPTHgyUxsd1gyMm3FbBksXh8y0bOErRxsLSM0kCYe4PPvIqy2UNFi1ZQd5tt3cqDYYfqtDAIaXLpPRyoeHKBooTGkp2lRTqWIdbc3RG2oFa5Gu0b2VL47sD5AgYoZ7PapUrFC7fjgB9QgYTdX+7ARhQJ7ivXNK0mXOLcBaI+N3bVlGFUy0ZQq5a1lPCFDjXPX8MDTyX3/I7l6GsoIu1rGqoep6lZGTarRtY+EwmAhzVVuJ7I7VdGz1m1mX9OEdAXaOUmll4J3zKxyg5roLU3rYcaL6FUKu8uF8yNqFppF2Wl267cTQHHds0XkjnmVM+pUbGlSi1HnFJPn4B8lpgZ4XwYAAA==",
+     "playerdata/0a9b8c7d-6e5f-4a3b-8c2d-1e0f9a8b7c6d.dat": "H4sIAAAAAAACE+NiYGBm4HZJLEkMSy0qzszPY2DgkuJkYA7IL2ZjAMod4GIAA4cAKC0PoTkZOILySxJLgDpYgVwmZxMGhoMfQOJsvvkgUbBuBhyAkYHDP8+9KL80L4WRlYHHLTEnxyWzuCQxLzkVJM3KwOaRmphTkuG4AGQIX0FOYmVqkXtibmpIZUEqxHpOz7yy1LyS/KJKsAu5GVhCQz1dgCwWrtk9tXnxXtY9unL8s7prcjkYOF0yc1PzwL4Tyc3MS00uSkwrsSrJSI3PSwWSRQwAVNyfoAYBAAA=",
+     "region/r.5.-1.mca": {
+      "fixture": "legacy/r.5.-1.mca"
+     }
+    },
+    "dirs": [
+     "DIM-1",
+     "DIM-1/region",
+     "DIM1",
+     "DIM1/region",
+     "playerdata",
+     "region"
+    ]
+   },
+   "after": {
+    "files": {
+     "data/minecraft/custom_boss_events.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkYGbgdgHSYalFxZn5eQwMQksYAG+remkeAAAA",
+     "data/minecraft/game_rules.dat": "H4sIAAAAAAAA/2XNMQ6CQBAF0L+RCjsLo1eh9gy2mxE+OCE7a8YJxPt4UOmMsX7Fa4EWzSAhCaeixt5ljG4mH1ltoUX1V0o4fq3UW55cOapN+BEZFrGeObRwk/O/rJS40xN22F+29Ep/ajXg8MYHFOToNYsAAAA=",
+     "data/minecraft/scheduled_events.dat": "H4sIAAAAAAAA/+NiYOBiYElJLEnkZGBLLUvNKylmAANmBm4XoGhYalFxZn4eA4PQEgYA4i2VaywAAAA=",
+     "data/minecraft/wandering_trader.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkZuAuLkgsz4tPSc1JrGRgiD3AzMADEUnOSMxLTmVgYJBkAKpyASoOSy0qzszPY2AQWsIAAJmV1xhDAAAA",
+     "data/minecraft/weather.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkZGAvSszMy8xLZ2Bk4CrJKM1LSS0C8ZgZeKC8+JLM3FQGIGBmEErOSU0sii9PTSzJgEvsbmBm4AQZAlcIVMntAjQ8LLWoODM/j4FBaAkDAB1kZg1zAAAA",
+     "data/minecraft/world_clocks.dat": "H4sIAAAAAAAA/+NiYOBiYElJLEnkYhDOzcxLTS5KTCuxyi9LLSrPL8pJYWHgLskvScyJL8lMzi5mAINSA0YGtoLE0uLUFCCPmYHbBag9LLWoODM/j4FBaAkDANaRhxBVAAAA",
+     "data/minecraft/world_gen_settings.dat": "H4sIAAAAAAAA/6WSTU7DMBCFX0SEgktFoeUyrHsGtlGaDK2lxq5mxkVco2foQWsKxUB+JIQXXvh7nnlvNAYwyJtKqwzzNTniSqkU5VBrYJIsw2TlXZCy3pAocuRC1OB8ZgcD09iWnFjvxGDeWkc1Vy/65PfEr563TYFc33bUywxuPnt6LlAIqVq3ll5tp/Ptyvo2evWBaypwvYt2SUc9PCbWhq3a0nkrhAu+S/gDxNks0ptuqHQUb7586IVDoWbfqp+F44l+0RSwU+cf6e5/BiD3NaouGco1Tcqo+mOooWYjroErTJZxY5+J3/cOeDjiBN+dhqLIAgAA",
+     "dimensions/minecraft/overworld/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH7RE24qI9CYuXKrgGdyGb/stwTYpSUDpGTyCS2/khYxt85bDY5gcyJHW5ElgWbH2bOWAeQKbmjpqWPYBX1tT3Q/f3TiB1KmBT6/3/v9MsHqQ1Uo30quOAykFMkc3loPRfCwnYYJ1vI02F9hCoGjZ9tKTbdhHY4psopNu7omJz4iCsjiH+gtbp4wGth/8AKvswNXUAAAA",
+     "dimensions/minecraft/overworld/region/r.5.-1.mca": {
+      "fixture": "legacy/r.5.-1.mca"
+     },
+     "dimensions/minecraft/the_end/data/minecraft/ender_dragon_fight.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkYGbgdgHSYalFxZn5eQwMQksYAG+remkeAAAA",
+     "dimensions/minecraft/the_end/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH7RE24qI9CYuXKrgGdyGb/stwTYpSUDpGTyCS2/khYxt85bDY5gcyJHW5ElgWbH2bOWAeQKbmjpqWPYBX1tT3Q/f3TiB1KmBT6/3/v9MsHqQ1Uo30quOAykFMkc3loPRfCwnYYJ1vI02F9hCoGjZ9tKTbdhHY4psopNu7omJz4iCsjiH+gtbp4wGth/8AKvswNXUAAAA",
+     "dimensions/minecraft/the_end/region/r.-1.-1.mca": {
+      "fixture": "legacy/1.16.5-end/r.-1.-1.mca"
+     },
+     "dimensions/minecraft/the_nether/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH7RE24qI9CYuXKrgGdyGb/stwTYpSUDpGTyCS2/khYxt85bDY5gcyJHW5ElgWbH2bOWAeQKbmjpqWPYBX1tT3Q/f3TiB1KmBT6/3/v9MsHqQ1Uo30quOAykFMkc3loPRfCwnYYJ1vI02F9hCoGjZ9tKTbdhHY4psopNu7omJz4iCsjiH+gtbp4wGth/8AKvswNXUAAAA",
+     "level.dat": "H4sIAAAAAAAA/1VQ20rDMBj+alvXZnq1F/AJBlPchVfiAVHmATamd/LbZC4sTUoTV+qTeCGIvof3voGPM9OqiD+E/Hwh34kBDNEROWLocTmbyexBufrWCuekvrcJ2B+KSJCtAyRzKnlmShEEWFcmWwgORIgmMhdo5+kmRHJCuZjURQul2BiLcinKg5I097RAgM6StFSKQr+J0kqjgbP3CGxE1l0pqhve4PVt7fCTIbYFVbqLsDDW/w5Xq9Wzv/f9+YgRF9Jl80YpQcq9D93S9XKpRVbSzO0ZL1GZUvEYYU1Va5OhM/0W9qHGmgo7N84zrHuvUlhEOUkdYu3U++i9JIgufCRE28P+TqMzEkuhWohdKr416A+G/d0AXamlk6Tko+C+ofSa7Lnh3IcJsElKmerQ5HlTA0J0m+6nv+l7Lwxpg1xRtrApOsea7pTg//tKkRxJ2z7gZ74AHn7J0cgBAAA=",
+     "level.dat_old": "H4sIAAAAAAAA/1VQ20rDMBj+alvXZnq1F/AJBlPchVfiAVHmATamd/LbZC4sTUoTV+qTeCGIvof3XvlKM62K+EPIzxfynRjAEB2RI4Yel7OZzB6Uq2+tcE7qe5uA/aGIBNk6QDKnkmemFEGAdWWyheBAhGgic4F2nm5CJCeUi0ldtFCKjbEol6I8KElzTwsE6CxJS6Uo9JsorTQaOHuPwEZk3ZWiuuENXt/WDj8ZYltQpbsIC2P973C1Wj37e9+fjxhxIV02b5QSpNz70C1dL5daZCXN3J7xEpUpFY8R1lS1Nhk6029hH2qsqbBz4zzDuvcqhUWUk9Qh1k69j95LgujCR0K0PezvNDojsRSqhdil4luD/mDY3w3QlVo6SUo+Cu4bSq/JnhvOfZgAm6SUqQ5Nnjc1IES36X76m773wpA2yBVlC5uic6zpTgn+v68UyZG07QN+5gsE2PfoyAEAAA==",
+     "players/data/0a9b8c7d-6e5f-4a3b-8c2d-1e0f9a8b7c6d.dat": "H4sIAAAAAAACE+NiYGBm4HZJLEkMSy0qzszPY2DgkuJkYA7IL2ZjAMod4GIAA4cAKC0PoTkZOILySxJLgDpYgVwmZxMGhoMfQOJsvvkgUbBuBhyAkYHDP8+9KL80L4WRlYHHLTEnxyWzuCQxLzkVJM3KwOaRmphTkuG4AGQIX0FOYmVqkXtibmpIZUEqxHpOz7yy1LyS/KJKsAu5GVhCQz1dgCwWrtk9tXnxXtY9unL8s7prcjkYOF0yc1PzwL4Tyc3MS00uSkwrsSrJSI3PSwWSRQwAVNyfoAYBAAA="
+    },
+    "dirs": [
+     "data",
+     "data/minecraft",
+     "dimensions",
+     "dimensions/minecraft",
+     "dimensions/minecraft/overworld",
+     "dimensions/minecraft/overworld/data",
+     "dimensions/minecraft/overworld/data/minecraft",
+     "dimensions/minecraft/overworld/region",
+     "dimensions/minecraft/the_end",
+     "dimensions/minecraft/the_end/data",
+     "dimensions/minecraft/the_end/data/minecraft",
+     "dimensions/minecraft/the_end/region",
+     "dimensions/minecraft/the_nether",
+     "dimensions/minecraft/the_nether/data",
+     "dimensions/minecraft/the_nether/data/minecraft",
+     "dimensions/minecraft/the_nether/region",
+     "players",
+     "players/data"
+    ]
+   }
+  },
+  {
+   "name": "1.21.4, current chunks in the old layout",
+   "data_version": 4189,
+   "before": {
+    "files": {
+     "level.dat": "H4sIAAAAAAACE51VzW4TSRCuyUzsmYmTOCS7EmhBK61W2hMou7nAJcY2G8IaCDjgJFpkdTxle5Sebqu7nch74sZtD3tH4kWQ8g7ceQLeIVTPT5wQ58DOZabqq/6quv4mBAjBazLDXFiwr9eodCwFQPWNC+XjQnryMYRyjrkwtx1ZAx+8ZyxBKK3f/X397oYDfluwkR5KA+BD0MJj5KlB+JxHP2dGHoQtps0OZxMkEse8E2/BgYVYxCZmPP4HI8cFf4uO7U5GCABzDiwyzuVJQyYJE5F2yNGQqagnFdLRsBn3+3FvzM2ETKtTqSV7R+TDgbJiRC8Glth+7sYUE8zt0VkzHIsIFYFACcilDP/lNxeqPY5MdZCZYaEG8KDcZJNCgoXP6x5452LF2Xeh1B6xE7F3dnb2pRD2CdsshAMSlkuwWJeK/DVQGFR7p/spAXyjP6jJWq4PM32bslT7UBgv5UrWxwMpsLZWAKsZ0GHKXr7OKR269lOBrlxCbfi1jQJbm/ppoRrtMjVAU3j04MY3cHH1i2ebLGED3EGV+t389Ef6hBDYyr4cc9Q+LEeSEsnjwdA0JpRpmO8zrtGHxSPE0bY4pvtLNQHPqDFplyKZVyKzztULiTzcUjH2bREzBurpwDbzDqMrB1B+JNghx8inAKkbjpmIOWcB+M1YnwN2EKqNsTYyqUutH1nnGuYhTAv2UAx4ekkXbnVY3jK7itk0WLwxZKJnDW66cHOWQROp4wHenAZQaaOiwaor28yXY3Ig6DD9VEYRNS7F05GKR1so2mgM8WkalEMpxrrbG6I2VApPox0j+1T/c2BlgAIVM9jtU6bGCrUTQhhRgYSdXB3CahIL7CnWNw8kBXFiHdAcGztrszDKZM4pVWG3PLUTMrYF83Ue4DUclcNYJtjVcqx6WND8MDVNaF7jbk5WGlHcaGZSpWVamwLUDV2BticK1png996iegHLCf7XFa7wpPGvXA4RxXkFriLfG/niFEtPzwz7qpt8AErpXlZX/wUBuDtSl+wAnP6a9Vvtxdvs/WMm0zy9lIYZOjFv13bjHUB9w+pLT6XVpqfhmod2+nOxpSQtYGceKn/SxqfpNPlU0RyWHiPjZvjwgyVZGqVxXvxLBBCcb4ww3cvgvXq13bQb6+h25d97T1r333fu3Hvw198J/ZyaxUxc12ZfAerqsCAaBwAA",
+     "region/r.-1.0.mca": {
+      "fixture": "r.-1.0.mca"
+     }
+    },
+    "dirs": [
+     "DIM-1",
+     "DIM-1/region",
+     "DIM1",
+     "DIM1/region",
+     "region"
+    ]
+   },
+   "after": {
+    "files": {
+     "data/minecraft/custom_boss_events.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkYGbgdgHSYalFxZn5eQwMQksYAG+remkeAAAA",
+     "data/minecraft/game_rules.dat": "H4sIAAAAAAAA/2XNMQ6CQBAF0L+RCjsLo1eh9gy2mxE+OCE7a8YJxPt4UOmMsX7Fa4EWzSAhCaeixt5ljG4mH1ltoUX1V0o4fq3UW55cOapN+BEZFrGeObRwk/O/rJS40xN22F+29Ep/ajXg8MYHFOToNYsAAAA=",
+     "data/minecraft/scheduled_events.dat": "H4sIAAAAAAAA/+NiYOBiYElJLEnkZGBLLUvNKylmAANmBm4XoGhYalFxZn4eA4PQEgYA4i2VaywAAAA=",
+     "data/minecraft/wandering_trader.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkZuAuLkgsz4tPSc1JrGRgiD3AzMADEUnOSMxLTmVgYJBkAKpyASoOSy0qzszPY2AQWsIAAJmV1xhDAAAA",
+     "data/minecraft/weather.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkZGAvSszMy8xLZ2Rk4CrJKM1LSS0C8hiYGXigvPiSzNxUBgZlDWYGoeSc1MSi+PLUxJIMuAQDUC0nyBAonykCKMDtAjQ8LLWoODM/j4FBaAkDAGrqYdJzAAAA",
+     "data/minecraft/world_clocks.dat": "H4sIAAAAAAAA/+NiYOBiYElJLEnkYhDOzcxLTS5KTCuxyi9LLSrPL8pJYWHgLskvScyJL8lMzi5mAAHue4aMDGwFiaXFqSlALjMDtwtQe1hqUXFmfh4Dg9ASBgDr20BUVQAAAA==",
+     "data/minecraft/world_gen_settings.dat": "H4sIAAAAAAAA/6WSQU7DMBBFf0SEggui0HIZ1pyBbZQmn9ZSY1czExDX4AwcFFNaArTuBi+88PueebbGAQ5l11hTYLZkoDTGWk2G1gahFgUmixgGrdsV1VCiVLLDdk3fHFznewb1MajDrPeBrTRPdh+fKS9R1l2F0l43PMocLnY9o1SolGY+LDWTvVz42Ce5OEjLCueb5Ec72fRuZP2wNl+H6JXY4+sRf4H0GfPxzFasA9Mu+wtHYe4V0x/Vd8HMEw6S//C/+a3I8P0ZhyRnfjUmt6k/2rlyJ7yAM0we0pg9Uj6HBbh9xweI0o1IfQIAAA==",
+     "dimensions/minecraft/overworld/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEehMPYBaeQXAVvu23BNukJAGlp3HhQbyDFzK25i2HxzAFUCBrKJDAqmYT2KlRWonfBLYN9dSyGiK+dLa+HT77aQKZ1yPL53TEAus7OaNNq4LuOZJKIPd0ZTVaw7JKt026TTYf2VKg7NgNKpBrOSRjhnyms+7fkxIf7zOSsjzG+hM7r60Bdi98AZ7KKyvUAAAA",
+     "dimensions/minecraft/overworld/region/r.-1.0.mca": {
+      "fixture": "r.-1.0.mca"
+     },
+     "dimensions/minecraft/the_end/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEehMPYBaeQXAVvu23BNukJAGlp3HhQbyDFzK25i2HxzAFUCBrKJDAqmYT2KlRWonfBLYN9dSyGiK+dLa+HT77aQKZ1yPL53TEAus7OaNNq4LuOZJKIPd0ZTVaw7JKt026TTYf2VKg7NgNKpBrOSRjhnyms+7fkxIf7zOSsjzG+hM7r60Bdi98AZ7KKyvUAAAA",
+     "dimensions/minecraft/the_nether/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEegnXPUCz8Axuw7f9lmCbliSg9DQuPIh38ELG1rzl8BgmAzIkDXkS2NRsPFs1yUriN4F9Qz21rMaAL91Q36pPOU8gcXpi+ZyPWGF7J2u0aZXXPQdSCKSOrqymwbAs4m0Xb7PNBbYWyDu2o/JkW/bRmCBd6KL798TEx/uIqMxPof7M1unBAIcXvldPUnHUAAAA",
+     "level.dat": "H4sIAAAAAAAA/1WR8WpTMRTGv/TetvemFRn9e8Mn6NgUwf0juIlsVh1sbAjCON6kNjQ3uSRpS/cQvoGM+R57IfEd6rlVEQ+EhC/k/L7vRAIS+QklkhgpM52aamHT+ibqlIz7EgvIfyp6zoearEAxo6AqHzQEetZXc62AAXYiv7G6sbTW4WaxMKwin+8Ov+6fTV58u97bP3r7qc6RX5pao62h+JiheEO1vlw3rdQpMbzQYanDq0BOsQEwo78kZ6yljE86ROMdcPaQQ04opvMWxyRx/71z/EOiGxtauQGyxkd+nW02m5+8v+T1uItuY1I1a9kFSsU+3LbdqDZOV4Gm6cgzYuWDVV1ka1ptfUr0r36DOfyFoybOfOIOPfZqdERek3EZOqfsY3RXIH/PkZAfPh8/bTkTvdR2K8kPVj05GB8ejJ8JDIwzyZA1t1oJgfKa4juvFIcReETW+tWxr+t2DCLDoP2lq7/pR3cSZaucUzWPJfqvHX22Wv0/rxLFiYnbC/ypX2WrGv/yAQAA",
+     "level.dat_old": "H4sIAAAAAAAA/1WR8WpTMRTGv/TetvemFRn9e8Mn6NgUwf0juIlsVh1sbAjCON6kNjQ3uSRpS/cQvoGM+R57Gf/2Heq5VREPhIQv5Py+70QCEvkJJZIYKTOdmmph0/om6pSM+xILyH8qes6HmqxAMaOgKh80BHrWV3OtgAF2Ir+xurG01uFmsTCsIp/vDr/un01efLve2z96+6nOkV+aWqOtofiYoXhDtb5cN63UKTG80GGpw6tATrEBMKO/JGespYxPOkTjHXD2kENOKKbzFsckcf+9c/xDohsbWrkBssZHfp1tNpufvL/k9biLbmNSNWvZBUrFPty23ag2TleBpunIM2Llg1VdZGtabX1K9K9+gzn8haMmznziDj32anREXpNxGTqn7GN0VyB/z5GQHz4fP205E73UdivJD1Y9ORgfHoyfCQyMM8mQNbdaCYHymuI7rxSHEXhE1vrVsa/rdgwiw6D9pau/6Ud3EmWrnFM1jyX6rx19tlr9P68SxYmJ2wv8qV/Wfcdr8gEAAA=="
+    },
+    "dirs": [
+     "data",
+     "data/minecraft",
+     "dimensions",
+     "dimensions/minecraft",
+     "dimensions/minecraft/overworld",
+     "dimensions/minecraft/overworld/data",
+     "dimensions/minecraft/overworld/data/minecraft",
+     "dimensions/minecraft/overworld/region",
+     "dimensions/minecraft/the_end",
+     "dimensions/minecraft/the_end/data",
+     "dimensions/minecraft/the_end/data/minecraft",
+     "dimensions/minecraft/the_end/region",
+     "dimensions/minecraft/the_nether",
+     "dimensions/minecraft/the_nether/data",
+     "dimensions/minecraft/the_nether/data/minecraft",
+     "dimensions/minecraft/the_nether/region"
+    ]
+   }
+  },
+  {
+   "name": "the border and spawn compounds of 4556, current chunks in the old layout",
+   "data_version": 4556,
+   "before": {
+    "files": {
+     "level.dat": "H4sIAAAAAAACE6VVzW7bRhAemhJFUrIto26BFGhRoCjQUwI3uSSXqJZS16nTuLFTJUADYkWORMLkLrG7tCqfcsuth94L5EUK+AFy671P0HdwZ/lTxYnUHrqARGJ29ttvZr4Z+gA+tEZMMxs+HjMeoUz47FQyejnJ2ZwPY8ZDBIAbFvijZDpNwiLViw0LOpIlnJytFrROk8z4APSs5za4ByzD00VuTBse9E5QnqPclwSvXLLR2XPGkzRlPvTHQqbRAfIT1JrQlAXdieCFCsIYlQYCV4hRCQ79Xy3YmSFHyTQGU2S6kKgsH/yICHCVCK58+CBLOIaSTfU9QffOzQU+ePU5IV1wVX3ZGt/eJBEZBkoUMkQXnJxuQb3S2YWWNpF+uNzLKEFJwEWiEJrt7eX29Y1VmFSS3aVZxxhwpH+5Loj+W+C145oI3vP8v/RX8iT+O9ftyNdWYHPpWXq9w7y65n24/6a24owRe+dHlEYoFrgnnOUqFhps2Dik3Z03dPZ70i44eze/2rt5h9TXGbHFP+ru/rlH8iTV64SlyQVGlgXemKlHIopIoxZssjQV86HIMqN1y4Ybq3pqhClbALy4JPkPC6VFti+UenCOXCti6Jn2eVKkSM3SzcTkQCY4JQRoT1mqKCdbkRiT9inTw0WYIsUrCzJvR4LIpsks1pW98d88Q8wPucEXclG50z3OMdFA6YHzSGjKiEMR2rBmtaH3DQU3SpSuBwJ4YB8LVZ66/KLyGvzwsnp+1JxyvkWW6vjr1wa7awZNnX/q5hdUg8f8QIqCR5YL3qhp4pVdYcNWXhJ+e7p0ofX06eGIXltnn/R+ufXw6O5v409v3fvup8wD94nQzETWNq7DVwD7dwxtb5mLctHEMrOsKvPGM+Kp48KUrbJ8/iXxjJmMQiGRitxfjsEjEZ5R4W3oU76ZrKvS6IUmZg1kqmfT1GtCf/h7C/wjpnRZApKepV/xl1STtjICaUM7T3QYGxDKS/SveemCnQtlwri6uvqLnvfpt90Ge8HmUCMc4TmmpbL9x2n0WaXud+ux84a6r4QMJkISawfckPKEMrgYiEGJ5UA/YhmbYZCTeZJS/Pf/uF0uhyY19cTgdZPU3pxJ84EIdJWPXQc8xaYYXAiOg93GbatxK9FMIB0HuinKPNBMzlA3iC3wKmvTjiWfhuLPl89rG3WQieuYEZoHnQecTVKMrn94SBwk5XKjgfobnebIEgsHAAA=",
+     "region/r.-1.0.mca": {
+      "fixture": "r.-1.0.mca"
+     }
+    },
+    "dirs": [
+     "DIM-1",
+     "DIM-1/region",
+     "DIM1",
+     "DIM1/region",
+     "region"
+    ]
+   },
+   "after": {
+    "files": {
+     "data/minecraft/custom_boss_events.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkYGbgdgHSYalFxZn5eQwMQksYAG+remkeAAAA",
+     "data/minecraft/game_rules.dat": "H4sIAAAAAAAA/2XNMQ6CQBAF0L+RCjsLo1eh9gy2mxE+OCE7a8YJxPt4UOmMsX7Fa4EWzSAhCaeixt5ljG4mH1ltoUX1V0o4fq3UW55cOapN+BEZFrGeObRwk/O/rJS40xN22F+29Ep/ajXg8MYHFOToNYsAAAA=",
+     "data/minecraft/scheduled_events.dat": "H4sIAAAAAAAA/+NiYOBiYElJLEnkZGBLLUvNKylmAANmBm4XoGhYalFxZn4eA4PQEgYA4i2VaywAAAA=",
+     "data/minecraft/wandering_trader.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkZuAuLkgsz4tPSc1JrGRgiD3AzMADEUnOSMxLTmVgYJBkAKpyASoOSy0qzszPY2AQWsIAAJmV1xhDAAAA",
+     "data/minecraft/weather.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkZGAvSszMy8xLZ2Rk4CrJKM1LSS0C8hiYGXigvPiSzNxUBgZlDWYGoeSc1MSi+PLUxJIMuAQDUC0nyBAonykCKMDtAjQ8LLWoODM/j4FBaAkDAGrqYdJzAAAA",
+     "data/minecraft/world_clocks.dat": "H4sIAAAAAAAA/+NiYOBiYElJLEnkYhDOzcxLTS5KTCuxyi9LLSrPL8pJYWHgLskvScyJL8lMzi5mAAHue4aMDGwFiaXFqSlALjMDtwtQe1hqUXFmfh4Dg9ASBgDr20BUVQAAAA==",
+     "data/minecraft/world_gen_settings.dat": "H4sIAAAAAAAA/6WSQU7DMBBFf0SEggui0HIZ1pyBbZQmn9ZSY1czYxDX4AwcFFOKQmkiFnjhxfzv7zf2OMCh7BprCizWDJTGWKtJai0JtSgwW8WQtG43VEOJUskO+zV/c3Cd7xnUx6AOi94HttI82X18prxE2XYOF4fcKBUqpZkPa53wXq587DNATNKywvkuM9BGzRVKe90Rd4PWp635OkSvxLd8PcjHwlhmfozlULYN68C8y1QT8x/hB+NEByfO/+KPcmb+m+M6w+QPXA3OvesX+dc1p3F/o42cAc4we8hj9kj5HBbg9h0fGeSNLn0CAAA=",
+     "dimensions/minecraft/overworld/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEehMPYBaeQXAVvu23BNukJAGlp3HhQbyDFzK25i2HxzAFUCBrKJDAqmYT2KlRWonfBLYN9dSyGiK+dLa+HT77aQKZ1yPL53TEAus7OaNNq4LuOZJKIPd0ZTVaw7JKt026TTYf2VKg7NgNKpBrOSRjhnyms+7fkxIf7zOSsjzG+hM7r60Bdi98AZ7KKyvUAAAA",
+     "dimensions/minecraft/overworld/region/r.-1.0.mca": {
+      "fixture": "r.-1.0.mca"
+     },
+     "dimensions/minecraft/the_end/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEehMPYBaeQXAVvu23BNukJAGlp3HhQbyDFzK25i2HxzAFUCBrKJDAqmYT2KlRWonfBLYN9dSyGiK+dLa+HT77aQKZ1yPL53TEAus7OaNNq4LuOZJKIPd0ZTVaw7JKt026TTYf2VKg7NgNKpBrOSRjhnyms+7fkxIf7zOSsjzG+hM7r60Bdi98AZ7KKyvUAAAA",
+     "dimensions/minecraft/the_nether/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEegnXPUCz8Axuw7f9lmCbliSg9DQuPIh38ELG1rzl8BgmAzIkDXkS2NRsPFs1yUriN4F9Qz21rMaAL91Q36pPOU8gcXpi+ZyPWGF7J2u0aZXXPQdSCKSOrqymwbAs4m0Xb7PNBbYWyDu2o/JkW/bRmCBd6KL798TEx/uIqMxPof7M1unBAIcXvldPUnHUAAAA",
+     "level.dat": "H4sIAAAAAAAA/1WR8WpTMRTGv/TetvemFRn9e8Mn6NgUwf0juIlsVh1sbAjCON6kNjQ3uSRpS/cQvoGM+R57Ix9BqOdWRTwQEr6Q8/u+EwlI5CeUSGKkzHRqqoVN65uoUzLuSywg/6noOR9qsgLFjIKqfNAQ6FlfzbUCBtiJ/MbqxtJah5vFwrCKfL47/Lp/Nnnx7Xpv/+jtpzpHfmlqjbaG4mOG4g3V+nLdtFKnxPBCh6UOrwI5xQbAjP6SnLGWMj7pEI13wNlDDjmhmM5bHJPE/ffO8U+Jbmxo5QbIGh/5dbbZbH7w/pLX4y66jUnVrGUXKBX7cNt2o9o4XQWapiPPiJUPVnWRrWm19SnRv/oN5vAXjpo484k79Nir0RF5TcZl6Jyyj9Fdgfw9R0J++Hz8tOVM9FLbrSQ/WPXkYHx4MH4mMDDOJEPW3GolBMpriu+8UhxG4BFZ61fHvq7bMYgMg/aXrv6mH91JlK1yTtU8lui/dvTZavX/vEoUJyZuL/CnfgEn31UU8gEAAA==",
+     "level.dat_old": "H4sIAAAAAAAA/1WR8WpTMRTGv/TetvemFRn9e8Mn6NgUwf0juIlsVh1sbAjCON6kNjQ3uSRpS/cQvoGM+R57I//zAeq5VREPhIQv5Py+70QCEvkJJZIYKTOdmmph0/om6pSM+xILyH8qes6HmqxAMaOgKh80BHrWV3OtgAF2Ir+xurG01uFmsTCsIp/vDr/un01efLve2z96+6nOkV+aWqOtofiYoXhDtb5cN63UKTG80GGpw6tATrEBMKO/JGespYxPOkTjHXD2kENOKKbzFsckcf+9c/xTohsbWrkBssZHfp1tNpsfvL/k9biLbmNSNWvZBUrFPty23ag2TleBpunIM2Llg1VdZGtabX1K9K9+gzn8haMmznziDj32anREXpNxGTqn7GN0VyB/z5GQHz4fP205E73UdivJD1Y9ORgfHoyfCQyMM8mQNbdaCYHymuI7rxSHEXhE1vrVsa/rdgwiw6D9pau/6Ud3EmWrnFM1jyX6rx19tlr9P68SxYmJ2wv8qV9/DSTG8gEAAA=="
+    },
+    "dirs": [
+     "data",
+     "data/minecraft",
+     "dimensions",
+     "dimensions/minecraft",
+     "dimensions/minecraft/overworld",
+     "dimensions/minecraft/overworld/data",
+     "dimensions/minecraft/overworld/data/minecraft",
+     "dimensions/minecraft/overworld/region",
+     "dimensions/minecraft/the_end",
+     "dimensions/minecraft/the_end/data",
+     "dimensions/minecraft/the_end/data/minecraft",
+     "dimensions/minecraft/the_end/region",
+     "dimensions/minecraft/the_nether",
+     "dimensions/minecraft/the_nether/data",
+     "dimensions/minecraft/the_nether/data/minecraft",
+     "dimensions/minecraft/the_nether/region"
+    ]
+   }
+  },
+  {
+   "name": "the game rules of 4671, current chunks in the old layout",
+   "data_version": 4671,
+   "before": {
+    "files": {
+     "level.dat": "H4sIAAAAAAACE6VVwW7bRhAdmhJFUkqiJE5QF2hQICjQUwInuSQXK7ZS16nTuLVTNUADYkWOpIXJXWJ3JVU+5ZZbD70XyI8U8D/03i/oP7izpBjZsdQcSkASsTP75s3Mm1EIEEKtywxz4fMeEwkqLoZHitHLYc6mYmfERIwAsOFA2OWDAY/HqZmtOdBQjAtydmpQO+KZ9QFoOa9d8HdZhkez3B6tBdA6RDVBta0IXvt0RncnTPA0ZSG0e1KlyS6KQzSG0LQDzb4UYx3FI9QGCFwjJgU4tH934PoQBSpmMBogM2OF2gkhTIiA0FwKHcLNjAuMFRuYJ5LiTm2AEIL5Pal88PU82ArfVp/LDCMtxypGH7ycoqBZ6uxDzdhMby1sGRWIR0JyjVCZry3MFw3LMKkl64tjM8JIIH2rVUm0z4HPHVdkcMnz/9JfypP4X794jmJlB64sPAuvj5iXYS7DfZrakjtW7I2fUFmhOOAfCpbrkTTgwtoeWW9s0d3vSbvgbd57sHnvEamv0WWzD+pu/r1J8iTVG85SfoKJ40DQY/qFTBLSqANXWJrK6Y7MMqt1x4WNZTPVxZTNAN6ckvx3xtrIbFtq/WyCwmhi6B2QGVUA3gtpiKlHkV1Y8dSh9Q0F7XJt5oMKAbgHUhe3Tr8qvTo/vC1/b1e3vG+RpWb09L3FbtoFMK8LTdkbqs1LsavkWCSOD0G3Gq6lanXhal4QPj/1Tai9erXXpdfa8Ret3+4/33/8R+/O/Sff/ZIF4P8oDbOZ1a3rzjuA7UeWdrAnbA2kmpUsaa6HhBmpcUpTDp8tgh8j5hGvvKkLt8/pV/ajoeI4oKLDBQtLJrZGkbH9dGDjsmVKK4UE7FBNfLveys6v/UwlMqOx7WR5cvdrKtGIqSSWykK1F5txX8bHpAUX2nGKTPVKxEpCtETnQJadS4uwqvrzP2sQ7jNtiu6TGh3zTrylGtS11Uwd6jk38ciCUEuS/2xJE9xcaiuAs7Ozf+h3iz7X6uDO2BTmCPs4wbQQe/gyTb4sBf+xFG5s0UAWkFFfKmLtgR9T0VFFJx3ZKbA8aCcsY0OMcjrup5T/1l8Pi8ej5U1j0nlf9tMlLKbsf0bZAoB1DwLNBhidSIGd9crtauVWoNlEGh40U1R5ZJgaoqkQaxCUp9WEFnwqir+evoZKSYHN64ARWgCNZ4L1U0wu/heRLmmKCkMF9S9ipxySHgcAAA==",
+     "region/r.-1.0.mca": {
+      "fixture": "r.-1.0.mca"
+     }
+    },
+    "dirs": [
+     "DIM-1",
+     "DIM-1/region",
+     "DIM1",
+     "DIM1/region",
+     "region"
+    ]
+   },
+   "after": {
+    "files": {
+     "data/minecraft/custom_boss_events.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkYGbgdgHSYalFxZn5eQwMQksYAG+remkeAAAA",
+     "data/minecraft/game_rules.dat": "H4sIAAAAAAAA/2XNMQrCQBCF4beYKnYWoldJ7RlslzF5iUPYWRmHBO/jQU0nYv3x87dAi2aQkIRjUWPvMkZX6i1PrhzVJvyIDItYzxxauMnpKzP5yGoLLaq/UsL5v1opcacn7LC/bNMr/anVgMMbH63ZEEqLAAAA",
+     "data/minecraft/scheduled_events.dat": "H4sIAAAAAAAA/+NiYOBiYElJLEnkZGBLLUvNKylmAANmBm4XoGhYalFxZn4eA4PQEgYA4i2VaywAAAA=",
+     "data/minecraft/wandering_trader.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkZuAuLkgsz4tPSc1JrGRgiD3AzMADEUnOSMxLTmVgYJBkAKpyASoOSy0qzszPY2AQWsIAAJmV1xhDAAAA",
+     "data/minecraft/weather.dat": "H4sIAAAAAAAA/+NiYOBiYElJLElkZGAvSszMy8xLZ2Rk4CrJKM1LSS0C8hiYGXigvPiSzNxUBgZlDWYGoeSc1MSi+PLUxJIMuAQDUC0nyBAonykCKMDtAjQ8LLWoODM/j4FBaAkDAGrqYdJzAAAA",
+     "data/minecraft/world_clocks.dat": "H4sIAAAAAAAA/+NiYOBiYElJLEnkYhDOzcxLTS5KTCuxyi9LLSrPL8pJYWHgLskvScyJL8lMzi5mAAHue4aMDGwFiaXFqSlALjMDtwtQe1hqUXFmfh4Dg9ASBgDr20BUVQAAAA==",
+     "data/minecraft/world_gen_settings.dat": "H4sIAAAAAAAA/6WSQU7DMBBFf0SEggui0HIZ1pyBbZQmn9ZSY1czYxDX4AwcFFOKQmkiFnjhxfzv7zf2OMCh7BprCizWDJTGWKtJai0JtSgwW8WQtG43VEOJUskO+zV/c3Cd7xnUx6AOi94HttI82X18prxE2XYOF4fcKBUqpZkPa53wXq587DNATNKywvkuM9BGzRVKe90Rd4PWp635OkSvxLd8PcjHwlhmfozlULYN68C8y1QT8x/hB+NEByfO/+KPcmb+m+M6w+QPXA3OvesX+dc1p3F/o42cAc4we8hj9kj5HBbg9h0fGeSNLn0CAAA=",
+     "dimensions/minecraft/overworld/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEehMPYBaeQXAVvu23BNukJAGlp3HhQbyDFzK25i2HxzAFUCBrKJDAqmYT2KlRWonfBLYN9dSyGiK+dLa+HT77aQKZ1yPL53TEAus7OaNNq4LuOZJKIPd0ZTVaw7JKt026TTYf2VKg7NgNKpBrOSRjhnyms+7fkxIf7zOSsjzG+hM7r60Bdi98AZ7KKyvUAAAA",
+     "dimensions/minecraft/overworld/region/r.-1.0.mca": {
+      "fixture": "r.-1.0.mca"
+     },
+     "dimensions/minecraft/the_end/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEehMPYBaeQXAVvu23BNukJAGlp3HhQbyDFzK25i2HxzAFUCBrKJDAqmYT2KlRWonfBLYN9dSyGiK+dLa+HT77aQKZ1yPL53TEAus7OaNNq4LuOZJKIPd0ZTVaw7JKt026TTYf2VKg7NgNKpBrOSRjhnyms+7fkxIf7zOSsjzG+hM7r60Bdi98AZ7KKyvUAAAA",
+     "dimensions/minecraft/the_nether/data/minecraft/world_border.dat": "H4sIAAAAAAAA/zWOQQrCMBQFH1iibUVEegnXPUCz8Axuw7f9lmCbliSg9DQuPIh38ELG1rzl8BgmAzIkDXkS2NRsPFs1yUriN4F9Qz21rMaAL91Q36pPOU8gcXpi+ZyPWGF7J2u0aZXXPQdSCKSOrqymwbAs4m0Xb7PNBbYWyDu2o/JkW/bRmCBd6KL798TEx/uIqMxPof7M1unBAIcXvldPUnHUAAAA",
+     "level.dat": "H4sIAAAAAAAA/1WR8WpTMRTGv/TetvemFZH+rfgEHZsiuH8EV5HNTgcbG4IwjjepDc1NLknaUh9ibyDDvcfeyHfozq2KeCAkfCHn930nEpDIJ5RIYqTMbGaqpU2b66hTMu5bLCD/qeg5H2qyAsWcgqp80BDoWV8ttAIGeBL5jdWNpY0O18ulYRX54unwZu9k+vrH1bO9ww9f6hz5hak12hqKzxmK91Tri03TSp0Sw3MdVjq8DeQUGwAz+ityxlrK+KRDNN4BJ/c55JRiOmtxTBI/7zqToUQ3NrR2A2SNj/w62263v3h/w+txF93GpGresguUin24XbtRbZyuAs3SoWfE2gerusg2tN75lOhf/gZz+HNHTZz7xB167NXoiLwm4zJ0jtnH6LZA/pEjIT94NX7RcqZ6pe1Okp+ser4/PtgfvxQYGGeSIWu+ayUEyiuKp14pDiPwiKz16yNf1+0YRIZB+0uXf9OPbiXKVjmjahFL9N85+mq1+n9eJYqJibsL/KkH2VO8afIBAAA=",
+     "level.dat_old": "H4sIAAAAAAAA/1WR4YoTMRSFTzoz7UxaEelvxSfosqsI7h/BrciuVRd22UUQlusktaGZZEjSlvoQ+way6Hv4Rr5DvVMV8UJIOCH3O+dGAhL5lBJJjJWZz029sml7E3VKxn2OJeQ/FX3nQ0NWoFxQULUPGgJ96+ulVsAQDyK/sbq1tNXhZrUyrCJfPhzdHpzNnn+9fnRw/OZjkyO/NI1GVyPxIUP5mhp9uW07qVdhdKHDWoeXgZxiA2DGYE3OWEsZn3SIxjvg7EcOOaOYzjsck8S3771pIVHEljZuiKz1kV9nu93uJ+8veN0vULQm1YuOXaJS7MPt240b43QdaJ6OPSM2PlhVINvSZu9TYnD1G8zhLxy1ceETd+izV6Mj8oaMy9A7ZR/juxL5O46E/OjZ5EnHmem1tntJvrfq8eHk6HDyVGBonEmGrPmilRCorim+9UpxGIF7ZK3fnPim6cYgMgy7X7r6m358J1F1yjnVy1hh8MrRJ6vV//OqUE5N3F/gT/0C5F5IovIBAAA="
+    },
+    "dirs": [
+     "data",
+     "data/minecraft",
+     "dimensions",
+     "dimensions/minecraft",
+     "dimensions/minecraft/overworld",
+     "dimensions/minecraft/overworld/data",
+     "dimensions/minecraft/overworld/data/minecraft",
+     "dimensions/minecraft/overworld/region",
+     "dimensions/minecraft/the_end",
+     "dimensions/minecraft/the_end/data",
+     "dimensions/minecraft/the_end/data/minecraft",
+     "dimensions/minecraft/the_end/region",
+     "dimensions/minecraft/the_nether",
+     "dimensions/minecraft/the_nether/data",
+     "dimensions/minecraft/the_nether/data/minecraft",
+     "dimensions/minecraft/the_nether/region"
+    ]
+   }
+  }
+ ]
+}

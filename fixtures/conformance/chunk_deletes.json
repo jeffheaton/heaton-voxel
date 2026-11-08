@@ -1,0 +1,753 @@
+{
+ "assembly": "as world.json -- copy ../r.-1.0.mca to dimensions/minecraft/overworld/region/ and ../level.dat to level.dat -- and additionally copy chunk_deletes/entities/r.-1.0.mca to dimensions/minecraft/overworld/entities/ and chunk_deletes/poi/r.-1.0.mca to dimensions/minecraft/overworld/poi/, then run every step below in order",
+ "catches": [
+  "a port that stamps the timestamp table the way vanilla's RegionFile.clear does: nothing reads the timestamp of a chunk that is not there, and stamping the current second would make the file unreproducible",
+  "a port that clears terrain and stops. Entity and POI storage are separate files that nothing rebuilds from the terrain, so what is left of them comes back in regenerated ground -- and the entity chunk at (-23, 2) has no terrain chunk at all, so clearing the sidecars only where terrain existed misses it",
+  "a port that reads entity_available/poi_available instead of opening the files: it reports every count here correctly and writes nothing, because save() writes only opened regions",
+  "a port that drops the container entry but leaves a cached chunk accessor standing, which goes on answering minecraft:full for ground that is gone",
+  "a port dividing block coordinates by 16 instead of shifting: every x here is negative, and truncation lands the box a chunk to the east"
+ ],
+ "files": {
+  "entities": {
+   "bytes_after": 20480,
+   "bytes_before": 20480,
+   "cleared": [
+    {
+     "chunk": [
+      -25,
+      1
+     ],
+     "freed_sectors_zeroed": true,
+     "index": 39,
+     "location_after": "00000000",
+     "location_before": "00000201",
+     "sectors_before": [
+      2,
+      1
+     ],
+     "timestamp_after": 1784414043,
+     "timestamp_before": 1784414043
+    },
+    {
+     "chunk": [
+      -23,
+      2
+     ],
+     "freed_sectors_zeroed": true,
+     "index": 73,
+     "location_after": "00000000",
+     "location_before": "00000301",
+     "sectors_before": [
+      3,
+      1
+     ],
+     "timestamp_after": 1784414099,
+     "timestamp_before": 1784414099
+    }
+   ],
+   "file": "dimensions/minecraft/overworld/entities/r.-1.0.mca",
+   "length_unchanged": true,
+   "location_table_sha256": {
+    "after": "1931f6adc3e791d6b58fe49cb0d7d16ad4a69e4e004ae78430dea561cbeab423",
+    "before": "cce9127a131e507334cd62703aa716b422617f3a6c007da5814cf003cf131883"
+   },
+   "sha256_after": "63dc747638ebbb93cffbf386c11316c23df29489f9799812f34cbb45ca601069",
+   "sha256_before": "056210a1a8dd8dc6290edeacc8143b483a44cdd755fef61d56ea58ff68aa8c82",
+   "survivors": [
+    {
+     "chunk": [
+      -28,
+      14
+     ],
+     "index": 452,
+     "payload_sha256": "d4f13e6a6a5bf965b9d1a19479a82fab91f993685b4304aca3589145a1216723",
+     "record_sha256": "e4ebe8a36500e7819f49eca9d8f783d62a52d48d53c61b6ca906049c99c15108",
+     "record_unmoved": true,
+     "sectors": [
+      4,
+      1
+     ]
+    }
+   ],
+   "timestamp_table_sha256": {
+    "after": "8eff886b89344c40122350aeb005303405317959a207a4af73451ee48b81ddf7",
+    "before": "8eff886b89344c40122350aeb005303405317959a207a4af73451ee48b81ddf7"
+   },
+   "timestamp_table_unchanged": true
+  },
+  "poi": {
+   "bytes_after": 20480,
+   "bytes_before": 20480,
+   "cleared": [
+    {
+     "chunk": [
+      -24,
+      1
+     ],
+     "freed_sectors_zeroed": true,
+     "index": 40,
+     "location_after": "00000000",
+     "location_before": "00000201",
+     "sectors_before": [
+      2,
+      1
+     ],
+     "timestamp_after": 1784414041,
+     "timestamp_before": 1784414041
+    },
+    {
+     "chunk": [
+      -25,
+      2
+     ],
+     "freed_sectors_zeroed": true,
+     "index": 71,
+     "location_after": "00000000",
+     "location_before": "00000301",
+     "sectors_before": [
+      3,
+      1
+     ],
+     "timestamp_after": 1784414043,
+     "timestamp_before": 1784414043
+    }
+   ],
+   "file": "dimensions/minecraft/overworld/poi/r.-1.0.mca",
+   "length_unchanged": true,
+   "location_table_sha256": {
+    "after": "1931f6adc3e791d6b58fe49cb0d7d16ad4a69e4e004ae78430dea561cbeab423",
+    "before": "9a508fecd9c2e59881fd35f9029a5f3ab4f215acebdaf19d638fac9783ccb275"
+   },
+   "sha256_after": "13042ddb1fcc19ae3cc4f05c4ec1b1de7c83d67c5991585095e43a10909bb18c",
+   "sha256_before": "25d3d21b7ee156454ab3cec392e813687a4aa6250d66ec3983226a4183b8aeb4",
+   "survivors": [
+    {
+     "chunk": [
+      -28,
+      14
+     ],
+     "index": 452,
+     "payload_sha256": "f7fb91ba6ed2d0839f7128da1bb4a00378f58a7cd77527aaa4b8e37facb000ca",
+     "record_sha256": "f656825be226d5cba7ebf4af02dac8b59c93375c9cafc57ae34b6ba09ff1aeb4",
+     "record_unmoved": true,
+     "sectors": [
+      4,
+      1
+     ]
+    }
+   ],
+   "timestamp_table_sha256": {
+    "after": "8183f07d80c760a1f139d370c1356b060e3e4049cce15ce10ae60bba3f0133ea",
+    "before": "8183f07d80c760a1f139d370c1356b060e3e4049cce15ce10ae60bba3f0133ea"
+   },
+   "timestamp_table_unchanged": true
+  },
+  "region": {
+   "bytes_after": 126976,
+   "bytes_before": 126976,
+   "cleared": [
+    {
+     "chunk": [
+      -25,
+      1
+     ],
+     "freed_sectors_zeroed": true,
+     "index": 39,
+     "location_after": "00000000",
+     "location_before": "00000a01",
+     "sectors_before": [
+      10,
+      1
+     ],
+     "timestamp_after": 1784414043,
+     "timestamp_before": 1784414043
+    },
+    {
+     "chunk": [
+      -24,
+      1
+     ],
+     "freed_sectors_zeroed": true,
+     "index": 40,
+     "location_after": "00000000",
+     "location_before": "00000b02",
+     "sectors_before": [
+      11,
+      2
+     ],
+     "timestamp_after": 1784414041,
+     "timestamp_before": 1784414041
+    },
+    {
+     "chunk": [
+      -23,
+      1
+     ],
+     "freed_sectors_zeroed": true,
+     "index": 41,
+     "location_after": "00000000",
+     "location_before": "00000d02",
+     "sectors_before": [
+      13,
+      2
+     ],
+     "timestamp_after": 1784414041,
+     "timestamp_before": 1784414041
+    },
+    {
+     "chunk": [
+      -25,
+      2
+     ],
+     "freed_sectors_zeroed": true,
+     "index": 71,
+     "location_after": "00000000",
+     "location_before": "00001501",
+     "sectors_before": [
+      21,
+      1
+     ],
+     "timestamp_after": 1784414043,
+     "timestamp_before": 1784414043
+    },
+    {
+     "chunk": [
+      -24,
+      2
+     ],
+     "freed_sectors_zeroed": true,
+     "index": 72,
+     "location_after": "00000000",
+     "location_before": "00001601",
+     "sectors_before": [
+      22,
+      1
+     ],
+     "timestamp_after": 1784414041,
+     "timestamp_before": 1784414041
+    }
+   ],
+   "file": "dimensions/minecraft/overworld/region/r.-1.0.mca",
+   "length_unchanged": true,
+   "location_table_sha256": {
+    "after": "1b9190c5a4ba04a741d5109477ca8bca1d90a73d3456fa78ec7d1bc6f5a23702",
+    "before": "899e9de92165e5a0d1f163b069392a71ecf21c1fd69ea0ca109dca78fe6b0d6e"
+   },
+   "sha256_after": "6927b95bb4ec3b3e9b6c0d528d626a045119fcf454a269b2e1b06ac1ed3f3eca",
+   "sha256_before": "cc013ab470c83197a06523311b30fa76a947f364c5869c00c6fc07fcb6151740",
+   "survivors": [
+    {
+     "chunk": [
+      -21,
+      0
+     ],
+     "index": 11,
+     "payload_sha256": "f8bc2b6c033f11751e9c0a0425d1d4be1eec0ea53b27201b6e21047ebb6089a1",
+     "record_sha256": "b1a1338ce49631baea0bfcb67339b712bdbd7bc20d095dceee8b00b692846059",
+     "record_unmoved": true,
+     "sectors": [
+      2,
+      2
+     ]
+    },
+    {
+     "chunk": [
+      -20,
+      0
+     ],
+     "index": 12,
+     "payload_sha256": "49ed138633a116c50abc44579fd621ef55ed49548285ca182f57bc6f244076f0",
+     "record_sha256": "2ac5ff033be6ba5b88023f1fec19027112f26d94a8bc86a1c782b7860d0ccc82",
+     "record_unmoved": true,
+     "sectors": [
+      4,
+      2
+     ]
+    },
+    {
+     "chunk": [
+      -18,
+      0
+     ],
+     "index": 14,
+     "payload_sha256": "506487f12952d590e0594ee6d298660302ff0ac7d9202a6382368e040d1f7142",
+     "record_sha256": "caadb23835eeadb544e14d04ddf66e9bdc2fc37e0d06cf014755bcb4a974b765",
+     "record_unmoved": true,
+     "sectors": [
+      6,
+      2
+     ]
+    },
+    {
+     "chunk": [
+      -6,
+      0
+     ],
+     "index": 26,
+     "payload_sha256": "dce8c3031b37289374ffe2e82c8d37032cee5aa99621f52a065d03fc10c0a32f",
+     "record_sha256": "8aa82ab56986573679321bec2b7b1f88abd74ebed7c268294ed9020f14f189e2",
+     "record_unmoved": true,
+     "sectors": [
+      8,
+      2
+     ]
+    },
+    {
+     "chunk": [
+      -6,
+      1
+     ],
+     "index": 58,
+     "payload_sha256": "bc02162604cf4fe071facdbc4d212ceaf5277652af63f0ab57ab11a34b69b26f",
+     "record_sha256": "8e063b4323f505d71bc0946a88895c0131b7b45c41837bc19f8e14aad77b60ce",
+     "record_unmoved": true,
+     "sectors": [
+      15,
+      2
+     ]
+    },
+    {
+     "chunk": [
+      -5,
+      1
+     ],
+     "index": 59,
+     "payload_sha256": "41c55f075b54ec8e568c07076e1dc18d3d4023952e12d4b7ef56c5d063c82795",
+     "record_sha256": "83742c3489cac7cf7736f8a1b16e64c480a1e0fc9750f0255c949d39a4c3b335",
+     "record_unmoved": true,
+     "sectors": [
+      17,
+      2
+     ]
+    },
+    {
+     "chunk": [
+      -32,
+      2
+     ],
+     "index": 64,
+     "payload_sha256": "a245c6ca0275d8f30dfa7931ecb3065054abdd663fb0392cd4b65f6a21fb4440",
+     "record_sha256": "7541de0edc12749a193f911cc317bc8dbe1d1e9564612266a431a8b5f9da6448",
+     "record_unmoved": true,
+     "sectors": [
+      19,
+      2
+     ]
+    },
+    {
+     "chunk": [
+      -7,
+      2
+     ],
+     "index": 89,
+     "payload_sha256": "18c7d64fb4eb775f936cc1764d7358d09d80ded1aedd5eb679752a0c42ac577f",
+     "record_sha256": "85d954d414528bbccf670b1a6a5fc863e99fb5ae4e63553443dcff1e86fed870",
+     "record_unmoved": true,
+     "sectors": [
+      23,
+      2
+     ]
+    },
+    {
+     "chunk": [
+      -28,
+      14
+     ],
+     "index": 452,
+     "payload_sha256": "7893483ae2b5df94b66d9f3105e93178e207926f4688798b987d1eccec3685b1",
+     "record_sha256": "cb9dddb0988bc62627b74629935695cf046527499d311e710cccc1482c0f5977",
+     "record_unmoved": true,
+     "sectors": [
+      25,
+      3
+     ]
+    },
+    {
+     "chunk": [
+      -32,
+      28
+     ],
+     "index": 896,
+     "payload_sha256": "f9c57a6c724e1f64101fc82e0bb0509b9dc02299b3f22b6ea3bd9173569c2305",
+     "record_sha256": "47cf0cfc94bfdce7f773fd42bbfc1dc1cc6b4f13837790c15a3418585ccf3b01",
+     "record_unmoved": true,
+     "sectors": [
+      28,
+      2
+     ]
+    },
+    {
+     "chunk": [
+      -32,
+      29
+     ],
+     "index": 928,
+     "payload_sha256": "e6058d5e1669a0f40c961667dfdb48bba02e8912286bbd4cc62b63baf65383cf",
+     "record_sha256": "d946f109706ec1a61739b7bec8f901de331a23555b8cfad8f23c9be6c3fbb31a",
+     "record_unmoved": true,
+     "sectors": [
+      30,
+      1
+     ]
+    }
+   ],
+   "timestamp_table_sha256": {
+    "after": "1973642770e32a985bad5ef29ce4bce5194a09d831157d1c36bfbe0ac7baf774",
+    "before": "1973642770e32a985bad5ef29ce4bce5194a09d831157d1c36bfbe0ac7baf774"
+   },
+   "timestamp_table_unchanged": true
+  }
+ },
+ "inputs": {
+  "entities": {
+   "bytes": 20480,
+   "chunks": [
+    {
+     "chunk": [
+      -25,
+      1
+     ],
+     "holds": "a villager and a cat",
+     "payload_sha256": "bc8fb49e35281c1af4c1da87ad7a075c7eb7612c3e69e91af2c668fda1e5e150",
+     "timestamp": 1784414043
+    },
+    {
+     "chunk": [
+      -23,
+      2
+     ],
+     "holds": "an armor stand, over ground that was never generated",
+     "payload_sha256": "4df14fd646ec09d02336fd369a99a2c756770ea338ba28493a98bab98afab0b5",
+     "timestamp": 1784414099
+    },
+    {
+     "chunk": [
+      -28,
+      14
+     ],
+     "holds": "a cow, outside the box",
+     "payload_sha256": "d4f13e6a6a5bf965b9d1a19479a82fab91f993685b4304aca3589145a1216723",
+     "timestamp": 1784414047
+    }
+   ],
+   "compression": "none (scheme 3), so these bytes are portable",
+   "file": "chunk_deletes/entities/r.-1.0.mca",
+   "sha256": "056210a1a8dd8dc6290edeacc8143b483a44cdd755fef61d56ea58ff68aa8c82"
+  },
+  "entities_far": {
+   "bytes": 12288,
+   "chunks": [
+    {
+     "chunk": [
+      -25,
+      -1
+     ],
+     "holds": "a sheep, at negative z, alone in its region file",
+     "payload_sha256": "bb6fc4c29fd2d877ae6a1310f230b7b14a14170e4df17bb58c18625557cd457a",
+     "timestamp": 1784414101
+    }
+   ],
+   "compression": "none (scheme 3), so these bytes are portable",
+   "file": "chunk_deletes/entities/r.-1.-1.mca",
+   "sha256": "975309b0866dedae47107829a8bc57043b1162d572465565e18bc541565bf73b"
+  },
+  "poi": {
+   "bytes": 20480,
+   "chunks": [
+    {
+     "chunk": [
+      -24,
+      1
+     ],
+     "holds": "a claimed bed and a claimed workstation",
+     "payload_sha256": "19dac48c1d924936375d3cb9a5434f8818e42e2e7c415d09762dbe01f8254d10",
+     "timestamp": 1784414041
+    },
+    {
+     "chunk": [
+      -25,
+      2
+     ],
+     "holds": "a claimed bed",
+     "payload_sha256": "12e0ce35180d3f91789fc67820a42249c8cd2f7181a4e0611126db4c0809e483",
+     "timestamp": 1784414043
+    },
+    {
+     "chunk": [
+      -28,
+      14
+     ],
+     "holds": "a claimed bed, outside the box",
+     "payload_sha256": "f7fb91ba6ed2d0839f7128da1bb4a00378f58a7cd77527aaa4b8e37facb000ca",
+     "timestamp": 1784414047
+    }
+   ],
+   "compression": "none (scheme 3), so these bytes are portable",
+   "file": "chunk_deletes/poi/r.-1.0.mca",
+   "sha256": "25d3d21b7ee156454ab3cec392e813687a4aa6250d66ec3983226a4183b8aeb4"
+  },
+  "region": {
+   "file": "../r.-1.0.mca",
+   "sha256": "cc013ab470c83197a06523311b30fa76a947f364c5869c00c6fc07fcb6151740",
+   "why": "the same vendored region region.json describes, so the survivors' payload digests are the ones it already lists"
+  }
+ },
+ "note": "the reads before the script are part of it: they leave a decoded accessor behind for each chunk, which is what makes reads_after able to tell a deleted chunk from a cached one. Digests here are of whole FILES, which is portable only because deleting recompresses nothing.",
+ "reads_after": [
+  {
+   "chunk": [
+    -25,
+    1
+   ],
+   "status": null,
+   "surface_y": null,
+   "x": -397,
+   "z": 19
+  },
+  {
+   "chunk": [
+    -24,
+    2
+   ],
+   "status": null,
+   "surface_y": null,
+   "x": -381,
+   "z": 35
+  },
+  {
+   "chunk": [
+    -23,
+    1
+   ],
+   "status": null,
+   "surface_y": null,
+   "x": -365,
+   "z": 19
+  },
+  {
+   "chunk": [
+    -28,
+    14
+   ],
+   "status": "minecraft:full",
+   "surface_y": 67,
+   "x": -445,
+   "z": 227
+  }
+ ],
+ "reads_before": [
+  {
+   "chunk": [
+    -25,
+    1
+   ],
+   "status": "minecraft:full",
+   "surface_y": 62,
+   "x": -397,
+   "z": 19
+  },
+  {
+   "chunk": [
+    -24,
+    2
+   ],
+   "status": "minecraft:full",
+   "surface_y": 62,
+   "x": -381,
+   "z": 35
+  },
+  {
+   "chunk": [
+    -23,
+    1
+   ],
+   "status": "minecraft:full",
+   "surface_y": 62,
+   "x": -365,
+   "z": 19
+  },
+  {
+   "chunk": [
+    -28,
+    14
+   ],
+   "status": "minecraft:full",
+   "surface_y": 67,
+   "x": -445,
+   "z": 227
+  }
+ ],
+ "save": {
+  "files_written": 4,
+  "on_disk_matches_serialized": {
+   "entities": true,
+   "poi": true,
+   "region": true
+  },
+  "why": "save() writes only regions that were opened, so a port that decided from entity_available without opening the file reports every count above correctly and leaves the entities and poi files on disk exactly as they were"
+ },
+ "steps": [
+  {
+   "from": [
+    -400,
+    0,
+    -16
+   ],
+   "op": "delete_chunks",
+   "result": {
+    "chunks_absent": 2,
+    "chunks_deleted": 1,
+    "deleted_box": [
+     [
+      -400,
+      -16
+     ],
+     [
+      -385,
+      31
+     ]
+    ],
+    "entity_chunks_deleted": 2,
+    "poi_chunks_deleted": 0,
+    "regions_touched": 2
+   },
+   "to": [
+    -390,
+    0,
+    24
+   ],
+   "why": "spans two REGION files at once -- chunks (-25, -1) and (-25, 1) sit either side of the r.-1.-1 | r.-1.0 line -- and reaches negative z, which nothing else here does. A port taking the region once from the box corner sends every chunk at the wrong file; one writing `chunk_z % 32` instead of `& 31` gets -1 for z = -1 and indexes off the table. It also empties r.-1.-1.mca outright, so a port that unlinks or forgets an emptied region is caught here too"
+  },
+  {
+   "from": [
+    -360,
+    200,
+    40
+   ],
+   "op": "delete_chunks",
+   "result": {
+    "chunks_absent": 2,
+    "chunks_deleted": 4,
+    "deleted_box": [
+     [
+      -400,
+      16
+     ],
+     [
+      -353,
+      47
+     ]
+    ],
+    "entity_chunks_deleted": 1,
+    "poi_chunks_deleted": 2,
+    "regions_touched": 1
+   },
+   "to": [
+    -395,
+    5,
+    20
+   ],
+   "why": "corners in any order, y ignored; the terrain the step above did not already take, one chunk of the six never generated, and the sidecar trees cleared on their own account"
+  },
+  {
+   "from": [
+    -400,
+    0,
+    -16
+   ],
+   "op": "delete_chunks",
+   "result": {
+    "chunks_absent": 2,
+    "chunks_deleted": 0,
+    "deleted_box": [
+     [
+      -400,
+      -16
+     ],
+     [
+      -385,
+      15
+     ]
+    ],
+    "entity_chunks_deleted": 0,
+    "poi_chunks_deleted": 0,
+    "regions_touched": 0
+   },
+   "to": [
+    -390,
+    0,
+    8
+   ],
+   "why": "spans two REGION files at once -- chunks z -1 and 0 sit either side of the r.-1.-1 | r.-1.0 line -- and reaches negative z, which nothing else here does. A port taking the region once from the box corner sends every chunk at the wrong file; one writing `chunk_z % 32` instead of `& 31` gets -1 for z = -1 and indexes off the table. It also empties r.-1.-1.mca outright, so a port that unlinks or forgets an emptied region is caught here too"
+  },
+  {
+   "from": [
+    5,
+    0,
+    5
+   ],
+   "op": "delete_chunks",
+   "result": {
+    "chunks_absent": 4,
+    "chunks_deleted": 0,
+    "deleted_box": [
+     [
+      0,
+      0
+     ],
+     [
+      31,
+      31
+     ]
+    ],
+    "entity_chunks_deleted": 0,
+    "poi_chunks_deleted": 0,
+    "regions_touched": 0
+   },
+   "to": [
+    20,
+    0,
+    20
+   ],
+   "why": "a region the world has never written: four absent chunks, nothing touched, and no file conjured into existence"
+  },
+  {
+   "from": [
+    -360,
+    200,
+    40
+   ],
+   "op": "delete_chunks",
+   "result": {
+    "chunks_absent": 6,
+    "chunks_deleted": 0,
+    "deleted_box": [
+     [
+      -400,
+      16
+     ],
+     [
+      -353,
+      47
+     ]
+    ],
+    "entity_chunks_deleted": 0,
+    "poi_chunks_deleted": 0,
+    "regions_touched": 0
+   },
+   "to": [
+    -395,
+    5,
+    20
+   ],
+   "why": "again, over the same box: all six absent now, which is what proves the first pass emptied the containers rather than only reporting that it had"
+  }
+ ],
+ "untouched_region": {
+  "entity_region_0_0": true,
+  "poi_region_0_0": true,
+  "why": "a delete over a region with no files must not create any; both of these are still absent afterwards"
+ },
+ "version": 1,
+ "why": "every other write in this corpus is checked through chunk NBT, and a deleted chunk has none left to check: its whole effect is the container around it. So this vector digests the files themselves, which it can do because deleting is also the one write here that recompresses nothing."
+}

@@ -1,0 +1,4716 @@
+{
+ "assembly": "copy ../modern/r.-1.0.mca to dimensions/minecraft/overworld/region/ and ../modern/level.dat to level.dat; every chunk is DataVersion >= 5006, so the 26.3 codec applies throughout",
+ "block_entities_after": {
+  "chunk": [
+   -13,
+   19
+  ],
+  "entities": [
+   [
+    -198,
+    64,
+    311,
+    "minecraft:chest"
+   ],
+   [
+    -206,
+    72,
+    311,
+    "minecraft:chiseled_bookshelf"
+   ],
+   [
+    -197,
+    64,
+    311,
+    "minecraft:chest"
+   ],
+   [
+    -204,
+    73,
+    305,
+    "minecraft:skull"
+   ],
+   [
+    -203,
+    73,
+    305,
+    "minecraft:skull"
+   ],
+   [
+    -201,
+    64,
+    311,
+    "minecraft:chest"
+   ],
+   [
+    -202,
+    73,
+    305,
+    "minecraft:skull"
+   ],
+   [
+    -200,
+    64,
+    311,
+    "minecraft:chest"
+   ],
+   [
+    -195,
+    70,
+    305,
+    "minecraft:skull"
+   ],
+   [
+    -194,
+    70,
+    306,
+    "minecraft:skull"
+   ]
+  ]
+ },
+ "blocks_after": [
+  [
+   -490,
+   -40,
+   5,
+   "minecraft:water[level=0]"
+  ],
+  [
+   -488,
+   -40,
+   7,
+   "minecraft:water[level=0]"
+  ],
+  [
+   -487,
+   -40,
+   5,
+   "minecraft:water[level=0]"
+  ],
+  [
+   -490,
+   -40,
+   9,
+   "minecraft:water[level=8]"
+  ],
+  [
+   -489,
+   -40,
+   9,
+   "minecraft:sea_pickle[pickles=4,waterlogged=true]"
+  ],
+  [
+   -488,
+   -40,
+   9,
+   "minecraft:oak_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+  ],
+  [
+   -486,
+   100,
+   5,
+   "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=false]"
+  ],
+  [
+   -485,
+   100,
+   5,
+   "minecraft:oak_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+  ],
+  [
+   -484,
+   100,
+   5,
+   "minecraft:water[level=0]"
+  ],
+  [
+   -484,
+   100,
+   6,
+   "minecraft:water[level=0]"
+  ],
+  [
+   -200,
+   63,
+   310,
+   "minecraft:sand"
+  ],
+  [
+   -198,
+   63,
+   312,
+   "minecraft:sand"
+  ],
+  [
+   -197,
+   63,
+   310,
+   "minecraft:sea_pickle[pickles=2,waterlogged=false]"
+  ],
+  [
+   -478,
+   319,
+   3,
+   "minecraft:air"
+  ],
+  [
+   -478,
+   320,
+   3,
+   null
+  ],
+  [
+   -205,
+   64,
+   311,
+   "minecraft:blast_furnace[facing=north,lit=false]"
+  ],
+  [
+   -204,
+   64,
+   311,
+   "minecraft:blast_furnace[facing=north,lit=false]"
+  ],
+  [
+   -201,
+   64,
+   311,
+   "minecraft:chest[facing=north,type=single,waterlogged=false]"
+  ],
+  [
+   -200,
+   64,
+   311,
+   "minecraft:chest[facing=north,type=right,waterlogged=false]"
+  ],
+  [
+   -198,
+   64,
+   311,
+   "minecraft:chest[facing=north,type=single,waterlogged=false]"
+  ],
+  [
+   -197,
+   64,
+   311,
+   "minecraft:chest[facing=north,type=right,waterlogged=false]"
+  ]
+ ],
+ "chunk_payload_sha256": [
+  {
+   "chunk": [
+    -31,
+    0
+   ],
+   "payload_sha256": "6128d4678701c3dfff5ff159f75f7303e537dd8eccb5ac496d8123d8036b73d8"
+  },
+  {
+   "chunk": [
+    -13,
+    19
+   ],
+   "payload_sha256": "c2c4262c69eff529e154b39b4733a344c5f25c5324dcddd339a8db51d3732f32"
+  }
+ ],
+ "chunks": [
+  {
+   "chunk": [
+    -31,
+    0
+   ],
+   "data_version": 5023,
+   "modern_states": true,
+   "sections": [
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:bedrock"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_redstone_ore[lit=false]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_diamond_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_gold_ore"
+      }
+     ],
+     "stored": "string",
+     "y": -4
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_redstone_ore[lit=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:glow_lichen[down=false,east=false,north=false,south=true,up=false,waterlogged=false,west=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_iron_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_gold_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_diamond_ore"
+      }
+     ],
+     "stored": "compound",
+     "y": -3
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_gold_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_diamond_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_lapis_ore"
+      }
+     ],
+     "stored": "string",
+     "y": -2
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_gold_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_redstone_ore[lit=false]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_lapis_ore"
+      }
+     ],
+     "stored": "string",
+     "y": -1
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:redstone_ore[lit=false]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gold_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:coal_ore"
+      }
+     ],
+     "stored": "string",
+     "y": 0
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:lapis_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      }
+     ],
+     "stored": "string",
+     "y": 1
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:coal_ore"
+      }
+     ],
+     "stored": "string",
+     "y": 2
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:sand"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:grass_block[snowy=false]"
+      }
+     ],
+     "stored": "string",
+     "y": 3
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:grass_block[snowy=false]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dandelion"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:short_grass"
+      }
+     ],
+     "stored": "string",
+     "y": 4
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 5
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 6
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 7
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 8
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 9
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 10
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 11
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 12
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 13
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 14
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 15
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 16
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 17
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 18
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 19
+    }
+   ]
+  },
+  {
+   "chunk": [
+    -30,
+    0
+   ],
+   "data_version": 5023,
+   "modern_states": true,
+   "sections": [
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:bedrock"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_redstone_ore[lit=false]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_diamond_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_iron_ore"
+      }
+     ],
+     "stored": "string",
+     "y": -4
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_redstone_ore[lit=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:lava[level=2]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:lava[level=8]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:water[level=0]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:lava[level=0]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_gold_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_lapis_ore"
+      }
+     ],
+     "stored": "compound",
+     "y": -3
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_gold_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_diamond_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_redstone_ore[lit=false]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_lapis_ore"
+      }
+     ],
+     "stored": "string",
+     "y": -2
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_lapis_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:water[level=0]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_diamond_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_gold_ore"
+      }
+     ],
+     "stored": "string",
+     "y": -1
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:redstone_ore[lit=false]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gold_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:diamond_ore"
+      }
+     ],
+     "stored": "string",
+     "y": 0
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:lapis_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=east]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gold_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:cobbled_deepslate"
+      }
+     ],
+     "stored": "compound",
+     "y": 1
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=east]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      }
+     ],
+     "stored": "compound",
+     "y": 2
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:grass_block[snowy=false]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:short_grass"
+      }
+     ],
+     "stored": "string",
+     "y": 3
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:short_grass"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dandelion"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:oak_log[axis=y]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_leaves[distance=1,persistent=false,waterlogged=false]"
+      }
+     ],
+     "stored": "compound",
+     "y": 4
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 5
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 6
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 7
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 8
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 9
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 10
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 11
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 12
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 13
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 14
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 15
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 16
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 17
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 18
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 19
+    }
+   ]
+  },
+  {
+   "chunk": [
+    -13,
+    19
+   ],
+   "data_version": 5023,
+   "modern_states": true,
+   "sections": [
+    {
+     "stored": "absent",
+     "y": -5
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:bedrock"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_redstone_ore[lit=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_block"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_diamond_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:ladder[facing=west,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:end_stone_brick_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:sea_lantern"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_iron_ore"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:pearlescent_froglight[axis=z]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:pearlescent_froglight[axis=x]"
+      }
+     ],
+     "stored": "compound",
+     "y": -4
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:ladder[facing=west,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_block"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:end_stone_brick_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_redstone_ore[lit=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:deepslate[axis=z]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:pearlescent_froglight[axis=y]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:pearlescent_froglight[axis=x]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:sea_lantern"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:polished_granite"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:pearlescent_froglight[axis=z]"
+      }
+     ],
+     "stored": "compound",
+     "y": -3
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:ladder[facing=west,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_block"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_gold_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_diamond_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:sea_lantern"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:glass"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:lava[level=0]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      }
+     ],
+     "stored": "compound",
+     "y": -2
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:ladder[facing=west,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_block"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_lapis_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:sea_lantern"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_iron_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_gold_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:obsidian"
+      }
+     ],
+     "stored": "compound",
+     "y": -1
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:ladder[facing=west,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_block"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gold_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:redstone_ore[lit=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:sea_lantern"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:diamond_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:water[level=0]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:cobblestone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=east]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=west]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:lapis_ore"
+      }
+     ],
+     "stored": "compound",
+     "y": 0
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:ladder[facing=west,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_block"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:sea_lantern"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=west]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:cobblestone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:birch_planks"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:wall_torch[facing=north]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=south]"
+      }
+     ],
+     "stored": "compound",
+     "y": 1
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:ladder[facing=west,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_block"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:sea_lantern"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:lantern[hanging=false,waterlogged=false]"
+      }
+     ],
+     "stored": "compound",
+     "y": 2
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:ladder[facing=west,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_block"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:sea_lantern"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:obsidian"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:rail[shape=north_south,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:powered_rail[powered=true,shape=north_south,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=west]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:redstone_wall_torch[facing=west,lit=true]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:glowstone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=east]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone_bricks"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:polished_andesite"
+      }
+     ],
+     "stored": "compound",
+     "y": 3
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone_bricks"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:ladder[facing=west,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_block"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:stone_brick_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:red_bed[facing=south,occupied=false,part=foot]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:furnace[facing=north,lit=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:crafting_table"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:chest[facing=north,type=left,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:chest[facing=north,type=right,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:red_bed[facing=south,occupied=false,part=head]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_door[facing=south,half=lower,hinge=left,open=false,powered=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:obsidian"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_door[facing=north,half=lower,hinge=right,open=false,powered=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:wall_torch[facing=north]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_door[facing=south,half=upper,hinge=left,open=false,powered=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:stone_brick_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:glowstone"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_door[facing=north,half=upper,hinge=right,open=false,powered=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=east]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:jungle_planks"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:infested_stone_bricks"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:sea_lantern"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:sand"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:grass_block[snowy=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:grass_block[snowy=true]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:bricks"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:bookshelf"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:orange_carpet"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:birch_planks"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:spruce_planks"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:spruce_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:vine[east=false,north=true,south=false,up=false,west=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:snow[layers=1]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:reinforced_deepslate"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:blue_carpet"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:lantern[hanging=false,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:glass_pane[east=true,north=false,south=false,waterlogged=false,west=true]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:glass"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:potted_red_tulip"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:potted_oxeye_daisy"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:glass_pane[east=false,north=true,south=true,waterlogged=false,west=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:cake[bites=0]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:ancient_debris"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:light_blue_stained_glass"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:zombie_head[powered=false,rotation=11]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:creeper_head[powered=false,rotation=13]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:potted_wither_rose"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:potted_red_mushroom"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:potted_brown_mushroom"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:flower_pot"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:lantern[hanging=true,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:cobblestone"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:spruce_trapdoor[facing=south,half=bottom,open=false,powered=false,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:spruce_trapdoor[facing=west,half=bottom,open=false,powered=false,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:oak_planks"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:purple_carpet"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:ladder[facing=east,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:red_bed[facing=east,occupied=false,part=foot]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:red_bed[facing=east,occupied=false,part=head]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:chiseled_bookshelf[facing=east,slot_0_occupied=false,slot_1_occupied=false,slot_2_occupied=false,slot_3_occupied=false,slot_4_occupied=false,slot_5_occupied=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:creeper_head[powered=false,rotation=6]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:zombie_head[powered=false,rotation=8]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:creeper_head[powered=false,rotation=10]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:potted_blue_orchid"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:potted_oak_sapling"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:potted_dandelion"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:farmland[moisture=7]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:water[level=0]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:carrots[age=7]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wheat[age=7]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:torch"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:acacia_planks"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:acacia_stairs[facing=south,half=bottom,shape=straight,waterlogged=false]"
+      }
+     ],
+     "stored": "compound",
+     "y": 4
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:snow[layers=1]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:acacia_planks"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:ancient_debris"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:light_blue_stained_glass"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:obsidian"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:glowstone"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:reinforced_deepslate"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:oak_planks"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dark_oak_planks"
+      }
+     ],
+     "stored": "string",
+     "y": 5
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:ancient_debris"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:light_blue_stained_glass"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:obsidian"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dark_oak_planks"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:glowstone"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:reinforced_deepslate"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:grass_block[snowy=false]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_brick_slab[type=bottom,waterlogged=false]"
+      }
+     ],
+     "stored": "string",
+     "y": 6
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 7
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 8
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 9
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 10
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 11
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 12
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 13
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 14
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 15
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 16
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 17
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 18
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 19
+    }
+   ]
+  },
+  {
+   "chunk": [
+    -3,
+    19
+   ],
+   "data_version": 5023,
+   "modern_states": true,
+   "sections": [
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:bedrock"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_redstone_ore[lit=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_diamond_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_lapis_ore"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:water[level=8]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:water[level=1]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:water[level=2]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:water[level=3]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:water[level=4]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:cobblestone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:lantern[hanging=false,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:lava[level=6]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:lava[level=8]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:lava[level=2]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:lava[level=4]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_gold_ore"
+      }
+     ],
+     "stored": "compound",
+     "y": -4
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_redstone_ore[lit=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:water[level=8]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:water[level=1]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:lava[level=8]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:water[level=0]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:lava[level=0]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:lava[level=2]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_diamond_ore"
+      }
+     ],
+     "stored": "compound",
+     "y": -3
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_lapis_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:deepslate_gold_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:tuff"
+      }
+     ],
+     "stored": "string",
+     "y": -2
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:tuff"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_iron_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_gold_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:glow_lichen[down=false,east=false,north=false,south=true,up=false,waterlogged=false,west=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:glow_lichen[down=false,east=false,north=false,south=false,up=false,waterlogged=false,west=true]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_diamond_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:deepslate_lapis_ore"
+      }
+     ],
+     "stored": "compound",
+     "y": -1
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:deepslate[axis=y]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:diamond_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:redstone_ore[lit=false]"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:coal_ore"
+      }
+     ],
+     "stored": "string",
+     "y": 0
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:lapis_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gold_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:oak_planks"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=east]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:oak_fence[east=false,north=false,south=false,waterlogged=false,west=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:torch"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:wall_torch[facing=north]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_fence[east=false,north=true,south=false,waterlogged=false,west=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_fence[east=false,north=false,south=true,waterlogged=false,west=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:wall_torch[facing=south]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:cobweb"
+      }
+     ],
+     "stored": "compound",
+     "y": 1
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:oak_planks"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:cobweb"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:iron_ore"
+      },
+      {
+       "form": "string",
+       "state": "minecraft:coal_ore"
+      }
+     ],
+     "stored": "string",
+     "y": 2
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:coal_ore"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:gravel"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:grass_block[snowy=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt_path"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:moss_block"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:glowstone"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:grass_block[snowy=true]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:polished_granite"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:polished_granite_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:short_grass"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:moss_carpet"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:snow[layers=1]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:cherry_log[axis=y]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:birch_log[axis=y]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:oak_log[axis=y]"
+      }
+     ],
+     "stored": "compound",
+     "y": 3
+    },
+    {
+     "entries": [
+      {
+       "form": "wrapped",
+       "state": "minecraft:stone"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:dirt"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:polished_granite"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:polished_granite_stairs[facing=west,half=bottom,shape=straight,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:air"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:spruce_leaves[distance=3,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:spruce_leaves[distance=2,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:spruce_leaves[distance=1,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:grass_block[snowy=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:snow[layers=1]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:cherry_leaves[distance=3,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:cherry_leaves[distance=2,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:grass_block[snowy=true]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:cherry_leaves[distance=1,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:cherry_log[axis=y]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_leaves[distance=4,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_leaves[distance=3,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:birch_log[axis=y]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_leaves[distance=2,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:oak_leaves[distance=1,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:oak_log[axis=y]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:dark_oak_leaves[distance=7,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:dark_oak_leaves[distance=6,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:dark_oak_leaves[distance=5,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:dark_oak_leaves[distance=4,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:birch_leaves[distance=3,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:birch_leaves[distance=2,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:birch_leaves[distance=1,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:birch_leaves[distance=7,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:polished_granite_stairs[facing=south,half=bottom,shape=inner_right,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:spruce_leaves[distance=4,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "wrapped",
+       "state": "minecraft:glowstone"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:cherry_leaves[distance=4,persistent=true,waterlogged=false]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:birch_sapling[stage=1]"
+      },
+      {
+       "form": "full",
+       "state": "minecraft:birch_leaves[distance=4,persistent=true,waterlogged=false]"
+      }
+     ],
+     "stored": "compound",
+     "y": 4
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 5
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 6
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 7
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 8
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 9
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 10
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 11
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 12
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 13
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 14
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 15
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 16
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 17
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 18
+    },
+    {
+     "entries": [
+      {
+       "form": "string",
+       "state": "minecraft:air"
+      }
+     ],
+     "stored": "string",
+     "y": 19
+    }
+   ]
+  }
+ ],
+ "modern_state_data_version": 5006,
+ "note": "'chunks' is the fixture as read: each stored palette entry's form and the state it decodes to, defaults restored and properties in name order. 'reads' are point reads and 'surfaces' all four heightmaps, both before any edit; a read outside the chunk's min_y..max_y is null even where a section of light alone is stored. 'steps' run in order on the same world (fills, connects and thaws with keep_loaded); then 'blocks_after', 'palettes_after' and the per-chunk digests of the UNCOMPRESSED NBT must all match.",
+ "palettes_after": [
+  {
+   "chunk": [
+    -31,
+    0
+   ],
+   "entries": [
+    {
+     "form": "wrapped",
+     "state": "minecraft:deepslate[axis=y]"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:tuff"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:deepslate_redstone_ore[lit=false]"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:gravel"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:air"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:glow_lichen[down=false,east=false,north=false,south=true,up=false,waterlogged=false,west=false]"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:deepslate_iron_ore"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:deepslate_gold_ore"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:deepslate_diamond_ore"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:water[level=0]"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:water[level=8]"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:sea_pickle[pickles=4,waterlogged=true]"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:oak_stairs[facing=north,half=bottom,shape=straight,waterlogged=false]"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:iron_chain[axis=y,waterlogged=true]"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:bell[attachment=floor,facing=north,powered=false]"
+    }
+   ],
+   "stored": "compound",
+   "y": -3
+  },
+  {
+   "chunk": [
+    -31,
+    0
+   ],
+   "entries": [
+    {
+     "form": "wrapped",
+     "state": "minecraft:air"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:oak_fence[east=true,north=false,south=false,waterlogged=false,west=false]"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:oak_fence[east=false,north=false,south=false,waterlogged=false,west=true]"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:water[level=0]"
+    }
+   ],
+   "stored": "compound",
+   "y": 6
+  },
+  {
+   "chunk": [
+    -13,
+    19
+   ],
+   "entries": [
+    {
+     "form": "wrapped",
+     "state": "minecraft:stone"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:ladder[facing=west,waterlogged=false]"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:iron_block"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:coal_ore"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:air"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:sea_lantern"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:obsidian"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:rail[shape=north_south,waterlogged=false]"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:dirt"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:powered_rail[powered=true,shape=north_south,waterlogged=false]"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:wall_torch[facing=west]"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:redstone_wall_torch[facing=west,lit=true]"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:glowstone"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:iron_ore"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:wall_torch[facing=east]"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:stone_bricks"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:gravel"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:polished_andesite"
+    },
+    {
+     "form": "wrapped",
+     "state": "minecraft:sand"
+    },
+    {
+     "form": "full",
+     "state": "minecraft:sea_pickle[pickles=2,waterlogged=false]"
+    }
+   ],
+   "stored": "compound",
+   "y": 3
+  }
+ ],
+ "reads": [
+  [
+   -495,
+   -65,
+   1,
+   null
+  ],
+  [
+   -488,
+   -65,
+   8,
+   null
+  ],
+  [
+   -482,
+   -65,
+   3,
+   null
+  ],
+  [
+   -493,
+   -65,
+   14,
+   null
+  ],
+  [
+   -495,
+   -60,
+   1,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -488,
+   -60,
+   8,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -482,
+   -60,
+   3,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -493,
+   -60,
+   14,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -495,
+   -20,
+   1,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -488,
+   -20,
+   8,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -482,
+   -20,
+   3,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -493,
+   -20,
+   14,
+   "minecraft:deepslate_lapis_ore"
+  ],
+  [
+   -495,
+   0,
+   1,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -488,
+   0,
+   8,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -482,
+   0,
+   3,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -493,
+   0,
+   14,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -495,
+   40,
+   1,
+   "minecraft:stone"
+  ],
+  [
+   -488,
+   40,
+   8,
+   "minecraft:stone"
+  ],
+  [
+   -482,
+   40,
+   3,
+   "minecraft:stone"
+  ],
+  [
+   -493,
+   40,
+   14,
+   "minecraft:gravel"
+  ],
+  [
+   -495,
+   60,
+   1,
+   "minecraft:dirt"
+  ],
+  [
+   -488,
+   60,
+   8,
+   "minecraft:dirt"
+  ],
+  [
+   -482,
+   60,
+   3,
+   "minecraft:dirt"
+  ],
+  [
+   -493,
+   60,
+   14,
+   "minecraft:sand"
+  ],
+  [
+   -495,
+   62,
+   1,
+   "minecraft:dirt"
+  ],
+  [
+   -488,
+   62,
+   8,
+   "minecraft:grass_block[snowy=false]"
+  ],
+  [
+   -482,
+   62,
+   3,
+   "minecraft:dirt"
+  ],
+  [
+   -493,
+   62,
+   14,
+   "minecraft:air"
+  ],
+  [
+   -495,
+   63,
+   1,
+   "minecraft:dirt"
+  ],
+  [
+   -488,
+   63,
+   8,
+   "minecraft:air"
+  ],
+  [
+   -482,
+   63,
+   3,
+   "minecraft:grass_block[snowy=false]"
+  ],
+  [
+   -493,
+   63,
+   14,
+   "minecraft:air"
+  ],
+  [
+   -495,
+   66,
+   1,
+   "minecraft:air"
+  ],
+  [
+   -488,
+   66,
+   8,
+   "minecraft:air"
+  ],
+  [
+   -482,
+   66,
+   3,
+   "minecraft:air"
+  ],
+  [
+   -493,
+   66,
+   14,
+   "minecraft:air"
+  ],
+  [
+   -495,
+   70,
+   1,
+   "minecraft:air"
+  ],
+  [
+   -488,
+   70,
+   8,
+   "minecraft:air"
+  ],
+  [
+   -482,
+   70,
+   3,
+   "minecraft:air"
+  ],
+  [
+   -493,
+   70,
+   14,
+   "minecraft:air"
+  ],
+  [
+   -495,
+   100,
+   1,
+   "minecraft:air"
+  ],
+  [
+   -488,
+   100,
+   8,
+   "minecraft:air"
+  ],
+  [
+   -482,
+   100,
+   3,
+   "minecraft:air"
+  ],
+  [
+   -493,
+   100,
+   14,
+   "minecraft:air"
+  ],
+  [
+   -479,
+   -65,
+   1,
+   null
+  ],
+  [
+   -472,
+   -65,
+   8,
+   null
+  ],
+  [
+   -466,
+   -65,
+   3,
+   null
+  ],
+  [
+   -477,
+   -65,
+   14,
+   null
+  ],
+  [
+   -479,
+   -60,
+   1,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -472,
+   -60,
+   8,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -466,
+   -60,
+   3,
+   "minecraft:tuff"
+  ],
+  [
+   -477,
+   -60,
+   14,
+   "minecraft:bedrock"
+  ],
+  [
+   -479,
+   -20,
+   1,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -472,
+   -20,
+   8,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -466,
+   -20,
+   3,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -477,
+   -20,
+   14,
+   "minecraft:tuff"
+  ],
+  [
+   -479,
+   0,
+   1,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -472,
+   0,
+   8,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -466,
+   0,
+   3,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -477,
+   0,
+   14,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -479,
+   40,
+   1,
+   "minecraft:stone"
+  ],
+  [
+   -472,
+   40,
+   8,
+   "minecraft:stone"
+  ],
+  [
+   -466,
+   40,
+   3,
+   "minecraft:stone"
+  ],
+  [
+   -477,
+   40,
+   14,
+   "minecraft:stone"
+  ],
+  [
+   -479,
+   60,
+   1,
+   "minecraft:dirt"
+  ],
+  [
+   -472,
+   60,
+   8,
+   "minecraft:dirt"
+  ],
+  [
+   -466,
+   60,
+   3,
+   "minecraft:dirt"
+  ],
+  [
+   -477,
+   60,
+   14,
+   "minecraft:dirt"
+  ],
+  [
+   -479,
+   62,
+   1,
+   "minecraft:dirt"
+  ],
+  [
+   -472,
+   62,
+   8,
+   "minecraft:grass_block[snowy=false]"
+  ],
+  [
+   -466,
+   62,
+   3,
+   "minecraft:grass_block[snowy=false]"
+  ],
+  [
+   -477,
+   62,
+   14,
+   "minecraft:grass_block[snowy=false]"
+  ],
+  [
+   -479,
+   63,
+   1,
+   "minecraft:grass_block[snowy=false]"
+  ],
+  [
+   -472,
+   63,
+   8,
+   "minecraft:air"
+  ],
+  [
+   -466,
+   63,
+   3,
+   "minecraft:air"
+  ],
+  [
+   -477,
+   63,
+   14,
+   "minecraft:air"
+  ],
+  [
+   -479,
+   66,
+   1,
+   "minecraft:air"
+  ],
+  [
+   -472,
+   66,
+   8,
+   "minecraft:air"
+  ],
+  [
+   -466,
+   66,
+   3,
+   "minecraft:air"
+  ],
+  [
+   -477,
+   66,
+   14,
+   "minecraft:air"
+  ],
+  [
+   -479,
+   70,
+   1,
+   "minecraft:air"
+  ],
+  [
+   -472,
+   70,
+   8,
+   "minecraft:air"
+  ],
+  [
+   -466,
+   70,
+   3,
+   "minecraft:air"
+  ],
+  [
+   -477,
+   70,
+   14,
+   "minecraft:air"
+  ],
+  [
+   -479,
+   100,
+   1,
+   "minecraft:air"
+  ],
+  [
+   -472,
+   100,
+   8,
+   "minecraft:air"
+  ],
+  [
+   -466,
+   100,
+   3,
+   "minecraft:air"
+  ],
+  [
+   -477,
+   100,
+   14,
+   "minecraft:air"
+  ],
+  [
+   -207,
+   -65,
+   305,
+   null
+  ],
+  [
+   -200,
+   -65,
+   312,
+   null
+  ],
+  [
+   -194,
+   -65,
+   307,
+   null
+  ],
+  [
+   -205,
+   -65,
+   318,
+   null
+  ],
+  [
+   -207,
+   -60,
+   305,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -200,
+   -60,
+   312,
+   "minecraft:bedrock"
+  ],
+  [
+   -194,
+   -60,
+   307,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -205,
+   -60,
+   318,
+   "minecraft:bedrock"
+  ],
+  [
+   -207,
+   -20,
+   305,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -200,
+   -20,
+   312,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -194,
+   -20,
+   307,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -205,
+   -20,
+   318,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -207,
+   0,
+   305,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -200,
+   0,
+   312,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -194,
+   0,
+   307,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -205,
+   0,
+   318,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -207,
+   40,
+   305,
+   "minecraft:stone"
+  ],
+  [
+   -200,
+   40,
+   312,
+   "minecraft:stone"
+  ],
+  [
+   -194,
+   40,
+   307,
+   "minecraft:stone"
+  ],
+  [
+   -205,
+   40,
+   318,
+   "minecraft:air"
+  ],
+  [
+   -207,
+   60,
+   305,
+   "minecraft:stone"
+  ],
+  [
+   -200,
+   60,
+   312,
+   "minecraft:stone"
+  ],
+  [
+   -194,
+   60,
+   307,
+   "minecraft:stone"
+  ],
+  [
+   -205,
+   60,
+   318,
+   "minecraft:air"
+  ],
+  [
+   -207,
+   62,
+   305,
+   "minecraft:dirt"
+  ],
+  [
+   -200,
+   62,
+   312,
+   "minecraft:dirt"
+  ],
+  [
+   -194,
+   62,
+   307,
+   "minecraft:stone"
+  ],
+  [
+   -205,
+   62,
+   318,
+   "minecraft:air"
+  ],
+  [
+   -207,
+   63,
+   305,
+   "minecraft:stone_bricks"
+  ],
+  [
+   -200,
+   63,
+   312,
+   "minecraft:stone_bricks"
+  ],
+  [
+   -194,
+   63,
+   307,
+   "minecraft:stone_bricks"
+  ],
+  [
+   -205,
+   63,
+   318,
+   "minecraft:stone_bricks"
+  ],
+  [
+   -207,
+   66,
+   305,
+   "minecraft:glowstone"
+  ],
+  [
+   -200,
+   66,
+   312,
+   "minecraft:glowstone"
+  ],
+  [
+   -194,
+   66,
+   307,
+   "minecraft:air"
+  ],
+  [
+   -205,
+   66,
+   318,
+   "minecraft:air"
+  ],
+  [
+   -207,
+   70,
+   305,
+   "minecraft:bricks"
+  ],
+  [
+   -200,
+   70,
+   312,
+   "minecraft:bricks"
+  ],
+  [
+   -194,
+   70,
+   307,
+   "minecraft:potted_wither_rose"
+  ],
+  [
+   -205,
+   70,
+   318,
+   "minecraft:air"
+  ],
+  [
+   -207,
+   100,
+   305,
+   "minecraft:air"
+  ],
+  [
+   -200,
+   100,
+   312,
+   "minecraft:air"
+  ],
+  [
+   -194,
+   100,
+   307,
+   "minecraft:air"
+  ],
+  [
+   -205,
+   100,
+   318,
+   "minecraft:air"
+  ],
+  [
+   -47,
+   -65,
+   305,
+   null
+  ],
+  [
+   -40,
+   -65,
+   312,
+   null
+  ],
+  [
+   -34,
+   -65,
+   307,
+   null
+  ],
+  [
+   -45,
+   -65,
+   318,
+   null
+  ],
+  [
+   -47,
+   -60,
+   305,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -40,
+   -60,
+   312,
+   "minecraft:bedrock"
+  ],
+  [
+   -34,
+   -60,
+   307,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -45,
+   -60,
+   318,
+   "minecraft:bedrock"
+  ],
+  [
+   -47,
+   -20,
+   305,
+   "minecraft:tuff"
+  ],
+  [
+   -40,
+   -20,
+   312,
+   "minecraft:tuff"
+  ],
+  [
+   -34,
+   -20,
+   307,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -45,
+   -20,
+   318,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -47,
+   0,
+   305,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -40,
+   0,
+   312,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -34,
+   0,
+   307,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -45,
+   0,
+   318,
+   "minecraft:deepslate[axis=y]"
+  ],
+  [
+   -47,
+   40,
+   305,
+   "minecraft:gravel"
+  ],
+  [
+   -40,
+   40,
+   312,
+   "minecraft:stone"
+  ],
+  [
+   -34,
+   40,
+   307,
+   "minecraft:stone"
+  ],
+  [
+   -45,
+   40,
+   318,
+   "minecraft:stone"
+  ],
+  [
+   -47,
+   60,
+   305,
+   "minecraft:stone"
+  ],
+  [
+   -40,
+   60,
+   312,
+   "minecraft:stone"
+  ],
+  [
+   -34,
+   60,
+   307,
+   "minecraft:dirt"
+  ],
+  [
+   -45,
+   60,
+   318,
+   "minecraft:stone"
+  ],
+  [
+   -47,
+   62,
+   305,
+   "minecraft:stone"
+  ],
+  [
+   -40,
+   62,
+   312,
+   "minecraft:snow[layers=1]"
+  ],
+  [
+   -34,
+   62,
+   307,
+   "minecraft:air"
+  ],
+  [
+   -45,
+   62,
+   318,
+   "minecraft:dirt"
+  ],
+  [
+   -47,
+   63,
+   305,
+   "minecraft:stone"
+  ],
+  [
+   -40,
+   63,
+   312,
+   "minecraft:air"
+  ],
+  [
+   -34,
+   63,
+   307,
+   "minecraft:air"
+  ],
+  [
+   -45,
+   63,
+   318,
+   "minecraft:grass_block[snowy=true]"
+  ],
+  [
+   -47,
+   66,
+   305,
+   "minecraft:stone"
+  ],
+  [
+   -40,
+   66,
+   312,
+   "minecraft:air"
+  ],
+  [
+   -34,
+   66,
+   307,
+   "minecraft:air"
+  ],
+  [
+   -45,
+   66,
+   318,
+   "minecraft:air"
+  ],
+  [
+   -47,
+   70,
+   305,
+   "minecraft:air"
+  ],
+  [
+   -40,
+   70,
+   312,
+   "minecraft:air"
+  ],
+  [
+   -34,
+   70,
+   307,
+   "minecraft:air"
+  ],
+  [
+   -45,
+   70,
+   318,
+   "minecraft:air"
+  ],
+  [
+   -47,
+   100,
+   305,
+   "minecraft:air"
+  ],
+  [
+   -40,
+   100,
+   312,
+   "minecraft:air"
+  ],
+  [
+   -34,
+   100,
+   307,
+   "minecraft:air"
+  ],
+  [
+   -45,
+   100,
+   318,
+   "minecraft:air"
+  ]
+ ],
+ "steps": [
+  {
+   "block": "minecraft:water",
+   "from": [
+    -490,
+    -40,
+    5
+   ],
+   "op": "fill",
+   "result": {
+    "blocks_filled": 9,
+    "blocks_out_of_range": 0,
+    "chunks_modified": 1,
+    "complete": true,
+    "missing_chunks": [],
+    "sections_replaced": 0
+   },
+   "to": [
+    -488,
+    -40,
+    7
+   ],
+   "why": "source water into a deep, all-default section: the list stays strings"
+  },
+  {
+   "block": "minecraft:water[level=8]",
+   "from": [
+    -490,
+    -40,
+    9
+   ],
+   "op": "fill",
+   "result": {
+    "blocks_filled": 1,
+    "blocks_out_of_range": 0,
+    "chunks_modified": 1,
+    "complete": true,
+    "missing_chunks": [],
+    "sections_replaced": 0
+   },
+   "to": [
+    -490,
+    -40,
+    9
+   ],
+   "why": "flowing water carries a property: the list widens and every bare id is wrapped"
+  },
+  {
+   "block": "minecraft:sea_pickle[pickles=4]",
+   "from": [
+    -489,
+    -40,
+    9
+   ],
+   "op": "fill",
+   "result": {
+    "blocks_filled": 1,
+    "blocks_out_of_range": 0,
+    "chunks_modified": 1,
+    "complete": true,
+    "missing_chunks": [],
+    "sections_replaced": 0
+   },
+   "to": [
+    -489,
+    -40,
+    9
+   ],
+   "why": "a partial state: the omitted waterlogged is filled from the defaults before it is stored, in name order"
+  },
+  {
+   "block": "minecraft:oak_stairs[facing=north]",
+   "from": [
+    -488,
+    -40,
+    9
+   ],
+   "op": "fill",
+   "result": {
+    "blocks_filled": 1,
+    "blocks_out_of_range": 0,
+    "chunks_modified": 1,
+    "complete": true,
+    "missing_chunks": [],
+    "sections_replaced": 0
+   },
+   "to": [
+    -488,
+    -40,
+    9
+   ],
+   "why": "a state spelled with its default value is the default: stored bare, wrapped"
+  },
+  {
+   "block": "minecraft:water[level=0]",
+   "from": [
+    -487,
+    -40,
+    5
+   ],
+   "op": "fill",
+   "result": {
+    "blocks_filled": 1,
+    "blocks_out_of_range": 0,
+    "chunks_modified": 1,
+    "complete": true,
+    "missing_chunks": [],
+    "sections_replaced": 0
+   },
+   "to": [
+    -487,
+    -40,
+    5
+   ],
+   "why": "spelled out in full, source water finds the bare entry the first step made"
+  },
+  {
+   "at": [
+    -489,
+    -40,
+    6
+   ],
+   "block": "minecraft:iron_chain[axis=y]",
+   "op": "place",
+   "result": {
+    "placed": true
+   },
+   "why": "a chain dropped into water holds it: the game gives every chain waterlogged"
+  },
+  {
+   "at": [
+    -489,
+    -40,
+    7
+   ],
+   "block": "minecraft:bell",
+   "op": "place",
+   "result": {
+    "placed": true
+   },
+   "why": "a bell displaces it: the bell has no waterlogged property to set"
+  },
+  {
+   "at": [
+    -486,
+    100,
+    5
+   ],
+   "block": "minecraft:oak_fence",
+   "op": "place",
+   "result": {
+    "placed": true
+   },
+   "why": "a lone fence derives all-false, which is its default: bare, in a uniform air section that must grow an index array"
+  },
+  {
+   "at": [
+    -485,
+    100,
+    5
+   ],
+   "block": "minecraft:oak_fence",
+   "op": "place",
+   "result": {
+    "placed": true
+   },
+   "why": "its neighbor connects both: two full entries, and the air list widens"
+  },
+  {
+   "block": "minecraft:ice",
+   "from": [
+    -484,
+    100,
+    5
+   ],
+   "op": "fill",
+   "result": {
+    "blocks_filled": 2,
+    "blocks_out_of_range": 0,
+    "chunks_modified": 1,
+    "complete": true,
+    "missing_chunks": [],
+    "sections_replaced": 0
+   },
+   "to": [
+    -484,
+    100,
+    6
+   ]
+  },
+  {
+   "from": [
+    -486,
+    100,
+    4
+   ],
+   "op": "unfreeze",
+   "result": {
+    "chunks_modified": 1,
+    "complete": true,
+    "deep_snow_kept": 0,
+    "floating_water": 2,
+    "ice_melted": 2,
+    "missing_chunks": [],
+    "snow_removed": 0,
+    "snowy_cleared": 0
+   },
+   "to": [
+    -483,
+    100,
+    7
+   ],
+   "why": "thawed ice is written as water[level=0], which the codec stores as the bare id"
+  },
+  {
+   "block": "minecraft:sand",
+   "from": [
+    -200,
+    63,
+    310
+   ],
+   "op": "fill",
+   "result": {
+    "blocks_filled": 9,
+    "blocks_out_of_range": 0,
+    "chunks_modified": 1,
+    "complete": true,
+    "missing_chunks": [],
+    "sections_replaced": 0
+   },
+   "to": [
+    -198,
+    63,
+    312
+   ],
+   "why": "a default state into a surface section the game already stored as compounds"
+  },
+  {
+   "block": "minecraft:sea_pickle[pickles=2,waterlogged=false]",
+   "from": [
+    -197,
+    63,
+    310
+   ],
+   "op": "fill",
+   "result": {
+    "blocks_filled": 1,
+    "blocks_out_of_range": 0,
+    "chunks_modified": 1,
+    "complete": true,
+    "missing_chunks": [],
+    "sections_replaced": 0
+   },
+   "to": [
+    -197,
+    63,
+    310
+   ],
+   "why": "and a non-default one beside it"
+  },
+  {
+   "from": [
+    -487,
+    99,
+    4
+   ],
+   "op": "connect",
+   "result": {
+    "blocks_scanned": 2,
+    "complete": true,
+    "fences_updated": 0,
+    "gates_updated": 0,
+    "panes_updated": 0,
+    "stairs_updated": 0,
+    "total_updated": 0,
+    "walls_updated": 0
+   },
+   "to": [
+    -482,
+    101,
+    8
+   ]
+  },
+  {
+   "from": [
+    -200,
+    0,
+    310
+   ],
+   "op": "rebuild_heightmaps",
+   "result": {
+    "chunks_rebuilt": 1,
+    "complete": true
+   },
+   "to": [
+    -197,
+    0,
+    312
+   ]
+  },
+  {
+   "from": [
+    -490,
+    0,
+    5
+   ],
+   "neighbors": false,
+   "op": "reset_lighting",
+   "result": {
+    "arrays_removed": 5,
+    "chunks_reset": 1,
+    "chunks_skipped": 0
+   },
+   "to": [
+    -488,
+    0,
+    9
+   ]
+  },
+  {
+   "chunk": [
+    -30,
+    0
+   ],
+   "op": "light_section",
+   "result": {
+    "max_y": 319,
+    "min_y": -64,
+    "sections": 25
+   },
+   "why": "not an edit but the case the fixture lacks: the game keeps a section of light alone one past the top of the world, Y=20, and it is no part of the chunk's range, which stays -64..319",
+   "y": 20
+  },
+  {
+   "at": [
+    -478,
+    319,
+    3
+   ],
+   "block": "minecraft:oak_door[facing=north]",
+   "op": "place",
+   "result": {
+    "placed": false
+   },
+   "why": "so a door on the top of the world, whose upper half would stand in that section, is refused whole: nothing is written"
+  },
+  {
+   "from": [
+    -206,
+    64,
+    311
+   ],
+   "mapping": [
+    [
+     "minecraft:furnace",
+     "minecraft:blast_furnace"
+    ],
+    [
+     "minecraft:chest[type=left]",
+     "minecraft:chest[type=single]"
+    ]
+   ],
+   "op": "replace",
+   "result": {
+    "block_entities_removed": 2,
+    "blocks_out_of_range": 0,
+    "blocks_replaced": 4,
+    "chunks_modified": 1,
+    "complete": true,
+    "missing_chunks": [],
+    "sections_replaced": 0,
+    "unfinished_chunks": [],
+    "unreadable_chunks": []
+   },
+   "to": [
+    -197,
+    64,
+    311
+   ],
+   "why": "keys as 26.3 reads them, defaults filled: the bare furnace is its default, and a chest key that leaves facing out means north. The chests keep their block entities, the furnaces lose theirs"
+  },
+  {
+   "chunk": [
+    -30,
+    0
+   ],
+   "op": "drop_section",
+   "result": {
+    "max_y": 319,
+    "min_y": -64,
+    "sections": 24
+   },
+   "why": "not an edit either: a chunk without the section at its floor still counts from the floor it records, yPos * 16, not from the lowest section it stores",
+   "y": -4
+  }
+ ],
+ "surfaces": [
+  {
+   "MOTION_BLOCKING": 65,
+   "MOTION_BLOCKING_NO_LEAVES": 65,
+   "OCEAN_FLOOR": 65,
+   "WORLD_SURFACE": 65,
+   "x": -496,
+   "z": 0
+  },
+  {
+   "MOTION_BLOCKING": 63,
+   "MOTION_BLOCKING_NO_LEAVES": 63,
+   "OCEAN_FLOOR": 63,
+   "WORLD_SURFACE": 63,
+   "x": -491,
+   "z": 5
+  },
+  {
+   "MOTION_BLOCKING": 60,
+   "MOTION_BLOCKING_NO_LEAVES": 60,
+   "OCEAN_FLOOR": 60,
+   "WORLD_SURFACE": 60,
+   "x": -485,
+   "z": 11
+  },
+  {
+   "MOTION_BLOCKING": 63,
+   "MOTION_BLOCKING_NO_LEAVES": 63,
+   "OCEAN_FLOOR": 63,
+   "WORLD_SURFACE": 63,
+   "x": -480,
+   "z": 0
+  },
+  {
+   "MOTION_BLOCKING": 61,
+   "MOTION_BLOCKING_NO_LEAVES": 61,
+   "OCEAN_FLOOR": 61,
+   "WORLD_SURFACE": 61,
+   "x": -475,
+   "z": 5
+  },
+  {
+   "MOTION_BLOCKING": 62,
+   "MOTION_BLOCKING_NO_LEAVES": 62,
+   "OCEAN_FLOOR": 62,
+   "WORLD_SURFACE": 62,
+   "x": -469,
+   "z": 11
+  },
+  {
+   "MOTION_BLOCKING": 72,
+   "MOTION_BLOCKING_NO_LEAVES": 72,
+   "OCEAN_FLOOR": 72,
+   "WORLD_SURFACE": 72,
+   "x": -208,
+   "z": 304
+  },
+  {
+   "MOTION_BLOCKING": 79,
+   "MOTION_BLOCKING_NO_LEAVES": 79,
+   "OCEAN_FLOOR": 79,
+   "WORLD_SURFACE": 80,
+   "x": -203,
+   "z": 309
+  },
+  {
+   "MOTION_BLOCKING": 110,
+   "MOTION_BLOCKING_NO_LEAVES": 110,
+   "OCEAN_FLOOR": 110,
+   "WORLD_SURFACE": 110,
+   "x": -197,
+   "z": 315
+  },
+  {
+   "MOTION_BLOCKING": 68,
+   "MOTION_BLOCKING_NO_LEAVES": 68,
+   "OCEAN_FLOOR": 68,
+   "WORLD_SURFACE": 69,
+   "x": -48,
+   "z": 304
+  },
+  {
+   "MOTION_BLOCKING": 67,
+   "MOTION_BLOCKING_NO_LEAVES": 67,
+   "OCEAN_FLOOR": 67,
+   "WORLD_SURFACE": 67,
+   "x": -43,
+   "z": 309
+  },
+  {
+   "MOTION_BLOCKING": 68,
+   "MOTION_BLOCKING_NO_LEAVES": 61,
+   "OCEAN_FLOOR": 68,
+   "WORLD_SURFACE": 68,
+   "x": -37,
+   "z": 315
+  }
+ ],
+ "version": 1
+}

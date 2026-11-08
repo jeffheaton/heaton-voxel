@@ -1,0 +1,713 @@
+{
+ "note": "stamp_level sets level.dat's Data.DataVersion in memory; a step marked refused must raise the port's NBT error and build nothing. Digests are of the UNCOMPRESSED chunk NBT.",
+ "runs": [
+  {
+   "assembly": "copy ../r.-1.0.mca to dimensions/minecraft/overworld/region/r.-1.0.mca and ../level.dat to level.dat, load every dimension, then run the steps in order",
+   "blocks_after": [
+    [
+     641,
+     61,
+     641,
+     "minecraft:overworld",
+     "minecraft:stone"
+    ],
+    [
+     661,
+     62,
+     645,
+     "minecraft:overworld",
+     "minecraft:air"
+    ],
+    [
+     650,
+     62,
+     644,
+     "minecraft:overworld",
+     "minecraft:gold_block"
+    ],
+    [
+     651,
+     62,
+     644,
+     "minecraft:overworld",
+     "minecraft:stone"
+    ],
+    [
+     652,
+     62,
+     644,
+     "minecraft:overworld",
+     "minecraft:air"
+    ],
+    [
+     651,
+     62,
+     646,
+     "minecraft:overworld",
+     "minecraft:structure_void"
+    ],
+    [
+     645,
+     63,
+     645,
+     "minecraft:overworld",
+     "minecraft:oak_fence[east=true,north=false,south=false,west=false]"
+    ],
+    [
+     646,
+     63,
+     645,
+     "minecraft:overworld",
+     "minecraft:oak_fence[east=false,north=false,south=false,west=true]"
+    ],
+    [
+     -500,
+     0,
+     450,
+     "minecraft:overworld",
+     "minecraft:deepslate[axis=y]"
+    ],
+    [
+     5,
+     100,
+     5,
+     "minecraft:the_nether",
+     "minecraft:air"
+    ]
+   ],
+   "chunk_payload_sha256": [
+    {
+     "chunk": [
+      -31,
+      28
+     ],
+     "dimension": "minecraft:overworld",
+     "payload_sha256": "656b83f9a3d82dc9ea4108fe2adb8185a2156a2309e3508142b4436d44cb9146",
+     "status": "minecraft:full"
+    },
+    {
+     "chunk": [
+      -32,
+      28
+     ],
+     "dimension": "minecraft:overworld",
+     "payload_sha256": "f9c57a6c724e1f64101fc82e0bb0509b9dc02299b3f22b6ea3bd9173569c2305",
+     "status": "minecraft:initialize_light"
+    },
+    {
+     "chunk": [
+      40,
+      40
+     ],
+     "dimension": "minecraft:overworld",
+     "payload_sha256": "0602da2a3d5bca11865ad8f7654386e2878b6fa6b98ba928b7ad56ddc5e4c742",
+     "status": "minecraft:full"
+    },
+    {
+     "chunk": [
+      41,
+      40
+     ],
+     "dimension": "minecraft:overworld",
+     "payload_sha256": "215cb4501a4e687ba4f7b14106d1d36d2f20d22f961dff8a9c9e245f6619b717",
+     "status": "minecraft:full"
+    },
+    {
+     "chunk": [
+      44,
+      40
+     ],
+     "dimension": "minecraft:overworld",
+     "payload_sha256": "b8ae17f1028a0e5865258eebd8fe49372574cda33409ca445b005afa6044fd54",
+     "status": "minecraft:full"
+    },
+    {
+     "chunk": [
+      0,
+      0
+     ],
+     "dimension": "minecraft:the_nether",
+     "payload_sha256": "541db17e3f4582b92025a28c6ce14d7ab7c6bcb4aa2334ff8f752c5ca9227c68",
+     "status": "minecraft:full"
+    }
+   ],
+   "level": "level.dat",
+   "region": "r.-1.0.mca",
+   "steps": [
+    {
+     "from": [
+      -512,
+      0,
+      432
+     ],
+     "op": "create_chunks",
+     "result": {
+      "biome": "minecraft:plains",
+      "chunks_created": 10,
+      "complete": false,
+      "created_chunks": [
+       [
+        -32,
+        27
+       ],
+       [
+        -32,
+        30
+       ],
+       [
+        -31,
+        27
+       ],
+       [
+        -31,
+        28
+       ],
+       [
+        -31,
+        29
+       ],
+       [
+        -31,
+        30
+       ],
+       [
+        -30,
+        27
+       ],
+       [
+        -30,
+        28
+       ],
+       [
+        -30,
+        29
+       ],
+       [
+        -30,
+        30
+       ]
+      ],
+      "data_version": 4903,
+      "existing_chunks": [],
+      "max_y": 319,
+      "min_y": -64,
+      "regions_created": 0,
+      "unfinished_chunks": [
+       [
+        -32,
+        28
+       ],
+       [
+        -32,
+        29
+       ]
+      ],
+      "unreadable_chunks": 0
+     },
+     "to": [
+      -465,
+      0,
+      495
+     ],
+     "why": "around two unfinished chunks, which stay"
+    },
+    {
+     "from": [
+      -448,
+      0,
+      224
+     ],
+     "op": "create_chunks",
+     "result": {
+      "biome": "minecraft:plains",
+      "chunks_created": 0,
+      "complete": true,
+      "created_chunks": [],
+      "data_version": 4903,
+      "existing_chunks": [
+       [
+        -28,
+        14
+       ]
+      ],
+      "max_y": null,
+      "min_y": null,
+      "regions_created": 0,
+      "unfinished_chunks": [],
+      "unreadable_chunks": 0
+     },
+     "to": [
+      -433,
+      0,
+      239
+     ],
+     "why": "over a finished chunk, which stays"
+    },
+    {
+     "biome": "minecraft:desert",
+     "from": [
+      640,
+      0,
+      640
+     ],
+     "op": "create_chunks",
+     "result": {
+      "biome": "minecraft:desert",
+      "chunks_created": 2,
+      "complete": true,
+      "created_chunks": [
+       [
+        40,
+        40
+       ],
+       [
+        41,
+        40
+       ]
+      ],
+      "data_version": 4903,
+      "existing_chunks": [],
+      "max_y": 319,
+      "min_y": -64,
+      "regions_created": 1,
+      "unfinished_chunks": [],
+      "unreadable_chunks": 0
+     },
+     "to": [
+      671,
+      0,
+      655
+     ],
+     "why": "a region file the world does not have"
+    },
+    {
+     "dimension": "minecraft:the_nether",
+     "from": [
+      0,
+      0,
+      0
+     ],
+     "op": "create_chunks",
+     "result": {
+      "biome": "minecraft:nether_wastes",
+      "chunks_created": 1,
+      "complete": true,
+      "created_chunks": [
+       [
+        0,
+        0
+       ]
+      ],
+      "data_version": 4903,
+      "existing_chunks": [],
+      "max_y": 255,
+      "min_y": 0,
+      "regions_created": 1,
+      "unfinished_chunks": [],
+      "unreadable_chunks": 0
+     },
+     "to": [
+      15,
+      0,
+      15
+     ],
+     "why": "a dimension the world never visited"
+    },
+    {
+     "biome": "minecraft:plains",
+     "chunk": [
+      -28,
+      14
+     ],
+     "data_version": 4903,
+     "op": "create_chunk",
+     "result": {
+      "refused": true
+     },
+     "why": "one chunk where one stands"
+    },
+    {
+     "block": "minecraft:stone",
+     "from": [
+      640,
+      60,
+      640
+     ],
+     "op": "fill",
+     "result": {
+      "blocks_filled": 693,
+      "chunks_modified": 2
+     },
+     "to": [
+      660,
+      62,
+      650
+     ]
+    },
+    {
+     "at": [
+      645,
+      63,
+      645
+     ],
+     "block": "minecraft:oak_fence",
+     "op": "place",
+     "result": {
+      "placed": true
+     }
+    },
+    {
+     "at": [
+      646,
+      63,
+      645
+     ],
+     "block": "minecraft:oak_fence",
+     "op": "place",
+     "result": {
+      "placed": true
+     }
+    },
+    {
+     "from": [
+      640,
+      0,
+      640
+     ],
+     "op": "rebuild_heightmaps",
+     "result": {
+      "chunks_rebuilt": 2
+     },
+     "to": [
+      671,
+      0,
+      655
+     ]
+    },
+    {
+     "at": [
+      650,
+      62,
+      644
+     ],
+     "cells": [
+      [
+       0,
+       0,
+       0,
+       "minecraft:gold_block"
+      ],
+      [
+       1,
+       0,
+       0,
+       "minecraft:structure_void"
+      ]
+     ],
+     "data_version": 4903,
+     "op": "import",
+     "result": {
+      "air_skipped": 0,
+      "blocks_pasted": 2,
+      "chunks_modified": 1,
+      "voids_skipped": 1
+     },
+     "size": [
+      3,
+      1,
+      1
+     ],
+     "why": "a structure's void leaves the stone under it"
+    },
+    {
+     "at": [
+      650,
+      62,
+      646
+     ],
+     "cells": [
+      [
+       0,
+       0,
+       0,
+       "minecraft:gold_block"
+      ],
+      [
+       1,
+       0,
+       0,
+       "minecraft:structure_void"
+      ]
+     ],
+     "data_version": 4903,
+     "op": "import",
+     "paste_voids": true,
+     "result": {
+      "air_skipped": 0,
+      "blocks_pasted": 3,
+      "chunks_modified": 1,
+      "voids_skipped": 0
+     },
+     "size": [
+      3,
+      1,
+      1
+     ],
+     "why": "unless told to place the void itself"
+    },
+    {
+     "data_version": 5100,
+     "op": "stamp_level",
+     "result": {},
+     "why": "a world newer than any chunk read"
+    },
+    {
+     "from": [
+      704,
+      0,
+      640
+     ],
+     "op": "create_chunks",
+     "result": {
+      "biome": "minecraft:plains",
+      "chunks_created": 1,
+      "complete": true,
+      "created_chunks": [
+       [
+        44,
+        40
+       ]
+      ],
+      "data_version": 5023,
+      "existing_chunks": [],
+      "max_y": 319,
+      "min_y": -64,
+      "regions_created": 0,
+      "unfinished_chunks": [],
+      "unreadable_chunks": 0
+     },
+     "to": [
+      704,
+      0,
+      640
+     ]
+    },
+    {
+     "data_version": 4440,
+     "op": "stamp_level",
+     "result": {},
+     "why": "a world older than any"
+    },
+    {
+     "from": [
+      720,
+      0,
+      640
+     ],
+     "op": "create_chunks",
+     "refused": true,
+     "result": {
+      "refused": true
+     },
+     "to": [
+      720,
+      0,
+      640
+     ]
+    }
+   ],
+   "surfaces_after": [
+    [
+     641,
+     641,
+     "minecraft:overworld",
+     62
+    ],
+    [
+     661,
+     645,
+     "minecraft:overworld",
+     null
+    ],
+    [
+     650,
+     644,
+     "minecraft:overworld",
+     62
+    ],
+    [
+     651,
+     644,
+     "minecraft:overworld",
+     62
+    ],
+    [
+     652,
+     644,
+     "minecraft:overworld",
+     61
+    ],
+    [
+     651,
+     646,
+     "minecraft:overworld",
+     61
+    ],
+    [
+     645,
+     645,
+     "minecraft:overworld",
+     63
+    ],
+    [
+     646,
+     645,
+     "minecraft:overworld",
+     63
+    ],
+    [
+     -500,
+     450,
+     "minecraft:overworld",
+     67
+    ],
+    [
+     5,
+     5,
+     "minecraft:the_nether",
+     null
+    ]
+   ],
+   "world": "26.2"
+  },
+  {
+   "assembly": "copy ../modern/r.-1.0.mca to dimensions/minecraft/overworld/region/r.-1.0.mca and ../modern/level.dat to level.dat, load every dimension, then run the steps in order",
+   "blocks_after": [
+    [
+     -400,
+     70,
+     3,
+     "minecraft:overworld",
+     "minecraft:oak_stairs[facing=east,half=bottom,shape=straight,waterlogged=false]"
+    ],
+    [
+     -400,
+     71,
+     3,
+     "minecraft:overworld",
+     "minecraft:air"
+    ]
+   ],
+   "chunk_payload_sha256": [
+    {
+     "chunk": [
+      -26,
+      0
+     ],
+     "dimension": "minecraft:overworld",
+     "payload_sha256": "21bd5c7c7941a56d413e336dc609008aad3f823e9efc0aacc2721d82f5dff9ca",
+     "status": "minecraft:full"
+    },
+    {
+     "chunk": [
+      -25,
+      0
+     ],
+     "dimension": "minecraft:overworld",
+     "payload_sha256": "a990423a76c5eedf1f3de7d0430000625367a5c693c8f716f4c7af01f820bccb",
+     "status": "minecraft:full"
+    }
+   ],
+   "level": "modern/level.dat",
+   "region": "modern/r.-1.0.mca",
+   "steps": [
+    {
+     "from": [
+      -416,
+      0,
+      0
+     ],
+     "op": "create_chunks",
+     "result": {
+      "biome": "minecraft:plains",
+      "chunks_created": 2,
+      "complete": true,
+      "created_chunks": [
+       [
+        -26,
+        0
+       ],
+       [
+        -25,
+        0
+       ]
+      ],
+      "data_version": 5023,
+      "existing_chunks": [],
+      "max_y": 319,
+      "min_y": -64,
+      "regions_created": 0,
+      "unfinished_chunks": [],
+      "unreadable_chunks": 0
+     },
+     "to": [
+      -385,
+      0,
+      15
+     ],
+     "why": "beside the 26.3 chunks, in their codec"
+    },
+    {
+     "block": "minecraft:oak_stairs[facing=east]",
+     "from": [
+      -410,
+      70,
+      2
+     ],
+     "op": "fill",
+     "result": {
+      "blocks_filled": 63,
+      "chunks_modified": 2
+     },
+     "to": [
+      -390,
+      70,
+      4
+     ]
+    },
+    {
+     "from": [
+      -416,
+      0,
+      0
+     ],
+     "op": "rebuild_heightmaps",
+     "result": {
+      "chunks_rebuilt": 2
+     },
+     "to": [
+      -385,
+      0,
+      15
+     ]
+    }
+   ],
+   "surfaces_after": [
+    [
+     -400,
+     3,
+     "minecraft:overworld",
+     70
+    ],
+    [
+     -400,
+     3,
+     "minecraft:overworld",
+     70
+    ]
+   ],
+   "world": "26.3"
+  }
+ ],
+ "version": 1
+}

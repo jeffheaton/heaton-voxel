@@ -1,0 +1,953 @@
+{
+ "assembly": "as world.json, then ../weather.dat and ../world_clocks.dat to data/minecraft/, and ../player.dat to players/data/be0f5711-95ac-467f-bac2-a2e5b1c4157c.dat; run every step in order",
+ "note": "each step is the settings call to perform and the value read back through the paired accessor; a step marked refused must raise, not comply. The border ops build tags of the listed types in the listed order -- insertion order reaches the digests. A write_world_border_file step names the path it writes: the border is per dimension, under dimensions/<ns>/<dim>/data/minecraft/, never in the world-wide data/minecraft/. Digests are of the UNCOMPRESSED root NBT of each touched file after the whole script, keyed by payload_files, so they are portable.",
+ "payload_files": {
+  "level": "level.dat",
+  "player": "players/data/be0f5711-95ac-467f-bac2-a2e5b1c4157c.dat",
+  "weather": "data/minecraft/weather.dat",
+  "world_border_overworld": "dimensions/minecraft/overworld/data/minecraft/world_border.dat",
+  "world_border_the_end": "dimensions/minecraft/the_end/data/minecraft/world_border.dat",
+  "world_clocks": "data/minecraft/world_clocks.dat"
+ },
+ "payload_sha256": {
+  "level": "dae1b1d9253fc874bf102a72a633e53e7a9f3ea7d7a20a42177beb6fd890ba25",
+  "player": "46cf25fc3ebeef63c6aaa9f4f614ca33286016b2a322ec95884b6a67c67e807a",
+  "weather": "089742812ffaa088213816c75adecadb8b733400a9fd2462db4096026fd1df84",
+  "world_border_overworld": "b9bf6f4e20603f62f7afa45deb39e883b2b269956d8c2aac248faf09db1d74ef",
+  "world_border_the_end": "7bd01d05d67aaedb6bae4313373065f3daf7fdaf6ee229d119a63e05a6ffca03",
+  "world_clocks": "085009022ea1f07417ec093ea89b0108f7f0376a1c476763346ae88d77641254"
+ },
+ "player_target": "players/data/be0f5711-95ac-467f-bac2-a2e5b1c4157c.dat",
+ "reads_after": {
+  "allow_commands": false,
+  "day_time": {
+   "minecraft:overworld": "5454000",
+   "minecraft:the_end": "123456789"
+  },
+  "difficulty": "hard",
+  "difficulty_locked": true,
+  "game_type": "spectator",
+  "hardcore": true,
+  "spawn": [
+   -400,
+   71,
+   100
+  ],
+  "weather": {
+   "clear_weather_time": 0,
+   "kind": "thunder",
+   "rain_time": 2400,
+   "raining": true,
+   "thunder_time": 2400,
+   "thundering": true
+  },
+  "world_border": {
+   "center_x": {
+    "bits": "40934a0000000000",
+    "t": "double",
+    "v": 1234.5
+   },
+   "center_z": {
+    "bits": "c08eda0000000000",
+    "t": "double",
+    "v": -987.25
+   },
+   "damage_per_block": {
+    "bits": "3fd999999999999a",
+    "t": "double",
+    "v": 0.4
+   },
+   "lerp_target": {
+    "bits": "40a0004000000000",
+    "t": "double",
+    "v": 2048.125
+   },
+   "lerp_time": "0",
+   "max_x": {
+    "bits": "40a1a52000000000",
+    "t": "double",
+    "v": 2258.5625
+   },
+   "max_z": {
+    "bits": "4042680000000000",
+    "t": "double",
+    "v": 36.8125
+   },
+   "min_x": {
+    "bits": "406a4e0000000000",
+    "t": "double",
+    "v": 210.4375
+   },
+   "min_z": {
+    "bits": "c09f6d4000000000",
+    "t": "double",
+    "v": -2011.3125
+   },
+   "safe_zone": {
+    "bits": "401a000000000000",
+    "t": "double",
+    "v": 6.5
+   },
+   "size": {
+    "bits": "40a0004000000000",
+    "t": "double",
+    "v": 2048.125
+   },
+   "stored": true,
+   "warning_blocks": 8,
+   "warning_time": 20
+  },
+  "world_border_the_end": {
+   "center_x": {
+    "bits": "c050000000000000",
+    "t": "double",
+    "v": -64.0
+   },
+   "center_z": {
+    "bits": "4050000000000000",
+    "t": "double",
+    "v": 64.0
+   },
+   "damage_per_block": {
+    "bits": "3fc999999999999a",
+    "t": "double",
+    "v": 0.2
+   },
+   "lerp_target": {
+    "bits": "4080000000000000",
+    "t": "double",
+    "v": 512.0
+   },
+   "lerp_time": "0",
+   "max_x": {
+    "bits": "4068000000000000",
+    "t": "double",
+    "v": 192.0
+   },
+   "max_z": {
+    "bits": "4074000000000000",
+    "t": "double",
+    "v": 320.0
+   },
+   "min_x": {
+    "bits": "c074000000000000",
+    "t": "double",
+    "v": -320.0
+   },
+   "min_z": {
+    "bits": "c068000000000000",
+    "t": "double",
+    "v": -192.0
+   },
+   "safe_zone": {
+    "bits": "4014000000000000",
+    "t": "double",
+    "v": 5.0
+   },
+   "size": {
+    "bits": "4080000000000000",
+    "t": "double",
+    "v": 512.0
+   },
+   "stored": true,
+   "warning_blocks": 5,
+   "warning_time": 15
+  }
+ },
+ "reads_before": {
+  "allow_commands": true,
+  "day_time": {
+   "minecraft:overworld": "5452815",
+   "minecraft:the_end": "4160349"
+  },
+  "difficulty": "normal",
+  "difficulty_locked": false,
+  "game_type": "creative",
+  "hardcore": false,
+  "spawn": [
+   32,
+   68,
+   -96
+  ],
+  "weather": {
+   "clear_weather_time": 0,
+   "kind": "rain",
+   "rain_time": 6675,
+   "raining": true,
+   "thunder_time": 6675,
+   "thundering": false
+  },
+  "world_border": {
+   "center_x": {
+    "bits": "0000000000000000",
+    "t": "double",
+    "v": 0.0
+   },
+   "center_z": {
+    "bits": "0000000000000000",
+    "t": "double",
+    "v": 0.0
+   },
+   "damage_per_block": {
+    "bits": "3fc999999999999a",
+    "t": "double",
+    "v": 0.2
+   },
+   "lerp_target": {
+    "bits": "418c9c3700000000",
+    "t": "double",
+    "v": 59999968.0
+   },
+   "lerp_time": "0",
+   "max_x": {
+    "bits": "417c9c3700000000",
+    "t": "double",
+    "v": 29999984.0
+   },
+   "max_z": {
+    "bits": "417c9c3700000000",
+    "t": "double",
+    "v": 29999984.0
+   },
+   "min_x": {
+    "bits": "c17c9c3700000000",
+    "t": "double",
+    "v": -29999984.0
+   },
+   "min_z": {
+    "bits": "c17c9c3700000000",
+    "t": "double",
+    "v": -29999984.0
+   },
+   "safe_zone": {
+    "bits": "4014000000000000",
+    "t": "double",
+    "v": 5.0
+   },
+   "size": {
+    "bits": "418c9c3700000000",
+    "t": "double",
+    "v": 59999968.0
+   },
+   "stored": false,
+   "warning_blocks": 5,
+   "warning_time": 15
+  },
+  "world_border_the_end": {
+   "center_x": {
+    "bits": "0000000000000000",
+    "t": "double",
+    "v": 0.0
+   },
+   "center_z": {
+    "bits": "0000000000000000",
+    "t": "double",
+    "v": 0.0
+   },
+   "damage_per_block": {
+    "bits": "3fc999999999999a",
+    "t": "double",
+    "v": 0.2
+   },
+   "lerp_target": {
+    "bits": "418c9c3700000000",
+    "t": "double",
+    "v": 59999968.0
+   },
+   "lerp_time": "0",
+   "max_x": {
+    "bits": "417c9c3700000000",
+    "t": "double",
+    "v": 29999984.0
+   },
+   "max_z": {
+    "bits": "417c9c3700000000",
+    "t": "double",
+    "v": 29999984.0
+   },
+   "min_x": {
+    "bits": "c17c9c3700000000",
+    "t": "double",
+    "v": -29999984.0
+   },
+   "min_z": {
+    "bits": "c17c9c3700000000",
+    "t": "double",
+    "v": -29999984.0
+   },
+   "safe_zone": {
+    "bits": "4014000000000000",
+    "t": "double",
+    "v": 5.0
+   },
+   "size": {
+    "bits": "418c9c3700000000",
+    "t": "double",
+    "v": 59999968.0
+   },
+   "stored": false,
+   "warning_blocks": 5,
+   "warning_time": 15
+  }
+ },
+ "steps": [
+  {
+   "mode": "spectator",
+   "op": "set_game_type",
+   "result": {
+    "game_type": "spectator"
+   },
+   "why": "world default and the player's own mode together"
+  },
+  {
+   "op": "set_allow_commands",
+   "result": {
+    "allow_commands": false
+   },
+   "value": false
+  },
+  {
+   "op": "set_hardcore",
+   "result": {
+    "hardcore": true
+   },
+   "value": true
+  },
+  {
+   "name": "hard",
+   "op": "set_difficulty",
+   "result": {
+    "difficulty": "hard"
+   }
+  },
+  {
+   "op": "set_difficulty_locked",
+   "result": {
+    "locked": true
+   },
+   "value": true
+  },
+  {
+   "name": "peaceful",
+   "op": "set_difficulty",
+   "refused": true,
+   "result": {
+    "refused": true
+   },
+   "why": "a locked difficulty must refuse, not comply"
+  },
+  {
+   "duration": 2400,
+   "kind": "thunder",
+   "op": "set_weather",
+   "result": {
+    "kind": "thunder"
+   },
+   "why": "rain and thunder timers fill together, the command's way"
+  },
+  {
+   "op": "set_day_time",
+   "result": {
+    "total_ticks": "5454000"
+   },
+   "time": "noon",
+   "why": "presets advance to the next occurrence, never backward"
+  },
+  {
+   "dimension": "minecraft:the_end",
+   "op": "set_day_time",
+   "result": {
+    "total_ticks": "123456789"
+   },
+   "time": 123456789,
+   "why": "absolute ticks, on the second stored clock"
+  },
+  {
+   "op": "set_spawn",
+   "pos": [
+    -400,
+    71,
+    100
+   ],
+   "result": {
+    "spawn": [
+     -400,
+     71,
+     100
+    ]
+   },
+   "why": "position and yaw move; dimension and pitch stay",
+   "yaw": 90.0
+  },
+  {
+   "op": "world_border",
+   "result": {
+    "border": {
+     "center_x": {
+      "bits": "0000000000000000",
+      "t": "double",
+      "v": 0.0
+     },
+     "center_z": {
+      "bits": "0000000000000000",
+      "t": "double",
+      "v": 0.0
+     },
+     "damage_per_block": {
+      "bits": "3fc999999999999a",
+      "t": "double",
+      "v": 0.2
+     },
+     "lerp_target": {
+      "bits": "418c9c3700000000",
+      "t": "double",
+      "v": 59999968.0
+     },
+     "lerp_time": "0",
+     "max_x": {
+      "bits": "417c9c3700000000",
+      "t": "double",
+      "v": 29999984.0
+     },
+     "max_z": {
+      "bits": "417c9c3700000000",
+      "t": "double",
+      "v": 29999984.0
+     },
+     "min_x": {
+      "bits": "c17c9c3700000000",
+      "t": "double",
+      "v": -29999984.0
+     },
+     "min_z": {
+      "bits": "c17c9c3700000000",
+      "t": "double",
+      "v": -29999984.0
+     },
+     "safe_zone": {
+      "bits": "4014000000000000",
+      "t": "double",
+      "v": 5.0
+     },
+     "size": {
+      "bits": "418c9c3700000000",
+      "t": "double",
+      "v": 59999968.0
+     },
+     "stored": false,
+     "warning_blocks": 5,
+     "warning_time": 15
+    }
+   },
+   "why": "no file, no flat keys: the defaults, marked unstored"
+  },
+  {
+   "dimension": "minecraft:the_nether",
+   "op": "world_border",
+   "result": {
+    "border": {
+     "center_x": {
+      "bits": "0000000000000000",
+      "t": "double",
+      "v": 0.0
+     },
+     "center_z": {
+      "bits": "0000000000000000",
+      "t": "double",
+      "v": 0.0
+     },
+     "damage_per_block": {
+      "bits": "3fc999999999999a",
+      "t": "double",
+      "v": 0.2
+     },
+     "lerp_target": {
+      "bits": "418c9c3700000000",
+      "t": "double",
+      "v": 59999968.0
+     },
+     "lerp_time": "0",
+     "max_x": {
+      "bits": "417c9c3700000000",
+      "t": "double",
+      "v": 29999984.0
+     },
+     "max_z": {
+      "bits": "417c9c3700000000",
+      "t": "double",
+      "v": 29999984.0
+     },
+     "min_x": {
+      "bits": "c17c9c3700000000",
+      "t": "double",
+      "v": -29999984.0
+     },
+     "min_z": {
+      "bits": "c17c9c3700000000",
+      "t": "double",
+      "v": -29999984.0
+     },
+     "safe_zone": {
+      "bits": "4014000000000000",
+      "t": "double",
+      "v": 5.0
+     },
+     "size": {
+      "bits": "418c9c3700000000",
+      "t": "double",
+      "v": 59999968.0
+     },
+     "stored": false,
+     "warning_blocks": 5,
+     "warning_time": 15
+    }
+   },
+   "why": "a dimension with no border file of its own answers the same way; it is not an error"
+  },
+  {
+   "dimension": "minecraft:the_aether",
+   "op": "world_border",
+   "refused": true,
+   "result": {
+    "refused": true
+   },
+   "why": "only the three vanilla dimensions are addressable"
+  },
+  {
+   "fields": [
+    {
+     "bits": "408f440000000000",
+     "name": "BorderSize",
+     "t": "double",
+     "v": 1000.5
+    },
+    {
+     "bits": "c06f480000000000",
+     "name": "BorderCenterX",
+     "t": "double",
+     "v": -250.25
+    },
+    {
+     "bits": "4053700000000000",
+     "name": "BorderCenterZ",
+     "t": "double",
+     "v": 77.75
+    },
+    {
+     "bits": "4014000000000000",
+     "name": "BorderSafeZone",
+     "t": "double",
+     "v": 5.0
+    },
+    {
+     "bits": "3fc999999999999a",
+     "name": "BorderDamagePerBlock",
+     "t": "double",
+     "v": 0.2
+    },
+    {
+     "bits": "4018000000000000",
+     "name": "BorderWarningBlocks",
+     "t": "double",
+     "v": 6.0
+    },
+    {
+     "bits": "4028000000000000",
+     "name": "BorderWarningTime",
+     "t": "double",
+     "v": 12.0
+    },
+    {
+     "bits": "408f440000000000",
+     "name": "BorderSizeLerpTarget",
+     "t": "double",
+     "v": 1000.5
+    },
+    {
+     "name": "BorderSizeLerpTime",
+     "t": "long",
+     "v": "0"
+    }
+   ],
+   "op": "inject_old_border_keys",
+   "result": {
+    "injected": 9
+   },
+   "why": "a pre-26.x world kept the border in level.dat, warnings as doubles; tags land in listed order"
+  },
+  {
+   "op": "world_border",
+   "result": {
+    "border": {
+     "center_x": {
+      "bits": "c06f480000000000",
+      "t": "double",
+      "v": -250.25
+     },
+     "center_z": {
+      "bits": "4053700000000000",
+      "t": "double",
+      "v": 77.75
+     },
+     "damage_per_block": {
+      "bits": "3fc999999999999a",
+      "t": "double",
+      "v": 0.2
+     },
+     "lerp_target": {
+      "bits": "408f440000000000",
+      "t": "double",
+      "v": 1000.5
+     },
+     "lerp_time": "0",
+     "max_x": {
+      "bits": "406f400000000000",
+      "t": "double",
+      "v": 250.0
+     },
+     "max_z": {
+      "bits": "4082100000000000",
+      "t": "double",
+      "v": 578.0
+     },
+     "min_x": {
+      "bits": "c087740000000000",
+      "t": "double",
+      "v": -750.5
+     },
+     "min_z": {
+      "bits": "c07a680000000000",
+      "t": "double",
+      "v": -422.5
+     },
+     "safe_zone": {
+      "bits": "4014000000000000",
+      "t": "double",
+      "v": 5.0
+     },
+     "size": {
+      "bits": "408f440000000000",
+      "t": "double",
+      "v": 1000.5
+     },
+     "stored": true,
+     "warning_blocks": 6,
+     "warning_time": 12
+    }
+   },
+   "why": "the flat keys read back, warnings coerced to ints"
+  },
+  {
+   "dimension": "minecraft:overworld",
+   "fields": [
+    {
+     "bits": "40934a0000000000",
+     "name": "center_x",
+     "t": "double",
+     "v": 1234.5
+    },
+    {
+     "bits": "c08eda0000000000",
+     "name": "center_z",
+     "t": "double",
+     "v": -987.25
+    },
+    {
+     "bits": "40a0004000000000",
+     "name": "size",
+     "t": "double",
+     "v": 2048.125
+    },
+    {
+     "bits": "401a000000000000",
+     "name": "safe_zone",
+     "t": "double",
+     "v": 6.5
+    },
+    {
+     "bits": "3fd999999999999a",
+     "name": "damage_per_block",
+     "t": "double",
+     "v": 0.4
+    },
+    {
+     "name": "warning_blocks",
+     "t": "int",
+     "v": 8
+    },
+    {
+     "name": "warning_time",
+     "t": "int",
+     "v": 20
+    },
+    {
+     "bits": "40a0004000000000",
+     "name": "lerp_target",
+     "t": "double",
+     "v": 2048.125
+    },
+    {
+     "name": "lerp_time",
+     "t": "long",
+     "v": "0"
+    }
+   ],
+   "op": "write_world_border_file",
+   "path": "dimensions/minecraft/overworld/data/minecraft/world_border.dat",
+   "result": {
+    "written": true
+   },
+   "why": "the split file, gzip, root '' holding a data compound with tags in listed order, as the game lays it out. It goes under the DIMENSION, which is where the game keeps it -- a reader looking in data/minecraft/ finds nothing and reports the defaults for every real save"
+  },
+  {
+   "op": "world_border",
+   "result": {
+    "border": {
+     "center_x": {
+      "bits": "40934a0000000000",
+      "t": "double",
+      "v": 1234.5
+     },
+     "center_z": {
+      "bits": "c08eda0000000000",
+      "t": "double",
+      "v": -987.25
+     },
+     "damage_per_block": {
+      "bits": "3fd999999999999a",
+      "t": "double",
+      "v": 0.4
+     },
+     "lerp_target": {
+      "bits": "40a0004000000000",
+      "t": "double",
+      "v": 2048.125
+     },
+     "lerp_time": "0",
+     "max_x": {
+      "bits": "40a1a52000000000",
+      "t": "double",
+      "v": 2258.5625
+     },
+     "max_z": {
+      "bits": "4042680000000000",
+      "t": "double",
+      "v": 36.8125
+     },
+     "min_x": {
+      "bits": "406a4e0000000000",
+      "t": "double",
+      "v": 210.4375
+     },
+     "min_z": {
+      "bits": "c09f6d4000000000",
+      "t": "double",
+      "v": -2011.3125
+     },
+     "safe_zone": {
+      "bits": "401a000000000000",
+      "t": "double",
+      "v": 6.5
+     },
+     "size": {
+      "bits": "40a0004000000000",
+      "t": "double",
+      "v": 2048.125
+     },
+     "stored": true,
+     "warning_blocks": 8,
+     "warning_time": 20
+    }
+   },
+   "why": "the split file outranks the flat keys"
+  },
+  {
+   "dimension": "minecraft:the_end",
+   "fields": [
+    {
+     "bits": "c050000000000000",
+     "name": "center_x",
+     "t": "double",
+     "v": -64.0
+    },
+    {
+     "bits": "4050000000000000",
+     "name": "center_z",
+     "t": "double",
+     "v": 64.0
+    },
+    {
+     "bits": "4080000000000000",
+     "name": "size",
+     "t": "double",
+     "v": 512.0
+    },
+    {
+     "bits": "4014000000000000",
+     "name": "safe_zone",
+     "t": "double",
+     "v": 5.0
+    },
+    {
+     "bits": "3fc999999999999a",
+     "name": "damage_per_block",
+     "t": "double",
+     "v": 0.2
+    },
+    {
+     "name": "warning_blocks",
+     "t": "int",
+     "v": 5
+    },
+    {
+     "name": "warning_time",
+     "t": "int",
+     "v": 15
+    },
+    {
+     "bits": "4080000000000000",
+     "name": "lerp_target",
+     "t": "double",
+     "v": 512.0
+    },
+    {
+     "name": "lerp_time",
+     "t": "long",
+     "v": "0"
+    }
+   ],
+   "op": "write_world_border_file",
+   "path": "dimensions/minecraft/the_end/data/minecraft/world_border.dat",
+   "result": {
+    "written": true
+   },
+   "why": "a second dimension, with its own different border"
+  },
+  {
+   "dimension": "minecraft:the_end",
+   "op": "world_border",
+   "result": {
+    "border": {
+     "center_x": {
+      "bits": "c050000000000000",
+      "t": "double",
+      "v": -64.0
+     },
+     "center_z": {
+      "bits": "4050000000000000",
+      "t": "double",
+      "v": 64.0
+     },
+     "damage_per_block": {
+      "bits": "3fc999999999999a",
+      "t": "double",
+      "v": 0.2
+     },
+     "lerp_target": {
+      "bits": "4080000000000000",
+      "t": "double",
+      "v": 512.0
+     },
+     "lerp_time": "0",
+     "max_x": {
+      "bits": "4068000000000000",
+      "t": "double",
+      "v": 192.0
+     },
+     "max_z": {
+      "bits": "4074000000000000",
+      "t": "double",
+      "v": 320.0
+     },
+     "min_x": {
+      "bits": "c074000000000000",
+      "t": "double",
+      "v": -320.0
+     },
+     "min_z": {
+      "bits": "c068000000000000",
+      "t": "double",
+      "v": -192.0
+     },
+     "safe_zone": {
+      "bits": "4014000000000000",
+      "t": "double",
+      "v": 5.0
+     },
+     "size": {
+      "bits": "4080000000000000",
+      "t": "double",
+      "v": 512.0
+     },
+     "stored": true,
+     "warning_blocks": 5,
+     "warning_time": 15
+    }
+   },
+   "why": "each dimension answers with its own, not the overworld's"
+  },
+  {
+   "op": "world_border",
+   "result": {
+    "border": {
+     "center_x": {
+      "bits": "40934a0000000000",
+      "t": "double",
+      "v": 1234.5
+     },
+     "center_z": {
+      "bits": "c08eda0000000000",
+      "t": "double",
+      "v": -987.25
+     },
+     "damage_per_block": {
+      "bits": "3fd999999999999a",
+      "t": "double",
+      "v": 0.4
+     },
+     "lerp_target": {
+      "bits": "40a0004000000000",
+      "t": "double",
+      "v": 2048.125
+     },
+     "lerp_time": "0",
+     "max_x": {
+      "bits": "40a1a52000000000",
+      "t": "double",
+      "v": 2258.5625
+     },
+     "max_z": {
+      "bits": "4042680000000000",
+      "t": "double",
+      "v": 36.8125
+     },
+     "min_x": {
+      "bits": "406a4e0000000000",
+      "t": "double",
+      "v": 210.4375
+     },
+     "min_z": {
+      "bits": "c09f6d4000000000",
+      "t": "double",
+      "v": -2011.3125
+     },
+     "safe_zone": {
+      "bits": "401a000000000000",
+      "t": "double",
+      "v": 6.5
+     },
+     "size": {
+      "bits": "40a0004000000000",
+      "t": "double",
+      "v": 2048.125
+     },
+     "stored": true,
+     "warning_blocks": 8,
+     "warning_time": 20
+    }
+   },
+   "why": "and reading the end did not disturb the overworld's"
+  }
+ ],
+ "version": 1
+}
