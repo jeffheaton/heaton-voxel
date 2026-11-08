@@ -5,18 +5,20 @@
 [![.NET coverage](https://img.shields.io/codecov/c/github/jeffheaton/heaton-voxel/main?flag=dotnet&label=.NET%20coverage&style=flat-square)](https://app.codecov.io/gh/jeffheaton/heaton-voxel)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue?style=flat-square)](https://github.com/jeffheaton/heaton-voxel/blob/main/LICENSE)
 
-A from-scratch toolkit for Minecraft (Java Edition) saves, for .NET and
-Unity: NBT and Anvil region files, paletted chunk contents, whole-save
-editing, Sponge `.schem` interchange, and the neighbor-derived block states
-(fence, wall and pane connections, stair shapes) that a block update in the
-game would set. It has no package dependencies, since the formats are parsed
-straight from the bytes, and it targets `netstandard2.1`, so Unity can use it
-directly.
+Read and edit Minecraft Java Edition worlds from .NET and Unity.
 
-It is the C# twin of the Python `heaton-voxel` library. Both are held to one
-language-neutral conformance corpus, so they agree byte for byte: a save
-loaded and saved again comes back identical, and an edit encodes the same in
-either.
+Open a save, read any block, change it, and write the world back the way the
+game would have made it: a door placed as two halves, a fence joined to its
+neighbors, a stair set in water waterlogged. Move builds in and out as
+WorldEdit `.schem`, Litematica `.litematic` and vanilla structure files,
+change the game mode, difficulty, weather and time of day, and undo an edit.
+Everything you didn't touch is written back byte for byte, and saving refuses
+while Minecraft has the world open. It has no package dependencies and
+targets `netstandard2.1`, so Unity can use it directly.
+
+It is the C# twin of the Python `heaton-voxel` library. One shared test
+corpus holds them to the same answers, so a save edited in either comes out
+identical, byte for byte.
 
 ```csharp
 using System;

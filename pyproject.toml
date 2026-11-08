@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "heaton-voxel"
 version = "0.1.0"
-description = "A from-scratch Minecraft (Java Edition) save toolkit: NBT, Anvil regions, blocks and biomes, whole worlds."
+description = "Read and edit Minecraft Java Edition worlds: blocks, settings, and WorldEdit, Litematica and structure files."
 readme = "README.md"
 requires-python = ">=3.10"
 license = "Apache-2.0"

@@ -9,42 +9,68 @@
 [![.NET coverage](https://img.shields.io/codecov/c/github/jeffheaton/heaton-voxel/main?flag=dotnet&label=.NET%20coverage&style=flat-square)](https://app.codecov.io/gh/jeffheaton/heaton-voxel)
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue?style=flat-square)](https://github.com/jeffheaton/heaton-voxel/blob/main/LICENSE)
 
-A from-scratch toolkit for Minecraft (Java Edition) saves: a lossless
-reader/writer for NBT data and Anvil regions, written directly against the
-binary formats, with block, biome and whole-world layers on top. Pure standard
-library — no Minecraft libraries, no third-party packages.
+**Read and edit Minecraft Java Edition worlds from Python, or from C# and
+Unity.**
+
+Open a save, read any block, change it, and write the world back the way the
+game would have made it: a door placed as two halves, a fence joined to its
+neighbors, a stair set in water waterlogged. Move builds in and out as
+WorldEdit `.schem`, Litematica `.litematic` and vanilla structure files;
+change the game mode, difficulty, weather and time of day; move the player;
+undo an edit. Everything you didn't touch is written back byte for byte, and
+saving refuses while Minecraft has the world open.
+
+```python
+from heaton_voxel import MinecraftSave
+
+save = MinecraftSave.load("saves/MyWorld")
+x, _, z = save.player_block_position()
+ground = save.surface_y(x, z)
+print(save.get_block(x, ground, z))          # minecraft:grass_block[snowy=false]
+
+save.place_block(x, ground + 1, z, "minecraft:oak_fence")   # joins the fences beside it
+save.reset_lighting((x, ground, z), (x, ground + 1, z))
+save.rebuild_heightmaps((x, ground, z), (x, ground + 1, z))
+save.save()
+```
 
 ```
-pip install heaton-voxel
+pip install heaton-voxel          # Python 3.10+, no dependencies
+dotnet add package HeatonVoxel    # .NET Standard 2.1, so Unity too
 ```
 
-Handles both shapes of file the game writes:
+The C# package is the Python one's twin, and one shared test corpus holds them
+to the same answers, byte for byte. Python adds two things the C# leaves out:
+pictures -- maps, floor plans and cutaways of any area -- and a kit for
+building at scale (terrain, roads, roofs, stairs, lighting, whole towers) that
+refuses a plan the game would undo, a torch with nothing to hang on or water
+that would run out of its basin, before it writes a block.
 
-- **Standalone NBT** — `level.dat`, `playerdata/*.dat`, structure files, in
-  gzip, zlib or uncompressed form.
-- **Anvil region containers** — `.mca` / `.mcr`, which pack up to 1024
-  independently-compressed chunks behind a sector-allocation table.
+It reads worlds as far back as Minecraft 1.13 and writes the current format,
+1.18 and later. Java Edition only: Bedrock worlds are a different format.
 
-The library is two tiers. The lower tier is deterministic editing — three
-layers, each on the one below: `heaton_voxel.nbt` (file formats),
-`heaton_voxel.blocks` (a chunk's contents), `heaton_voxel.world` (the whole
-save) — plus `heaton_voxel.schem`, which moves boxes of world through Sponge
-`.schem` files, the format WorldEdit trades builds in. Its names are
-re-exported from `heaton_voxel` itself, so
-`from heaton_voxel import MinecraftSave` is enough for most programs; the
-examples below import from the submodules to show which layer each name
-belongs to.
+## How it's organized
 
-Above it sits `heaton_voxel.craft`, the judged tier: `craft.build` is a
-construction kit (terraces, smoothed roads, building shells, villagers with
-jobs) whose `finish()` runs the whole correctness litany over what was
-built, `craft.render` draws pictures of any of it, and `craft.worksite`
-wraps a building session in a seatbelt — byte-exact snapshot before the
-first edit, protected zones that trip on a single changed block, and a
-`restore()` that makes the build never have happened. Everything up there
-is game knowledge and taste rather than format truth, so it is imported
-explicitly (`from heaton_voxel.craft import Builder`), never re-exported,
-and deliberately outside the C# port.
+The package has two halves. The lower one edits worlds, and every question
+it answers has one right answer -- which bytes encode this chunk, which state
+a placed block takes -- so it has a C# twin that agrees with it byte for
+byte. It is four modules: `heaton_voxel.nbt` reads and writes the files,
+`heaton_voxel.blocks` a chunk's blocks, biomes, heightmaps and light,
+`heaton_voxel.world` a whole save, and `heaton_voxel.schem` moves boxes of
+world in and out as `.schem`, `.litematic` and structure files. Their names
+are re-exported from `heaton_voxel`, so `from heaton_voxel import
+MinecraftSave` is enough for most programs; the examples below import from
+the submodules to show where each name lives.
+
+The upper half, `heaton_voxel.craft`, is for building, where the answers are
+choices rather than facts: which stone a road is paved in, how steep a roof
+rises. `craft.build` lays terrain, roads, walls, roofs, stairs and lighting,
+and checks each plan against the game's rules before it writes;
+`craft.render` draws maps, floor plans and cutaways; and `craft.worksite`
+snapshots every file a build can touch before the first edit, trips on any
+change inside a protected area, and can put everything back as it was. It is
+Python only, and it is imported by name (`from heaton_voxel.craft import
+Builder`), so a script that uses it says so.
 
 | document | for |
 | --- | --- |
@@ -53,7 +79,15 @@ and deliberately outside the C# port.
 | [PORTING.md](https://github.com/jeffheaton/heaton-voxel/blob/main/PORTING.md) | porting to another language, and the conformance corpus under `fixtures/conformance/` |
 | [CLAUDE.md](https://github.com/jeffheaton/heaton-voxel/blob/main/CLAUDE.md) | project rules, verification, and traps already hit |
 
-## Usage
+## The file formats directly
+
+Under the world are the two kinds of file the game writes, and either can be
+read and written directly:
+
+- **Standalone NBT** — `level.dat`, `playerdata/*.dat`, structure files, in
+  gzip, zlib or uncompressed form.
+- **Anvil region containers** — `.mca` / `.mcr`, which pack up to 1024
+  independently-compressed chunks behind a sector-allocation table.
 
 ```python
 from heaton_voxel.nbt import NBT, TagString

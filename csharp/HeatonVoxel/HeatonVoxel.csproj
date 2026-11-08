@@ -8,10 +8,10 @@
     <Nullable>enable</Nullable>
     <RootNamespace>HeatonVoxel</RootNamespace>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <Description>A from-scratch Minecraft (Java Edition) save toolkit: NBT and
-      Anvil regions, paletted chunk contents, whole-save editing, Sponge .schem
-      interchange, and the game's neighbor-derived block states. Port of the
-      Python reference; conforms to the shared corpus.</Description>
+    <Description>Read and edit Minecraft Java Edition worlds from .NET and
+      Unity: blocks placed the way the game places them, settings, undo, and
+      WorldEdit, Litematica and structure files. The twin of the Python
+      heaton-voxel library, held to the same test corpus byte for byte.</Description>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <!-- One release, two packages: this version moves with pyproject.toml's,
          and tests/test_architecture.py holds them equal. -->
