@@ -119,6 +119,21 @@ jobs:
             -p:Version=$VERSION -o nupkgs
           ls -l nupkgs
 
+      # What deploy-lib-dotnet.yml tags: the commit this package was built from.
+      - name: Record the build
+        run: |
+          cat > "nupkgs/HeatonVoxel-$VERSION-build.json" <<EOF
+          {
+            "name": "HeatonVoxel",
+            "version": "$VERSION",
+            "commit": "$GITHUB_SHA",
+            "run_id": $GITHUB_RUN_ID,
+            "run_number": $GITHUB_RUN_NUMBER,
+            "built": "$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          }
+          EOF
+          cat "nupkgs/HeatonVoxel-$VERSION-build.json"
+
       - name: Upload NuGet packages artifact
         uses: actions/upload-artifact@v7
         with:

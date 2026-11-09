@@ -17,7 +17,8 @@ on:
         required: true
 
 permissions:
-  contents: read
+  # Creates the release tag.
+  contents: write
   # Trusted Publishing: PyPI accepts this workflow's OIDC token.
   id-token: write
 
@@ -46,6 +47,49 @@ jobs:
             }
           done
           ls -l dist
+          mkdir -p record
+          aws s3 cp "s3://data.heatonresearch.com/library/heaton-voxel-$VERSION-build.json" record/ || {
+            echo "Error: no build record for $VERSION in S3. Run Build Library at this version first."
+            exit 1
+          }
+
+      # The tag records what was released: the commit these files were built
+      # from, read from the build record. A tag already standing elsewhere is
+      # refused before anything is published.
+      - name: Check the tag
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ github.event.inputs.version }}
+          RECORD: record/heaton-voxel-${{ github.event.inputs.version }}-build.json
+        run: |
+          COMMIT=$(python3 -c "import json, os; print(json.load(open(os.environ['RECORD']))['commit'])")
+          echo "COMMIT=$COMMIT" >> "$GITHUB_ENV"
+          ref=$(gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/v$VERSION" --jq '.object.type + " " + .object.sha' 2>/dev/null || true)
+          if [ -z "$ref" ]; then
+            echo "v$VERSION is not tagged yet; it will be, at $COMMIT"
+            exit 0
+          fi
+          sha=${ref#* }
+          if [ "${ref% *}" = tag ]; then
+            sha=$(gh api "repos/$GITHUB_REPOSITORY/git/tags/$sha" --jq .object.sha)
+          fi
+          if [ "$sha" != "$COMMIT" ]; then
+            echo "::error::v$VERSION already points at $sha, not $COMMIT, the commit this build came from."
+            exit 1
+          fi
+          echo "v$VERSION is already at $COMMIT"
 
       - name: Publish to PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
+
+      - name: Tag the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ github.event.inputs.version }}
+        run: |
+          if gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/v$VERSION" > /dev/null 2>&1; then
+            echo "v$VERSION already tagged (checked above)"
+          else
+            gh api "repos/$GITHUB_REPOSITORY/git/refs" -f ref="refs/tags/v$VERSION" -f sha="$COMMIT" > /dev/null
+            echo "Tagged v$VERSION at $COMMIT"
+          fi

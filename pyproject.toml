@@ -57,9 +57,9 @@ packages = [
 heaton_voxel = ["py.typed"]
 
 # Coverage, as CI measures it for the badge: the package alone, branches
-# included, over the whole unittest suite. Like mypy, coverage is a
-# development tool from a venv, never a dependency:
-#   python -m coverage run -m unittest discover -s tests && python -m coverage report
+# included, over the whole suite. Like mypy, pytest and coverage are
+# development tools from a venv, never dependencies:
+#   python -m pytest tests --cov=heaton_voxel --cov-branch
 [tool.coverage.run]
 source = ["heaton_voxel"]
 branch = true

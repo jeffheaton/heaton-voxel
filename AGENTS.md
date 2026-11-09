@@ -115,8 +115,8 @@ python -m venv /tmp/mypy && /tmp/mypy/bin/pip install mypy && /tmp/mypy/bin/mypy
 ```
 
 CI runs the same checks on every push that can change them:
-`.github/workflows/test-lib.yml` runs the suite on Linux, macOS and Windows
-under Python 3.10 to 3.14, with mypy beside it, and
+`.github/workflows/test-lib.yml` runs the suite under pytest on Linux, macOS
+and Windows, under Python 3.10 to 3.14, with mypy beside it, and
 `test-lib-dotnet.yml` runs the conformance suite on all three, checks the C#
 against `dotnet format` and packs the NuGet package. One run of each
 measures coverage for Codecov (`codecov.yml`; the flags are `python` and
@@ -124,12 +124,15 @@ measures coverage for Codecov (`codecov.yml`; the flags are `python` and
 turns off line-ending conversion for every file, because the corpus and
 fixtures are compared byte for byte.
 
-Releases follow dynaface's pattern, two manual steps per language: a build
-that tests, stamps `heaton_voxel/version.py` or `Version.cs` with the date
-and run number, and stages the packages on S3 (`build-lib.yml`,
-`build-lib-dotnet.yml`), then a deploy that publishes what was staged, by
-version (`deploy-lib.yml` to PyPI, `deploy-lib-dotnet.yml` to NuGet.org,
-both by Trusted Publishing). [RELEASING.md](RELEASING.md) has the one-time
+Releases follow the release convention in `~/.claude/CLAUDE.md`, which
+dynaface follows too: two manual steps per language.
+- A **build** tests and stamps `heaton_voxel/version.py` or `Version.cs`
+  with the date and run number. It stages the packages on S3 with a
+  `<name>-<version>-build.json` naming the commit (`build-lib.yml`,
+  `build-lib-dotnet.yml`).
+- A **deploy** publishes what was staged, by version, and tags
+  `v<version>` at that commit. `deploy-lib.yml` goes to PyPI and
+  `deploy-lib-dotnet.yml` to NuGet.org, both by Trusted Publishing. [RELEASING.md](RELEASING.md) has the one-time
 setup and the steps. A version bump touches four files together:
 `pyproject.toml`, the csproj, `heaton_voxel/version.py` and
 `csharp/HeatonVoxel/Version.cs`.

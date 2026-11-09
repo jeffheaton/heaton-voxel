@@ -2,11 +2,18 @@
 
 One release is two packages with one version: `heaton-voxel` on PyPI and
 `HeatonVoxel` on NuGet.org. The conformance corpus makes them one library,
-so they ship together. The release automation follows dynaface's: for each
-language a manual **build** tests the code, stamps the version file and
-stages the packages on S3, and a manual **deploy** publishes what was
-staged, by version. Nothing reaches a registry until you run the deploy,
-and what it publishes is exactly what the build checked.
+so they ship together. The release automation follows the release convention
+in `~/.claude/CLAUDE.md`, which dynaface follows too, in two manual steps per
+language:
+- A **build** tests the code and stamps the version file. It stages the
+  packages on S3 with a build record (`<name>-<version>-build.json`: the
+  commit, run and build number).
+- A **deploy** publishes what was staged, by version. It then tags
+  `v<version>` at the commit the build recorded.
+
+Nothing reaches a registry until you run the deploy, and what it publishes is
+exactly what the build checked. A tag records a release; it never triggers
+one.
 
 | step | Python | .NET |
 | --- | --- | --- |
@@ -87,8 +94,14 @@ do it for you.
 4. Look at what the builds staged: the artifacts on each run's page, and the
    reports.
 5. Run **Deploy Library to PyPI** and **Deploy Library to NuGet (.NET)**,
-   each with the version (e.g. `0.1.0`). Each downloads its files for that
-   version from S3 and publishes them.
+   each with the version (e.g. `0.1.0`). Each:
+   1. downloads its files and build record for that version from S3;
+   2. checks that `v<version>` is either untagged or already at the recorded
+      commit, and refuses otherwise;
+   3. publishes, then tags `v<version>` at that commit.
+
+   The two builds of one release should come from one commit. The second
+   deploy then finds the tag already where it belongs.
 
 A version, once on PyPI or NuGet.org, can't be uploaded again. NuGet's push
 skips a duplicate rather than failing; PyPI's refuses it. To fix a bad

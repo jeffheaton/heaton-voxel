@@ -30,7 +30,7 @@ jobs:
       # The package has no dependencies; these are the build's own tools, and
       # never the package's.
       - name: Install build and analysis tools
-        run: python -m pip install build twine "coverage[toml]" pytest flake8 mypy bandit black isort
+        run: python -m pip install build twine pytest pytest-cov flake8 mypy bandit black isort
 
       # Reports, not gates, as in dynaface: each is uploaded for reading.
       # mypy over the deterministic tier is a gate already, in Test Library.
@@ -72,11 +72,10 @@ jobs:
       # pytest runs the unittest suite as it stands, for its JUnit report.
       - name: Run tests
         run: |
-          python -m coverage run -m pytest tests -p no:cacheprovider \
-            --junitxml=unit_test_results.xml
-          python -m coverage xml -o coverage.xml
-          python -m coverage html
-          python -m coverage report
+          python -m pytest tests -p no:cacheprovider \
+            --junitxml=unit_test_results.xml \
+            --cov=heaton_voxel --cov-branch \
+            --cov-report=xml:coverage.xml --cov-report=html --cov-report=term
 
       - name: Check coverage threshold
         continue-on-error: true
@@ -136,6 +135,21 @@ jobs:
           smoke/bin/heaton-voxel-nbt --help > /dev/null
           smoke/bin/python -c "import heaton_voxel.craft; from heaton_voxel import version; print(version.VERSION, version.BUILD_DATE, version.BUILD)"
 
+      # What deploy-lib.yml tags: the commit these files were built from.
+      - name: Record the build
+        run: |
+          python - <<EOF > "dist/heaton-voxel-$VERSION-build.json"
+          import json, os
+          print(json.dumps({
+              "name": "heaton-voxel", "version": os.environ["VERSION"],
+              "commit": os.environ["GITHUB_SHA"],
+              "run_id": int(os.environ["GITHUB_RUN_ID"]),
+              "run_number": int(os.environ["GITHUB_RUN_NUMBER"]),
+              "built": "$(date -u +%Y-%m-%dT%H:%M:%SZ)",
+          }, indent=2))
+          EOF
+          cat "dist/heaton-voxel-$VERSION-build.json"
+
       - name: Upload the distributions
         uses: actions/upload-artifact@v7
         with:
@@ -150,7 +164,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
         run: |
-          for f in dist/heaton_voxel-"$VERSION"-py3-none-any.whl dist/heaton_voxel-"$VERSION".tar.gz; do
+          for f in dist/heaton_voxel-"$VERSION"-py3-none-any.whl dist/heaton_voxel-"$VERSION".tar.gz dist/heaton-voxel-"$VERSION"-build.json; do
             aws s3 cp "$f" s3://data.heatonresearch.com/library/ --acl public-read
           done
 
