@@ -13,6 +13,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import threading
 import time
 import unittest
 import zlib
@@ -530,6 +531,102 @@ class SaveSafetyTests(unittest.TestCase):
                 self.assertEqual(handle.read(), original, "original clobbered")
             leftovers = [f for f in os.listdir(tmp) if f.startswith(".nbt-")]
             self.assertEqual(leftovers, [], "temp file left behind")
+
+    def _refused(self):
+        return PermissionError(13, "The process cannot access the file "
+                                   "because it is being used by another process")
+
+    def test_a_refused_rename_is_tried_again_on_windows(self):
+        """A scanner's hold clears in milliseconds, so the rename waits."""
+        real = os.replace
+        calls = []
+
+        def held_twice(src, dst):
+            calls.append(dst)
+            if len(calls) <= 2:
+                raise self._refused()
+            real(src, dst)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, "r.0.0.mca")
+            nbt.atomic_write(path, b"old")
+            with mock.patch.object(nbt, "_RENAME_REFUSED_WHILE_OPEN", True),                     mock.patch("os.replace", side_effect=held_twice),                     mock.patch.object(nbt.time, "sleep") as sleep:
+                nbt.atomic_write(path, b"new")
+            with open(path, "rb") as handle:
+                self.assertEqual(handle.read(), b"new")
+            self.assertEqual(os.listdir(tmp), ["r.0.0.mca"])
+            self.assertEqual([c.args[0] for c in sleep.call_args_list], [0.05, 0.1])
+
+    def test_a_refusal_that_outlasts_the_waits_is_raised(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, "r.0.0.mca")
+            nbt.atomic_write(path, b"old")
+            with mock.patch.object(nbt, "_RENAME_REFUSED_WHILE_OPEN", True),                     mock.patch("os.replace", side_effect=self._refused()) as replace,                     mock.patch.object(nbt.time, "sleep") as sleep:
+                with self.assertRaises(PermissionError):
+                    nbt.atomic_write(path, b"new")
+            waits = [c.args[0] for c in sleep.call_args_list]
+            self.assertEqual(waits, list(nbt._REPLACE_WAITS))
+            self.assertAlmostEqual(sum(waits), 2.55)
+            self.assertEqual(replace.call_count, len(nbt._REPLACE_WAITS) + 1)
+            with open(path, "rb") as handle:
+                self.assertEqual(handle.read(), b"old", "original clobbered")
+            self.assertEqual(os.listdir(tmp), ["r.0.0.mca"], "temp file left behind")
+
+    def test_a_refusal_off_windows_is_final_at_once(self):
+        """A POSIX rename ignores open handles; nothing would clear."""
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, "r.0.0.mca")
+            nbt.atomic_write(path, b"old")
+            with mock.patch.object(nbt, "_RENAME_REFUSED_WHILE_OPEN", False),                     mock.patch("os.replace", side_effect=self._refused()) as replace,                     mock.patch.object(nbt.time, "sleep") as sleep:
+                with self.assertRaises(PermissionError):
+                    nbt.atomic_write(path, b"new")
+            self.assertEqual(replace.call_count, 1)
+            sleep.assert_not_called()
+            self.assertEqual(os.listdir(tmp), ["r.0.0.mca"])
+
+    @unittest.skipUnless(sys.platform == "win32",
+                         "only Windows refuses to replace a file that is open")
+    def test_a_file_held_open_on_windows(self):
+        """A real hold, as a scanner takes one: shared for reading and
+        writing, not for deletion, which is how Python opens a file there."""
+        with tempfile.TemporaryDirectory() as tmp:
+            path = os.path.join(tmp, "r.0.0.mca")
+            nbt.atomic_write(path, b"old")
+
+            # The hold must refuse what it stands in for, or the cases
+            # below pass having tested nothing.
+            holder = open(path, "rb")
+            try:
+                probe = os.path.join(tmp, "probe")
+                with open(probe, "wb") as handle:
+                    handle.write(b"probe")
+                with self.assertRaises(PermissionError):
+                    os.replace(probe, path)
+                os.unlink(probe)
+
+                # Released after 250 ms: waited out.
+                timer = threading.Timer(0.25, holder.close)
+                timer.start()
+                nbt.atomic_write(path, b"new")
+                timer.join()
+            finally:
+                holder.close()
+            with open(path, "rb") as handle:
+                self.assertEqual(handle.read(), b"new")
+            self.assertEqual(os.listdir(tmp), ["r.0.0.mca"])
+
+            # Held throughout: raised after the waits, the file untouched.
+            holder = open(path, "rb")
+            try:
+                started = time.monotonic()
+                with self.assertRaises(PermissionError):
+                    nbt.atomic_write(path, b"newer")
+                self.assertGreaterEqual(time.monotonic() - started, 2.5)
+            finally:
+                holder.close()
+            with open(path, "rb") as handle:
+                self.assertEqual(handle.read(), b"new", "original clobbered")
+            self.assertEqual(os.listdir(tmp), ["r.0.0.mca"], "temp file left behind")
 
     def test_save_leaves_no_temp_files(self):
         region = self._small_region()

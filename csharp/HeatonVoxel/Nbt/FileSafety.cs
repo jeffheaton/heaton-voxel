@@ -13,6 +13,8 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices;
+using System.Threading;
 
 namespace HeatonVoxel.Nbt
 {
@@ -20,10 +22,32 @@ namespace HeatonVoxel.Nbt
     {
         public const string SessionLock = "session.lock";
 
+        // Windows will not replace or rename a file that another process has
+        // open without sharing it for deletion, and Defender and the search
+        // indexer open a file the moment it is written: the temporary file
+        // always, and for a region saved twice in a row the file it replaces
+        // as well. Such a hold lasts milliseconds, so the rename is tried
+        // again after each of these waits in turn, 2.55 s in all, and a
+        // refusal that outlasts them is thrown as it came. The reference
+        // waits out PermissionError from os.replace, which is MoveFileEx.
+        // File.Replace is ReplaceFile, which refuses with errors of its own
+        // (ERROR_UNABLE_TO_REMOVE_REPLACED, 1175, is the one seen) beside the
+        // sharing violation, and how each runtime maps those to exceptions
+        // is its own affair -- so every IOException but a missing path is
+        // waited out, as is UnauthorizedAccessException (ERROR_ACCESS_DENIED).
+        // A POSIX rename does not care who has either file open, so there a
+        // refusal is final at once.
+        private static readonly int[] ReplaceWaits = { 50, 100, 200, 400, 800, 1000 };
+        private static readonly bool RenameRefusedWhileOpen =
+            RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+
         /// <summary>Write data to a path without ever leaving it
         /// half-written: sibling temp file, flush to disk, rename over. A
         /// plain truncating write would destroy a multi-megabyte region on
-        /// a crash with no copy anywhere.</summary>
+        /// a crash with no copy anywhere. On Windows a rename refused because
+        /// another process -- a virus scanner, the search indexer -- has one
+        /// of the two files open is tried again for up to 2.55 s, and never
+        /// turned into a copy.</summary>
         public static void AtomicWrite(string path, byte[] data)
         {
             string directory = Path.GetDirectoryName(Path.GetFullPath(path))!;
@@ -36,19 +60,51 @@ namespace HeatonVoxel.Nbt
                     stream.Write(data, 0, data.Length);
                     stream.Flush(flushToDisk: true);
                 }
-                // netstandard2.1 has no overwriting Move; Replace handles an
-                // existing destination atomically, Move a fresh one.
-                if (File.Exists(path))
-                    File.Replace(temp, path, destinationBackupFileName: null);
-                else
-                    File.Move(temp, path);
+                Replace(temp, path);
             }
             catch
             {
-                try { File.Delete(temp); } catch (IOException) { }
+                try { File.Delete(temp); }
+                catch (IOException) { }
+                catch (UnauthorizedAccessException) { }
                 throw;
             }
         }
+
+        private static void Replace(string temp, string path)
+        {
+            foreach (int wait in ReplaceWaits)
+            {
+                try
+                {
+                    ReplaceOnce(temp, path);
+                    return;
+                }
+                catch (Exception exc) when (RenameRefusedWhileOpen && MightClear(exc))
+                {
+                }
+                Thread.Sleep(wait);
+            }
+            ReplaceOnce(temp, path);
+        }
+
+        private static void ReplaceOnce(string temp, string path)
+        {
+            // netstandard2.1 has no overwriting Move; Replace handles an
+            // existing destination atomically, Move a fresh one. Asked on
+            // every try, since the answer can change between them.
+            if (File.Exists(path))
+                File.Replace(temp, path, destinationBackupFileName: null);
+            else
+                File.Move(temp, path);
+        }
+
+        private static bool MightClear(Exception exc) =>
+            exc is UnauthorizedAccessException
+            || (exc is IOException
+                && !(exc is FileNotFoundException)
+                && !(exc is DirectoryNotFoundException)
+                && !(exc is PathTooLongException));
 
         /// <summary>Walk up from a file to the save directory holding
         /// session.lock, or null.</summary>

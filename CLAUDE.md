@@ -1503,4 +1503,10 @@ clean pass over an empty world. `dim.loaded_regions()` is the cheap subset.
 
 **Writes are atomic.** Temp file in the same directory, `fsync`, `os.replace`.
 A plain write truncates first, so an interruption would destroy a multi-megabyte
-region with no copy anywhere.
+region with no copy anywhere. On Windows the rename is waited out for up to
+2.55 s when another process holds either file, since Defender and the search
+indexer open each file as it is written: the Unity app's backup check failed
+two runs in six on 2026-11-14 restoring a region saved a moment earlier,
+"Unable to remove the file to be replaced". A copy would get past the hold by
+giving up the atomicity, so it is never the fallback (PORTING.md has both
+twins' rules).

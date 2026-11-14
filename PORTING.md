@@ -318,6 +318,16 @@ Therefore:
 - **Atomic replace**: `File.Replace`/`MoveFileEx` on Windows,
   rename-over on POSIX; directory fsync after rename is a POSIX nicety
   with no Windows equivalent (skip it there). Never open-truncate a region.
+  Windows refuses the rename while another process has either file open
+  without sharing it for deletion, and Defender and the search indexer
+  open every file the moment it is written, so on Windows a refused rename
+  is tried again after 50, 100, 200, 400, 800 and 1000 ms (2.55 s in all)
+  and the last refusal raised as it came; never fall back to a copy. The
+  reference waits out `PermissionError` from `os.replace`; the C# twin,
+  whose `File.Replace` is `ReplaceFile` with refusals of its own
+  (`ERROR_UNABLE_TO_REMOVE_REPLACED`), waits out any `IOException` but a
+  missing path, and `UnauthorizedAccessException`. On POSIX a refusal is
+  final at once.
 - **Hashes are internal.** The reference digests with blake2b for change
   detection; nothing persists it, so the port may use any hash (SHA-256 is
   in every profile). Only the conformance corpus's SHA-256 digests are

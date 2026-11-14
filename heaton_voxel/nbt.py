@@ -730,6 +730,31 @@ def _fsync_directory(directory: str) -> None:
         os.close(fd)
 
 
+# Windows will not replace or rename a file that another process has open
+# without sharing it for deletion, and Defender and the search indexer open a
+# file the moment it is written: the temporary file always, and for a region
+# saved twice in a row the file it replaces as well. Such a hold lasts
+# milliseconds, so the rename is tried again after each of these waits in
+# turn, 2.55 s in all, and a refusal that outlasts them is raised as it came.
+# It arrives as PermissionError (winerror 5, 32 or 33). A POSIX rename does
+# not care who has either file open, so there a refusal is final at once.
+_REPLACE_WAITS = (0.05, 0.1, 0.2, 0.4, 0.8, 1.0)
+_RENAME_REFUSED_WHILE_OPEN = sys.platform == "win32"
+
+
+def _replace(tmp: str, path: str) -> None:
+    """``os.replace``, waiting out another process's hold on Windows."""
+    for wait in _REPLACE_WAITS:
+        try:
+            os.replace(tmp, path)
+            return
+        except PermissionError:
+            if not _RENAME_REFUSED_WHILE_OPEN:
+                raise
+        time.sleep(wait)
+    os.replace(tmp, path)
+
+
 def atomic_write(path: str, data: bytes) -> None:
     """Write ``data`` to ``path`` without ever leaving it half-written.
 
@@ -737,8 +762,11 @@ def atomic_write(path: str, data: bytes) -> None:
     so a crash, a full disk or an I/O error partway through would destroy the
     original with no copy anywhere. Writing a sibling temporary file and
     renaming makes the swap atomic, because rename within a filesystem is.
-    Public because every writer in this package -- and anything built on it
-    -- should write files this way rather than reinventing it.
+    On Windows a rename refused because another process -- a virus scanner,
+    the search indexer -- has one of the two files open is tried again for
+    up to 2.55 s, and never turned into a copy. Public because every writer
+    in this package -- and anything built on it -- should write files this
+    way rather than reinventing it.
     """
     directory = os.path.dirname(os.path.abspath(path))
     fd, tmp = tempfile.mkstemp(dir=directory, prefix=".nbt-", suffix=".tmp")
@@ -750,7 +778,7 @@ def atomic_write(path: str, data: bytes) -> None:
         if os.path.exists(path):
             # mkstemp makes the file 0600; keep the original's permissions.
             os.chmod(tmp, stat.S_IMODE(os.stat(path).st_mode))
-        os.replace(tmp, path)
+        _replace(tmp, path)
     except BaseException:
         try:
             os.unlink(tmp)
