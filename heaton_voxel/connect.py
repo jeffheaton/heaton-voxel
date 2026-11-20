@@ -50,16 +50,24 @@ _OPPOSITE = {"north": "south", "south": "north", "west": "east", "east": "west"}
 # Counter-clockwise seen from above, the game's Direction.getCounterClockWise.
 _CCW = {"north": "west", "west": "south", "south": "east", "east": "north"}
 
-# The game's ``Block.isExceptionForConnection`` (26.3, read with javap):
-# what a fence, a wall, a pane or bars never join as a solid neighbor,
-# however full its faces -- leaves, the barrier, the pumpkins, the jack
-# o'lantern, the melon and the shulker boxes. Every one of those predicates
-# asks it before the face, so these are never sturdy here.
+# The game's ``Block.isExceptionForConnection``: what a fence, a wall, a
+# pane or bars never join as a solid neighbor, however full its faces --
+# every leaf, the barrier, the pumpkins, the jack o'lantern and the melon,
+# and nothing else. Every one of those predicates asks it before the face,
+# so these are never sturdy here.
+#
+# Held to the game itself, state by state, by ``tests/test_connect.py``:
+# the game excepts exactly these 19 blocks in 26.1.2, 26.2 and 26.3, and a
+# shulker box is not one of them. This list named all 17 of them until
+# 2026-11-20, and a shulker box's four sides are full, so every fence,
+# wall, pane and bar the game had joined to one was rewritten into a
+# free-standing post -- a stub removed, not one invented, which is the
+# harder direction to notice.
 _NO_CONNECTION_EXACT = {
     "minecraft:barrier", "minecraft:pumpkin", "minecraft:carved_pumpkin",
     "minecraft:jack_o_lantern", "minecraft:melon",
 }
-_NO_CONNECTION_SUFFIXES = ("_leaves", "shulker_box")
+_NO_CONNECTION_SUFFIXES = ("_leaves",)
 
 
 def _no_connection(name: str) -> bool:
@@ -176,18 +184,23 @@ def _face_full(neighbor: BlockState, direction: str) -> bool:
     ``direction`` runs from the connecting block to the neighbor, so the
     face that touches is the neighbor's ``opposite(direction)`` side, and
     whether it is full is the game's own answer, generated from its shapes
-    into :mod:`heaton_voxel.connect_faces`. A stair's full face is its
-    ``facing`` side (shipwreck fences attach to stair backs), read by that
-    alone since its ``shape`` is derived in the same sweep. What the game
-    excepts from every connection (:func:`_no_connection`) is never joined
-    as solid, and a block the game does not have has no full face, which
-    under-connects rather than inventing an attachment.
+    into :mod:`heaton_voxel.connect_faces` -- a stair included, read by its
+    ``facing`` *and* its ``shape`` as the game reads it: its facing side
+    (shipwreck fences attach to stair backs), an inner corner's flank
+    beside that, and nothing at all on an outer corner, which is a quarter
+    step with no full side. Reading a stair by its ``facing`` alone, as
+    this did until 2026-11-20, put an arm on every connector beside an
+    outer corner -- a stub jutting into nothing, the one direction this
+    module says it never errs in -- and left one short of every inner
+    corner's flank.
+
+    What the game excepts from every connection (:func:`_no_connection`)
+    is never joined as solid, and a block the game does not have has no
+    full face, which under-connects rather than inventing an attachment.
     """
     name = neighbor.name
     if _no_connection(name):
         return False
-    if _is_stairs(name):
-        return neighbor.properties.get("facing", "north") == _OPPOSITE[direction]
     return bool(full_sides(name, neighbor.properties)
                 & SIDE_BIT[_OPPOSITE[direction]])
 
@@ -403,6 +416,15 @@ def connect_blocks(
     placing into water. Blocks the vocabulary does not recognize count as
     "not solid", which errs toward a free-standing post rather than an arm
     reaching at nothing.
+
+    Every neighbor is read exactly as it stands, which is what the game's
+    own update does. A stair's full faces follow its ``shape``, so a
+    connector this pass reaches *before* the stair beside it -- the sweep
+    runs top-down, then z, then x -- reads the shape that stair was
+    written with rather than the one this pass settles it to. Where a
+    bulk build left stair shapes unsettled, a second call takes those
+    connectors with it; the second call's own result is then empty, and
+    nothing moves after it.
 
     Give the box a one-block margin around new construction: neighbors are
     read beyond the box, but only blocks inside it are rewritten.

@@ -65,12 +65,19 @@ namespace HeatonVoxel
                 ["east"] = "north",
             };
 
-        // The game's Block.isExceptionForConnection (26.3, read with javap):
-        // what a fence, a wall, a pane or bars never join as a solid
-        // neighbor, however full its faces -- leaves, the barrier, the
-        // pumpkins, the jack o'lantern, the melon and the shulker boxes.
-        // Every one of those predicates asks it before the face, so these
-        // are never sturdy here.
+        // The game's Block.isExceptionForConnection: what a fence, a wall,
+        // a pane or bars never join as a solid neighbor, however full its
+        // faces -- every leaf, the barrier, the pumpkins, the jack
+        // o'lantern and the melon, and nothing else. Every one of those
+        // predicates asks it before the face, so these are never sturdy
+        // here.
+        //
+        // Held to the game itself, state by state, by the Python twin's
+        // tests/test_connect.py: the game excepts exactly these 19 blocks
+        // in 26.1.2, 26.2 and 26.3, and a shulker box is not one of them.
+        // This list named all 17 of them until 2026-11-20, and a shulker
+        // box's four sides are full, so every fence, wall, pane and bar the
+        // game had joined to one was rewritten into a free-standing post.
         private static readonly HashSet<string> NoConnectionExact =
             new HashSet<string>(StringComparer.Ordinal)
             {
@@ -80,7 +87,7 @@ namespace HeatonVoxel
 
         private static readonly string[] NoConnectionSuffixes =
         {
-            "_leaves", "shulker_box",
+            "_leaves",
         };
 
         private static bool EndsWithAny(string name, string[] suffixes)
@@ -137,19 +144,21 @@ namespace HeatonVoxel
         /// toward us? direction runs from the connecting block to the
         /// neighbor, so the face that touches is the neighbor's opposite
         /// side, and whether it is full is the game's own answer, generated
-        /// from its shapes into ConnectFaces. A stair's full face is its
-        /// facing side (shipwreck fences attach to stair backs), read by
-        /// that alone since its shape is derived in the same sweep. What the
-        /// game excepts from every connection (NoConnection) is never joined
-        /// as solid, and a block the game does not have has no full
-        /// face.</summary>
+        /// from its shapes into ConnectFaces — a stair included, read by
+        /// its facing <em>and</em> its shape as the game reads it: its
+        /// facing side (shipwreck fences attach to stair backs), an inner
+        /// corner's flank beside that, and nothing at all on an outer
+        /// corner, which is a quarter step with no full side. Reading a
+        /// stair by its facing alone, as this did until 2026-11-20, put an
+        /// arm on every connector beside an outer corner and left one short
+        /// of every inner corner's flank. What the game excepts from every
+        /// connection (NoConnection) is never joined as solid, and a block
+        /// the game does not have has no full face.</summary>
         private static bool FaceFull(BlockState neighbor, string direction)
         {
             string name = neighbor.Name;
             if (NoConnection(name))
                 return false;
-            if (IsStairs(name))
-                return (neighbor.GetProperty("facing") ?? "north") == Opposite[direction];
             return (ConnectFaces.FullSides(neighbor) & FaceBit(Opposite[direction])) != 0;
         }
 
@@ -393,7 +402,18 @@ namespace HeatonVoxel
         /// is placement history the game never derives. Blocks the
         /// vocabulary does not recognize count as "not solid", which errs
         /// toward a free-standing post rather than an arm reaching at
-        /// nothing. Give the box a one-block margin around new
+        /// nothing.
+        ///
+        /// Every neighbor is read exactly as it stands, which is what the
+        /// game's own update does. A stair's full faces follow its shape,
+        /// so a connector this pass reaches <em>before</em> the stair
+        /// beside it — the sweep runs top-down, then z, then x — reads the
+        /// shape that stair was written with rather than the one this pass
+        /// settles it to. Where a bulk build left stair shapes unsettled, a
+        /// second call takes those connectors with it, and its own result
+        /// is then empty.
+        ///
+        /// Give the box a one-block margin around new
         /// construction: neighbors are read beyond the box, but only blocks
         /// inside it are rewritten.</summary>
         public static ConnectResult ConnectBlocks(

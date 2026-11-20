@@ -344,6 +344,31 @@
    }
   },
   {
+   "center": "minecraft:oak_fence",
+   "expected": "minecraft:oak_fence[east=true,north=false,south=false,west=false]",
+   "name": "fence-to-shulker-box",
+   "neighbors": {
+    "east": "minecraft:shulker_box[facing=up]"
+   }
+  },
+  {
+   "center": "minecraft:glass_pane",
+   "expected": "minecraft:glass_pane[east=false,north=false,south=false,west=true]",
+   "name": "pane-to-shulker-box",
+   "neighbors": {
+    "west": "minecraft:red_shulker_box[facing=north]"
+   }
+  },
+  {
+   "center": "minecraft:cobblestone_wall",
+   "expected": "minecraft:cobblestone_wall[east=none,north=low,south=low,up=false,west=none]",
+   "name": "wall-to-shulker-box",
+   "neighbors": {
+    "north": "minecraft:cobblestone_wall",
+    "south": "minecraft:lime_shulker_box[facing=up]"
+   }
+  },
+  {
    "center": "minecraft:cobblestone_wall",
    "expected": "minecraft:cobblestone_wall[east=low,north=none,south=none,up=false,west=low]",
    "name": "wall-to-open-trapdoor-plate",

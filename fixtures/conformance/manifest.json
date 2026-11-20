@@ -25,8 +25,8 @@
    "sha256": "25d3d21b7ee156454ab3cec392e813687a4aa6250d66ec3983226a4183b8aeb4"
   },
   "derived_states.json": {
-   "bytes": 14830,
-   "sha256": "bf04fc755df9ad50f4adf5c7457c777403c6533e1537479f55d0d481f22b8f3f"
+   "bytes": 15606,
+   "sha256": "38e1aa2bbe3a666beefa56b2342b704f157c60ca1c15f685f3f2de2d9bbc2678"
   },
   "empty/r.0.0.mca": {
    "bytes": 0,
@@ -105,12 +105,12 @@
    "sha256": "b4fc91c4dbbe0404c4658e380f0a8830b680eeb9252f46fd59cbf34aad5b1e38"
   },
   "tables.json": {
-   "bytes": 71157,
-   "sha256": "22c92d17d9d01fece62dba2a34ed36d95b6fd3c739fb7b2044092c667f8da0f3"
+   "bytes": 135673,
+   "sha256": "6519aac96ad083643f2d94c00200435ec61795445e98620c44770d265369440c"
   },
   "transforms.json": {
-   "bytes": 11583,
-   "sha256": "e1edc0a931862fe8db24be7198a5c09f9a7cbc31580c16060e0ba32618cb06fb"
+   "bytes": 14626,
+   "sha256": "28ee26235c930f1c24a412dc248a50e79ed7da1e4effcbe2bacf8f1a6721c44a"
   },
   "varints.json": {
    "bytes": 732,

@@ -270,8 +270,8 @@ class AttachmentTests(ConnectBase):
         ``SupportType.FULL`` masks): a trapdoor joins only where its face
         toward the joining block is full, and the blocks the game excepts
         from every connection -- leaves, the barrier, the pumpkins, the
-        jack o'lantern, the melon and every shulker box -- never, though
-        most have full faces all round."""
+        jack o'lantern and the melon -- never, though most have full faces
+        all round."""
         from fixtures import block_shapes
         from heaton_voxel import connect
         from heaton_voxel.blocks import BlockState
@@ -284,9 +284,9 @@ class AttachmentTests(ConnectBase):
                     "minecraft:melon"}
         wrong, seen = [], set()
         for name, properties, shape in block_shapes():
-            exception = (name in excepted or name.endswith("_leaves")
-                         or name.endswith("shulker_box"))
-            if not (exception or name.endswith("_trapdoor")):
+            exception = name in excepted or name.endswith("_leaves")
+            if not (exception or name.endswith("_trapdoor")
+                    or name.endswith("shulker_box")):
                 continue
             seen.add(name)
             state = BlockState(name, properties)
@@ -300,16 +300,53 @@ class AttachmentTests(ConnectBase):
         self.assertGreater(sum(name.endswith("_trapdoor") for name in seen), 10)
         self.assertGreater(sum(name.endswith("shulker_box") for name in seen), 16)
 
+    def test_the_game_excepts_these_nineteen_blocks_and_no_others(self):
+        """``Block.isExceptionForConnection`` is a list of names here, so
+        it is held to the game's own list, block by block: the fourteen
+        leaves, the two pumpkins, the jack o'lantern, the melon and the
+        barrier. A shulker box was on this list and is not on the game's --
+        in 26.1.2, 26.2 or 26.3 -- and its sides are full, so a fence,
+        wall, pane or bar the game had joined to one came back a
+        free-standing post."""
+        from fixtures import block_shapes
+        from heaton_voxel import connect
+
+        # The game's answer: a block with a full side that nothing joins.
+        full_sided, excepted = set(), set()
+        for name, properties, shape in block_shapes():
+            if shape.sturdy & (4 | 8 | 16 | 32):
+                full_sided.add(name)
+            if connect._no_connection(name):
+                excepted.add(name)
+        leaves = {name for name in excepted if name.endswith("_leaves")}
+        self.assertEqual(len(leaves), 14, sorted(leaves))
+        self.assertEqual(excepted - leaves,
+                         {"minecraft:barrier", "minecraft:pumpkin",
+                          "minecraft:carved_pumpkin",
+                          "minecraft:jack_o_lantern", "minecraft:melon"})
+        boxes = {name for name in full_sided if name.endswith("shulker_box")}
+        self.assertEqual(len(boxes), 17, sorted(boxes))
+        self.assertEqual(boxes & excepted, set(),
+                         "the game joins a fence to a shulker box")
+
+    def test_a_pane_joins_a_shulker_box(self):
+        """The whole of the bug, as a build sees it."""
+        self.put(0, Y, 0, "minecraft:purple_shulker_box[facing=up]")
+        self.put(1, Y, 0, "minecraft:glass_pane")
+        self.connect()
+        self.assertEqual(self.props(1, Y, 0)["west"], "true")
+
 
 class FaceTests(ConnectBase):
     """What is solid to join, held to the game state by state."""
 
     def test_every_state_joins_as_the_game_says(self):
         """Every side of every state the game has against its own
-        ``SupportType.FULL`` faces. A stair is read by its ``facing`` alone,
-        since its ``shape`` is derived in the same sweep. The rule this
+        ``SupportType.FULL`` faces, a stair among them. The rule this
         replaced was a list of name endings, which disagreed on 10,308 sides
-        and left a copper tower's panes short of its piers (2026-11-01)."""
+        and left a copper tower's panes short of its piers (2026-11-01);
+        stairs were then read by ``facing`` alone, which disagreed on 6,322
+        states more (2026-11-20)."""
         from fixtures import block_shapes
         from heaton_voxel import connect
         from heaton_voxel.blocks import BlockState
@@ -319,10 +356,12 @@ class FaceTests(ConnectBase):
                     "east": "west"}
         wrong = []
         count = 0
+        stairs = 0
         for name, properties, shape in block_shapes():
-            if name.endswith("_stairs") or connect._no_connection(name):
+            if connect._no_connection(name):
                 continue
             state = BlockState(name, properties)
+            stairs += name.endswith("_stairs")
             for direction in full:
                 count += 1
                 game = bool(shape.sturdy & full[opposite[direction]])
@@ -330,6 +369,77 @@ class FaceTests(ConnectBase):
                     wrong.append((str(state), direction, game))
         self.assertEqual(wrong[:5], [], f"{len(wrong)} disagree")
         self.assertGreater(count, 100000)
+        self.assertGreater(stairs, 7000, "stairs are in the table now")
+
+    def test_a_stair_joins_by_its_shape_and_not_its_facing_alone(self):
+        """The three answers a stair gives, each the game's own: a straight
+        stair's facing side is full, an inner corner's flank beside it is
+        too, and an outer corner -- a quarter step -- has no full side.
+        Read by ``facing`` alone, the outer corner put an arm on a pane
+        reaching at nothing and the inner corner left one short."""
+        from heaton_voxel import connect
+        from heaton_voxel.blocks import BlockState
+
+        def face(shape, side):
+            """Is the ``side`` face of a north-facing stair full? The
+            argument runs from the connector to the stair, so a connector
+            touching that face stands on the opposite side of it."""
+            state = BlockState("minecraft:oak_stairs",
+                               {"facing": "north", "half": "bottom",
+                                "shape": shape, "waterlogged": "false"})
+            opposite = {"north": "south", "south": "north",
+                        "west": "east", "east": "west"}
+            return connect._face_full(state, opposite[side])
+
+        # the stair's own facing side
+        self.assertTrue(face("straight", "north"))
+        self.assertTrue(face("inner_left", "north"))
+        self.assertTrue(face("inner_right", "north"))
+        self.assertFalse(face("outer_left", "north"))
+        self.assertFalse(face("outer_right", "north"))
+        # the flank: an inner_left fills the one counter-clockwise of its
+        # facing, an inner_right the one clockwise, and a straight neither
+        self.assertTrue(face("inner_left", "west"))
+        self.assertFalse(face("inner_right", "west"))
+        self.assertFalse(face("straight", "west"))
+        self.assertTrue(face("inner_right", "east"))
+        self.assertFalse(face("inner_left", "east"))
+        # the back and the open side are never full
+        for shape in ("straight", "inner_left", "inner_right",
+                      "outer_left", "outer_right"):
+            self.assertFalse(face(shape, "south"), shape)
+
+    def test_a_pane_beside_an_outer_corner_stair_stays_a_post(self):
+        """The bug as a build sees it: a pane reaching at a quarter step.
+
+        An outer corner always has a stair on its facing side -- that
+        neighbor is what makes it a corner -- so a pane meets one only
+        where the stair's shape is the stored one, which is what
+        ``stairs=False`` says it is.
+        """
+        self.put(0, Y, 0, "minecraft:oak_stairs[facing=east,half=bottom,"
+                          "shape=outer_left]")
+        self.put(1, Y, 0, "minecraft:glass_pane")
+        self.save.connect_blocks((-8, Y - 2, -8), (16, Y + 6, 16), stairs=False)
+        self.assertEqual(self.props(1, Y, 0)["west"], "false")
+        self.assertEqual(self.props(0, Y, 0)["shape"], "outer_left",
+                         "stairs=False leaves the shape alone")
+
+    def test_a_pane_joins_a_straight_stair_it_faces(self):
+        self.put(0, Y, 0, "minecraft:oak_stairs[facing=east,half=bottom,"
+                          "shape=straight]")
+        self.put(1, Y, 0, "minecraft:glass_pane")
+        self.connect()
+        self.assertEqual(self.props(1, Y, 0)["west"], "true")
+
+    def test_a_pane_joins_an_inner_corner_stair_flank(self):
+        """A north-facing inner_left fills its west face too, so a pane to
+        the west of it joins -- which reading the facing alone missed."""
+        self.put(1, Y, 0, "minecraft:oak_stairs[facing=north,half=bottom,"
+                          "shape=inner_left]")
+        self.put(0, Y, 0, "minecraft:glass_pane")
+        self.connect()
+        self.assertEqual(self.props(0, Y, 0)["east"], "true")
 
     def test_the_blocks_the_name_list_missed(self):
         for name in ("minecraft:waxed_oxidized_copper",
@@ -457,6 +567,28 @@ class PassBehaviorTests(ConnectBase):
         self.assertEqual(second.total_updated, 0, "second pass changes nothing")
         outside = self.props(8, Y, 0)
         self.assertNotIn("east", outside, "blocks outside the box stay bare")
+
+    def test_a_connector_before_a_stale_stair_settles_on_the_second_pass(self):
+        """Every neighbor is read as it stands, a stair's ``shape``
+        included, so a connector the sweep reaches before the stair beside
+        it reads the shape that stair was written with. A bulk build that
+        left its stair shapes unsettled therefore wants a second call,
+        after which nothing moves."""
+        self.put(1, Y, 1, "minecraft:oak_stairs[facing=west,half=bottom,"
+                          "shape=straight]")
+        # written straight; its corner is really inner_left
+        self.put(1, Y, 0, "minecraft:oak_stairs[facing=north,half=bottom,"
+                          "shape=straight]")
+        self.put(0, Y, 0, "minecraft:glass_pane")
+        first = self.save.connect_blocks((-1, Y - 1, -1), (3, Y + 1, 3))
+        self.assertEqual(self.props(1, Y, 0)["shape"], "inner_left")
+        self.assertEqual(self.props(0, Y, 0)["east"], "false",
+                         "the pane read the shape the stair was written with")
+        second = self.save.connect_blocks((-1, Y - 1, -1), (3, Y + 1, 3))
+        self.assertEqual(self.props(0, Y, 0)["east"], "true")
+        third = self.save.connect_blocks((-1, Y - 1, -1), (3, Y + 1, 3))
+        self.assertEqual(third.total_updated, 0, "and then it is settled")
+        self.assertEqual((first.total_updated, second.total_updated), (2, 1))
 
     def test_waterlogged_and_other_properties_survive(self):
         self.put(0, Y, 0, "minecraft:oak_fence[waterlogged=true]")

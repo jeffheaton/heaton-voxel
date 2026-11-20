@@ -152,6 +152,34 @@
      "top": 0
     }
    },
+   "minecraft:acacia_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:acacia_trapdoor": {
     "keys": [
      "facing",
@@ -176,6 +204,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:andesite_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:bamboo_door": {
@@ -213,6 +269,34 @@
      "top": 0
     }
    },
+   "minecraft:bamboo_mosaic_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:bamboo_shelf": {
     "keys": [
      "facing"
@@ -232,6 +316,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:bamboo_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:bamboo_trapdoor": {
@@ -296,6 +408,34 @@
      "top": 0
     }
    },
+   "minecraft:birch_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:birch_trapdoor": {
     "keys": [
      "facing",
@@ -322,6 +462,34 @@
      "top": 0
     }
    },
+   "minecraft:black_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:black_wool_slab": {
     "keys": [
      "type"
@@ -330,6 +498,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:black_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:blackstone_slab": {
@@ -342,6 +538,34 @@
      "top": 0
     }
    },
+   "minecraft:blackstone_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:blue_concrete_slab": {
     "keys": [
      "type"
@@ -350,6 +574,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:blue_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:blue_wool_slab": {
@@ -362,6 +614,34 @@
      "top": 0
     }
    },
+   "minecraft:blue_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:brick_slab": {
     "keys": [
      "type"
@@ -370,6 +650,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:brown_concrete_slab": {
@@ -382,6 +690,34 @@
      "top": 0
     }
    },
+   "minecraft:brown_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:brown_wool_slab": {
     "keys": [
      "type"
@@ -390,6 +726,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:brown_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:cherry_door": {
@@ -438,6 +802,34 @@
      "top": 0
     }
    },
+   "minecraft:cherry_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:cherry_trapdoor": {
     "keys": [
      "facing",
@@ -464,6 +856,34 @@
      "top": 0
     }
    },
+   "minecraft:cinnabar_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:cinnabar_slab": {
     "keys": [
      "type"
@@ -472,6 +892,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:cinnabar_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:cobbled_deepslate_slab": {
@@ -484,6 +932,34 @@
      "top": 0
     }
    },
+   "minecraft:cobbled_deepslate_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:cobblestone_slab": {
     "keys": [
      "type"
@@ -492,6 +968,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:cobblestone_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:copper_door": {
@@ -581,6 +1085,34 @@
      "top": 0
     }
    },
+   "minecraft:crimson_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:crimson_trapdoor": {
     "keys": [
      "facing",
@@ -605,6 +1137,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:cut_copper_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:cut_red_sandstone_slab": {
@@ -637,6 +1197,34 @@
      "top": 0
     }
    },
+   "minecraft:cyan_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:cyan_wool_slab": {
     "keys": [
      "type"
@@ -645,6 +1233,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:cyan_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:dark_oak_door": {
@@ -693,6 +1309,34 @@
      "top": 0
     }
    },
+   "minecraft:dark_oak_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:dark_oak_trapdoor": {
     "keys": [
      "facing",
@@ -719,6 +1363,34 @@
      "top": 0
     }
    },
+   "minecraft:dark_prismarine_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:deepslate_brick_slab": {
     "keys": [
      "type"
@@ -727,6 +1399,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:deepslate_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:deepslate_tile_slab": {
@@ -739,6 +1439,34 @@
      "top": 0
     }
    },
+   "minecraft:deepslate_tile_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:diorite_slab": {
     "keys": [
      "type"
@@ -749,6 +1477,34 @@
      "top": 0
     }
    },
+   "minecraft:diorite_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:end_stone_brick_slab": {
     "keys": [
      "type"
@@ -757,6 +1513,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:end_stone_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:exposed_copper_door": {
@@ -810,6 +1594,34 @@
      "top": 0
     }
    },
+   "minecraft:exposed_cut_copper_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:granite_slab": {
     "keys": [
      "type"
@@ -818,6 +1630,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:granite_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:gray_concrete_slab": {
@@ -830,6 +1670,34 @@
      "top": 0
     }
    },
+   "minecraft:gray_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:gray_wool_slab": {
     "keys": [
      "type"
@@ -838,6 +1706,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:gray_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:green_concrete_slab": {
@@ -850,6 +1746,34 @@
      "top": 0
     }
    },
+   "minecraft:green_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:green_wool_slab": {
     "keys": [
      "type"
@@ -858,6 +1782,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:green_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:iron_door": {
@@ -947,6 +1899,34 @@
      "top": 0
     }
    },
+   "minecraft:jungle_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:jungle_trapdoor": {
     "keys": [
      "facing",
@@ -984,6 +1964,34 @@
      "top": 0
     }
    },
+   "minecraft:light_blue_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:light_blue_wool_slab": {
     "keys": [
      "type"
@@ -992,6 +2000,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:light_blue_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:light_gray_concrete_slab": {
@@ -1004,6 +2040,34 @@
      "top": 0
     }
    },
+   "minecraft:light_gray_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:light_gray_wool_slab": {
     "keys": [
      "type"
@@ -1012,6 +2076,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:light_gray_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:lime_concrete_slab": {
@@ -1024,6 +2116,34 @@
      "top": 0
     }
    },
+   "minecraft:lime_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:lime_wool_slab": {
     "keys": [
      "type"
@@ -1032,6 +2152,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:lime_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:magenta_concrete_slab": {
@@ -1044,6 +2192,34 @@
      "top": 0
     }
    },
+   "minecraft:magenta_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:magenta_wool_slab": {
     "keys": [
      "type"
@@ -1052,6 +2228,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:magenta_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:mangrove_door": {
@@ -1100,6 +2304,34 @@
      "top": 0
     }
    },
+   "minecraft:mangrove_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:mangrove_trapdoor": {
     "keys": [
      "facing",
@@ -1126,6 +2358,34 @@
      "top": 0
     }
    },
+   "minecraft:mossy_cobblestone_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:mossy_stone_brick_slab": {
     "keys": [
      "type"
@@ -1134,6 +2394,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:mossy_stone_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:mud_brick_slab": {
@@ -1146,6 +2434,34 @@
      "top": 0
     }
    },
+   "minecraft:mud_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:nether_brick_slab": {
     "keys": [
      "type"
@@ -1154,6 +2470,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:nether_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:oak_door": {
@@ -1202,6 +2546,34 @@
      "top": 0
     }
    },
+   "minecraft:oak_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:oak_trapdoor": {
     "keys": [
      "facing",
@@ -1228,6 +2600,34 @@
      "top": 0
     }
    },
+   "minecraft:orange_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:orange_wool_slab": {
     "keys": [
      "type"
@@ -1236,6 +2636,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:orange_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:oxidized_copper_door": {
@@ -1289,6 +2717,34 @@
      "top": 0
     }
    },
+   "minecraft:oxidized_cut_copper_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:pale_oak_door": {
     "keys": [
      "facing",
@@ -1335,6 +2791,34 @@
      "top": 0
     }
    },
+   "minecraft:pale_oak_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:pale_oak_trapdoor": {
     "keys": [
      "facing",
@@ -1371,6 +2855,34 @@
      "top": 0
     }
    },
+   "minecraft:pink_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:pink_wool_slab": {
     "keys": [
      "type"
@@ -1379,6 +2891,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:pink_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:piston": {
@@ -1424,6 +2964,34 @@
      "top": 0
     }
    },
+   "minecraft:polished_andesite_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:polished_blackstone_brick_slab": {
     "keys": [
      "type"
@@ -1432,6 +3000,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:polished_blackstone_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:polished_blackstone_slab": {
@@ -1444,6 +3040,34 @@
      "top": 0
     }
    },
+   "minecraft:polished_blackstone_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:polished_cinnabar_slab": {
     "keys": [
      "type"
@@ -1452,6 +3076,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:polished_cinnabar_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:polished_deepslate_slab": {
@@ -1464,6 +3116,34 @@
      "top": 0
     }
    },
+   "minecraft:polished_deepslate_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:polished_diorite_slab": {
     "keys": [
      "type"
@@ -1472,6 +3152,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:polished_diorite_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:polished_granite_slab": {
@@ -1484,6 +3192,34 @@
      "top": 0
     }
    },
+   "minecraft:polished_granite_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:polished_sulfur_slab": {
     "keys": [
      "type"
@@ -1494,6 +3230,34 @@
      "top": 0
     }
    },
+   "minecraft:polished_sulfur_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:polished_tuff_slab": {
     "keys": [
      "type"
@@ -1502,6 +3266,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:polished_tuff_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:poplar_door": {
@@ -1550,6 +3342,34 @@
      "top": 0
     }
    },
+   "minecraft:poplar_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:poplar_trapdoor": {
     "keys": [
      "facing",
@@ -1576,6 +3396,34 @@
      "top": 0
     }
    },
+   "minecraft:prismarine_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:prismarine_slab": {
     "keys": [
      "type"
@@ -1584,6 +3432,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:prismarine_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:purple_concrete_slab": {
@@ -1596,6 +3472,34 @@
      "top": 0
     }
    },
+   "minecraft:purple_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:purple_wool_slab": {
     "keys": [
      "type"
@@ -1604,6 +3508,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:purple_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:purpur_slab": {
@@ -1616,6 +3548,34 @@
      "top": 0
     }
    },
+   "minecraft:purpur_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:quartz_slab": {
     "keys": [
      "type"
@@ -1624,6 +3584,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:quartz_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:red_concrete_slab": {
@@ -1636,6 +3624,34 @@
      "top": 0
     }
    },
+   "minecraft:red_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:red_nether_brick_slab": {
     "keys": [
      "type"
@@ -1644,6 +3660,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:red_nether_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:red_sandstone_slab": {
@@ -1656,6 +3700,34 @@
      "top": 0
     }
    },
+   "minecraft:red_sandstone_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:red_wool_slab": {
     "keys": [
      "type"
@@ -1664,6 +3736,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:red_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:resin_brick_slab": {
@@ -1676,6 +3776,34 @@
      "top": 0
     }
    },
+   "minecraft:resin_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:sandstone_slab": {
     "keys": [
      "type"
@@ -1684,6 +3812,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:sandstone_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:smooth_quartz_slab": {
@@ -1696,6 +3852,34 @@
      "top": 0
     }
    },
+   "minecraft:smooth_quartz_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:smooth_red_sandstone_slab": {
     "keys": [
      "type"
@@ -1706,6 +3890,34 @@
      "top": 0
     }
    },
+   "minecraft:smooth_red_sandstone_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:smooth_sandstone_slab": {
     "keys": [
      "type"
@@ -1714,6 +3926,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:smooth_sandstone_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:smooth_stone_slab": {
@@ -1787,6 +4027,34 @@
      "top": 0
     }
    },
+   "minecraft:spruce_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:spruce_trapdoor": {
     "keys": [
      "facing",
@@ -1833,6 +4101,34 @@
      "top": 0
     }
    },
+   "minecraft:stone_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:stone_slab": {
     "keys": [
      "type"
@@ -1841,6 +4137,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:stone_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:sulfur_brick_slab": {
@@ -1853,6 +4177,34 @@
      "top": 0
     }
    },
+   "minecraft:sulfur_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:sulfur_slab": {
     "keys": [
      "type"
@@ -1861,6 +4213,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:sulfur_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:tuff_brick_slab": {
@@ -1873,6 +4253,34 @@
      "top": 0
     }
    },
+   "minecraft:tuff_brick_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:tuff_slab": {
     "keys": [
      "type"
@@ -1881,6 +4289,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:tuff_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:warped_door": {
@@ -1927,6 +4363,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:warped_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:warped_trapdoor": {
@@ -1996,6 +4460,34 @@
      "top": 0
     }
    },
+   "minecraft:waxed_cut_copper_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:waxed_exposed_copper_door": {
     "keys": [
      "facing",
@@ -2045,6 +4537,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:waxed_exposed_cut_copper_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:waxed_oxidized_copper_door": {
@@ -2098,6 +4618,34 @@
      "top": 0
     }
    },
+   "minecraft:waxed_oxidized_cut_copper_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:waxed_weathered_copper_door": {
     "keys": [
      "facing",
@@ -2147,6 +4695,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:waxed_weathered_cut_copper_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:weathered_copper_door": {
@@ -2200,6 +4776,34 @@
      "top": 0
     }
    },
+   "minecraft:weathered_cut_copper_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:white_concrete_slab": {
     "keys": [
      "type"
@@ -2208,6 +4812,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:white_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:white_wool_slab": {
@@ -2220,6 +4852,34 @@
      "top": 0
     }
    },
+   "minecraft:white_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
+   },
    "minecraft:yellow_concrete_slab": {
     "keys": [
      "type"
@@ -2228,6 +4888,34 @@
      "bottom": 0,
      "double": 15,
      "top": 0
+    }
+   },
+   "minecraft:yellow_concrete_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
     }
    },
    "minecraft:yellow_wool_slab": {
@@ -2239,6 +4927,34 @@
      "double": 15,
      "top": 0
     }
+   },
+   "minecraft:yellow_wool_stairs": {
+    "keys": [
+     "facing",
+     "shape"
+    ],
+    "masks": {
+     "east,inner_left": 9,
+     "east,inner_right": 10,
+     "east,outer_left": 0,
+     "east,outer_right": 0,
+     "east,straight": 8,
+     "north,inner_left": 5,
+     "north,inner_right": 9,
+     "north,outer_left": 0,
+     "north,outer_right": 0,
+     "north,straight": 1,
+     "south,inner_left": 10,
+     "south,inner_right": 6,
+     "south,outer_left": 0,
+     "south,outer_right": 0,
+     "south,straight": 2,
+     "west,inner_left": 6,
+     "west,inner_right": 5,
+     "west,outer_left": 0,
+     "west,outer_right": 0,
+     "west,straight": 4
+    }
    }
   },
   "no_connection_exact": [
@@ -2249,8 +4965,7 @@
    "minecraft:pumpkin"
   ],
   "no_connection_suffixes": [
-   "_leaves",
-   "shulker_box"
+   "_leaves"
   ],
   "sides": {},
   "whole": [

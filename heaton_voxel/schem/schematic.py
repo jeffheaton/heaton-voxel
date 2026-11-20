@@ -501,7 +501,9 @@ class Schematic:
             offset,
             cell,
             lambda state: _map_state(
-                state, lambda properties: _properties_mirrored(properties, axis)
+                state,
+                lambda properties, name=state.name: _properties_mirrored(
+                    properties, axis, block=name),
             ),
             dict(
                 point=point,

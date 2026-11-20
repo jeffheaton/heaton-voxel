@@ -1184,8 +1184,81 @@ update. Every top-down render and every check drew it finished, because a
 render cannot see a pane's arms and no check asks: Jeff saw it from inside the
 building. `heaton_voxel/connect_faces.py` and its twin are written from the
 probe's `SupportType.FULL` faces by `tools/generate_connect_faces.py`, held
-state by state by `tests/test_connect.py`, and a stair stays read by its
-`facing`, since its `shape` is derived in the same sweep.
+state by state by `tests/test_connect.py`.
+
+**The two names left on that list were both wrong, and the jar answers in
+seconds.** The table above covered everything the generator wrote, and two
+hand-written pieces sat beside it, each the last name list in the rule.
+Both were checked against the game on 2026-11-20 by running
+`Block.isExceptionForConnection` and `isFaceSturdy(SupportType.FULL)` over
+every one of 26.3's 35,723 states -- twenty lines of Java on the installed
+jar, the pattern `tools/probe_block_shapes.py` already uses -- and both
+disagreed with it.
+
+`_NO_CONNECTION_SUFFIXES` named `shulker_box`. The game excepts exactly
+nineteen blocks from every connection -- the fourteen leaves, the two
+pumpkins, the jack o'lantern, the melon and the barrier -- in 26.1.2, 26.2
+and 26.3 alike, and a shulker box is not one of them; its four sides are
+full and the game joins to it. So every fence, wall, pane and bar the game
+had already joined to a shulker box was *rewritten* into a free-standing
+post by `connect_blocks`, `place_block` and `finish()`: a stub taken away
+rather than one invented, which is the direction the module says it errs in
+and the harder one to notice, since what is gone looks like what was never
+built. The nineteen are held to the game block by block now, so a version
+that moves one fails by name.
+
+Stairs were left out of the generated table on the grounds that a stair's
+`shape` is derived in the same sweep as what joins it, and read by `facing`
+alone. The game's answer is `facing` *and* `shape`: a straight stair's own
+facing side is full, an inner corner's flank beside it is too, and an outer
+corner -- a quarter step -- has no full side at all. Read by facing alone it
+disagreed with the game on 6,322 states, both ways: an arm on every
+connector beside an outer corner, reaching at nothing, and none on the
+flank of every inner corner, where the game joins. Stairs are in the table
+now (keyed on facing and shape, 20 masks each), `_face_full` has no special
+case, and `connect.py` agrees with the game on all 35,723 states. The
+reason for the special case was real and is now a documented one-liner
+instead: every neighbor is read as it stands, so a connector the sweep
+reaches before the stair beside it reads the shape that stair was *written*
+with, and a bulk build that left its stair shapes unsettled wants a second
+`connect_blocks` -- whose own result is then empty.
+
+**A flip along y has no game to copy, and three of its rules were
+guesses.** `Mirror` has `NONE`, `LEFT_RIGHT` and `FRONT_BACK` and nothing
+vertical, so `Schematic.flipped("y")` is this library's own semantics --
+which is exactly why nothing had checked it. Rotation and the two
+horizontal flips *do* have an oracle, `BlockState.rotate`/`mirror`, and run
+against it over every state they agree everywhere it matters: the only
+differences are derived state the game defers to a block update (a stair's
+`shape`, a chest's `type`, a fire's and a chorus plant's faces) and an
+anvil's symmetric facing, and in each of those the library computes what
+the settled world holds, which is what a paste wants. The vertical flip had
+no such check and three faults, found by asking a cheaper question -- does
+every turn of a state the game has land on another state the game has?
+-- of `craft.block_registry`:
+
+* it renamed the `up` key to `down`, which is right for the seven blocks
+  that have both faces (mushroom blocks, chorus plant, glow lichen, sculk
+  vein, resin clump) and wrong for the 34 that have only `up`: all 32
+  walls, the vine and fire. 10,912 states. A flipped wall came back
+  `down=true`, which the game reads as a name its block does not have and
+  so takes the default -- the post simply gone.
+* it turned a crafter's and a jigsaw's `orientation` in both halves, so
+  `east_up` became `east_down`. The game's `FrontAndTop` has twelve
+  orientations and not one tops downward, so a crafter fronting a
+  horizontal direction has no upside-down state and keeps the one it has;
+  one fronting up or down still turns over (`down_east` ↔ `up_east`).
+* it turned `facing=down` into `up`, right for the 41 blocks with a
+  six-way facing and wrong for the hopper, the one block whose facing takes
+  `down` and not `up`.
+
+The corpus pinned all three: `cobblestone_wall` and `vine` with `down=true`
+and `crafter[orientation=north_down]` were the committed expectations, both
+twins agreed, and 25,621 checks passed -- a vector written from the code it
+tests proves the twins match, never that either is right. `properties_mirrored`
+now takes an optional `block=` for the cases that need the name, which
+`Schematic.flipped` passes, and the whole registry turns and turns back
+cleanly in every axis.
 
 **Roads carved through buildings, and top-down renders hid it.** A lane
 routed through a lot cuts a channel under the roof; `render_area` shows the

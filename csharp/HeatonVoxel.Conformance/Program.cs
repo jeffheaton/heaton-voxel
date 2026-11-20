@@ -2826,7 +2826,9 @@ internal static class Program
             }
             string axis = op.Substring(op.Length - 1);
             return Transforms.MapState(
-                state, properties => Transforms.PropertiesMirrored(properties, axis))
+                state,
+                properties => Transforms.PropertiesMirrored(
+                    properties, axis, state.Name))
                 .ToString();
         }
 

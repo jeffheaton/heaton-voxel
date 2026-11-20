@@ -3333,15 +3333,24 @@ def derived_state_cases():
          {"east": wall, "west": wall, "above": "minecraft:torch"}),
         # What the game's Block.isExceptionForConnection excepts is never
         # joined, full faces and all: the pumpkins, the melon (and the
-        # jack o'lantern, the barrier, leaves and shulker boxes). A
-        # trapdoor's one full side is an open one's plate, opposite its
-        # facing: joined from the side it faces away from, never edge on.
+        # jack o'lantern, the barrier and leaves). A shulker box is *not*
+        # one of them in any version this reads -- its four sides are full
+        # and the game joins to it -- which both twins had wrong until
+        # 2026-11-20. A trapdoor's one full side is an open one's plate,
+        # opposite its facing: joined from the side it faces away from,
+        # never edge on.
         ("wall-not-to-pumpkin", wall,
          {"north": wall, "south": "minecraft:pumpkin"}),
         ("fence-not-to-carved-pumpkin", fence,
          {"east": "minecraft:carved_pumpkin[facing=north]"}),
         ("pane-not-to-melon", "minecraft:glass_pane",
          {"west": "minecraft:melon"}),
+        ("fence-to-shulker-box", fence,
+         {"east": "minecraft:shulker_box[facing=up]"}),
+        ("pane-to-shulker-box", "minecraft:glass_pane",
+         {"west": "minecraft:red_shulker_box[facing=north]"}),
+        ("wall-to-shulker-box", wall,
+         {"north": wall, "south": "minecraft:lime_shulker_box[facing=up]"}),
         ("wall-to-open-trapdoor-plate", wall,
          {"east": "minecraft:spruce_trapdoor[facing=east,half=top,open=true]",
           "west": "minecraft:oak_trapdoor[facing=west,open=true]"}),
@@ -3407,6 +3416,19 @@ def transform_cases():
         "minecraft:lantern[hanging=true]",
         "minecraft:pointed_dripstone[vertical_direction=up]",
         "minecraft:crafter[orientation=north_up]",
+        # A flip along y turns the front of an orientation and never its
+        # top, since the game has no orientation that tops downward, and
+        # swaps the up and down faces only of a block that has both: a
+        # wall's lone up is its post and a vine's is the face it hangs by.
+        # A hopper faces down and never up, so a flip leaves it facing
+        # down rather than writing a state the game does not have.
+        "minecraft:crafter[orientation=down_east]",
+        "minecraft:jigsaw[orientation=east_up]",
+        "minecraft:hopper[enabled=true,facing=down]",
+        "minecraft:hopper[enabled=true,facing=north]",
+        "minecraft:brown_mushroom_block[down=false,east=false,north=true,"
+        "south=false,up=true,west=false]",
+        "minecraft:fire[age=3,east=true,north=false,south=false,up=true,west=false]",
         "minecraft:white_bed[facing=south,part=foot]",
         "minecraft:fake_block[widget=north]",
     ]
@@ -3425,7 +3447,8 @@ def transform_cases():
             return str(_map_state(state, mapper))
         axis = op[-1]
         return str(_map_state(
-            state, lambda props: _properties_mirrored(props, axis)))
+            state, lambda props: _properties_mirrored(
+                props, axis, block=state.name)))
 
     ops = ("rot90", "rot180", "rot270", "flipx", "flipy", "flipz")
     state_cases = [

@@ -207,7 +207,7 @@
   },
   {
    "flipx": "minecraft:cobblestone_wall[east=none,north=tall,south=none,up=true,west=low]",
-   "flipy": "minecraft:cobblestone_wall[down=true,east=low,north=tall,south=none,west=none]",
+   "flipy": "minecraft:cobblestone_wall[east=low,north=tall,south=none,up=true,west=none]",
    "flipz": "minecraft:cobblestone_wall[east=low,north=none,south=tall,up=true,west=none]",
    "rot180": "minecraft:cobblestone_wall[east=none,north=none,south=tall,up=true,west=low]",
    "rot270": "minecraft:cobblestone_wall[east=none,north=low,south=none,up=true,west=tall]",
@@ -216,7 +216,7 @@
   },
   {
    "flipx": "minecraft:vine[east=false,north=false,south=false,up=true,west=true]",
-   "flipy": "minecraft:vine[down=true,east=true,north=false,south=false,west=false]",
+   "flipy": "minecraft:vine[east=true,north=false,south=false,up=true,west=false]",
    "flipz": "minecraft:vine[east=true,north=false,south=false,up=true,west=false]",
    "rot180": "minecraft:vine[east=false,north=false,south=false,up=true,west=true]",
    "rot270": "minecraft:vine[east=false,north=true,south=false,up=true,west=false]",
@@ -288,12 +288,66 @@
   },
   {
    "flipx": "minecraft:crafter[orientation=north_up]",
-   "flipy": "minecraft:crafter[orientation=north_down]",
+   "flipy": "minecraft:crafter[orientation=north_up]",
    "flipz": "minecraft:crafter[orientation=south_up]",
    "rot180": "minecraft:crafter[orientation=south_up]",
    "rot270": "minecraft:crafter[orientation=west_up]",
    "rot90": "minecraft:crafter[orientation=east_up]",
    "state": "minecraft:crafter[orientation=north_up]"
+  },
+  {
+   "flipx": "minecraft:crafter[orientation=down_west]",
+   "flipy": "minecraft:crafter[orientation=up_east]",
+   "flipz": "minecraft:crafter[orientation=down_east]",
+   "rot180": "minecraft:crafter[orientation=down_west]",
+   "rot270": "minecraft:crafter[orientation=down_north]",
+   "rot90": "minecraft:crafter[orientation=down_south]",
+   "state": "minecraft:crafter[orientation=down_east]"
+  },
+  {
+   "flipx": "minecraft:jigsaw[orientation=west_up]",
+   "flipy": "minecraft:jigsaw[orientation=east_up]",
+   "flipz": "minecraft:jigsaw[orientation=east_up]",
+   "rot180": "minecraft:jigsaw[orientation=west_up]",
+   "rot270": "minecraft:jigsaw[orientation=north_up]",
+   "rot90": "minecraft:jigsaw[orientation=south_up]",
+   "state": "minecraft:jigsaw[orientation=east_up]"
+  },
+  {
+   "flipx": "minecraft:hopper[enabled=true,facing=down]",
+   "flipy": "minecraft:hopper[enabled=true,facing=down]",
+   "flipz": "minecraft:hopper[enabled=true,facing=down]",
+   "rot180": "minecraft:hopper[enabled=true,facing=down]",
+   "rot270": "minecraft:hopper[enabled=true,facing=down]",
+   "rot90": "minecraft:hopper[enabled=true,facing=down]",
+   "state": "minecraft:hopper[enabled=true,facing=down]"
+  },
+  {
+   "flipx": "minecraft:hopper[enabled=true,facing=north]",
+   "flipy": "minecraft:hopper[enabled=true,facing=north]",
+   "flipz": "minecraft:hopper[enabled=true,facing=south]",
+   "rot180": "minecraft:hopper[enabled=true,facing=south]",
+   "rot270": "minecraft:hopper[enabled=true,facing=west]",
+   "rot90": "minecraft:hopper[enabled=true,facing=east]",
+   "state": "minecraft:hopper[enabled=true,facing=north]"
+  },
+  {
+   "flipx": "minecraft:brown_mushroom_block[down=false,east=false,north=true,south=false,up=true,west=false]",
+   "flipy": "minecraft:brown_mushroom_block[down=true,east=false,north=true,south=false,up=false,west=false]",
+   "flipz": "minecraft:brown_mushroom_block[down=false,east=false,north=false,south=true,up=true,west=false]",
+   "rot180": "minecraft:brown_mushroom_block[down=false,east=false,north=false,south=true,up=true,west=false]",
+   "rot270": "minecraft:brown_mushroom_block[down=false,east=false,north=false,south=false,up=true,west=true]",
+   "rot90": "minecraft:brown_mushroom_block[down=false,east=true,north=false,south=false,up=true,west=false]",
+   "state": "minecraft:brown_mushroom_block[down=false,east=false,north=true,south=false,up=true,west=false]"
+  },
+  {
+   "flipx": "minecraft:fire[age=3,east=false,north=false,south=false,up=true,west=true]",
+   "flipy": "minecraft:fire[age=3,east=true,north=false,south=false,up=true,west=false]",
+   "flipz": "minecraft:fire[age=3,east=true,north=false,south=false,up=true,west=false]",
+   "rot180": "minecraft:fire[age=3,east=false,north=false,south=false,up=true,west=true]",
+   "rot270": "minecraft:fire[age=3,east=false,north=true,south=false,up=true,west=false]",
+   "rot90": "minecraft:fire[age=3,east=false,north=false,south=true,up=true,west=false]",
+   "state": "minecraft:fire[age=3,east=true,north=false,south=false,up=true,west=false]"
   },
   {
    "flipx": "minecraft:white_bed[facing=south,part=foot]",

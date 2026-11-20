@@ -71,6 +71,37 @@ namespace HeatonVoxel.Schem
                 ["y"] = Map("up", "down", "down", "up"),
             };
 
+        /// <summary>A vertical flip swaps a block's <c>up</c> and
+        /// <c>down</c> <em>faces</em>, and only a block that has both has
+        /// faces to swap: a mushroom block, a chorus plant, glow lichen, a
+        /// sculk vein, a resin clump. A lone <c>up</c> is something else —
+        /// a wall's post flag, the one face a vine hangs by, which side of
+        /// a fire is burning — and has no <c>down</c> to become (34 blocks
+        /// in 26.3: the 32 walls, the vine and fire). Renaming it would
+        /// lose the property outright, since the game reads a name its
+        /// block does not have as absent and takes the default.</summary>
+        private static readonly string[] BothFaces = { "up", "down" };
+
+        /// <summary>What a flip has no state to turn into, by axis and
+        /// block, where the caller named the block. The hopper is the one
+        /// block whose <c>facing</c> takes <c>down</c> and not <c>up</c>
+        /// (HopperBlock), so a hopper turned over would be written
+        /// <c>facing=up</c>, which the game does not have and loads as the
+        /// default; it keeps the facing it has instead. Only a flip along
+        /// <c>y</c> has such a case — <c>x</c> and <c>z</c> turn every
+        /// state the game has into another one it has, checked state by
+        /// state against the game's own BlockState.mirror.</summary>
+        private static readonly Dictionary<string, Dictionary<string, HashSet<string>>>
+            Unturnable = new Dictionary<string, Dictionary<string, HashSet<string>>>(
+                StringComparer.Ordinal)
+            {
+                ["y"] = new Dictionary<string, HashSet<string>>(StringComparer.Ordinal)
+                {
+                    ["minecraft:hopper"] = new HashSet<string>(
+                        StringComparer.Ordinal) { "facing" },
+                },
+            };
+
         private static readonly Dictionary<string, Dictionary<string, string>> RailMirror =
             new Dictionary<string, Dictionary<string, string>>(StringComparer.Ordinal)
             {
@@ -216,14 +247,37 @@ namespace HeatonVoxel.Schem
         }
 
         public static PropertyMap PropertiesMirrored(PropertyMap properties, string axis)
+            => PropertiesMirrored(properties, axis, null);
+
+        /// <summary>A state's properties mirrored along <paramref name="axis"/>.
+        /// Mirroring along <c>y</c> swaps the <c>up</c> and <c>down</c>
+        /// faces only of a block that carries both, since a lone <c>up</c>
+        /// has no <c>down</c> to become; <paramref name="block"/>, the id
+        /// the properties belong to, names the handful of blocks a vertical
+        /// flip cannot turn at all, whose property is left as it
+        /// stands.</summary>
+        public static PropertyMap PropertiesMirrored(PropertyMap properties, string axis,
+                                                     string? block)
         {
             var pairs = DirMirror[axis];
             bool horizontal = axis == "x" || axis == "z";
+            // Per-face keys swap sides, vertically only where there are two
+            // to swap.
+            bool swapFaces = horizontal
+                || BothFaces.All(face => properties.Get(face) is not null);
+            HashSet<string>? unturnable = null;
+            if (block is not null && Unturnable.TryGetValue(axis, out var byBlock))
+                byBlock.TryGetValue(block, out unturnable);
             var output = new PropertyMap();
             foreach (var entry in properties)
             {
-                string key = Lookup(pairs, entry.Key);  // per-face booleans swap sides
+                string key = swapFaces ? Lookup(pairs, entry.Key) : entry.Key;
                 string value = entry.Value;
+                if (unturnable is not null && unturnable.Contains(key))
+                {
+                    output[key] = value;
+                    continue;
+                }
                 if (key == "facing")
                 {
                     value = Lookup(pairs, value);
@@ -249,8 +303,7 @@ namespace HeatonVoxel.Schem
                 }
                 else if (key == "orientation")
                 {
-                    value = string.Join("_", value.Split('_')
-                        .Select(part => Lookup(pairs, part)));
+                    value = OrientationMirrored(value, pairs, horizontal);
                 }
                 else if (!horizontal)
                 {
@@ -266,6 +319,24 @@ namespace HeatonVoxel.Schem
                 output[key] = value;
             }
             return output;
+        }
+
+        /// <summary>A crafter's or jigsaw's <c>orientation</c> —
+        /// <c>&lt;front&gt;_&lt;top&gt;</c> — mirrored. A horizontal mirror
+        /// turns both halves; a vertical one turns the front alone. The
+        /// game's FrontAndTop holds twelve orientations and not one of them
+        /// tops downward, so a crafter fronting a horizontal direction has
+        /// no upside-down state to become and keeps the one it has, while
+        /// one fronting up or down turns over cleanly.</summary>
+        private static string OrientationMirrored(string value,
+                                                  Dictionary<string, string> pairs,
+                                                  bool horizontal)
+        {
+            string[] parts = value.Split('_');
+            if (horizontal)
+                return string.Join("_", parts.Select(part => Lookup(pairs, part)));
+            parts[0] = Lookup(pairs, parts[0]);
+            return string.Join("_", parts);
         }
 
         public static BlockState MapState(BlockState state,

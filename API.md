@@ -547,6 +547,25 @@ and `shouldRaisePost` what a wall under every block state becomes, joined
 on every set of its sides, and refuses to keep a table under which the rule
 here answers otherwise even once.
 
+What is solid to join is the game's own answer too, from
+`heaton_voxel.connect_faces`, **generated** by
+`tools/generate_connect_faces.py` out of the same probe run: every state's
+`isFaceSturdy(SupportType.FULL)` faces, stairs included, so a straight
+stair offers its facing side, an inner corner that side and the flank
+beside it, and an outer corner — a quarter step — nothing at all. What the
+game excepts from every connection, however full its faces
+(`Block.isExceptionForConnection`: the fourteen leaves, the two pumpkins,
+the jack o'lantern, the melon, the barrier — and *not* a shulker box), is
+the one name list left, held to the game block by block by
+`tests/test_connect.py`.
+
+Every neighbor is read exactly as it stands, which is what the game's own
+update does. Since a stair's full faces follow its `shape`, a connector the
+pass reaches *before* the stair beside it (top-down, then z, then x) reads
+the shape that stair was written with, not the one this pass settles it to;
+where a bulk build left stair shapes unsettled, a second call takes those
+connectors with it and its own result is then empty.
+
 The rules live in `heaton_voxel.connect` and are game knowledge, validated
 against **22,616 vanilla-placed blocks with zero disagreements**; unknown
 blocks count as "not solid", so drift errs toward a free-standing post,
@@ -829,6 +848,19 @@ Each takes a property dict and returns a new one in the same key order (a
 per-face key, `north=true`, renamed where it stands), leaving its argument
 alone; `directional_leftovers` takes any iterable of `BlockState` and
 returns the `transform_warnings` a turn of them would carry.
+
+A flip along `"y"` has two cases a horizontal one does not, since the game
+itself has no vertical mirror to copy. It swaps the `up` and `down` *faces*
+only of a block that carries both — a mushroom block, a chorus plant, glow
+lichen, a sculk vein — because a lone `up` is something else: a wall's post,
+the face a vine hangs by, a burning side of a fire, with no `down` to become
+(34 blocks in 26.3). And where the game has no upside-down state at all, the
+property stays as it stands: a hopper faces down and never up, and a
+crafter's or jigsaw's `orientation` tops upward in every one of the twelve
+the game has, so only one fronting up or down turns over. `properties_mirrored`
+takes the optional `block=` for the handful that needs the name;
+`Schematic.flipped` passes it, and without it a hopper would be written
+`facing=up`, a state the game does not have.
 
 **Refusals and accounting.** Export **refuses** a box touching ungenerated
 or unreadable chunks unless `allow_incomplete=True` (the format cannot say

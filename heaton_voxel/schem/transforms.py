@@ -51,6 +51,25 @@ _DIR_MIRROR = {
     "z": {"north": "south", "south": "north"},
     "y": {"up": "down", "down": "up"},
 }
+# A vertical flip swaps a block's ``up`` and ``down`` *faces*, and only a
+# block that has both has faces to swap: a mushroom block, a chorus plant,
+# glow lichen, a sculk vein, a resin clump. A lone ``up`` is something else
+# -- a wall's post flag, the one face a vine hangs by, which side of a fire
+# is burning -- and has no ``down`` to become (34 blocks in 26.3: the 32
+# walls, the vine and fire). Renaming it would lose the property outright,
+# since the game reads a name its block does not have as absent and takes
+# the default: a flipped wall would come back with its post down.
+_BOTH_FACES = ("up", "down")
+
+# What a flip has no state to turn into, by axis and block, where the
+# caller named the block. The hopper is the one block whose ``facing``
+# takes ``down`` and not ``up`` (``HopperBlock``), so a hopper turned over
+# would be written ``facing=up``, which the game does not have and loads as
+# the default; it keeps the facing it has instead. Only a flip along ``y``
+# has such a case -- ``x`` and ``z`` turn every state the game has into
+# another one it has, checked state by state against the game's own
+# ``BlockState.mirror``.
+_UNTURNABLE = {"y": {"minecraft:hopper": frozenset({"facing"})}}
 _RAIL_MIRROR = {
     "x": {
         "ascending_east": "ascending_west",
@@ -144,7 +163,25 @@ def properties_rotated_cw(properties: dict) -> dict:
     return out
 
 
-def properties_mirrored(properties: dict, axis: str) -> dict:
+def _orientation_mirrored(value: str, pairs: dict, horizontal: bool) -> str:
+    """A crafter's or jigsaw's ``orientation`` -- ``<front>_<top>`` --
+    mirrored.
+
+    A horizontal mirror turns both halves; a vertical one turns the front
+    alone. The game's ``FrontAndTop`` holds twelve orientations and not one
+    of them tops downward (``down_east`` through ``up_west``, then
+    ``east_up`` through ``south_up``), so a crafter fronting a horizontal
+    direction has no upside-down state to become and keeps the one it has,
+    while one fronting up or down turns over cleanly.
+    """
+    parts = value.split("_")
+    if horizontal:
+        return "_".join(pairs.get(part, part) for part in parts)
+    return "_".join([pairs.get(parts[0], parts[0]), *parts[1:]])
+
+
+def properties_mirrored(properties: dict, axis: str, *,
+                        block: str | None = None) -> dict:
     """A state's properties mirrored along ``axis``: ``"x"`` swaps east and
     west, ``"z"`` north and south, ``"y"`` up and down.
 
@@ -155,12 +192,29 @@ def properties_mirrored(properties: dict, axis: str) -> dict:
     through unchanged. Returns a new dict in the same key order, and
     leaves ``properties`` alone. The C# twin is
     ``Transforms.PropertiesMirrored``.
+
+    Mirroring along ``y`` swaps the ``up`` and ``down`` *faces* only of a
+    block that carries both (:data:`_BOTH_FACES`), since a lone ``up`` --
+    a wall's post, a vine's hold, a burning side of a fire -- has no
+    ``down`` to become. ``block``, the id the properties belong to, names
+    the handful of blocks a vertical flip cannot turn at all
+    (:data:`_UNTURNABLE`: a hopper faces down and never up), whose
+    property is left as it stands; without it those turn as the vocabulary
+    says, which for a hopper is a state the game does not have.
     """
     pairs = _DIR_MIRROR[axis]
     horizontal = axis in ("x", "z")
+    # Per-face keys swap sides, vertically only where there are two to swap.
+    faces = pairs if horizontal or all(
+        face in properties for face in _BOTH_FACES) else {}
+    by_block = _UNTURNABLE.get(axis, {})
+    unturnable = by_block.get(block, ()) if block is not None else ()
     out = {}
     for key, value in properties.items():
-        key = pairs.get(key, key)  # per-face booleans swap sides
+        key = faces.get(key, key)  # per-face booleans swap sides
+        if key in unturnable:
+            out[key] = value
+            continue
         if key == "facing":
             value = pairs.get(value, value)
         elif key == "rotation" and horizontal:
@@ -174,7 +228,7 @@ def properties_mirrored(properties: dict, axis: str) -> dict:
             swap = _LEFT_RIGHT if horizontal else _TOP_BOTTOM
             value = swap.get(value, value)  # chest halves / slab halves only
         elif key == "orientation":
-            value = "_".join(pairs.get(part, part) for part in value.split("_"))
+            value = _orientation_mirrored(value, pairs, horizontal)
         elif not horizontal:
             if key == "half":
                 value = _HALF_MIRROR_Y.get(value, value)

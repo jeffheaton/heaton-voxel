@@ -16,11 +16,14 @@ import ``craft``, so this copies them down, from one run, into:
     csharp/HeatonVoxel/ConnectFaces.generated.cs
 
 Both are derived; edit neither by hand. ``heaton_voxel.connect`` is the
-reference for how the table is *used*. A stair is left out: its ``shape`` is
-derived in the same sweep as what joins it, so it is read by its ``facing``.
-``tests/test_connect.py`` regenerates both files and fails if the committed ones
-differ, so rerun this after the probe. It needs no game: the probe has asked
-already.
+reference for how the table is *used*. Stairs are in it, keyed on ``facing``
+and ``shape``: a straight stair's own facing side is full, an inner corner's
+flank beside it is too, and an outer corner -- a quarter step -- has none.
+They were left out until 2026-11-20 and read by ``facing`` alone, which put
+an arm on every fence, wall and pane beside an outer corner and left one
+short of every inner corner's flank. ``tests/test_connect.py`` regenerates
+both files and fails if the committed ones differ, so rerun this after the
+probe. It needs no game: the probe has asked already.
 
 Usage::
 
@@ -88,8 +91,6 @@ def tables() -> tuple:
     state. A block with no full side in any state is in none of them."""
     whole, sides, by_state = [], {}, {}
     for name in sorted(BLOCK_IDS):
-        if name.endswith("_stairs"):
-            continue
         read = read_block(name)
         if read == 15:
             whole.append(name)
@@ -117,10 +118,12 @@ def python_text(whole, sides, by_state) -> str:
              "it is full (the game's ``isFaceSturdy``, "
              "``SupportType.FULL``), and which blocks",
              "the game excepts from that is :mod:`heaton_voxel.connect`'s. "
-             "A stair is not here:",
-             "it is read by its ``facing``. A name not here has no full side, "
-             "as an unknown",
-             'block is taken to.', '"""', "",
+             "A stair is here by",
+             "its ``facing`` and ``shape``: its facing side, an inner "
+             "corner's flank beside",
+             "it, and nothing at all on an outer corner. A name not here "
+             "has no full side,",
+             'as an unknown block is taken to.', '"""', "",
              "from __future__ import annotations", "",
              "from .block_defaults import BLOCK_DEFAULTS", "",
              f'GAME_VERSION = "{GAME_VERSION}"',

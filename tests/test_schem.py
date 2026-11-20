@@ -1092,6 +1092,38 @@ class TransformTests(SequenceAssertions):
                 "minecraft:pointed_dripstone[vertical_direction=up]":
                     "minecraft:pointed_dripstone[vertical_direction=down]",
                 "minecraft:oak_sign[rotation=5]": "minecraft:oak_sign[rotation=5]",
+                # A lone ``up`` is a wall's post, a vine's hold or a
+                # burning side of a fire: there is no ``down`` face for it
+                # to become, and renaming it lost the property outright,
+                # since the game takes the default for a name its block
+                # does not have. Only a block with both faces swaps them.
+                "minecraft:cobblestone_wall[east=low,north=tall,south=none,"
+                "up=true,west=none]":
+                    "minecraft:cobblestone_wall[east=low,north=tall,"
+                    "south=none,up=true,west=none]",
+                "minecraft:vine[east=true,north=false,south=false,up=true,"
+                "west=false]":
+                    "minecraft:vine[east=true,north=false,south=false,"
+                    "up=true,west=false]",
+                "minecraft:brown_mushroom_block[down=false,east=false,"
+                "north=true,south=false,up=true,west=false]":
+                    "minecraft:brown_mushroom_block[down=true,east=false,"
+                    "north=true,south=false,up=false,west=false]",
+                # The game's FrontAndTop tops upward in all twelve of its
+                # orientations, so only one fronting up or down turns over.
+                "minecraft:crafter[crafting=false,orientation=east_up,"
+                "triggered=false]":
+                    "minecraft:crafter[crafting=false,orientation=east_up,"
+                    "triggered=false]",
+                "minecraft:crafter[crafting=false,orientation=down_east,"
+                "triggered=false]":
+                    "minecraft:crafter[crafting=false,orientation=up_east,"
+                    "triggered=false]",
+                # A hopper faces down and never up.
+                "minecraft:hopper[enabled=true,facing=down]":
+                    "minecraft:hopper[enabled=true,facing=down]",
+                "minecraft:hopper[enabled=true,facing=north]":
+                    "minecraft:hopper[enabled=true,facing=north]",
             },
         }
         for axis, table in cases.items():
@@ -1101,6 +1133,58 @@ class TransformTests(SequenceAssertions):
                     self.assertEqual(
                         str(schematic.flipped(axis).get_block(0, 0, 0)), expected
                     )
+
+    def test_every_turn_of_a_real_state_lands_on_a_real_state(self):
+        """The whole registry through every turn, both ways.
+
+        The vocabulary is name-keyed and the game's own ``rotate``/``mirror``
+        answer only for the horizontal axes, so what holds a vertical flip
+        honest is closure: a turn of a state the game has must be a state
+        the game has, and turning back must give the one we started from.
+        Asked of all 35,321 stateful states this found three faults at once
+        in 2026-11-20's ``properties_mirrored`` along ``y`` -- a wall's and a
+        vine's lone ``up`` renamed to a ``down`` their blocks do not have
+        (10,912 states), a crafter's and a jigsaw's ``orientation`` topped
+        downward (20), and a hopper faced up (2).
+        """
+        from fixtures import block_shapes
+        from heaton_voxel.schem import (properties_mirrored,
+                                        properties_rotated_cw)
+
+        # Every value each block's properties take, straight out of the
+        # vendored states: the game's own answer to "is this a state?".
+        every: dict[str, dict[str, set]] = {}
+        listed = []
+        for name, properties, _shape in block_shapes():
+            if not properties:
+                continue
+            listed.append((name, properties))
+            options = every.setdefault(name, {})
+            for key, value in properties.items():
+                options.setdefault(key, set()).add(value)
+
+        bad = []
+        for name, state in listed:
+            options = every[name]
+            turns = {"rot90": properties_rotated_cw(state)}
+            for axis in ("x", "z", "y"):
+                turns[f"flip{axis}"] = properties_mirrored(
+                    state, axis, block=name)
+            for op, turned in turns.items():
+                for key, value in turned.items():
+                    if key not in options or value not in options[key]:
+                        bad.append((name, op, str(state), key, value))
+                        break
+                if op == "rot90":
+                    back = turned
+                    for _ in range(3):
+                        back = properties_rotated_cw(back)
+                else:
+                    back = properties_mirrored(turned, op[-1], block=name)
+                if back != state:
+                    bad.append((name, op, str(state), "round trip", str(back)))
+        self.assertEqual(bad[:4], [], f"{len(bad)} turns leave the game")
+        self.assertGreater(len(listed), 35000)
 
     def test_unknown_directional_properties_warn_not_guess(self):
         schematic = Schematic.new(1, 1, 1, DATA_VERSION)

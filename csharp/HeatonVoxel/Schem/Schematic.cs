@@ -440,7 +440,8 @@ namespace HeatonVoxel.Schem
             var result = Transformed(
                 (width, height, length), offset, cell,
                 state => Transforms.MapState(
-                    state, properties => Transforms.PropertiesMirrored(properties, axis)),
+                    state, properties => Transforms.PropertiesMirrored(
+                        properties, axis, state.Name)),
                 new EntityOp
                 {
                     Point = point,
